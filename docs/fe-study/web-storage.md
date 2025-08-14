@@ -12,21 +12,38 @@ sidebar_position: 6
 개념정리 끝에는 관련 **면접질문**을 첨부하였으니 도움이 되었으면 좋겠습니다.
 
 
-### **1.2. What is a HTTP?**
+## 1.2. What is a HTTP?
 
-> HTTP란?
-> 
+:::info
+## HTTP란?
 
-@쿠키 @웹스토리지 @세션스토리지 @로컬스토리지
+HTTP 기본 내용
 
-- HTTP 관련 면접 질문
-    
+- **HTTP란?** | HTTP요청 | HTTP응답
+
+HTTP 특징
+
+- **무상태와 비연결성** | 쿠키🍪 | 세션
+
+상태 유지🍪
+
+- 쿠키🍪 | SessionStorage | LocalStorage
+
+전반적인 개념 정리
+
+- HTTP vs HTTPS 
+
+- API | REST API | RESTful API 
+
+- CORS
+:::
+<details>
+  <summary>관련 면접 질문</summary>
+
     @ 쿠키, sessionStorage, localStorage의 차이점은 무엇인가요?
-    
+</details>
 
-# 1.
-
-## 쿠키(Cookie)
+### 쿠키(Cookie)
 
 [HTTP 개념 정리 2편](https://hamrang.vercel.app/fe-HTTP-2) 참고
 
@@ -42,9 +59,8 @@ sidebar_position: 6
 - 도메인 기반으로 저장되며 브라우저 간 공유 가능
 - 단점: 작은 용량, 서버 전송으로 인한 트래픽 증가, 보안 취약
 
-# 2.
 
-## 웹 스토리지 Web Storage (HTML5)
+### 웹 스토리지 Web Storage (HTML5)
 
 HTML5에서는 쿠키의 단점들을 보완한 좀 더 간단한 웹 저장소(Web Storage)를 도입했습니다. 
 
@@ -73,9 +89,7 @@ HTML5에서는 쿠키의 단점들을 보완한 좀 더 간단한 웹 저장소(
 
 4) 쿠키는 같은 브라우저라면 값을 공유했는데, sessionStorage는 같은 브라우저여도, 다른 탭이라면 값을 공유하지 않는다.
 
-# 3.
-
-## 로컬 스토리지 LocalStorage
+### 로컬 스토리지 LocalStorage
 
 로컬 스토리지는 클라이언트 내에서 장기적/영구적으로 데이터를 저장하는 데 사용합니다. 
 
@@ -92,9 +106,7 @@ HTML5에서는 쿠키의 단점들을 보완한 좀 더 간단한 웹 저장소(
 
 **→ 필요한 데이터만 브라우저에 저장**
 
-# 4.
-
-## 세션 스토리지 SessionStorage
+### 세션 스토리지 SessionStorage
 
 세션 스토리지는 세션(탭)이 종료될때까지 지속되는 스토리지입니다. 
 
@@ -130,9 +142,7 @@ Cookie: user_id=abc123; theme=dark
 
 ---
 
-# 5.
-
-## 쿠키와 웹 스토리지 사용처 정리
+### 쿠키와 웹 스토리지 사용처 정리
 
 | 목적 | 추천 저장 방식 | 특징 |
 | --- | --- | --- |

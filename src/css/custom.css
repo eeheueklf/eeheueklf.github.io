@@ -24,6 +24,7 @@
   --ifm-font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
   --ifm-navbar-height: 20px;
   --ifm-menu-color-background-active : #e9dccd;
+  --ifm-hover-overlay : #f3f3f3;
   
   /* 표 */
   --ifm-table-cell-padding : 0.3rem 1rem;
@@ -41,7 +42,19 @@
 }
 
 article{
-  width: 700px;
+  width: 750px;
+}
+/* 이전-다음 글 */
+.pagination-nav{
+  display:none;
+}
+/* 편집하기 */
+.theme-edit-this-page{
+  display: none;
+}
+/* 제목 위치 */
+.breadcrumbs {
+margin-bottom:20px;
 }
 
 /* 박스 */
@@ -57,10 +70,12 @@ article{
 .admonitionHeading_Gvgb{
   display:none;
 }
-ul{
-  padding-inline-start: 1.1rem;
+.admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module{
+  display:none;
 }
-
+.admonitionHeading_node_modules{
+    display:none;
+}
 
 /* 제목 크기 */
 

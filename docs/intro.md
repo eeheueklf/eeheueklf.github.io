@@ -5,7 +5,7 @@ last_update:
   author: endi
 ---
 
-# 제목 1
+# 🗨️ 마크다운 참고하기
 ## 제목 2
 ### 제목 3
 #### 제목 4
@@ -111,11 +111,24 @@ console.log("JavaScript 코드 블록");
 ---
 
 ## 14. 코드 블록 줄 하이라이트 (Prism)
-```js {2,4}
+```js {1,4}
 function hello() {
   console.log("2번 줄 하이라이트");
 }
 console.log("4번 줄 하이라이트");
+console.log("4번 줄 하이라이트");
+console.log("4번 줄 하이라이트");
 ```
 
 ---
+
+
+<details>
+  <summary>Toggle me!</summary>
+
+  This is the detailed content
+
+  ```js
+  console.log("Markdown features including the code block are available");
+  ```
+</details>

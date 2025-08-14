@@ -12,20 +12,33 @@ sidebar_position: 7
 개념정리 끝에는 관련 **면접질문**을 첨부하였으니 도움이 되었으면 좋겠습니다.
 
 
-### **1.2. What is a HTTP?**
+## 1.2. What is a HTTP?
 
-> HTTP란?
-> 
+:::info
+## HTTP란?
 
-@HTTP vs HTTPS 
+HTTP 기본 내용
 
-@API @REST API @RESTful API 
+- **HTTP란?** | HTTP요청 | HTTP응답
 
-@CORS
+HTTP 특징
 
-# 1.
+- **무상태와 비연결성** | 쿠키🍪 | 세션
 
-## HTTP와 HTTPS의 차이점이 무엇인가요
+상태 유지🍪
+
+- 쿠키🍪 | SessionStorage | LocalStorage
+
+전반적인 개념 정리
+
+- HTTP vs HTTPS 
+
+- API | REST API | RESTful API 
+
+- CORS
+:::
+
+### HTTP와 HTTPS의 차이점이 무엇인가요
 
 ![Frame 13 (1).png](attachment:2e65f19e-372d-49ab-8b6a-c62fcece43a1:Frame_13_(1).png)
 
@@ -39,9 +52,7 @@ sidebar_position: 7
 
 [브라우저 개념 정리 - 웹 탐색과 렌더링 과정 한눈에 보기](https://hamrang.vercel.app/fe-internet-10)
 
-# 2.
-
-## REST / REST API / RESTful API란 무엇인가요
+### REST / REST API / RESTful API란 무엇인가요
 
 `Representational Station Transfer`
 
@@ -80,9 +91,7 @@ REST한 API를 제공하는 웹 어플리케이션을 RESTful 하다고 부르�
 
 ![Frame 15 (1).png](attachment:3593ee3b-b552-4967-8e67-63f4f533c11e:Frame_15_(1).png)
 
-# 3.
-
-## **CORS에 대해서 설명해주세요.**
+### CORS에 대해서 설명해주세요.
 
 `교차 출처 리소스 공유`
 

@@ -11,12 +11,16 @@ sidebar_position: 8
 
 개념정리 끝에는 관련 **면접질문**을 첨부하였으니 도움이 되었으면 좋겠습니다.
 
-### **1.3. What is a Domain Name?**
+## **1.3. What is a Domain Name?**
 
-> 도메인 이름이란?
-> 
+:::info
+## 도메인 이름이란?
 
-@도메인 이름 @URL @URI @DNS
+
+- 도메인 이름 | URL | URI | DNS
+
+
+:::
 
 - 도메인 관련 면접 질문
     
@@ -27,9 +31,7 @@ sidebar_position: 8
     @ URI와 URL의 차이점은 무엇인가요
     
 
-# 1.
-
-## 도메인 이름(Domain Name)이란?
+### 도메인 이름(Domain Name)이란?
 
 인터넷에서 웹사이트를 찾을때 우리는 google.com이나 naver.com같은 **도메인 이름**을 사용합니다.
 
@@ -40,9 +42,7 @@ google.com 입력 → 49.8.14.121로 연결
 - 도메인 : 사람이 이해하고 기억하기 쉽게 만든 주소 (google.com)
 - IP 주소 : 컴퓨터끼리 통신할 때 사용하는 **숫자로 된 실제 주소** (49.8.14.121)
 
-# 2.
-
-## 도메인 구조에 대해 알아보자
+### 도메인 구조에 대해 알아보자
 
 `www` . `naver` `.com` `.`
 
@@ -95,13 +95,11 @@ google = 2단계 도메인
 
 www.google.com / blog.naver.com / mail.google.com
 
-# 3.
-
-## URI, URL, 도메인 쉽게 정리하기 (차이점)
+### URI, URL, 도메인 쉽게 정리하기 (차이점)
 
 ![Frame 16 (1).png](attachment:3e209a19-5ae7-48a5-a543-09b0a12ad198:Frame_16_(1).png)
 
-### **URI**
+#### **URI**
 
 웹 상의 자원(Resource)를 식별하기 위한 고유한 문자열
 
@@ -110,7 +108,7 @@ www.google.com / blog.naver.com / mail.google.com
 - google.co.kr/search/view?seq=40
 - naver.com
 
-### **URL**
+#### **URL**
 
 **URI 중**에서 특히 **리소스 위치**를 가리키는 주소입니다.
 
@@ -121,7 +119,7 @@ www.google.com / blog.naver.com / mail.google.com
 - https://google.co.kr → 웹 페이지 주소
 - ftp://example.com/file.txt → 파일 서버 주소
 
-### **도메인**
+#### **도메인**
 
 URI나 URL의 host 부분에 들어가는 값으로
 

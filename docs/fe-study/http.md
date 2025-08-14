@@ -11,20 +11,42 @@ sidebar_position: 4
 
 개념정리 끝에는 관련 **면접질문**을 첨부하였으니 도움이 되었으면 좋겠습니다.
 
-@ HTTP는 관련 개념이 정말 많은데요 (포스팅 4개짜리임)
+:::tip
+HTTP는 관련 개념이 정말 많은데요 (포스팅 4개짜리임)
 
 그만큼 기초적이고 실제로 응용되는 부분이 많으니 알아두시면 도움 될겁니다!
+:::
 
-### **1.2. What is a HTTP?**
+## 1.2. What is a HTTP?
 
-> HTTP란?
-> 
+:::info
+## HTTP란?
 
-@HTTP요청 @HTTP응답
+HTTP 기본 내용
 
-- HTTP 관련 면접 질문
-    
-    @ HTTP 프로토콜에 대해 설명해주세요.
+- **HTTP란?** | HTTP요청 | HTTP응답
+
+HTTP 특징
+
+- **무상태와 비연결성** | 쿠키🍪 | 세션
+
+상태 유지🍪
+
+- 쿠키🍪 | SessionStorage | LocalStorage
+
+전반적인 개념 정리
+
+- HTTP vs HTTPS 
+
+- API | REST API | RESTful API 
+
+- CORS
+:::
+
+<details>
+  <summary>관련 면접 질문</summary>
+
+      @ HTTP 프로토콜에 대해 설명해주세요.
     
     @ HTTP Method와 각각이 사용되는 경우에 대해서 설명해주세요.
     
@@ -33,11 +55,10 @@ sidebar_position: 4
     @ GET 메서드와 POST 메서드의 차이점에 대해 설명해주세요.
     
     @ PUT 메서드와 PATCH 메서드의 차이점에 대해 설명해주세요.
-    
+</details>
 
-# 1.
 
-## **HTTP**
+### 1. HTTP
 
 하이퍼텍스트+전송+프로토콜
 
@@ -58,9 +79,8 @@ https://www.google.com/
 
 ---
 
-# 2.
 
-## **HTTP 요청**
+### 2. HTTP 요청
 
 HTTP 요청은 웹 브라우저에서 **웹 사이트를 로드**하는 데 필요한 **정보를 요청**하는 방법입니다.
 
@@ -141,9 +161,8 @@ ID 및 비밀번호 또는 양식에 입력된 기타 데이터와 같이 웹 �
 
 ---
 
-# 3.
 
-## **HTTP 응답**
+### 3. HTTP 응답
 
 HTTP 응답은 웹 클라이언트에서 **HTTP 요청에 대한 응답**으로 웹 서버로부터 수신하는 응답입니다.
 

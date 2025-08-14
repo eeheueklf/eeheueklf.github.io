@@ -58,6 +58,10 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      metadata:[{
+        name:"google-site-verification",
+        content:"fhdIMfm7eKRtHRKiRQ5quuM9xGeD5qNnWKm-hnjb-Qc"
+      }],
       navbar: {
         title: 'Hamrang-log',
         logo: {

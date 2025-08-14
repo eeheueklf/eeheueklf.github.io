@@ -8,27 +8,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Hamrang-log',
+  tagline: '햄 랑 로 그',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://eeheueklf.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'eeheueklf', // Usually your GitHub org/user name.
-  projectName: 'eeheueklf.github.io', // Usually your repo name.
+  organizationName: 'eeheueklf', 
+  projectName: 'eeheueklf.github.io', 
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  trailingSlash: true,
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'ko',
     locales: ['ko'],
@@ -66,7 +59,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Hamrang-log',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -83,6 +76,18 @@ const config = {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'feGroup',
+            position: 'left',
+            label: 'FE',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'beGroup',
+            position: 'left',
+            label: 'BE',
           },
         ],
       },

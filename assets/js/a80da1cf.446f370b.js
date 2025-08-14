@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhamrang_log=self.webpackChunkhamrang_log||[]).push([[497],{1550:a=>{a.exports=JSON.parse('{"label":"docusaurus","permalink":"/blog/tags/docusaurus","allTagsPath":"/blog/tags","count":4,"unlisted":false}')}}]);

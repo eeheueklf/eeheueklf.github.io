@@ -54,7 +54,7 @@ article{
 .alert p{
   margin: 0 0 0.2rem;
 }
-.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module:not(:last-child){
+.admonitionHeading_Gvgb{
   display:none;
 }
 ul{
@@ -118,7 +118,7 @@ ul{
   background: var(--ifm-menu-link-sublist-icon) 100% / 1rem 1rem !important;
 }
 
-.menu_src-theme-DocSidebar-Desktop-Content-styles-module{
+nav{
   padding : 0 1rem !important;
 }
 
@@ -127,4 +127,11 @@ ul{
 mark {
   background-color: #e9dccd;
   padding: 0 2px;
+}
+
+/* 코드 */
+code {
+  /* color :rgb(128, 0, 0); */
+  /* border:none; */
+  background-color: #e6d8c8;
 }

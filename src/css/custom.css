@@ -25,17 +25,56 @@
   --ifm-navbar-height: 20px;
   --ifm-menu-color-background-active : #e9dccd;
   
-/* 67442E
-A2704C
-A7805D
-A48E78
-BDA087
-CFB79F */
+  /* 표 */
+  --ifm-table-cell-padding : 0.3rem 1rem;
 
+  /* 경고 박스 */
+  --ifm-color-info-contrast-background : white;
+  --ifm-list-paragraph-margin : 0;
+  --ifm-alert-shadow :  0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+  
+  /* 팁박스 */
+  --ifm-color-success-dark : black;
+  --ifm-color-info-dark : rgb(226, 226, 226);
+
+  --ifm-font-family-monospace: "D2Coding", "Fira Code", monospace;
+}
+
+article{
+  width: 700px;
+}
+
+/* 박스 */
+.alert{
+  border: 1px solid var(--ifm-tabs-color-active-border);
+  font-size : 0.8rem;
+  padding: var(--ifm-alert-padding-vertical) 1rem;
+  color: #4a5157;
+}
+.alert p{
+  margin: 0 0 0.2rem;
+}
+.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module:not(:last-child){
+  display:none;
+}
+ul{
+  padding-inline-start: 1.1rem;
 }
 
 
+/* 제목 크기 */
 
+.markdown > h1{
+  font-size : 2rem;
+}
+.markdown > h2{
+  font-size : 1.6rem;
+}
+.markdown > h3{
+  font-size : 1.2rem;
+}
+
+/* 헤더 없앰 */
 .navbar {
   display : none;
 }
@@ -63,11 +102,11 @@ CFB79F */
 }
 
 
-
 /* 사이드바 */
 .menu__link {
   font-size: 0.85rem; 
   font-weight: 400;   
+  line-height: 1.5;
 }
 
 .menu__link a {
@@ -81,4 +120,11 @@ CFB79F */
 
 .menu_src-theme-DocSidebar-Desktop-Content-styles-module{
   padding : 0 1rem !important;
+}
+
+
+/* 마크 */
+mark {
+  background-color: #e9dccd;
+  padding: 0 2px;
 }

@@ -1,11 +1,7 @@
 .searchContainer {
-    margin-top : 100px;
-  padding: 0 1.5rem 0 1rem;
+  padding: 60px 1.5rem 0 1rem;
 }
 
-.searchContainer img{
-    width:30px;
-}
 
 .searchInput {
   width: 100%;
@@ -21,3 +17,15 @@
   border-color: var(--ifm-color-primary);
   box-shadow: 0 0 0 2px var(--ifm-color-primary-tint);
 }
+
+.LogoContainer{
+    display:flex;
+    gap : 10px;
+    margin-bottom : 10px;
+    line-height: 2;
+}
+.LogoContainer img{
+    height: 30px;
+    width: auto;
+}
+

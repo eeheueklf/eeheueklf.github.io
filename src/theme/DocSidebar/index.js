@@ -42,7 +42,10 @@ export default function DocSidebar(props) {
   return (
     <>
       <div className={styles.searchContainer}>
-        <img src="/img/favicon.ico" alt="Logo" />
+        <div className={styles.LogoContainer}>
+          <img src="/img/favicon.ico" alt="Logo" />
+          <span>햄 랑 잉</span>
+        </div>
         <input
           type="text"
           className={styles.searchInput}

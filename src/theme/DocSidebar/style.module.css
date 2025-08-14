@@ -1,0 +1,23 @@
+.searchContainer {
+    margin-top : 100px;
+  padding: 0 1.5rem 0 1rem;
+}
+
+.searchContainer img{
+    width:30px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 1rem;
+  border: 1px solid var(--ifm-color-gray-200);
+  font-size: 0.9rem;
+  background-color: #f3f3f3;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-tint);
+}

@@ -5,26 +5,80 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary: #A7805D;
+  --ifm-color-primary-dark: #A2704C;
+  --ifm-color-primary-darker: #67442E;
   --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary-light: #A48E78;
+  --ifm-color-primary-lighter: #BDA087;
+  --ifm-color-primary-lightest: #CFB79F;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+
+  /* sidebar */
+  --doc-sidebar-width: 280px !important;
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
+  --ifm-navbar-height: 20px;
+  --ifm-menu-color-background-active : #e9dccd;
+  
+/* 67442E
+A2704C
+A7805D
+A48E78
+BDA087
+CFB79F */
+
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+
+.navbar {
+  display : none;
+}
+
+.theme-doc-sidebar {
+  background-color: #1e1e2f;
+}
+
+/* 카테고리 레이블 색 */
+.theme-doc-sidebar .menu__list-item.category > .menu__list-item-collapsible {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* 마크다운 페이지 링크 색 */
+.theme-doc-sidebar a.menu__link {
+  color: #ffffff;
+}
+
+/* 활성화된 페이지 강조 */
+.theme-doc-sidebar a.menu__link.menu__link--active {
+  background-color: #3b3b5e;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+
+
+/* 사이드바 */
+.menu__link {
+  font-size: 0.85rem; 
+  font-weight: 400;   
+}
+
+.menu__link a {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.menu__caret:before{
+  background: var(--ifm-menu-link-sublist-icon) 100% / 1rem 1rem !important;
+}
+
+.menu_src-theme-DocSidebar-Desktop-Content-styles-module{
+  padding : 0 1rem !important;
 }

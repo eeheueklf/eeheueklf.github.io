@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhamrang_log=self.webpackChunkhamrang_log||[]).push([[4409],{8949:e=>{e.exports=JSON.parse('{"title":"g-be-docs","description":"g-be-docs","slug":"/category/g-be-docs-2","permalink":"/docs/category/g-be-docs-2","navigation":{"next":{"title":"exp-1","permalink":"/docs/g-fe-docs/express/exp-1"}}}')}}]);

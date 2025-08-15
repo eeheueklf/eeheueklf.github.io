@@ -37,19 +37,21 @@
   
   /* 박스 */
   /* ::info ::note ::tip ::warning ::danger */
-  --ifm-color-info-contrast-background : #f0e4d6;
   --ifm-color-success-contrast-background : #eaf2e4;
   --ifm-color-warning-contrast-background : #fff4e0;
   --ifm-color-danger-contrast-background : #fdecea;
 
 
-  --ifm-color-info-dark : #bdb3a8;
-  /* --ifm-color-secondary-dark : white; */
   --ifm-color-success-dark : #c4d2b8;
   --ifm-color-warning-dark : #e8d1a8;
   --ifm-color-danger-dark : #e1b9b3;
 
+  --ifm-alert-border-radius : 10px;
   --ifm-alert-shadow :  4px 4px 1px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+
+  /* 토글 */
+  --ifm-color-info-dark : #9b928b;
+  --ifm-color-info-contrast-background : #ffffff;
 
   /* 코드블럭 */
   --ifm-font-family-monospace: "D2Coding", "Fira Code", monospace;
@@ -82,7 +84,6 @@ margin-bottom:20px;
   font-size : 0.8rem;
   padding: var(--ifm-alert-padding-vertical) 1rem;
   color: #4a5157;
-  border-radius: 10px;
 }
 .alert p{
   margin: 0 0 0.2rem;
@@ -90,7 +91,31 @@ margin-bottom:20px;
 .alert svg {
   height: 1.2em !important;
 }
+.theme-admonition-info {
+  font-size: 14px;
+  padding-top: -10px;
+  border:none;
+  border-left: 6px solid #a09287;
+  /* border-right: 6px solid #a09287; */
+  border-radius: 0;
+  /* box-shadow: none; */
+  background-color: #f9f6f0; /* 연한 베이지 */
+  min-width: 400px;
+  /* width : 50% */
+}
+.theme-admonition-info > :first-child {
+  display: none;
+}
 
+.theme-admonition-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* 토글 */
+details{
+  border-radius: 0 !important;
+}
 
 /* 제목 크기 */
 
@@ -99,15 +124,13 @@ margin-bottom:20px;
 }
 .markdown > h2{
   font-size : 1.6rem;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 .markdown > h3{
   font-size : 1.2rem;
 }
 
-.markdown h2, .markdown h3 {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
 
 .markdown p {
   line-height: 1.7;

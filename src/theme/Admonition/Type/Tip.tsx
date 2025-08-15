@@ -15,7 +15,7 @@ import IconTip from '@theme/Admonition/Icon/Tip';
 const infimaClassName = 'alert alert--success';
 
 const defaultProps = {
-  icon: '💡',
+  icon: '🌵',
 };
 
 export default function AdmonitionTypeTip(props: Props): JSX.Element {

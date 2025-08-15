@@ -15,7 +15,7 @@ import IconWarning from '@theme/Admonition/Icon/Warning';
 const infimaClassName = 'alert alert--warning';
 
 const defaultProps = {
-  icon: '📝',
+  icon: '🌞',
 };
 
 export default function AdmonitionTypeWarning(props: Props): JSX.Element {

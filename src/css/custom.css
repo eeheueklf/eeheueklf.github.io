@@ -21,22 +21,34 @@
   /* sidebar */
   --doc-sidebar-width: 280px !important;
   --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
   --ifm-font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
   --ifm-navbar-height: 20px;
   --ifm-menu-color-background-active : #e9dccd;
   --ifm-hover-overlay : #f3f3f3;
   
   /* 표 */
-  --ifm-table-cell-padding : 0.3rem 1rem;
-
-  /* 경고 박스 */
-  --ifm-color-info-contrast-background : white;
-  --ifm-list-paragraph-margin : 0;
-  --ifm-alert-shadow :  0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+  /* --ifm-table-cell-padding : 0.3rem 1rem; */
+  /* --ifm-table-stripe-background : #f0e4d6; */
+  /* --ifm-table-head-background : #e9dccd; */
+  /* --ifm-table-border-color : #e9dccd; */
   
-  /* 팁박스 */
-  --ifm-color-success-dark : black;
-  --ifm-color-info-dark : rgb(226, 226, 226);
+  /* 박스 */
+  /* ::info ::note ::tip ::warning ::danger */
+  --ifm-color-info-contrast-background : #f0e4d6;
+  --ifm-color-success-contrast-background : #eaf2e4;
+  --ifm-color-warning-contrast-background : #fff4e0;
+  --ifm-color-danger-contrast-background : #fdecea;
+
+
+  --ifm-color-info-dark : #bdb3a8;
+  /* --ifm-color-secondary-dark : white; */
+  --ifm-color-success-dark : #c4d2b8;
+  --ifm-color-warning-dark : #e8d1a8;
+  --ifm-color-danger-dark : #e1b9b3;
+
+  --ifm-alert-shadow :  4px 4px 1px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+
 
   --ifm-font-family-monospace: "D2Coding", "Fira Code", monospace;
 }
@@ -58,24 +70,21 @@ margin-bottom:20px;
 }
 
 /* 박스 */
+
 .alert{
   border: 1px solid var(--ifm-tabs-color-active-border);
   font-size : 0.8rem;
   padding: var(--ifm-alert-padding-vertical) 1rem;
   color: #4a5157;
+  border-radius: 10px;
 }
 .alert p{
   margin: 0 0 0.2rem;
 }
-.admonitionHeading_Gvgb{
-  display:none;
+.alert svg {
+  height: 1.2em !important;
 }
-.admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module{
-  display:none;
-}
-.admonitionHeading_node_modules{
-    display:none;
-}
+
 
 /* 제목 크기 */
 
@@ -92,6 +101,10 @@ margin-bottom:20px;
 /* 헤더 없앰 */
 .navbar {
   display : none;
+}
+
+.navbar--fixed-top{
+  display:none;
 }
 
 .theme-doc-sidebar {
@@ -149,4 +162,42 @@ code {
   /* color :rgb(128, 0, 0); */
   /* border:none; */
   background-color: #e6d8c8;
+}
+
+
+
+/* 표 */
+table {
+  font-size:12px;
+  text-align: left;
+}
+
+table td {
+  padding: 0.6em 0.8em;
+}
+
+
+/* 마우스 오버 효과 */
+table tr:hover {
+  background-color: #f0e4d6;
+}
+
+
+
+
+
+
+
+
+
+/* 스크롤바, 드래그 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e9dccd;
+  border-radius: 4px;
+}
+::selection {
+  background-color: #b6d8ec; /* 프라이머리 라이트 톤 */
 }

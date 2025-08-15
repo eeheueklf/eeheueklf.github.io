@@ -17,6 +17,8 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
+  /* 본문 글 간격 */
+  --ifm-leading-desktop : 0.8;
 
   /* sidebar */
   --doc-sidebar-width: 280px !important;
@@ -49,13 +51,15 @@
 
   --ifm-alert-shadow :  4px 4px 1px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
 
-
+  /* 코드블럭 */
   --ifm-font-family-monospace: "D2Coding", "Fira Code", monospace;
+  --ifm-pre-padding : 1.5rem;
+  --ifm-global-shadow-lw :4px 4px 1px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
 }
 
-article{
+/* article{
   width: 750px;
-}
+} */
 /* 이전-다음 글 */
 .pagination-nav{
   display:none;
@@ -68,6 +72,8 @@ article{
 .breadcrumbs {
 margin-bottom:20px;
 }
+
+
 
 /* 박스 */
 
@@ -96,6 +102,15 @@ margin-bottom:20px;
 }
 .markdown > h3{
   font-size : 1.2rem;
+}
+
+.markdown h2, .markdown h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.markdown p {
+  line-height: 1.7;
 }
 
 /* 헤더 없앰 */
@@ -162,9 +177,16 @@ code {
   /* color :rgb(128, 0, 0); */
   /* border:none; */
   background-color: #e6d8c8;
+  padding: 0.1em 0.3em;
+  font-size: 0.9rem;
+  border-radius: 4px;
 }
 
+/* 코드블럭 */
 
+pre code {
+  background: #f5f1ed !important;
+}
 
 /* 표 */
 table {

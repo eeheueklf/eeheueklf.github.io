@@ -15,30 +15,26 @@ sidebar_position: 2
 기초보다 입문 난이도가 더 쉬워서 입문부터 하는걸 추천함
 
 **목표**: 새로운 메서드의 등장 filter & 2차원 배열 순회
-- `forEach` ✨ 배열 순회 메서드 | 각 요소에 대해 부가적인 실행
-    
+- `forEach` ✨ 배열 순회 메서드 | 각 요소에 대해 부가적인 실행    
     `array.map((v,idx)=> console.log(v))`
     
-- `map` ✨ 배열 순회 메서드 | 각 요소를 변환해서 새 배열 반환
-    
+- `map` ✨ 배열 순회 메서드 | 각 요소를 변환해서 새 배열 반환    
     `array.map((v,idx)=> Number(v))`
     
-- `reduce` ✨ 배열 순회 메서드 | 하나의 누적된 값
-    
+- `reduce` ✨ 배열 순회 메서드 | 하나의 누적된 값    
     `array.reduce((acc,cur)=> acc + cur)`
     
-- `filter` ✨✨ 배열 순회 메서드 | 조건을 통과한 요소만 새 배열 생성
-    
+- `filter` ✨✨ 배열 순회 메서드 | 조건을 통과한 요소만 새 배열 생성    
     `array.filter((v,idx)=> v%2===0)`
     
-- 2차원 배열 순회와 구조분해
+- 2차원 배열 순회와 구조분해할당
 
-```jsx
-const queries = [[1, 3, 5], [2, 4, 7]];
-queries.forEach(([s, e, k]) => {
-  console.log(s, e, k); 
-});
-```
+    ```jsx
+    const queries = [[1, 3, 5], [2, 4, 7]];
+    queries.forEach(([s, e, k]) => {
+    console.log(s, e, k); 
+    });
+    ```
 :::
 
 ---
@@ -47,7 +43,7 @@ queries.forEach(([s, e, k]) => {
 
 ### 특정 문자 제거하기
 
-**각 요소를 조건에 따라 걸러야 할때 → filter**
+*각 요소를 조건에 따라 걸러야 할때 → filter*
 
 - `filter` 로 letter와 다른 문자만 통과
 - `.join` 으로 배열 → 문자열
@@ -87,7 +83,7 @@ function solution(angle) {
 
 ### 외계행성의 나이
 
-**각 원소를 변환 → map**
+*각 원소를 변환 → map*
 
 - 각 숫자(일의자리)를 알파벳으로 변환하기
 - `.map` 배열 돌면서 val을 97 + Number(val)로 바꿈
@@ -120,7 +116,7 @@ function solution(age) {
 
 ### 진료 순서 정하기
 
-**각 원소를 변환 → map**
+*각 원소를 변환 → map*
 
 - 정수 배열 `emergency`
 - 높은 순서대로 진료 순서 정하기
@@ -174,7 +170,7 @@ function solution(n) {
 
 ### 수열과 구간 쿼리 4 
 
-**각 원소에 대해 부가적인 실행 → forEach**
+*각 원소에 대해 부가적인 실행 → forEach*
 
 - 정수 배열 `arr`  2차원 정수 배열 `queries`
 - `.forEach` queries 돌면서 조건에 맞는 값을 더함
@@ -277,9 +273,11 @@ function solution(n, arr = []) {
 
 노가다로 품.
 
+---
+
 ### 글자 이어붙여 문자열 만들기
 
-**각 원소에 대한 부가적인 실행 → forEach**
+*각 원소에 대한 부가적인 실행 → forEach*
 
 - `.forEach`로 배열 돌면서 글자 이어붙임
 
@@ -293,7 +291,7 @@ function solution(my_string, index_list) {
 
 **✨ 개선 코드**
 
-**각 요소를 변환 → map 사용 가능함**
+*각 요소를 변환 → map 사용 가능함*
 
 - `map` 사용해서 인덱스를 문자로 바꿈
 

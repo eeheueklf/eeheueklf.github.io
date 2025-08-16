@@ -12,37 +12,41 @@ sidebar_position: 2
 
 :::warning
 #### ✨Day 3-4
-JavaScript에서 많이 쓰이는 forEach, map, 스프레드 연산자에 익숙해져보자
 
 **목표**: for 반복문 대신 JS의 forEach와 map 써보기  
-반복문을 써야하는 코드가 많은데 JS의 **forEach, map** 메서드를 잘 활용해보자!  
-JS에서 배열을 순회하는 방법 중 forEach와 map 메서드는 자주 쓰이면서도 다른 방식으로 사용된다.
+JavaScript에서 많이 쓰이는 forEach, map, 스프레드 연산자에 익숙해져보자   
+JS에서 배열을 순회하는 방법 중 **forEach**와 **map** 메서드는 자주 쓰이면서도 다른 방식으로 사용된다.
 
-**forEach**
-- 배열의 각 요소를 하나씩 실행할 때 사용
-- **반환값이 없고** 그냥 반복 작업용
-- 배열을 순회하며 콘솔 출력, 변수 변경 등을 할때 사용된다
+- 배열 순회  
+    `forEach` ✨ 각 요소에 대해 함수 실행  
+    `map` ✨ 각 요소를 변환해서 새 배열 반환  
 
-```jsx
-const numbers = [1, 2, 3];
-numbers.forEach((value, index) => {
-  console.log(`index: ${index}, value: ${value}`);
-});
-// index: 0, value: 1
-// index: 1, value: 2
-// index: 2, value: 3
-```
-**map**
+- `forEach` ✨ 배열 순회 메서드 | 각 요소에 대해 부가적인 실행    
+    `array.map((v,idx)=> console.log(v))`
+  - 배열의 각 요소를 하나씩 실행할 때 사용
+  - **반환값이 없고** 그냥 반복 작업용
+  - 배열을 순회하며 콘솔 출력, 변수 변경 등을 할때 사용된다
+    ```jsx
+    const numbers = [1, 2, 3];
+    numbers.forEach((value, index) => {
+    console.log(`index: ${index}, value: ${value}`);
+    });
+    // index: 0, value: 1
+    // index: 1, value: 2
+    // index: 2, value: 3
+    ```
 
-- 배열의 각 요소에 대해 함수를 적용한 **새 배열**을 반환
-- 원본 배열은 변경하지 않음
-- 반환된 새 배열을 바로 변수에 저장 혹은 리턴 가능
+- `map` ✨ 배열 순회 메서드 | 각 요소를 변환해서 새 배열 반환    
+    `array.map((v,idx)=> Number(v))`
 
-```jsx
-const names = ['alice', 'bob', 'charlie'];
-const upperNames = names.map(name => name.toUpperCase());
-console.log(upperNames); // ["ALICE", "BOB", "CHARLIE"]
-```
+  - 배열의 각 요소에 대해 함수를 적용한 **새 배열**을 반환
+  - 원본 배열은 변경하지 않음
+  - 반환된 새 배열을 바로 변수에 저장 혹은 리턴 가능
+    ```jsx
+    const names = ['alice', 'bob', 'charlie'];
+    const upperNames = names.map(name => name.toUpperCase());
+    console.log(upperNames); // ["ALICE", "BOB", "CHARLIE"]
+    ```
 
 즉  
 **각 원소를 변환할때 → map,**  

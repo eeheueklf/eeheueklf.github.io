@@ -16,28 +16,27 @@ sidebar_position: 2
 기초보다 입문 난이도가 더 쉬워서 입문부터 하는걸 추천함
 
 **목표**: 새로운 메서드의 등장 reduce & 구조분해할당
-- `forEach` ✨ 배열 순회 메서드 | 각 요소에 대해 부가적인 실행
-    
+- `forEach` ✨ 배열 순회 메서드 | 각 요소에 대해 부가적인 실행    
     `array.map((v,idx)=> console.log(v))`
     
-- `map` ✨ 배열 순회 메서드 | 각 요소를 변환해서 새 배열 반환
-    
+- `map` ✨ 배열 순회 메서드 | 각 요소를 변환해서 새 배열 반환    
     `array.map((v,idx)=> Number(v))`
     
-- `reduce` ✨✨ 배열 순회 메서드 | 하나의 누적된 값
-    
+- `reduce` ✨✨ 배열 순회 메서드 | 하나의 누적된 값    
     `array.reduce((acc,cur)=> acc + cur)`
-- 구조분해할당 | 배열이나 객체를 풀어서 변수로 만드는 문법
+- `구조분해할당` | 배열이나 객체를 풀어서 변수로 만드는 문법
 
-```jsx
-//배열 구조 분해
-const fruits = ["apple", "banana", "cherry"];
-const [first, second, third] = fruits;
+    ```jsx
+    //배열 구조 분해
+    const fruits = ["apple", "banana", "cherry"];
+    const [first, second, third] = fruits;
 
-//객체 구조 분해
-const user = { name: "kkabu", age: 20 };
-const { name, age } = user;
-```
+    //객체 구조 분해
+    const user = { name: "kkabu", age: 20 };
+    const { name, age } = user;
+    ```
+- 변수 스왑  
+    `[a,b] = [b,a]` : swap
 :::
 
 ---
@@ -86,7 +85,7 @@ const solution = (price) => {
 
 ### 짝수 홀수 개수
 
-**각 원소에 대한 부가적인 실행 → forEach**
+*각 원소에 대한 부가적인 실행 → forEach*
 
 - `forEach` 사용하여 num_list 돌면서 홀수, 짝수 개수 값 증가
 
@@ -101,7 +100,7 @@ function solution(num_list) {
 
 ### 문자 반복 출력하기
 
-**my_string의 각 원소를 변환 → map**
+*my_string의 각 원소를 변환 → map*
 
 - `[…my_string]` 문자열을 배열로 변환하여 반복문 처리
 - `map` 사용하여 my_string각 원소를 n번씩 반복한 결과 리턴
@@ -149,7 +148,7 @@ function solution(code) {
 
 **✨개선코드**
 
-**code의 원소에 따른 부가적인 실행 → forEach**
+*code의 원소에 따른 부가적인 실행 → forEach*
 
 - `forEach`
 
@@ -191,7 +190,7 @@ function solution(a, d, included) {
 
 **✨개선코드**
 
-**누적된 값을 구할때 → reduce**
+*누적된 값을 구할때 → reduce*
 
 - `reduce` ✨✨ 배열 순회 메서드 | 하나의 누적된 값
 - `array.reduce((acc, cur, idx) => { ... }, 초기값)`
@@ -239,7 +238,7 @@ function solution(num_list) {
 
 ### 수 조작하기1
 
-**각 원소에 대한 부가적인 실행 → forEach**
+*각 원소에 대한 부가적인 실행 → forEach*
 
 - 정수 `n` 문자열 `control`
 - control 규칙에 따라 n을 바꿈
@@ -261,7 +260,7 @@ function solution(n, control) {
 
 **✨개선코드**
 
-**누적값을 계산할 때 → reduce**
+*누적값을 계산할 때 → reduce*
 
 - 연산 결과가 미리 계산된 **객체** `operations`사용
 - `reudce` 로 누적 계산
@@ -301,7 +300,6 @@ function solution(numLog) {
     return answer;
 }
 ```
----
 
 **✨개선코드**
 
@@ -340,7 +338,6 @@ function solution(arr, queries) {
     return arr;
 }
 ```
----
 
 **✨개선코드**
 
@@ -379,7 +376,6 @@ function solution(arr, queries) {
     return result;
 }
 ```
----
 
 **✨개선코드**
 
@@ -389,7 +385,8 @@ function solution(arr, queries) {
 
 ```jsx
 function solution(arr, queries) {
-    return queries.map(([s, e, k]) => arr.slice(s, e + 1).filter((n) => n > k).sort((a, b) => a - b)[0] || -1);
+    return queries.map(([s, e, k]) => arr.slice(s, e + 1)
+    .filter((n) => n > k).sort((a, b) => a - b)[0] || -1);
 }
 
 ```

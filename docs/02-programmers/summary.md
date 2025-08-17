@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 0️⃣ INTRO
+# 🪵 INTRO
 
 :::note
 [프로그래머스] <mark>일일 도전 과제 문제 풀이 정리</mark>입니다.  
@@ -11,7 +11,7 @@ sidebar_position: 1
 :::
 
 
-## 1️⃣ 입문 & 기초
+## 입문 & 기초
 
 
 :::warning
@@ -72,7 +72,7 @@ sidebar_position: 1
     `indexOf` 🔍 찾으려는 첫번째 인덱스 반환  
     `lastIndexOf` 🔍 찾으려는 마지막 인덱스 반환  
     `includes` 🔍  포함 여부 확인  
-    `slice` 🔄  문자열/배열 자르기 | 새 문자열/배열 반
+    `slice` 🔄  문자열/배열 자르기 | 새 문자열/배열 반환
     `forEach` ⏺️ 각 요소에 대해 부가적인 실행  
 
 
@@ -84,9 +84,5 @@ sidebar_position: 1
 - 정규식    
     `/zero|one|two|.../g` : OR 패턴, 전역 치환  
     `new RegExp(str,'g')` : 문자열 동적 패턴
-:::
 
-    `.toUpperCase` 🔄 문자열을 대문자로 변환  
-    `.toLowerCase` 🔄 문자열을 소문자로 변환  
-    `split('')`  💜 문자열을 배열로  
-    `join`  💚 배열을 문자열로  
+:::

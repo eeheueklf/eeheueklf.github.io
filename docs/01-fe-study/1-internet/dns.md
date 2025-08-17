@@ -15,9 +15,14 @@ sidebar_position: 9
 ## 1.4. DNS and how it works?
 
 :::info
-#### DNS는 무엇이고 어떻게 작동하는가?
+- [DNS 개념 \& 동작 원리](#dns-개념--동작-원리)
+  - [1.4. DNS and how it works?](#14dns-and-how-it-works)
+    - [DNS(Domain Name System)란?](#dnsdomain-name-system란)
+    - [naver.com을 입력하면 일어나는 일](#navercom을-입력하면-일어나는-일)
+    - [DNS가 어떻게 IP를 찾을까?](#dns가-어떻게-ip를-찾을까)
+    - [DNS 캐시란?](#dns-캐시란)
+      - [**🕓** TTL(Time To Live)이란?](#-ttltime-to-live이란)
 
-- DNS | IP주소 | 캐시
 :::
 
 <br/>
@@ -28,7 +33,7 @@ sidebar_position: 9
 
 `DNS`는 사용자가 입력한 **도메인 이름**을 해당하는 **IP주소**로 변환하는 시스템이며, 반대로 IP주소를 도메인으로 바꾸는 역할도 수행합니다.
 
-<br/>
+
 ---
 
 ### naver.com을 입력하면 일어나는 일
@@ -78,7 +83,7 @@ DNS가 실제로 어떻게 작동하는지 알아보기 위해, 사용자가 브
 
 이처럼 DNS는 루트 서버부터 시작해 점점 구체적인 정보를 가진 서버를 탐색하며 원하는 도메인의 IP주소를 찾아냅니다.
 
-<br/>
+
 ---
 
 ### DNS 캐시란?

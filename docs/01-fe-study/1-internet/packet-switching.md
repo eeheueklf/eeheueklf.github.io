@@ -14,11 +14,13 @@ sidebar_position: 3
 ## 1.1. How does the internet work?
 
 :::info
-#### 인터넷 동작 방식
+- [패킷 스위칭, 인터넷 프로토콜](#패킷-스위칭-인터넷-프로토콜)
+  - [1.1. How does the internet work?](#11-how-does-the-internet-work)
+    - [1. 패킷스위칭 Packet Switching](#1-패킷스위칭-packet-switching)
+    - [2. 패킷의 구조](#2-패킷의-구조)
+    - [3. 프로토콜](#3-프로토콜)
+    - [4. 인터넷 프로토콜 (IP)](#4-인터넷-프로토콜-ip)
 
-인터넷에서의 데이터 이동
-
-- 패킷 | 헤더 | **패킷스위칭** | 프로토콜 | **IP**
 :::
 
 ### 1. 패킷스위칭 Packet Switching

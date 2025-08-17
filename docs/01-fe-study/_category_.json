@@ -1,7 +1,10 @@
 {
-  "label": "❤️‍🔥프론트엔드 로드맵 2025",
+  "label": "프론트엔드 로드맵 2025",
   "position": 2,
   "link": {
-    "type": "generated-index",
+    "type": "generated-index"
+  },
+  "customProps": {
+    "icon": "/icon/1.jpg"
   }
 }

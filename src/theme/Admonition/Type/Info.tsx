@@ -14,10 +14,14 @@ import IconInfo from '@theme/Admonition/Icon/Info';
 
 const infimaClassName = 'alert alert--info';
 
+const defaultProps = {
+  icon: '🐻',
+};
 
 export default function AdmonitionTypeInfo(props: Props): JSX.Element {
   return (
     <AdmonitionLayout
+      {...defaultProps}
       {...props}
       className={clsx(infimaClassName, props.className)}>
       {props.children}

@@ -15,10 +15,12 @@ sidebar_position: 6
 ## 1.2. What is a HTTP?
 
 :::info
-#### HTTP란?
-상태 유지🍪
-
-- 쿠키🍪 | SessionStorage | LocalStorage
+- [LocalStorage와 sessionStorage (with 쿠키)](#localstorage와-sessionstorage-with-쿠키)
+  - [1.2. What is a HTTP?](#12-what-is-a-http)
+    - [쿠키(Cookie)](#쿠키cookie)
+    - [웹 스토리지 Web Storage (HTML5)](#웹-스토리지-web-storage-html5)
+    - [로컬 스토리지 LocalStorage](#로컬-스토리지-localstorage)
+    - [세션 스토리지 SessionStorage](#세션-스토리지-sessionstorage)
 
 :::
 <br/>
@@ -35,9 +37,9 @@ sidebar_position: 6
 - 도메인 기반으로 저장되며 브라우저 간 공유 가능
 - 단점: 작은 용량, 서버 전송으로 인한 트래픽 증가, 보안 취약
 
-<br/>
+
 ---
-<br/>
+
 
 ### 웹 스토리지 Web Storage (HTML5)
 
@@ -62,9 +64,9 @@ HTML5에서는 쿠키의 단점들을 보완한 좀 더 간단한 웹 저장소(
 3) 용량의 제한이 크다.
 4) 쿠키는 같은 브라우저라면 값을 공유했는데, sessionStorage는 같은 브라우저여도, 다른 탭이라면 값을 공유하지 않는다.
 
-<br/>
+
 ---
-<br/>
+
 
 ### 로컬 스토리지 LocalStorage
 
@@ -105,9 +107,9 @@ example.com에서 생성된 쿠키는, example.com 도메인으로 요청을 보
 이때 동일한 도메인에 포함된 다른 **서브 페이지 또한 쿠키에 접근**할 수 있기 때문에 **보안**상이나 **트래픽 문제**가 발생합니다. 
 :::
 
-<br/>
+
 ---
-<br/>
+
 
 
 ++ **쿠키와 웹 스토리지 사용처**

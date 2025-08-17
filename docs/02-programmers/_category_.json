@@ -1,7 +1,10 @@
 {
-  "label": "🔥프로그래머스 코딩테스트",
+  "label": "프로그래머스 코딩테스트",
   "position": 3,
   "link": {
-    "type": "generated-index",
+    "type": "generated-index"
+  },
+  "customProps": {
+    "icon": "/icon/2.jpg"
   }
 }

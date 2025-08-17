@@ -7,7 +7,7 @@
 /* You can override the default Infima variables here. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
-  --ifm-color-primary: #A7805D;
+  --ifm-color-primary: #72481d;
   --ifm-color-primary-dark: #A2704C;
   --ifm-color-primary-darker: #67442E;
   --ifm-color-primary-darkest: #205d3b;
@@ -16,18 +16,25 @@
   --ifm-color-primary-lightest: #CFB79F;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
   /* 본문 글 간격 */
   --ifm-leading-desktop : 0.8;
 
+  /* 구분선 */
+  --ifm-hr-margin-vertical : 3rem;
+
   /* sidebar */
   --doc-sidebar-width: 280px !important;
-  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
   --ifm-font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
   --ifm-navbar-height: 20px;
   --ifm-menu-color-background-active : #e9dccd;
   --ifm-hover-overlay : #f3f3f3;
+  --ifm-menu-color: #383838;
+  --ifm-menu-link-padding-horizontal : 0.5rem;
+  --ifm-menu-color-background-active : #f3f3f3;
+  --ifm-menu-color-active : var(--ifm-menu-color);
   
   /* 표 */
   /* --ifm-table-cell-padding : 0.3rem 1rem; */
@@ -49,19 +56,32 @@
   --ifm-alert-border-radius : 10px;
   --ifm-alert-shadow :  4px 4px 1px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
 
+  --ifm-link-color: #1c1e21;
+  --ifm-list-item-margin: 0;
   /* 토글 */
   --ifm-color-info-dark : #9b928b;
   --ifm-color-info-contrast-background : #ffffff;
 
   /* 코드블럭 */
-  --ifm-font-family-monospace: "D2Coding", "Fira Code", monospace;
+  --ifm-font-family-monospace: 'Fira Code', Consolas, 'Courier New', monospace;
   --ifm-pre-padding : 1.5rem;
   --ifm-global-shadow-lw :4px 4px 1px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+
+  --code-text-color : #d63d2c;
+
+  /* 코드 */
+  --code-area-bg : #ececec;
+  --code-area-border : #d4d5d8;
+  --ifm-code-font-size : 90%;
+
+  /* 제목 왼쪽 border 색 */
+  --h3-border-color : #727272;
+  
+  /* 마크 */
+  --mark-highlight-shadow : #fcf3d9;
+
 }
 
-/* article{
-  width: 750px;
-} */
 /* 이전-다음 글 */
 .pagination-nav{
   display:none;
@@ -72,13 +92,12 @@
 }
 /* 제목 위치 */
 .breadcrumbs {
-margin-bottom:20px;
+  margin-bottom:20px;
 }
 
 
 
 /* 박스 */
-
 .alert{
   border: 1px solid var(--ifm-tabs-color-active-border);
   font-size : 0.8rem;
@@ -91,26 +110,42 @@ margin-bottom:20px;
 .alert svg {
   height: 1.2em !important;
 }
-.theme-admonition-info {
-  font-size: 14px;
-  padding-top: -10px;
-  border:none;
-  border-left: 6px solid #a09287;
-  /* border-right: 6px solid #a09287; */
-  border-radius: 0;
-  /* box-shadow: none; */
-  background-color: #f9f6f0; /* 연한 베이지 */
-  min-width: 400px;
-  /* width : 50% */
-}
-.theme-admonition-info > :first-child {
-  display: none;
-}
 
+/* 목차 */
+.theme-admonition-info {
+  border-radius: 4px;
+  background-color: #f9f9f9; 
+  padding: 20px 16px;  
+  font-size: 14px;
+  line-height: 2.2;
+  width: 50%;
+  min-width: 300px;
+  margin-bottom : 50px !important;
+}
+.theme-admonition-info a {
+  text-decoration: none; 
+  color: inherit; 
+  font-size: 14px;
+}
+.theme-admonition-info a:hover {
+  color: var(--ifm-color-primary); 
+  box-shadow: inset 0 -10px 0 var(--mark-highlight-shadow); 
+}
 .theme-admonition-info ul {
   list-style: none;
-  padding-left: 0;
+  padding-left: 10px; 
+  margin: 0;
 }
+.theme-admonition-info ul ul {
+  padding-left: 10px; 
+}
+.theme-admonition-info ul ul ul {
+  padding-left: 10px;
+}
+.theme-admonition-info ul ul ul ul {
+  padding-left: 10px;
+}
+
 
 /* 토글 */
 details{
@@ -120,17 +155,18 @@ details{
 /* 제목 크기 */
 
 .markdown > h1{
-  font-size : 2rem;
+  font-size : 2.1rem;
 }
 .markdown > h2{
   font-size : 1.6rem;
   margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
 }
 .markdown > h3{
-  font-size : 1.2rem;
+  font-size : 1.4rem;
+  border-left: 3px solid var(--h3-border-color);
+  padding-left : 20px;
 }
-
 
 .markdown p {
   line-height: 1.7;
@@ -149,88 +185,72 @@ details{
   background-color: #1e1e2f;
 }
 
-/* 카테고리 레이블 색 */
-.theme-doc-sidebar .menu__list-item.category > .menu__list-item-collapsible {
-  color: #ffd700;
-  font-weight: bold;
-}
-
-/* 마크다운 페이지 링크 색 */
-.theme-doc-sidebar a.menu__link {
-  color: #ffffff;
-}
-
-/* 활성화된 페이지 강조 */
-.theme-doc-sidebar a.menu__link.menu__link--active {
-  background-color: #3b3b5e;
-  color: #ffffff;
-  border-radius: 4px;
-}
-
 
 /* 사이드바 */
 .menu__link {
   font-size: 0.85rem; 
   font-weight: 400;   
   line-height: 1.5;
-}
-
-.menu__link a {
-  font-size: 0.95rem;
-  font-weight: 400;
+  letter-spacing: -0.3px;
 }
 
 .menu__caret:before{
   background: var(--ifm-menu-link-sublist-icon) 100% / 1rem 1rem !important;
 }
 
-nav{
-  padding : 0 1rem !important;
+.sidebar-category-icon{
+  border-radius :3px;
 }
+
 
 
 /* 마크 */
 mark {
-  background-color: #e9dccd;
-  padding: 0 2px;
+  background-color: inherit;
+  padding: 0 3px;
+  box-shadow: inset 0 -10px 0 var(--mark-highlight-shadow); 
+  color:inherit;
 }
+
 
 /* 코드 */
 code {
-  /* color :rgb(128, 0, 0); */
-  /* border:none; */
-  background-color: #e6d8c8;
-  padding: 0.1em 0.3em;
-  font-size: 0.9rem;
-  border-radius: 4px;
+  padding: 2px 6px;
+  color : var(--code-text-color);
+  border: 1px solid #e1e4e8;  
+  letter-spacing: -0.3px;
 }
 
-/* 코드블럭 */
-
-pre code {
-  background: #f5f1ed !important;
+code:hover{
+  background-color: rgb(255, 255, 255);
 }
 
-/* 표 */
+/* 코드블럭 - 같은 code임 */
+pre code{
+  background: var(--code-area-bg) !important;
+  border: 1px solid var(--code-area-border);
+  letter-spacing: 0px;
+}
+
+/* 테이블 */
 table {
   font-size:12px;
   text-align: left;
 }
 
+table code{
+  font-size:12px;
+  background-color: rgb(238, 238, 238);
+  color : #d63624;
+  padding: 2px 6px;
+}
+table code:hover{
+  background-color: rgb(255, 255, 255);
+}
+
 table td {
-  padding: 0.6em 0.8em;
+  padding: 0.7em 0.8em;
 }
-
-
-/* 마우스 오버 효과 */
-table tr:hover {
-  background-color: #f0e4d6;
-}
-
-
-
-
-
 
 
 
@@ -244,5 +264,6 @@ table tr:hover {
   border-radius: 4px;
 }
 ::selection {
-  background-color: #b6d8ec; /* 프라이머리 라이트 톤 */
+  background-color: #b6d8ec;
 }
+

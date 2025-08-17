@@ -15,27 +15,12 @@ sidebar_position: 7
 ## 1.2. What is a HTTP?
 
 :::info
-#### HTTP란?
+- [HTTP vs HTTPS / REST / CORS](#http-vs-https--rest--cors)
+  - [1.2. What is a HTTP?](#12-what-is-a-http)
+  - [HTTP와 HTTPS의 차이점이 무엇인가요](#http와-https의-차이점이-무엇인가요)
+  - [REST / REST API / RESTful API란 무엇인가요](#rest--rest-api--restful-api란-무엇인가요)
+  - [CORS에 대해서 설명해주세요.](#cors에-대해서-설명해주세요)
 
-HTTP 기본 내용
-
-- **HTTP란?** | HTTP요청 | HTTP응답
-
-HTTP 특징
-
-- **무상태와 비연결성** | 쿠키🍪 | 세션
-
-상태 유지🍪
-
-- 쿠키🍪 | SessionStorage | LocalStorage
-
-전반적인 개념 정리
-
-- HTTP vs HTTPS 
-
-- API | REST API | RESTful API 
-
-- CORS
 :::
 
 ## HTTP와 HTTPS의 차이점이 무엇인가요
@@ -50,9 +35,9 @@ HTTP 특징
 
 [자세한 HTTPS 동작 과정 - 브라우저 동작 과정 한눈에 보기✨](https://eeheueklf.github.io/docs/fe-study/browser/)
 
-<br/>
+
 ---
-<br/>
+
 
 ## REST / REST API / RESTful API란 무엇인가요
 
@@ -94,9 +79,9 @@ REST한 API를 제공하는 웹 어플리케이션을 RESTful 하다고 부르�
 
 ![restfulapi](./img/restfulapi.png)
 
-<br/>
+
 ---
-<br/>
+
 
 ## CORS에 대해서 설명해주세요.
 

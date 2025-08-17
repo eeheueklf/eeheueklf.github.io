@@ -14,9 +14,19 @@ sidebar_position: 8
 ## 1.3. What is a Domain Name?
 
 :::info
-#### 도메인 이름이란?
-
-- 도메인 이름 | URL | URI | DNS
+- [Domain과 URI / URL](#domain과-uri--url)
+  - [1.3. What is a Domain Name?](#13-what-is-a-domain-name)
+    - [도메인 이름(Domain Name)이란?](#도메인-이름domain-name이란)
+    - [도메인 구조에 대해 알아보자](#도메인-구조에-대해-알아보자)
+      - [루트도메인](#루트도메인)
+      - [최상위 도메인(TLD, Top Level Domain)](#최상위-도메인tld-top-level-domain)
+      - [2단계 도메인(SLD, Second-)](#2단계-도메인sld-second-)
+      - [도메인 이름(Domain Name)](#도메인-이름domain-name)
+      - [서브도메인](#서브도메인)
+    - [URI, URL, 도메인 쉽게 정리하기](#uri-url-도메인-쉽게-정리하기)
+      - [URI](#uri)
+      - [URL](#url)
+      - [도메인](#도메인)
 
 :::
 
@@ -91,9 +101,9 @@ google.com
 
 www.google.com / blog.naver.com / mail.google.com
 
-<br/>
+
 ---
-<br/>
+
 
 ### URI, URL, 도메인 쉽게 정리하기
 

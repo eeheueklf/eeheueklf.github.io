@@ -20,11 +20,19 @@ HTTP는 관련 개념이 정말 많은데요 (포스팅 4개짜리임)
 ## 1.2. What is a HTTP?
 
 :::info
-#### HTTP란?
-
-HTTP 기본 내용
-
-- **HTTP란?** | HTTP요청 | HTTP응답
+- [HTTP 요청 HTTP 응답 : 웹 통신의 기본 프로토콜](#http-요청-http-응답--웹-통신의-기본-프로토콜)
+	- [1.2. What is a HTTP?](#12-what-is-a-http)
+		- [1. HTTP](#1-http)
+		- [2. HTTP 요청](#2-http-요청)
+			- [2.1 start line](#21-start-line)
+				- [HTTP 메서드](#http-메서드)
+			- [2.2 headers](#22-headers)
+			- [2.3 HTTP 본문](#23-http-본문)
+		- [3. HTTP 응답](#3-http-응답)
+			- [3.1 Status Line](#31-status-line)
+				- [HTTP 상태 코드 (Status Code)](#http-상태-코드-status-code)
+			- [3.2 headers](#32-headers)
+			- [3.3 body](#33-body)
 
 :::
 
@@ -43,9 +51,9 @@ HTTP는 웹에서 데이터를 주고 받기 위해 **서버-클라이언트**(�
 
 우리가 접속하는 사이트주소(URL)도 `프로토콜 + 도메인 이름 + 경로`로 이루어져 있습니다.
 
-<br/>
+
 ---
-<br/>
+
 
 ### 2. HTTP 요청
 
@@ -128,9 +136,9 @@ HTML코드, CSS, JS 파일이 포함될 수 있으며
 ID 및 비밀번호 또는 양식에 입력된 기타 데이터와 같이 웹 서버에 제출되는 모든 정보가 포함됩니다.
 
 
-<br/>
+
 ---
-<br/>
+
 
 ### 3. HTTP 응답
 

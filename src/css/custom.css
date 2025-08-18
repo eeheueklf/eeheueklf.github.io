@@ -31,8 +31,8 @@
   --ifm-navbar-height: 20px;
   --ifm-menu-color-background-active : #e9dccd;
   --ifm-hover-overlay : #f3f3f3;
-  --ifm-menu-color: #383838;
-  --ifm-menu-link-padding-horizontal : 0.5rem;
+  --ifm-menu-color: #414141;
+  --ifm-menu-link-padding-horizontal : 1rem;
   --ifm-menu-color-background-active : #f3f3f3;
   --ifm-menu-color-active : var(--ifm-menu-color);
   
@@ -200,6 +200,10 @@ details{
 
 .sidebar-category-icon{
   border-radius :3px;
+}
+
+.menu{
+  padding : 0 0.7rem !important;
 }
 
 

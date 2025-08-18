@@ -20,7 +20,7 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  trailingSlash: true,
+  trailingSlash: false,
 
   i18n: {
     defaultLocale: 'ko',

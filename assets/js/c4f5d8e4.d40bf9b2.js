@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhamrang_log=self.webpackChunkhamrang_log||[]).push([[2634],{192:(r,a,n)=>{n.r(a),n.d(a,{default:()=>t});var e=n(6347),s=n(4848);function t(){return(0,s.jsx)(e.rd,{to:"/docs/intro"})}}}]);

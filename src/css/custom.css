@@ -80,6 +80,10 @@
   /* 마크 */
   --mark-highlight-shadow : #fcf3d9;
 
+  /* 하이퍼링크 */
+  --mark-hyperlink-color: rgb(219, 45, 45);
+  --mark-hyperlink-hover: rgb(45, 45, 219);
+
 }
 
 /* 이전-다음 글 */
@@ -235,6 +239,22 @@ pre code{
   border: 1px solid var(--code-area-border);
   letter-spacing: 0px;
 }
+
+/* 링크 - 같은 code임 */
+a code {
+  text-decoration: underline solid var(--mark-hyperlink-color);
+  text-underline-offset: 3px;
+  padding: 0;
+  color : var(--mark-hyperlink-color);
+  border: none;  
+  background-color: inherit;
+  font-weight: bold;
+}
+a code:hover {
+  text-decoration: underline solid var(--mark-hyperlink-hover);
+  color : var(--mark-hyperlink-hover);
+}
+
 
 /* 테이블 */
 table {

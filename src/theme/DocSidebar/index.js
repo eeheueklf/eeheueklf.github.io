@@ -19,40 +19,8 @@ export default function DocSidebar(props) {
     windowSize === 'desktop' || windowSize === 'ssr';
   // Mobile sidebar not visible on hydration: can avoid SSR rendering
   const shouldRenderSidebarMobile = windowSize === 'mobile';
-  const handleSearch = (e) => {
-    const query = e.target.value.toLowerCase();
-    const items = document.querySelectorAll('.menu__list-item');
-
-    items.forEach((item) => {
-      const link = item.querySelector('.menu__link');
-      const text = link ? link.textContent.toLowerCase() : '';
-
-      const childLinks = item.querySelectorAll('.menu__link');
-      const matchesChild = Array.from(childLinks).some((child) =>
-        child.textContent.toLowerCase().includes(query)
-      );
-
-      if (text.includes(query) || matchesChild) {
-        item.style.display = '';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  };
   return (
     <>
-      <div className={styles.searchContainer}>
-        <div className={styles.LogoContainer}>
-          <img src="/img/favicon.ico" alt="Logo" />
-          <span>햄 랑 잉</span>
-        </div>
-        <input
-          type="text"
-          className={styles.searchInput}
-          placeholder="문서 검색하기"
-          onInput={handleSearch}
-        />
-      </div>
       {shouldRenderSidebarDesktop && <DocSidebarDesktop {...props} />}
       {shouldRenderSidebarMobile && <DocSidebarMobile {...props} />}
     </>

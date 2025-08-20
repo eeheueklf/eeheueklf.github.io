@@ -34,12 +34,14 @@ sidebar_position: 1
     `map` ✨ 각 요소를 변환해서 새 배열 반환  
     `reduce` ✨ 하나의 누적된 값  
     `filter` ✨ 조건을 통과한 요소만 새 배열 생성  
+    `some` ✨ 조건을 만족하는 요소가 있으면 true  
+    `every` ✨ 모든 요소가 조건을 만족하면 true  
 
 - 기타  
     `sort` 💚 배열 정렬 | 원본 변경  
     `push/pop` 💚 요소 추가 | 원본 변경  
     `join`  💚 배열을 문자열로  
-
+    `new Set()` : 배열 중복 제거
 
 문자열 메서드
 
@@ -51,6 +53,7 @@ sidebar_position: 1
     `indexOf` 🔍 찾으려는 문자열의 첫번째 인덱스 반환  
     `lastIndexOf` 🔍 찾으려는 문자열의 마지막 인덱스 반환  
     `includes` 🔍 문자열 포함 여부 확인  
+    `match` 🔍 정규식으로 일치하는 부분 검색
 
 - 문자열 치환/변환  
     `substr` 🔄 일정 길이로 문자열 자르기
@@ -85,4 +88,10 @@ sidebar_position: 1
     `/zero|one|two|.../g` : OR 패턴, 전역 치환  
     `new RegExp(str,'g')` : 문자열 동적 패턴
 
+- 수학
+    `Math.pow`, `2 ** x` : 거듭제곱  
+    `Math.log2` : 2를 밑으로 한 로그  
+    `Math.floor` : 소수 내림  
+    `Math.ceil` : 소수 올림  
+    `Math.abs` : 절댓값     
 :::

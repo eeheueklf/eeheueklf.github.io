@@ -8,10 +8,10 @@ sidebar_position: 1
 웹 페이지를 꾸미는 데 꼭 필요한 <mark>CSS의 기본 개념과 구조</mark>를 정리했습니다.
 :::
 
-## 1.6.
+## 3.1. Learn the basics
 :::info
 - [CSS 기초 \& 기본기 다지기](#css-기초--기본기-다지기)
-  - [1.6.](#16)
+  - [3.1. Learn the basics](#31-learn-the-basics)
     - [CSS란?](#css란)
     - [CSS ruleset](#css-ruleset)
       - [여러 요소 선택하기](#여러-요소-선택하기)
@@ -20,7 +20,6 @@ sidebar_position: 1
     - [CSS 적용 우선 순위(Cascading)](#css-적용-우선-순위cascading)
     - [단위 (units)](#단위-units)
     - [색상 표현 방식](#색상-표현-방식)
-    - [레이아웃 기초](#레이아웃-기초)
 
 :::
 
@@ -135,22 +134,3 @@ CSS에서는 색상을 표현하기 위해 다양한 방식을 사용합니다.
 - RGBA : `rgb(225,0,0, 0.1)` (빨강에 투명도 10%)
 
 ---
-
-### 레이아웃 기초
-
-display
-
-- `block` : 한 줄 전체를 차지 (예: `<div>`, `<p>`)
-- `inline` : 글자처럼 흐름에 맞게 배치 (예: `<span>`, `<a>`)
-- `inline-block` : inline처럼 배치되지만 block처럼 크기 조절 가능
-- `none` : 화면에서 요소를 숨김
-
-position
-- `static` : 기본값, 특별한 위치 지정 없음
-- `relative` : 자기 자신을 기준으로 위치 조정
-- `absolute` : 부모 요소를 기준으로 절대 위치 지정
-- `fixed` : 화면(viewport)을 기준으로 고정  
-  - 스크롤을 내려도 같은 위치에 있음
-  - 보통 헤더/네비게이션 바에 사용   
-- `sticky` : 스크롤 위치에 따라 상대적/고정적 특성을 동시에 가짐  
-  - 보통 목차/사이드바에 사용

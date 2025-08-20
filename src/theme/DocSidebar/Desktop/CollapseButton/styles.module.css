@@ -8,6 +8,8 @@
 :root {
   --docusaurus-collapse-button-bg: transparent;
   --docusaurus-collapse-button-bg-hover: rgb(0 0 0 / 10%);
+  --sidebar-collaps-button: #A48E78;
+  --sidebar-collaps-hover: rgb(126, 126, 126);
 }
 
 [data-theme='dark']:root {
@@ -23,21 +25,25 @@
     position: sticky;
     bottom: 0;
     border-radius: 0;
-    border: 1px solid var(--ifm-toc-border-color);
+    border: none;
+    text-align: left;
+    padding: 0;
   }
 
   .collapseSidebarButtonIcon {
     transform: rotate(180deg);
-    margin-top: 4px;
+    fill : var(--sidebar-collaps-button);
+    margin : 0 0 0 20px;
   }
+
 
   [dir='rtl'] .collapseSidebarButtonIcon {
     transform: rotate(0);
   }
 
-  .collapseSidebarButton:hover,
-  .collapseSidebarButton:focus {
-    background-color: var(--docusaurus-collapse-button-bg-hover);
+  .collapseSidebarButtonIcon:hover,
+  .collapseSidebarButtonIcon:focus {
+    fill : var(--sidebar-collaps-hover);
   }
 }
 

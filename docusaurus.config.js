@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Hamrang-log',
-  tagline: '햄 랑 로 그',
+  title: '히리로그',
+  tagline: '오늘의 기록, 내일의 성장 ― 유히리 데일리로그',
   favicon: 'img/favicon.ico',
 
   url: 'https://eeheueklf.github.io',
@@ -35,15 +35,11 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           showLastUpdateTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
         },
         blog: {
           // showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
         },
@@ -70,6 +66,7 @@ const config = {
       docs:{
         sidebar: {
           autoCollapseCategories: true,
+          hideable: true,
         }
       },
       prism: {

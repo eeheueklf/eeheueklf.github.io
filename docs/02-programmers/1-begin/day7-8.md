@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Day 7-8 | filter & 2차원 배열 순회
+# filter와 2차원 배열 순회 (Day 7-8)
 
 :::note
 [프로그래머스] <mark>일일 도전 과제 문제 풀이 정리</mark>입니다.  

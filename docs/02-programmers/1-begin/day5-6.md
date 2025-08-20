@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 
-# Day 5-6 | reduce & 구조분해할당
+# reduce & 구조분해할당 (Day 5-6)
 
 :::note
 [프로그래머스] <mark>일일 도전 과제 문제 풀이 정리</mark>입니다.  

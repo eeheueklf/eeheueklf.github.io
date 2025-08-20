@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# HTTP 요청 HTTP 응답 : 웹 통신의 기본 프로토콜
+# HTTP 요청 & HTTP 응답
 
 :::note
 프론트엔드 중요 개념 - <mark>HTTP 개념 정리 1편</mark>입니다.
@@ -20,7 +20,7 @@ HTTP는 관련 개념이 정말 많은데요 (포스팅 4개짜리임)
 ## 1.2. What is a HTTP?
 
 :::info
-- [HTTP 요청 HTTP 응답 : 웹 통신의 기본 프로토콜](#http-요청-http-응답--웹-통신의-기본-프로토콜)
+- [HTTP 요청 \& HTTP 응답](#http-요청--http-응답)
 	- [1.2. What is a HTTP?](#12-what-is-a-http)
 		- [1. HTTP](#1-http)
 		- [2. HTTP 요청](#2-http-요청)

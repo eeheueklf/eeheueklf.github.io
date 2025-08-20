@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 🪵 INTRO
+# INTRO
 
 :::note
 [프로그래머스] <mark>일일 도전 과제 문제 풀이 정리</mark>입니다.  

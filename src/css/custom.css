@@ -31,11 +31,11 @@
   --ifm-navbar-height: 20px;
   --ifm-menu-color-background-active : #e9dccd;
   --ifm-hover-overlay : #f3f3f3;
-  --ifm-menu-color: #414141;
-  --ifm-menu-link-padding-horizontal : 1rem;
+  --ifm-menu-color: #5f5f5f;
   --ifm-menu-color-background-active : #f3f3f3;
-  --ifm-menu-color-active : var(--ifm-menu-color);
-  
+  --ifm-menu-color-active : #000000;
+  --ifm-menu-link-padding-vertical : 0.45rem;
+  --custom-menu-link-hover : var(--ifm-menu-color-active)
   /* 표 */
   /* --ifm-table-cell-padding : 0.3rem 1rem; */
   /* --ifm-table-stripe-background : #f0e4d6; */
@@ -83,7 +83,7 @@
   /* 하이퍼링크 */
   --mark-hyperlink-color: rgb(219, 45, 45);
   --mark-hyperlink-hover: rgb(45, 45, 219);
-
+  --ifm-link-color: rgb(219, 45, 45);
 }
 
 /* 이전-다음 글 */
@@ -194,14 +194,19 @@ details{
 .menu__link {
   font-size: 0.85rem; 
   font-weight: 400;   
-  line-height: 1.5;
   letter-spacing: -0.3px;
 }
 
+.menu__caret{
+  padding: 0.3rem;
+}
 .menu__caret:before{
   background: var(--ifm-menu-link-sublist-icon) 100% / 1rem 1rem !important;
 }
 
+.menu__list-item:not(:first-child){
+  margin-top : 0.5rem;
+}
 .sidebar-category-icon{
   border-radius :3px;
 }
@@ -209,8 +214,14 @@ details{
 .menu{
   padding : 0 0.7rem !important;
 }
+.menu__list-item-collapsible{
+  margin-bottom: 10px;
+}
 
 
+.menu__link:hover{
+  color:var(--custom-menu-link-hover);
+}
 
 /* 마크 */
 mark {
@@ -245,7 +256,7 @@ a code {
   text-decoration: underline solid var(--mark-hyperlink-color);
   text-underline-offset: 3px;
   padding: 0;
-  color : var(--mark-hyperlink-color);
+  /* color : var(--mark-hyperlink-color); */
   border: none;  
   background-color: inherit;
   font-weight: bold;
@@ -254,7 +265,6 @@ a code:hover {
   text-decoration: underline solid var(--mark-hyperlink-hover);
   color : var(--mark-hyperlink-hover);
 }
-
 
 /* 테이블 */
 table {

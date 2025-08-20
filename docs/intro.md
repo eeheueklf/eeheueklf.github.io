@@ -2,16 +2,17 @@
 sidebar_position: 1
 last_update:
   date: 7/8/2025
+title : 소개
 ---
 
-# 🗨️ 마크다운 참고하기 🍩🐿️🍦
-👋 안녕하세요
-## 제목 2 🍪🍄‍🟫☕
-### 제목 3 🤎🧸📜
+# 🧱🧱🧱🧱🧱🧱🧱🧱🧱🧱
+
+## 마크다운 참고하기 🍪🍄‍🟫☕
+### 👋 안녕하세요 🤎🧸📜
 #### 제목 4 🌕🍞🍂
 ##### 제목 5 🪐🧺🥖
 ###### 제목 6 🐌🐻🪵
-
+ 🍩🐿️🍦
 ## 13. 경고/팁 박스 (Admonitions)
 
 :::info
@@ -32,6 +33,11 @@ last_update:
 
 :::danger
 경고
+:::
+:::danger Take care
+
+경고입니다~
+
 :::
 ---
 
@@ -116,7 +122,7 @@ console.log("JavaScript 코드 블록");
 
 ---
 
-## 14. 코드 블록 줄 하이라이트 (Prism)
+## 14. 코드 블록
 ```js {1,4}
 function hello() {
   console.log("2번 줄 하이라이트");
@@ -125,6 +131,20 @@ console.log("4번 줄 하이라이트");
 console.log("4번 줄 하이라이트");
 console.log("4번 줄 하이라이트");
 ```
+```jsx title="src/pages/my-react-page.js"
+import React from 'react';
+import Layout from '@theme/Layout';
+
+export default function MyReactPage() {
+  return (
+    <Layout>
+      <h1>My React page</h1>
+      <p>This is a React page</p>
+    </Layout>
+  );
+}
+```
+
 
 ---
 

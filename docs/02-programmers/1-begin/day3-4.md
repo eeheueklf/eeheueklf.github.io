@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Day 3-4 | forEach와 map 활용하기
+# forEach와 map 활용 (Day 3-4)
 
 :::note
 [프로그래머스] <mark>일일 도전 과제 문제 풀이 정리</mark>입니다.  

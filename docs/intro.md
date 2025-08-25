@@ -2,7 +2,6 @@
 sidebar_position: 1
 last_update:
   date: 7/8/2025
-title : 소개
 ---
 
 # 🧱🧱🧱🧱🧱🧱🧱🧱🧱🧱

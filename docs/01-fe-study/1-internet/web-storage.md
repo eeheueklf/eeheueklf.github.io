@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+toc_max_heading_level: 4
 ---
 
 # LocalStorage와 sessionStorage (with 쿠키)
@@ -14,18 +15,7 @@ sidebar_position: 6
 
 ## 1.2. What is a HTTP?
 
-:::info
-- [LocalStorage와 sessionStorage (with 쿠키)](#localstorage와-sessionstorage-with-쿠키)
-  - [1.2. What is a HTTP?](#12-what-is-a-http)
-    - [쿠키(Cookie)](#쿠키cookie)
-    - [웹 스토리지 Web Storage (HTML5)](#웹-스토리지-web-storage-html5)
-    - [로컬 스토리지 LocalStorage](#로컬-스토리지-localstorage)
-    - [세션 스토리지 SessionStorage](#세션-스토리지-sessionstorage)
-
-:::
-<br/>
-
-### 쿠키(Cookie)
+### 쿠키
 
 쿠키는 **클라이언트**(브라우저)에 저장되는 작은 데이터 조각으로, 서버가 클라이언트에 상태 정보를 저장하기 위해 응답 헤더에 포함시켜 전송합니다.
 
@@ -41,7 +31,7 @@ sidebar_position: 6
 ---
 
 
-### 웹 스토리지 Web Storage (HTML5)
+### 웹 스토리지
 
 HTML5에서는 쿠키의 단점들을 보완한 좀 더 간단한 웹 저장소(Web Storage)를 도입했습니다. 
 
@@ -68,7 +58,7 @@ HTML5에서는 쿠키의 단점들을 보완한 좀 더 간단한 웹 저장소(
 ---
 
 
-### 로컬 스토리지 LocalStorage
+### 로컬 스토리지
 
 로컬 스토리지는  쿠키의 <mark>요청마다 모든 쿠키 전송</mark>을 개선합니다.  
 
@@ -88,7 +78,7 @@ HTML5에서는 쿠키의 단점들을 보완한 좀 더 간단한 웹 저장소(
 
 <br/>
 
-### 세션 스토리지 SessionStorage
+### 세션 스토리지
 세션 스토리지는 쿠키의 <mark>도메인이 같으면 항상 쿠키를 보낸다</mark>을 개선합니다.
 
 

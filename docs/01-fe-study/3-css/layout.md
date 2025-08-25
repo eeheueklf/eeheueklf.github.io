@@ -1,29 +1,12 @@
 ---
 sidebar_position: 2
+toc_max_heading_level: 4
 ---
 
 # CSS Layout 가이드
 
-:::note
-웹 페이지를 꾸미는 데 꼭 필요한 <mark>CSS Layout</mark>를 정리했습니다.
-:::
 
 ## 3.2. Making Layouts
-:::info
-- [CSS Layout 가이드](#css-layout-가이드)
-  - [3.2. Making Layouts](#32-making-layouts)
-    - [CSS 레이아웃](#css-레이아웃)
-    - [일반 흐름](#일반-흐름)
-    - [Layout 기법](#layout-기법)
-      - [display 속성](#display-속성)
-        - [flexbox](#flexbox)
-        - [grid](#grid)
-      - [floats](#floats)
-      - [position](#position)
-      - [table](#table)
-
-
-:::
 
 ### CSS 레이아웃
 

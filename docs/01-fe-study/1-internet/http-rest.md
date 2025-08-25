@@ -12,16 +12,6 @@ sidebar_position: 7
 개념정리 끝에는 관련 **면접질문**을 첨부하였으니 도움이 되었으면 좋겠습니다.
 :::
 
-## 1.2. What is a HTTP?
-
-:::info
-- [HTTP vs HTTPS / REST / CORS](#http-vs-https--rest--cors)
-  - [1.2. What is a HTTP?](#12-what-is-a-http)
-  - [HTTP와 HTTPS의 차이점이 무엇인가요](#http와-https의-차이점이-무엇인가요)
-  - [REST / REST API / RESTful API란 무엇인가요](#rest--rest-api--restful-api란-무엇인가요)
-  - [CORS에 대해서 설명해주세요.](#cors에-대해서-설명해주세요)
-
-:::
 
 ## HTTP와 HTTPS의 차이점이 무엇인가요
 

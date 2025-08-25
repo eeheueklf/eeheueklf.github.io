@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+toc_max_heading_level: 4
 ---
 
 # 폼(Form) 개념서
@@ -14,21 +15,7 @@ sidebar_position: 3
 
 
 ## 2.1.  Forms and Validations
-:::info
-- [폼(Form) 개념서](#폼form-개념서)
-  - [2.1.  Forms and Validations](#21--forms-and-validations)
-    - [HTML Forms 기본개념](#html-forms-기본개념)
-      - [`<form>` 속성](#form-속성)
-      - [`<input>`⌨️](#input️)
-      - [`<textarea>`⌨️](#textarea️)
-      - [`<select>` \& `<option>`⌨️](#select--option️)
-      - [`<button>` / `<input type=”submit”>`✨](#button--input-typesubmit)
-    - [HTML Input Validation (입력 검증)](#html-input-validation-입력-검증)
 
-
-:::
-
-<br/>
 
 ### HTML Forms 기본개념
 ![Search Input Form](./img/search.png)

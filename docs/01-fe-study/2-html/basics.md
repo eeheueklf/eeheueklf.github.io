@@ -14,21 +14,7 @@ sidebar_position: 1
 
 
 ## 2.1. Learn the Basics
-:::info
-- [HTML 문서 구조 \& 태그](#html-문서-구조--태그)
-  - [2.1. Learn the Basics](#21-learn-the-basics)
-    - [HTML 이란?](#html-이란)
-  - [태그 목록](#태그-목록)
-    - [HTML 문서 구조 태그](#html-문서-구조-태그)
-    - [텍스트](#텍스트)
-    - [리스트](#리스트)
-    - [링크 \& 이미지](#링크--이미지)
-    - [테이블](#테이블)
-    - [Form](#form)
 
-:::
-
-<br/>
 
 ### HTML 이란?
 

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 8
+toc_max_heading_level: 4
 ---
 
 # Domain과 URI / URL
@@ -12,25 +13,6 @@ sidebar_position: 8
 개념정리 끝에는 관련 **면접질문**을 첨부하였으니 도움이 되었으면 좋겠습니다.
 :::
 ## 1.3. What is a Domain Name?
-
-:::info
-- [Domain과 URI / URL](#domain과-uri--url)
-  - [1.3. What is a Domain Name?](#13-what-is-a-domain-name)
-    - [도메인 이름(Domain Name)이란?](#도메인-이름domain-name이란)
-    - [도메인 구조에 대해 알아보자](#도메인-구조에-대해-알아보자)
-      - [루트도메인](#루트도메인)
-      - [최상위 도메인(TLD, Top Level Domain)](#최상위-도메인tld-top-level-domain)
-      - [2단계 도메인(SLD, Second-)](#2단계-도메인sld-second-)
-      - [도메인 이름(Domain Name)](#도메인-이름domain-name)
-      - [서브도메인](#서브도메인)
-    - [URI, URL, 도메인 쉽게 정리하기](#uri-url-도메인-쉽게-정리하기)
-      - [URI](#uri)
-      - [URL](#url)
-      - [도메인](#도메인)
-
-:::
-
-<br/>
 
 ### 도메인 이름(Domain Name)이란?
 

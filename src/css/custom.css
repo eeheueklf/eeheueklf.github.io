@@ -35,7 +35,7 @@
   --ifm-menu-color-background-active : #f3f3f3;
   --ifm-menu-color-active : #000000;
   --ifm-menu-link-padding-vertical : 0.45rem;
-  --custom-menu-link-hover : var(--ifm-menu-color-active)
+  --custom-menu-link-hover : var(--ifm-menu-color-active);
   /* 표 */
   /* --ifm-table-cell-padding : 0.3rem 1rem; */
   /* --ifm-table-stripe-background : #f0e4d6; */
@@ -69,10 +69,13 @@
 
   --code-text-color : #d63d2c;
 
+
   /* 코드 */
   --code-area-bg : #ececec;
   --code-area-border : #d4d5d8;
-  --ifm-code-font-size : 90%;
+  --ifm-code-font-size : 80%;
+  --ifm-global-shadow-lw : none;
+  --ifm-code-border-radius : 0;
 
   /* 제목 왼쪽 border 색 */
   --h3-border-color : #727272;
@@ -117,23 +120,13 @@
 
 /* 목차 */
 .theme-admonition-info {
-  border-radius: 4px;
+  border-radius: 0;
   background-color: #f9f9f9; 
-  padding: 20px 16px;  
+  padding: 1rem 1rem;  
   font-size: 14px;
   line-height: 2.2;
-  width: 50%;
   min-width: 300px;
   margin-bottom : 50px !important;
-}
-.theme-admonition-info a {
-  text-decoration: none; 
-  color: inherit; 
-  font-size: 14px;
-}
-.theme-admonition-info a:hover {
-  color: var(--ifm-color-primary); 
-  box-shadow: inset 0 -10px 0 var(--mark-highlight-shadow); 
 }
 .theme-admonition-info ul {
   list-style: none;
@@ -151,6 +144,14 @@
 }
 
 
+.table-of-contents li a {
+  display: inline;
+  position: relative;
+}
+.table-of-contents li a:hover{
+  box-shadow: inset 0 -10px 0 var(--mark-highlight-shadow); 
+
+}
 /* 토글 */
 details{
   border-radius: 0 !important;
@@ -234,20 +235,19 @@ mark {
 
 /* 코드 */
 code {
-  padding: 2px 6px;
+  padding: 0.1rem 0.3rem;
   color : var(--code-text-color);
   border: 1px solid #e1e4e8;  
   letter-spacing: -0.3px;
+  border-radius:0.4rem;
 }
 
-code:hover{
+p code:hover, li code:hover{
   background-color: rgb(255, 255, 255);
 }
 
 /* 코드블럭 - 같은 code임 */
 pre code{
-  background: var(--code-area-bg) !important;
-  border: 1px solid var(--code-area-border);
   letter-spacing: 0px;
 }
 

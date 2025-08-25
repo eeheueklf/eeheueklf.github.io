@@ -1,5 +1,6 @@
 ---
 sidebar_position: 9
+toc_max_heading_level: 4
 ---
 
 # DNS 개념 & 동작 원리
@@ -13,19 +14,6 @@ sidebar_position: 9
 :::
 
 ## 1.4. DNS and how it works?
-
-:::info
-- [DNS 개념 \& 동작 원리](#dns-개념--동작-원리)
-  - [1.4. DNS and how it works?](#14dns-and-how-it-works)
-    - [DNS(Domain Name System)란?](#dnsdomain-name-system란)
-    - [naver.com을 입력하면 일어나는 일](#navercom을-입력하면-일어나는-일)
-    - [DNS가 어떻게 IP를 찾을까?](#dns가-어떻게-ip를-찾을까)
-    - [DNS 캐시란?](#dns-캐시란)
-      - [**🕓** TTL(Time To Live)이란?](#-ttltime-to-live이란)
-
-:::
-
-<br/>
 
 ### DNS(Domain Name System)란?
 

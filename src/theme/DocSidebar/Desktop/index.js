@@ -11,6 +11,9 @@ import Logo from '@theme/Logo';
 import CollapseButton from '@theme/DocSidebar/Desktop/CollapseButton';
 import Content from '@theme/DocSidebar/Desktop/Content';
 import styles from './styles.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import IconHome from '@theme/Icon/Home';
+import Link from '@docusaurus/Link';
 function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
   const {
     navbar: {hideOnScroll},
@@ -38,6 +41,8 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
       }
     });
   };
+
+  const homeHref = useBaseUrl('/');
   return (
     <div
       className={clsx(
@@ -46,9 +51,14 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
         isHidden && styles.sidebarHidden,
       )}>
       {hideable && 
-      <div className={styles.iconContainer}>
-        <CollapseButton onClick={onCollapse} />
-      </div>
+      <ol className={styles.iconContainer}>
+        <li>
+          <Link href={homeHref}>
+            <IconHome className={styles.collapseSidebarHomeIcon}/>
+          </Link>
+        </li>
+        <li><CollapseButton onClick={onCollapse} /></li>
+      </ol>
       }
       <div className={styles.searchContainer}>
         <div className={styles.LogoContainer}>

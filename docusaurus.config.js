@@ -39,7 +39,7 @@ const config = {
             'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
         },
         blog: {
-          // showReadingTime: true,
+          showReadingTime: true,
           editUrl:
             'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
         },

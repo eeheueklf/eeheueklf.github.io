@@ -6,8 +6,8 @@ sidebar_position: 1
 
 
 :::note
-웹 사이트의 복잡한 동작들을 구현할 수 있는 <mark>Javascript</mark>를 정리했습니다.  
-JavaScript의 기본 개념부터 변수, 이벤트, 객체까지 다뤄봤습니다.
+프론트엔드 중요 개념 - <mark>Javascript 내용 정리 1편</mark>입니다.
+웹 사이트의 복잡한 동작들을 구현할 수 있는 JavaScript의 기본 개념부터 변수, 이벤트, 객체까지 다뤄봤습니다.
 :::
 
 

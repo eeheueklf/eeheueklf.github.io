@@ -26,6 +26,7 @@
 
   /* sidebar */
   --doc-sidebar-width: 280px !important;
+  --cus-sidebar-home-icon: #363636;
 
   --ifm-font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
   --ifm-navbar-height: 20px;
@@ -301,3 +302,6 @@ table td {
   background-color: #b6d8ec;
 }
 
+.thin-scrollbar{  
+   scrollbar-width: none;
+}

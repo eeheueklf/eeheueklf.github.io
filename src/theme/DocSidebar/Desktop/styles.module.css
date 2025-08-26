@@ -76,6 +76,19 @@
 }
 
 
-.iconContainer{
-  width : 100%;
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 1rem;
+  margin: 0;
+  width: 100%;
+}
+
+
+
+.collapseSidebarHomeIcon{
+  width:20px;
+  color: var(--cus-sidebar-home-icon);
 }

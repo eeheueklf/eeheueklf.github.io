@@ -2,6 +2,7 @@
 slug: long-blog-post
 title: Long Blog Post
 tags: [hello, docusaurus]
+date: 2025-08-1
 ---
 
 This is the summary of a very long blog post,

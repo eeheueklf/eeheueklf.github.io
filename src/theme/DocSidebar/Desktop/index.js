@@ -4,17 +4,23 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import {useThemeConfig} from '@docusaurus/theme-common';
 import Logo from '@theme/Logo';
-import CollapseButton from '@theme/DocSidebar/Desktop/CollapseButton';
+// import CollapseButton from '@theme/DocSidebar/Desktop/CollapseButton';
 import Content from '@theme/DocSidebar/Desktop/Content';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import IconHome from '@theme/Icon/Home';
+import IconDocs from '@theme/Icon/WordWrap';
+import IconBlog from '@theme/Icon/DarkMode';
+import IconSearch from '../../Icon/Search.tsx';
 import Link from '@docusaurus/Link';
 function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
+  const [openSearch, setOpenSearch] = useState(false);
+
+
   const {
     navbar: {hideOnScroll},
     docs: {
@@ -43,6 +49,9 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
   };
 
   const homeHref = useBaseUrl('/');
+  const docsHref = useBaseUrl('/docs/intro');
+  const blogHref = useBaseUrl('/blogs/intro');
+
   return (
     <div
       className={clsx(
@@ -50,28 +59,43 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
         hideOnScroll && styles.sidebarWithHideableNavbar,
         isHidden && styles.sidebarHidden,
       )}>
-      {hideable && 
-      <ol className={styles.iconContainer}>
-        <li>
-          <Link href={homeHref}>
-            <IconHome className={styles.collapseSidebarHomeIcon}/>
-          </Link>
-        </li>
-        <li><CollapseButton onClick={onCollapse} /></li>
-      </ol>
-      }
       <div className={styles.searchContainer}>
         <div className={styles.LogoContainer}>
           <img src="/img/favicon.ico" alt="Logo" />
           <span>히리로그</span>
         </div>
+      </div>
+      <ol className={styles.iconContainer}>
+        <li>
+          <Link href={homeHref}>
+            <IconHome className={styles.collapseSidebarHomeIcon}/>𝙷𝚘𝚖𝚎
+          </Link>
+        </li>
+        <li>
+          <Link href={docsHref}>
+            <IconDocs className={styles.collapseSidebarHomeIcon}/>𝙳𝚘𝚌𝚜
+          </Link>
+        </li>
+        <li>
+          <Link href={blogHref}>
+            <IconBlog className={styles.collapseSidebarHomeIcon}/>𝙱𝚕𝚘𝚐
+          </Link>
+        </li>
+        <li>
+          <Link onClick={()=>setOpenSearch(prev => !prev)}>
+            <IconSearch className={styles.collapseSidebarHomeIcon}/>𝚂𝚎𝚊𝚛𝚌𝚑
+          </Link>
+        </li>
+      </ol>
+      {openSearch && 
         <input
           type="text"
           className={styles.searchInput}
           placeholder="문서 검색하기"
           onInput={handleSearch}
         />
-      </div>
+      }
+      
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
       <Content path={path} sidebar={sidebar} />
     </div>

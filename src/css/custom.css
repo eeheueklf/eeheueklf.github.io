@@ -25,8 +25,8 @@
   --ifm-hr-margin-vertical : 3rem;
 
   /* sidebar */
-  --doc-sidebar-width: 280px !important;
-  --cus-sidebar-home-icon: #363636;
+  --doc-sidebar-width: 260px !important;
+  --cus-sidebar-home-icon : #585858;
 
   --ifm-font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
   --ifm-navbar-height: 20px;
@@ -37,6 +37,8 @@
   --ifm-menu-color-active : #000000;
   --ifm-menu-link-padding-vertical : 0.45rem;
   --custom-menu-link-hover : var(--ifm-menu-color-active);
+
+  --ifm-menu-link-padding-horizontal : 0.4rem;
   /* 표 */
   /* --ifm-table-cell-padding : 0.3rem 1rem; */
   /* --ifm-table-stripe-background : #f0e4d6; */
@@ -88,7 +90,37 @@
   --mark-hyperlink-color: rgb(219, 45, 45);
   --mark-hyperlink-hover: rgb(45, 45, 219);
   --ifm-link-color: rgb(219, 45, 45);
+
+  /* 폰트 */
 }
+
+/* 제목 크기 */
+h1{
+  font-size : 2.1rem;
+  margin-top: 2rem;
+}
+
+.markdown > h2{
+  margin-top: 4rem;
+  margin-bottom: 0.8em;
+}
+.markdown > h3{
+  border-left: 3px solid var(--h3-border-color);
+  padding-left : 20px;
+  margin-top: 3rem;
+  margin-bottom: 0.8em;
+}
+.markdown > h4{
+  margin-top: 2rem;
+  margin-bottom: 0.8em;
+}
+.markdown p {
+  line-height: 1.7;
+}
+
+
+
+
 
 /* 이전-다음 글 */
 .pagination-nav{
@@ -108,12 +140,12 @@
 /* 박스 */
 .alert{
   border: 1px solid var(--ifm-tabs-color-active-border);
-  font-size : 0.8rem;
   padding: var(--ifm-alert-padding-vertical) 1rem;
   color: #4a5157;
 }
-.alert p{
+.alert{
   margin: 0 0 0.2rem;
+  font-size : 0.8rem;
 }
 .alert svg {
   height: 1.2em !important;
@@ -158,25 +190,6 @@ details{
   border-radius: 0 !important;
 }
 
-/* 제목 크기 */
-
-.markdown > h1{
-  font-size : 2.1rem;
-}
-.markdown > h2{
-  font-size : 1.6rem;
-  margin-top: 1.5em;
-  margin-bottom: 0.8em;
-}
-.markdown > h3{
-  font-size : 1.4rem;
-  border-left: 3px solid var(--h3-border-color);
-  padding-left : 20px;
-}
-
-.markdown p {
-  line-height: 1.7;
-}
 
 /* 헤더 없앰 */
 .navbar {
@@ -216,10 +229,10 @@ details{
 .menu{
   padding : 0 0.7rem !important;
 }
-.menu__list-item-collapsible{
-  margin-bottom: 10px;
-}
 
+.menu__list-item{
+  margin-top : 0.3rem !important;
+}
 
 .menu__link:hover{
   color:var(--custom-menu-link-hover);
@@ -305,3 +318,4 @@ table td {
 .thin-scrollbar{  
    scrollbar-width: none;
 }
+

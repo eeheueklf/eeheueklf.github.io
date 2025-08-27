@@ -5,6 +5,30 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+const fs = require("fs");
+const path = require("path");
+
+function countDocs(dir) {
+  let count = 0;
+  function walk(folder) {
+    const files = fs.readdirSync(folder);
+    for (const file of files) {
+      const fullPath = path.join(folder, file);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        walk(fullPath);
+      } else if (file.endsWith('.md') || file.endsWith('.mdx')) {
+        count++;
+      }
+    }
+  }
+  walk(dir);
+  return count;
+}
+
+const docsCount = countDocs(path.join(__dirname, 'docs'));
+const blogCount = countDocs(path.join(__dirname, 'blogs'));
+const totalCount = docsCount + blogCount;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -42,6 +66,8 @@ const config = {
           showReadingTime: true,
           editUrl:
             'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All Posts',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -57,7 +83,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       metadata:[{
         name:"google-site-verification",
@@ -74,7 +99,24 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-  
+    plugins: [
+      [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: 'blogDocs',            // 고유 id
+          path: 'blogs',               // 실제 blog 폴더
+          routeBasePath: 'blogs',      // URL 경로: example.com/blog/~
+          sidebarPath: require.resolve('./sidebarsBlog.js'),
+          editUrl: 'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
+          showLastUpdateTime: true,
+        },
+      ],
+    ],
+    customFields: {
+      blogCount,
+      docsCount,
+      totalCount,
+    },
 };
 
 export default config;

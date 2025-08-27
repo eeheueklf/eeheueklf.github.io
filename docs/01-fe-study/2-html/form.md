@@ -12,10 +12,7 @@ toc_max_heading_level: 4
 :::
 
 
-## 2.1.  Forms and Validations
-
-
-### HTML Forms 기본개념
+## HTML Forms 기본개념
 ![Search Input Form](./img/search.png)
 
 `<form>`은 <mark>사용자의 입력을 서버로 전송하기 위한 태그</mark>입니다. 로그인·회원가입을 위해서 입력해야 하는 **username, id, password** 검색을 위해 검색창에 입력해야 하는 **검색어** 같은 입력 데이터를 전송합니다.
@@ -33,8 +30,7 @@ toc_max_heading_level: 4
   <button type="submit">가입하기</button>
 </form>
 ```
----
-#### `<form>` 속성
+### `<form>` 속성
 
 - `action` 데이터를 전송할 서버 주소(URL)
 - `method` HTTP 메서드 (GET/POST)
@@ -45,7 +41,7 @@ toc_max_heading_level: 4
 ```
 <br/>
 
-#### `<input>`⌨️
+### `<input>`⌨️
 
 - `type` text checkbox date email color range search 등
 - `name` 서버로 전송될 key값
@@ -65,7 +61,7 @@ toc_max_heading_level: 4
 <br/>
 
 
-#### `<textarea>`⌨️
+### `<textarea>`⌨️
 
 여러 줄 입력이 필요할때
 
@@ -75,7 +71,7 @@ toc_max_heading_level: 4
 <br/>
 
 
-#### `<select>` & `<option>`⌨️
+### `<select>` & `<option>`⌨️
 
 드롭다운 선택 메뉴
 
@@ -88,13 +84,12 @@ toc_max_heading_level: 4
 <br/>
 
 
-#### `<button>` / `<input type=”submit”>`✨
+### `<button>` / `<input type=”submit”>`✨
 
 ```jsx
 <button type="submit">가입하기<button>
 <input type="submit" value="가입하기">
 ```
----
 
 ### HTML Input Validation (입력 검증)
 
@@ -113,8 +108,7 @@ toc_max_heading_level: 4
 </form>
 
 ```
-
-HTML5부터는 JavaScript 없이도 input에 유효성 검사를 할 수 있는 속성들이 추가되었습니다.
+JavaScript 없이도 input에 유효성 검사를 해주는 속성들입니다.
 
 - `pattern` 정규식 패턴 검사
 - `required` 빈 값 제출 방지
@@ -124,4 +118,4 @@ HTML5부터는 JavaScript 없이도 input에 유효성 검사를 할 수 있는 
 
 해당 조건을 지키지 못할시, 브라우저마다 다른 경고 UI가 제공됩니다.
 
-➕ 클라이언트에서의 검증은 편의용일뿐, 서버측에서도 필수적으로 재검증 해야합니다.
+➕ 클라이언트에서의 검증은 편의용일뿐, 서버측에서도 필수적으로 재검증 해야함!.

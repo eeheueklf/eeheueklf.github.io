@@ -28,6 +28,11 @@ export default function Home() {
   const windowSize = useWindowSize();
   const shouldRenderSidebarDesktop =
     windowSize === 'desktop' || windowSize === 'ssr';
+  const { blogCount, docsCount, totalCount } = siteConfig.customFields;
+
+  const startDay = new Date('2025-07-24')
+  const today = new Date();
+  const diffDate = Math.floor(Math.abs((startDay.getTime() - today.getTime())/(1000*60*60*24)))
   return (
     <Layout title="𝙷𝚘𝚖𝚎" description="프론트엔드 개발블로그">
       <div style={{ display: 'flex', minHeight: '100vh' }}>
@@ -36,8 +41,12 @@ export default function Home() {
           {/* <HomepageHeader /> */}
           <Content/>
           <section>
-            <h2>메인 콘텐츠 영역</h2>
-            <p>여기에 홈페이지 내용을 넣으세요.</p>
+            <div>
+              📚 Docs: {docsCount} <br />
+              📝 Blog: {blogCount} <br />
+              🔢 총 포스팅 {totalCount} <br/>
+              블로그 시작한지 {diffDate}일
+            </div>
           </section>
         </main>
       </div>

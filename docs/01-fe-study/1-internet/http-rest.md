@@ -17,13 +17,13 @@ sidebar_position: 7
 
 ![http vs https](./img/http.png)
 
- HTTP(Hypertext Transfer Protocol)는 웹에서 데이터를 주고 받기 위한 서버-클라이언트(브라우저)의 프로토콜입니다. HTTPS(Hypertext Transfer Protocol `Secure`)는 HTTP에 **데이터 암호화가 추가된 프로토콜**입니다. (데이터를 안전하게 전송하기 위해 SSL 또는 TLS 프로토콜을 사용합니다. )
+ HTTP(하이퍼텍스트 전송 프로토콜)는 웹에서 데이터를 주고 받기 위한 서버-클라이언트(브라우저)의 프로토콜입니다. HTTPS(Hypertext Transfer Protocol `Secure`)는 HTTP에 **데이터 암호화가 추가된 프로토콜**입니다. (데이터를 안전하게 전송하기 위해 SSL 또는 TLS 프로토콜을 사용합니다. )
 
  HTTP와 HTTPS의 가장 큰 차이점은 **보안성**입니다. HTTP는 **평문으로 데이터를 전송**하기때문에 중간 공격자가 데이터를 가로챌 경우, 내용을 쉽게 확인할 수 있습니다. 반면에 HTTPS는 **데이터를 암호화하여 전송**하기 때문에 중간 공격자가 데이터를 읽거나 수정하는 것을 방지합니다.
 
  또한 HTTPS는 **검증된 사이트**만 허가받을 수 있기 때문에 서버가 제공하는 인증서를 통해 접속한 웹사이트가 신뢰할 수 있는 곳인지 확인할 수 있습니다. 
 
-[자세한 HTTPS 동작 과정 - 브라우저 동작 과정 한눈에 보기✨](https://eeheueklf.github.io/docs/fe-study/browser/)
+[자세한 HTTPS 동작 과정 - 브라우저 동작 과정 한눈에 보기✨](https://eeheueklf.github.io/docs/fe-study/internet/browser)
 
 
 ---
@@ -35,9 +35,7 @@ sidebar_position: 7
 
 **API란?** 
 
-API는 서로 다른 소프트웨어끼리 대화할 수 있게 해주는 통신 방법입니다.
-
-우리가 개발할때는 프론트에서 백엔드로 API 요청을 보내고, 백엔드는 그 요청을 받아 프론트에서 전달한 데이터를 처리합니다.
+API는 서로 다른 소프트웨어끼리 대화할 수 있게 해주는 통신 방법입니다. 우리가 개발할때는 프론트에서 백엔드로 API 요청을 보내고, 백엔드는 그 요청을 받아 프론트에서 전달한 데이터를 처리합니다.
 <br/>
 
 **REST란?**

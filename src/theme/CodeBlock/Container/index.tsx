@@ -18,15 +18,22 @@ export default function CodeBlockContainer<T extends 'div' | 'pre'>({
   const prismTheme = usePrismTheme();
   const prismCssVariables = getPrismCssVariables(prismTheme);
   return (
-    <As
-      // Polymorphic components are hard to type, without `oneOf` generics
-      {...(props as any)}
-      style={prismCssVariables}
-      className={clsx(
-        props.className,
-        styles.codeBlockContainer,
-        ThemeClassNames.common.codeBlock,
-      )}
-    />
+    <div className={styles.codeBlockContainer}>
+      <div className={styles.codeHeader}>
+        <div className={clsx(styles.circle, styles.red)}></div>
+        <div className={clsx(styles.circle, styles.yellow)}></div>
+        <div className={clsx(styles.circle, styles.green)}></div>
+      </div>
+      <As
+        // Polymorphic components are hard to type, without `oneOf` generics
+        {...(props as any)}
+        style={prismCssVariables}
+        className={clsx(
+          props.className,
+          styles.codeBlockLine,
+          ThemeClassNames.common.codeBlock,
+        )}
+      />
+    </div>
   );
 }

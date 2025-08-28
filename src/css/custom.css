@@ -256,13 +256,8 @@ code {
   border-radius:0.4rem;
 }
 
-p code:hover, li code:hover{
+p code:hover, li p code:hover{
   background-color: rgb(255, 255, 255);
-}
-
-/* 코드블럭 - 같은 code임 */
-pre code{
-  letter-spacing: 0px;
 }
 
 /* 링크 - 같은 code임 */

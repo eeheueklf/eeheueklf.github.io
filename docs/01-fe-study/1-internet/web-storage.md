@@ -1,6 +1,8 @@
 ---
 sidebar_position: 6
 toc_max_heading_level: 4
+last_update:
+  date: 8/5/2025
 ---
 
 # LocalStorage와 sessionStorage (with 쿠키)

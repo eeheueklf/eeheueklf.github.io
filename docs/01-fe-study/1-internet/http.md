@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 toc_max_heading_level: 4
+last_update:
+  date: 7/24/2025
 ---
 
 # HTTP 요청 & HTTP 응답

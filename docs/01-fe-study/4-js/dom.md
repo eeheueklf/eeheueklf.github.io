@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 toc_max_heading_level: 4
+last_update:
+  date: 8/25/2025
 ---
 
 # DOM 조작 : 바닐라 JS vs React

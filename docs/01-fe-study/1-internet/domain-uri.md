@@ -1,6 +1,8 @@
 ---
 sidebar_position: 8
 toc_max_heading_level: 4
+last_update:
+  date: 8/8/2025
 ---
 
 # Domain과 URI / URL

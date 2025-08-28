@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 toc_max_heading_level: 4
+last_update:
+  date: 7/22/2025
 ---
 
 # 인터넷과 네트워크

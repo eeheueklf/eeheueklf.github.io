@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+last_update:
+  date: 8/7/2025
 ---
 
 # HTTP vs HTTPS / REST / CORS

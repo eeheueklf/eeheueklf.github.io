@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 toc_max_heading_level: 4
+last_update:
+  date: 8/15/2025
 ---
 
 # CSS 기초 & 기본기 다지기

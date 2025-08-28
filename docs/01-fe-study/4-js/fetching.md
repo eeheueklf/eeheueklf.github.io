@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 toc_max_heading_level: 4
+last_update:
+  date: 8/28/2025
 ---
 
 # Data Fetching(데이터 가져오기)

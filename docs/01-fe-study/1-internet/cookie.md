@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+last_update:
+  date: 7/28/2025
 ---
 
 # 무상태와 비연결성(쿠키, 세션)

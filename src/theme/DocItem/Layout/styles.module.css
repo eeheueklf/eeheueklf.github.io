@@ -23,3 +23,29 @@
   }
 
 }
+.docDateContainer{
+  width: 100%;
+  max-height : 9rem;
+  font-size: 0.8rem;
+  color: var(--ifm-toc-link-color);
+  padding : 1rem;
+  border-radius : 10px;
+  border : 1px solid var(--ifm-color-secondary-dark);
+  position: sticky;
+  top: 10rem;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.docTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top:0.5rem;
+}
+
+.tagItem {
+  background-color: #dfcfc8;
+  padding: 1px 8px;
+  border-radius: 0.7rem;
+}

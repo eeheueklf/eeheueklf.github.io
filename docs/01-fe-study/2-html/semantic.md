@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 toc_max_heading_level: 4
+last_update:
+  date: 8/12/2025
 ---
 
 # 시맨틱 태그 & 검색엔진 최적화

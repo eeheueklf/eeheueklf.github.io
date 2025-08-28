@@ -14,6 +14,11 @@
   --ifm-color-primary-light: #A48E78;
   --ifm-color-primary-lighter: #BDA087;
   --ifm-color-primary-lightest: #CFB79F;
+
+  --cus-tag-color-first:#e7d1bb;
+  --cus-tag-color-sec:#d4c9bd;
+  --cus-tag-color-third:#f0e1d2;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -29,7 +34,10 @@
   --cus-sidebar-home-icon : #585858;
 
   --ifm-font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
-  --ifm-navbar-height: 20px;
+  
+  /* 목차 */
+  --ifm-navbar-height: 19rem;
+  --ifm-sidebar-height: 20px;
   --ifm-menu-color-background-active : #e9dccd;
   --ifm-hover-overlay : #f3f3f3;
   --ifm-menu-color: #5f5f5f;
@@ -92,7 +100,17 @@
   --ifm-link-color: rgb(219, 45, 45);
 
   /* 폰트 */
+  --ifm-container-width-xl : 1140px;
 }
+
+.row{
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 
 /* 제목 크기 */
 h1{
@@ -182,9 +200,8 @@ h1{
   display: inline;
   position: relative;
 }
-.table-of-contents li a:hover{
+.table-of-contents li a:hover, .table-of-contents__link--active{
   box-shadow: inset 0 -10px 0 var(--mark-highlight-shadow); 
-
 }
 /* 토글 */
 details{
@@ -315,3 +332,8 @@ table td {
    scrollbar-width: none;
 }
 
+/* 목차 */
+.table-of-contents__left-border{
+  border : 1px solid var(--ifm-color-secondary-dark);
+  border-radius : 10px;
+}

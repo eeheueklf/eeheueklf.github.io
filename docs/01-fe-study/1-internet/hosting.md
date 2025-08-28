@@ -1,6 +1,8 @@
 ---
 sidebar_position: 10
 toc_max_heading_level: 4
+last_update:
+  date: 8/9/2025
 ---
 
 # 웹사이트 배포 개념 - 호스팅

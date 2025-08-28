@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+last_update:
+  date: 8/22/2025
 ---
 
 # 자바스크립트 기초

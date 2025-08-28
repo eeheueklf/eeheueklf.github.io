@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 toc_max_heading_level: 4
+last_update:
+  date: 8/18/2025
 ---
 
 # CSS Layout 가이드

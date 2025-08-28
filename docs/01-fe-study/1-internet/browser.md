@@ -1,6 +1,8 @@
 ---
 sidebar_position: 11
 toc_max_heading_level: 4
+last_update:
+  date: 8/10/2025
 ---
 
 # 브라우저 동작 과정 한눈에 보기✨

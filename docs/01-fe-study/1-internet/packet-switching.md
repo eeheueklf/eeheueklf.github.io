@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+last_update:
+  date: 7/23/2025
 ---
 
 # 패킷 스위칭, 인터넷 프로토콜

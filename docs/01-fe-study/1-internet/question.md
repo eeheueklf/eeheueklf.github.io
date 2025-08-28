@@ -1,5 +1,7 @@
 ---
 sidebar_position: 12
+last_update:
+  date: 8/26/2025
 ---
 
 # 프론트엔드 기술 면접 질문 리스트

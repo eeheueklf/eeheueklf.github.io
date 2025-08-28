@@ -1,6 +1,8 @@
 ---
 sidebar_position: 9
 toc_max_heading_level: 4
+last_update:
+  date: 8/6/2025
 ---
 
 # DNS 개념 & 동작 원리

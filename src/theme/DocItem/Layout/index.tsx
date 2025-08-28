@@ -48,9 +48,23 @@ function useDocTOC() {
 
 export default function DocItemLayout({children}: Props): JSX.Element {
   const docTOC = useDocTOC();
+  
   const {
-    metadata: {unlisted},
-  } = useDoc();
+  frontMatter,
+  metadata: { lastUpdatedAt, unlisted, title, tags },
+} = useDoc();
+
+  const lastUpdated = lastUpdatedAt
+  ? (() => {
+      const d = new Date(lastUpdatedAt * 1000);
+      return `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일`;
+    })()
+  : null;
+
+const colors = ['var(--cus-tag-color-first)',
+   'var(--cus-tag-color-sec)',
+    'var(--cus-tag-color-third)'];
+
   return (
     <div className="row">
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
@@ -67,7 +81,28 @@ export default function DocItemLayout({children}: Props): JSX.Element {
           <DocItemPaginator />
         </div>
       </div>
-      {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
+      {docTOC.desktop && <div className="col col--3">
+        {/* <div className={styles.docImageContainer}>
+          <div className={styles.LogoContainer}>
+              <img src="/icon/box.jpg" alt="Logo" />
+          </div>
+        </div> */}
+        {lastUpdated && (
+          <div className={styles.docDateContainer}>
+            {title && <h3 className={styles.docTitle}>{title}</h3>}
+            {lastUpdated}
+            <div className={styles.docTags}>
+              {tags.map((tag, idx) => (
+                <div key={idx} className={styles.tagItem} style={{ backgroundColor: colors[idx % colors.length] }}>
+                  {tag.label}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      {docTOC.desktop}
+      
+      </div>}
     </div>
   );
 }

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+last_update:
+  date: 8/11/2025
 ---
 
 # HTML 문서 구조 & 태그

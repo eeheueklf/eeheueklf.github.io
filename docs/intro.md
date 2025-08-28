@@ -2,6 +2,8 @@
 sidebar_position: 1
 last_update:
   date: 7/8/2025
+tags: ["markdown", "docusaurus"]
+keywords: ["markdown", "docusaurus"]
 ---
 
 # 🧱 마크다운 참고하기

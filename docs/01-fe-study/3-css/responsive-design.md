@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 toc_max_heading_level: 4
+last_update:
+  date: 8/19/2025
 ---
 
 # 반응형 디자인 가이드

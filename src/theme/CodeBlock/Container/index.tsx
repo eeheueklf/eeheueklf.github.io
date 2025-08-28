@@ -8,21 +8,25 @@
 import React, {type ComponentProps} from 'react';
 import clsx from 'clsx';
 import {ThemeClassNames, usePrismTheme} from '@docusaurus/theme-common';
-import {getPrismCssVariables} from '@docusaurus/theme-common/internal';
+import {parseCodeBlockTitle, getPrismCssVariables} from '@docusaurus/theme-common/internal';
 import styles from './styles.module.css';
 
 export default function CodeBlockContainer<T extends 'div' | 'pre'>({
   as: As,
+  title: titleProp,
+  metastring,
   ...props
-}: {as: T} & ComponentProps<T>): JSX.Element {
+}: {as: T; metastring?: string; title?: string} & ComponentProps<T>): JSX.Element {
   const prismTheme = usePrismTheme();
   const prismCssVariables = getPrismCssVariables(prismTheme);
+    const title = parseCodeBlockTitle(metastring) || titleProp;
   return (
     <div className={styles.codeBlockContainer}>
       <div className={styles.codeHeader}>
         <div className={clsx(styles.circle, styles.red)}></div>
         <div className={clsx(styles.circle, styles.yellow)}></div>
         <div className={clsx(styles.circle, styles.green)}></div>
+        {title && <div className={styles.codeBlockTitle}>{title}</div>}
       </div>
       <As
         // Polymorphic components are hard to type, without `oneOf` generics

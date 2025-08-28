@@ -5,13 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-.codeBlockContainer {
-  background: var(--prism-background-color);
-  color: var(--prism-color);
-  margin-bottom: var(--ifm-leading);
-  box-shadow: var(--ifm-global-shadow-lw);
-  border-radius: var(--ifm-code-border-radius);
-}
 pre {
   position: relative;
   border-radius:  0 0 10px 10px;
@@ -23,9 +16,12 @@ pre code{
 }
 
 .codeBlockContainer{
-  font-size: 1.1rem;
+  background: var(--prism-background-color);
+  color: var(--prism-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+  border-radius: var(--ifm-code-border-radius);
+  font-size: inherit;
   border: 1px solid rgb(194, 194, 194);
-  border-radius: 10px;
   margin : 2rem 0;
 }
 
@@ -55,4 +51,10 @@ pre code{
 }
 .codeHeader .green {
   background-color: #43c645;
+}
+
+.codeBlockTitle {
+  font-size: var(--ifm-code-font-size);
+  font-weight: 500;
+  padding-left: 0.75rem;
 }

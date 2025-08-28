@@ -78,7 +78,7 @@
   --code-area-border : #d4d5d8;
   --ifm-code-font-size : 80%;
   --ifm-global-shadow-lw : none;
-  --ifm-code-border-radius : 0;
+  --ifm-code-border-radius : 10px;
 
   /* 제목 왼쪽 border 색 */
   --h3-border-color : #727272;
@@ -143,6 +143,7 @@ h1{
   padding: var(--ifm-alert-padding-vertical) 1rem;
   color: #4a5157;
 }
+
 .alert{
   margin: 0 0 0.2rem;
   font-size : 0.8rem;

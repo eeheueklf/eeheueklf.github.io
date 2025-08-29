@@ -118,4 +118,28 @@ fetch("/api/member/sign",{
 .then((response)=> response.json())
 .then((json)=>console.log(json));
 ```
-- `JSON.stringify`를 사용해 JavaScript 값이나 객체를 JSON 문자열로 변환합니다.
+- `JSON.stringify`를 사용해 JavaScript 값이나 객체를 **JSON 문자열**로 변환합니다.
+
+
+### 다른 메서드
+
+PUT, PATCH, DELETE또한 POST와 같이 **method와 options 객체**를 전달하는 방식입니다.
+
+```jsx
+fetch("/api/member/sign",{
+  method: "PUT",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    "id": 'jamie11',
+    "userName": 'jamie',
+  }),
+})
+.then((response)=> response.json())
+.then((json)=>console.log(json));
+```
+
+- PUT : 서버의 데이터 전체 수정/생성
+- PATCH : 서버의 데이터 일부 수정
+- DELETE : 서버의 데이터 삭제

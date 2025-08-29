@@ -110,20 +110,17 @@ JS가 콜백 실행을 Call Stack에서 처리하도록 한 이유는 **동시�
 비동기 결과를 전달받기 위해 함수의 매개변수에 함수를 넘기는 방식입니다.
 
 ```jsx
-function getData(result1) { getData(result1, step2); }
-
-
-function printMessage(message) {
-  console.log(message);
-}
-
-function work(callback) {
+function getData(callback) {
   setTimeout(() => {
     callback("작업 완료!");
   }, 1000);
 }
 
-work(printMessage);
+function printMessage(message) {
+  console.log(message);
+}
+
+getData(printMessage);
 ```
 
 하지만 단순한 콜백 방식으로 코드를 짜면 코드가 복잡해집니다. 이를 콜백 지옥이라고 부릅니다.

@@ -7,7 +7,7 @@
   width : var(--doc-sidebar-width);
   border-right: 1px solid #ddd;
   background-color: #f8f8f8ff;
-  padding-top: var(--ifm-navbar-height);
+  padding-top: var(--ifm-sidebar-height);
 }
 
 @media (min-width: 997px) {
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding-top: var(--ifm-navbar-height);
+    padding-top: var(--ifm-sidebar-height);
     width: var(--doc-sidebar-width);
   }
 
@@ -32,8 +32,8 @@
     display: flex !important;
     align-items: center;
     margin: 0 var(--ifm-navbar-padding-horizontal);
-    min-height: var(--ifm-navbar-height);
-    max-height: var(--ifm-navbar-height);
+    min-height: var(--ifm-sidebar-height);
+    max-height: var(--ifm-sidebar-height);
     color: inherit !important;
     text-decoration: none !important;
   }

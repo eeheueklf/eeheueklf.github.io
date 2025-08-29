@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhamrang_log=self.webpackChunkhamrang_log||[]).push([[5151],{350:a=>{a.exports=JSON.parse('[{"label":"markdown","permalink":"/docs/tags/markdown","count":1},{"label":"docusaurus","permalink":"/docs/tags/docusaurus","count":1}]')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhamrang_log=self.webpackChunkhamrang_log||[]).push([[1325],{4562:e=>{e.exports=JSON.parse('{"title":"REACT","slug":"/category/react","permalink":"/docs/category/react","navigation":{"previous":{"title":"React vs Next.js","permalink":"/docs/fe-study/etc/react-nextjs"},"next":{"title":"JSX","permalink":"/docs/fe-study/React/basics"}}}')}}]);

@@ -82,6 +82,6 @@ HTTP 특징
 
 
 
-![Frontend Roadmap Dropdown](./img/fe-roadmap.png)
+![Frontend Roadmap Dropdown](../img/fe-roadmap.png)
 
 출처 : Developer Roadmaps - Frontend Roadmap

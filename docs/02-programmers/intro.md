@@ -21,6 +21,6 @@ sidebar_position: 0
 
 참고사항으로는 초반에는 기초와 입문 난이도가 비슷한데, 입문 후반이 좀 어려워져서 기초 입문 따로 하실거면 기초->입문 순서 추천드립니다.
 
-![프로그래머스 완료 캘린더](./img/programmers-cal.png)
+![프로그래머스 완료 캘린더](../img/programmers-cal.png)
 
 

@@ -1,0 +1,10 @@
+{
+  "label": "개발일지",
+  "position": 4,
+  "link": {
+    "type": "generated-index"
+  },
+  "customProps": {
+    "icon": "/icon/3.jpg"
+  }
+}

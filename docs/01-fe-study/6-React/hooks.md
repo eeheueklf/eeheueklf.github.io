@@ -101,3 +101,8 @@ const handleClick = useCallback(() => {
 React에서는 컴포넌트가 리렌더링 될 때마다 함수가 새로 생성됩니다.  
 `useCallback`을 쓰면 의존성이 변하지 않는 한 같은 함수 인스턴스를 재사용할 수 있습니다. (**함수를 메모이제이션**)  
 주로 자식 컴포넌트에 `props`로 함수를 넘길 때 불필요한 리렌더링을 막는 용도로 사용합니다.
+
+---
+
+기타 Hook들은 제가 배움이 깊어지는 대로 추가해보겠습니다..!
+(`useReducer`, `useLayoutEffect`, `useImperativeHandle` ... )

@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <Layout title="𝙷𝚘𝚖𝚎" description="프론트엔드 개발블로그">
       <div style={{ display: 'flex', minHeight: '100vh' }}>
-        {shouldRenderSidebarDesktop  && <HomeSidebar/>}
+        <HomeSidebar/>
         <main style={{ flex: 1, padding: '2rem' }}>
           {/* <HomepageHeader /> */}
           <Content/>

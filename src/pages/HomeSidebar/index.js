@@ -39,16 +39,6 @@ function HomeSideBar() {
           </Link>
         </li>
     </ol>
-    {/* <nav aria-label='Home sidebar' class='menu'>
-        <ul class='menu__list'>
-            <li class='menu__list-item'>
-                <a class="menu__link" href="/docs/intro">유히리 개발 아카이브</a>
-            </li>
-            <li class='menu__list-item'>
-                <a class="menu__link" href="/blogs/intro">유히리 데일리 로그</a>
-            </li>
-        </ul>
-    </nav> */}
 
     </aside>
   );

@@ -42,12 +42,12 @@ function CardContainer({
 
 function CardLayout({
   href,
-  icon,
+  // icon,
   title,
   description,
 }: {
   href: string;
-  icon: ReactNode;
+  // icon: ReactNode;
   title: string;
   description?: string;
 }): JSX.Element {
@@ -56,8 +56,8 @@ function CardLayout({
       <Heading
         as="h2"
         className={clsx('text--truncate', styles.cardTitle)}
-        title={title}>
-        {icon} {title}
+        title={title}> 
+        {title}
       </Heading>
     </CardContainer>
   );
@@ -96,11 +96,12 @@ function CardCategory({
 }
 
 function CardLink({item}: {item: PropSidebarItemLink}): JSX.Element {
-  const icon = isInternalUrl(item.href) ? '📄️' : '🔗';
+  // const icon = isInternalUrl(item.href) ? '📄️' : '🔗';
   const doc = useDocById(item.docId ?? undefined);
   return (
     <CardLayout
       href={item.href}
+      // icon={icon}
       title={item.label}
       description={item.description ?? doc?.description}
     />

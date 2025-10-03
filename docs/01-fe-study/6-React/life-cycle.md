@@ -55,7 +55,7 @@ re-render → 함수 호출 → virtual DOM 재계산 → 화면 반영 → useE
 :::
 
 ## useEffect로 생명주기 다루기
-useEffect를 통해 함수형 컴포넌트의 생명주기를 다룰 수 있습니다.
+useEffect를 통해 함수형 컴포넌트에서도 컴포넌트 생명주기를 다룰 수 있습니다.
 
 ```jsx
 useEffect(func, deps)

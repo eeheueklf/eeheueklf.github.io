@@ -44,7 +44,6 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  trailingSlash: false,
 
   i18n: {
     defaultLocale: 'ko',
@@ -75,7 +74,14 @@ const config = {
         gtag:{
           trackingID: "G-NE35MDLPZW",
           anonymizeIP: true,
-        }
+        },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],

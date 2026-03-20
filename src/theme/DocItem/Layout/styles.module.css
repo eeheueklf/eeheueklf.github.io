@@ -19,7 +19,7 @@
 
 @media (min-width: 997px) {
   .docItemCol {
-    max-width: 65% !important;
+    max-width: 720px;
   }
 
 }

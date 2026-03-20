@@ -81,12 +81,12 @@ const colors = ['var(--cus-tag-color-first)',
           <DocItemPaginator />
         </div>
       </div>
-      {docTOC.desktop && <div className="col col--3">
-        {/* <div className={styles.docImageContainer}>
+      {/* {docTOC.desktop && <div className="col col--3">
+        <div className={styles.docImageContainer}>
           <div className={styles.LogoContainer}>
               <img src="/icon/box.jpg" alt="Logo" />
           </div>
-        </div> */}
+        </div>
         {lastUpdated && (
           <div className={styles.docDateContainer}>
             {title && <h3 className={styles.docTitle}>{title}</h3>}
@@ -101,8 +101,7 @@ const colors = ['var(--cus-tag-color-first)',
           </div>
         )}
       {docTOC.desktop}
-      
-      </div>}
+      </div>} */}
     </div>
   );
 }

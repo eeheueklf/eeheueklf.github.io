@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-tags: [hola, docusaurus]
+slug: intro
+title: 인트로
 date: 2025-08-27
 ---
 

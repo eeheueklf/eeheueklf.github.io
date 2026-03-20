@@ -11,7 +11,7 @@ last_update:
 [브라우저 동작 과정 한눈에 보기✨](https://eeheueklf.github.io/docs/fe-study/internet/browser#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81-%EA%B3%BC%EC%A0%95-%EC%9B%B9-%ED%8E%98%EC%9D%B4%EC%A7%80-%ED%83%90%EC%83%89-%EC%9D%B4%ED%9B%84)에서 브라우저는 서버로부터 받아온 HTML 문서를 한 글자씩 읽어 DOM(Document Object Model) 트리를 구성한다고 했습니다. 
 이처럼 <mark>문서를 구성하는 요소들을 tree 형태로 표현한 것</mark>을 **DOM**이라고 합니다.
 
-![alt text](../1-internet/img/dom.png)
+![alt text](../internet/img/dom.png)
 
 ## Virtual DOM
 `가상 돔`

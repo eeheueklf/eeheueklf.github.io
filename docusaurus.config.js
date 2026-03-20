@@ -33,7 +33,7 @@ const totalCount = docsCount + blogCount;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '히리로그',
-  tagline: '오늘의 기록, 내일의 성장 ― 유히리 데일리로그',
+  tagline: '/프론트엔드 개발로그',
   favicon: 'img/favicon.ico',
 
   url: 'https://eeheueklf.github.io',
@@ -49,6 +49,13 @@ const config = {
     defaultLocale: 'ko',
     locales: ['ko'],
   },
+
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap',
+      type: 'text/css',
+    },
+  ],
 
   presets: [
     [

@@ -9,7 +9,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {useWindowSize} from '@docusaurus/theme-common';
 import DocSidebarDesktop from '@theme/DocSidebar/Desktop';
 import DocSidebarMobile from '@theme/DocSidebar/Mobile';
-import styles from './style.module.css';
 
 export default function DocSidebar(props) {
   const {siteConfig} = useDocusaurusContext();

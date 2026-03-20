@@ -1,0 +1,22 @@
+[
+  {
+    "title": "인트로",
+    "date": "2025-08-27T00:00:00.000Z",
+    "path": "/blogs/intro"
+  },
+  {
+    "title": "First Blog Post",
+    "date": "2025-08-03T00:00:00.000Z",
+    "path": "/blogs/first-blog-post"
+  },
+  {
+    "title": "Long Blog Post",
+    "date": "2025-08-1",
+    "path": "/blogs/long-blog-post"
+  },
+  {
+    "title": "MDX Blog Post",
+    "date": "2025-08-1",
+    "path": "/blogs/mdx-blog-post"
+  }
+]

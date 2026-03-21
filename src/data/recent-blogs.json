@@ -1,11 +1,16 @@
 [
   {
+    "title": "Next.js가 함정이었던 타자 연습 프로젝트 회고",
+    "date": "2026-03-21T00:00:00.000Z",
+    "path": "/blogs/next-sidepj"
+  },
+  {
     "title": "인트로",
     "date": "2025-08-27T00:00:00.000Z",
     "path": "/blogs/intro"
   },
   {
-    "title": "First Blog Post",
+    "title": "히리로그",
     "date": "2025-08-03T00:00:00.000Z",
     "path": "/blogs/first-blog-post"
   },

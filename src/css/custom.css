@@ -46,6 +46,7 @@
   /* sidebar */
   --doc-sidebar-width: 260px !important;
   --cus-sidebar-home-icon : #585858;
+  --doc-sidebar-hidden-width : 0 !important;
 
   --ifm-font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
   
@@ -114,17 +115,15 @@
   --ifm-link-color: #1e90ff;;
 
   /* 폰트 */
+  --ifm-container-width : 800px;
   --ifm-container-width-xl : 800px;
   --ifm-font-weight-base: 400;
   --ifm-font-size-base: 14px;
 }
 
-.row{
-  /* display: flex; */
-  /* gap: 4rem; */
-  /* justify-content: center; */
-  /* margin: 0 auto; */
-  padding: 0 5rem;
+
+.docRoot_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-styles-module {
+  padding : 2rem;
 }
 
 a{

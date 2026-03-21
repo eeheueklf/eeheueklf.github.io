@@ -66,21 +66,17 @@ const colors = ['var(--cus-tag-color-first)',
     'var(--cus-tag-color-third)'];
 
   return (
-    <div className="row">
-      <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
+    <div>
         {unlisted && <Unlisted />}
-        <DocVersionBanner />
-        <div className={styles.docItemContainer}>
-          <article>
-            <DocBreadcrumbs />
-            <DocVersionBadge />
-            {docTOC.mobile}
-            <DocItemContent>{children}</DocItemContent>
-            <DocItemFooter />
-          </article>
-          <DocItemPaginator />
-        </div>
-      </div>
+        {/* <DocVersionBanner /> */}
+        <article>
+          <DocBreadcrumbs />
+          <DocVersionBadge />
+          {docTOC.mobile}
+          <DocItemContent>{children}</DocItemContent>
+          <DocItemFooter />
+        </article>
+      {/* <DocItemPaginator /> */}
       {/* {docTOC.desktop && <div className="col col--3">
         <div className={styles.docImageContainer}>
           <div className={styles.LogoContainer}>

@@ -1,6 +1,6 @@
 ---
 slug: first-blog-post
-title: First Blog Post
+title: 히리로그
 tags: [hola, docusaurus]
 date: 2025-08-03
 ---

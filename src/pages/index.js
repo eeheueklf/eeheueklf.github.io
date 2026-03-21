@@ -40,8 +40,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   const { blogCount, docsCount } = siteConfig.customFields;
 
-  const docsHref = useBaseUrl('/docs/intro');
-  const blogHref = useBaseUrl('/blogs/intro');
+  const docsHref = useBaseUrl('/docs');
+  const blogHref = useBaseUrl('/blogs');
 
   const startDay = new Date('2025-07-24')
   const today = new Date();

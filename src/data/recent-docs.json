@@ -1,27 +1,27 @@
 [
   {
     "title": "day17 18",
-    "date": "2026-03-21T07:41:40.873Z",
+    "date": "2026-03-21T10:20:29.031Z",
     "path": "/docs/programmers/begin/day17-18"
   },
   {
-    "title": "summary",
-    "date": "2026-03-21T07:36:57.159Z",
-    "path": "/docs/programmers/summary"
+    "title": "virtual dom",
+    "date": "2026-03-20T07:19:55.706Z",
+    "path": "/docs/fe-study/React/virtual-dom"
   },
   {
-    "title": "day7 8",
-    "date": "2026-03-21T07:36:57.158Z",
-    "path": "/docs/programmers/begin/day7-8"
+    "title": "Split과 정규식 lookbehind 적용",
+    "date": "2026-03-20T06:30:18.266Z",
+    "path": "/docs/dev-log/Split과 정규식 lookbehind 적용"
   },
   {
-    "title": "day9 10",
-    "date": "2026-03-21T07:36:57.158Z",
-    "path": "/docs/programmers/begin/day9-10"
+    "title": "useEffect render",
+    "date": "2025-10-03T14:26:25.955Z",
+    "path": "/docs/fe-study/React/useEffect-render"
   },
   {
-    "title": "intro",
-    "date": "2026-03-21T07:36:57.158Z",
-    "path": "/docs/programmers/intro"
+    "title": "life cycle",
+    "date": "2025-10-03T14:17:09.016Z",
+    "path": "/docs/fe-study/React/life-cycle"
   }
 ]

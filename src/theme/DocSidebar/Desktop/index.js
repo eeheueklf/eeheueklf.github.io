@@ -65,28 +65,6 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
           <span>히리로그</span>
         </div>
       </div>
-      <ol className={styles.iconContainer}>
-        <li>
-          <Link href={homeHref}>
-            <IconHome className={styles.collapseSidebarHomeIcon}/>𝙷𝚘𝚖𝚎
-          </Link>
-        </li>
-        <li>
-          <Link href={docsHref}>
-            <IconDocs className={styles.collapseSidebarHomeIcon}/>𝙳𝚘𝚌𝚜
-          </Link>
-        </li>
-        <li>
-          <Link href={blogHref}>
-            <IconBlog className={styles.collapseSidebarHomeIcon}/>𝙱𝚕𝚘𝚐
-          </Link>
-        </li>
-        <li>
-          <Link onClick={()=>setOpenSearch(prev => !prev)}>
-            <IconSearch className={styles.collapseSidebarHomeIcon}/>𝚂𝚎𝚊𝚛𝚌𝚑
-          </Link>
-        </li>
-      </ol>
       {openSearch && 
         <input
           type="text"

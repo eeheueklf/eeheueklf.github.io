@@ -47,11 +47,9 @@
   --doc-sidebar-width: 260px !important;
   --cus-sidebar-home-icon : #585858;
   --doc-sidebar-hidden-width : 0 !important;
-
-  --ifm-font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
   
   /* 목차 */
-  --ifm-navbar-height: 19rem;
+  --ifm-navbar-height: 10rem;
   --ifm-sidebar-height: 20px;
   --ifm-menu-color-background-active : #e9dccd;
   --ifm-hover-overlay : #f3f3f3;
@@ -62,11 +60,7 @@
   --custom-menu-link-hover : var(--ifm-menu-color-active);
 
   --ifm-menu-link-padding-horizontal : 0.4rem;
-  /* 표 */
-  /* --ifm-table-cell-padding : 0.3rem 1rem; */
-  /* --ifm-table-stripe-background : #f0e4d6; */
-  /* --ifm-table-head-background : #e9dccd; */
-  /* --ifm-table-border-color : #e9dccd; */
+  --ifm-toc-padding-horizontal : 0;
   
   /* 박스 */
   /* ::info ::note ::tip ::warning ::danger */
@@ -99,7 +93,7 @@
   /* 코드 */
   --code-area-bg : #ececec;
   --code-area-border : #d4d5d8;
-  --ifm-code-font-size : 80%;
+  --ifm-code-font-size : 100%;
   --ifm-global-shadow-lw : none;
   --ifm-code-border-radius : 10px;
 
@@ -133,7 +127,7 @@ a{
 
 /* main */
 main{
-  background-color: #fcfcfc;
+  background-color: #ffffff;
 }
 /* font - 배민 한나체 */
 .hanna-text {
@@ -211,9 +205,6 @@ h1{
   margin-top: 2rem;
   margin-bottom: 0.8em;
 }
-.markdown p {
-  line-height: 200%;
-}
 
 
 
@@ -275,12 +266,29 @@ h1{
 }
 
 
+
+/* 목차 */
+.tableOfContents_node_modules-\@docusaurus-theme-classic-lib-theme-TOC-styles-module {
+  position:inherit !important;
+}
+
+.table-of-contents {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
 .table-of-contents li a {
   display: inline;
   position: relative;
+  text-decoration: none;
+  color: black;
 }
 .table-of-contents li a:hover, .table-of-contents__link--active{
   box-shadow: inset 0 -10px 0 var(--mark-highlight-shadow); 
+}
+
+.table-of-contents__left-border{
+  border: none;
 }
 /* 토글 */
 details{
@@ -357,19 +365,14 @@ p code:hover, li p code:hover{
 }
 
 /* 링크 - 같은 code임 */
-a code {
-  text-decoration: underline solid var(--mark-hyperlink-color);
-  text-underline-offset: 3px;
-  padding: 0;
-  /* color : var(--mark-hyperlink-color); */
-  border: none;  
-  background-color: inherit;
-  font-weight: bold;
+.markdown a {
+  color: var(--mark-hyperlink-color);
 }
-a code:hover {
-  text-decoration: underline solid var(--mark-hyperlink-hover);
-  color : var(--mark-hyperlink-hover);
+
+.markdown em{
+  color: #818181
 }
+
 
 /* 테이블 */
 table {
@@ -410,8 +413,24 @@ table td {
    scrollbar-width: none;
 }
 
+
+
 /* 목차 */
-.table-of-contents__left-border{
-  border : 1px solid var(--ifm-color-secondary-dark);
-  border-radius : 10px;
+.doc-toc {
+  position: fixed;
+  right: 20px; 
+  top: 0px;   
+  width: 200px; 
+  height: calc(100vh - 10px); 
+  overflow-y: auto;
+  z-index: 10; 
+}
+
+@media (max-width: 1240px) {
+  .custom-desktop-toc {
+      display: none;
+  }
+  .docItemMain {
+      margin-right: 0;
+  }
 }

@@ -69,11 +69,14 @@ const config = {
             'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
         },
         blog: {
+          path: 'blogs',         
+          routeBasePath: 'blogs',
           showReadingTime: true,
-          editUrl:
-            'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Posts',
+          editUrl:
+            'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
+
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -105,19 +108,6 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-    plugins: [
-      [
-        '@docusaurus/plugin-content-docs',
-        {
-          id: 'blogDocs',            // 고유 id
-          path: 'blogs',               // 실제 blog 폴더
-          routeBasePath: 'blogs',      // URL 경로: example.com/blog/~
-          sidebarPath: require.resolve('./sidebarsBlog.js'),
-          editUrl: 'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
-          showLastUpdateTime: true,
-        },
-      ],
-    ],
     customFields: {
       blogCount,
       docsCount,

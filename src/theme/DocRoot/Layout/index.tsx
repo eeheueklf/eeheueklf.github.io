@@ -21,13 +21,13 @@ export default function DocRootLayout({children}: Props): JSX.Element {
     <div className={styles.docsWrapper}>
       <BackToTopButton />
       <div className={styles.docRoot}>
-        {sidebar && (
+        {/* {sidebar && (
           <DocRootLayoutSidebar
             sidebar={sidebar.items}
             hiddenSidebarContainer={hiddenSidebarContainer}
             setHiddenSidebarContainer={setHiddenSidebarContainer}
           />
-        )}
+        )} */}
         <DocRootLayoutMain hiddenSidebarContainer={hiddenSidebarContainer}>
           {children}
         </DocRootLayoutMain>

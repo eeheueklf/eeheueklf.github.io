@@ -111,7 +111,7 @@
   /* 하이퍼링크 */
   --mark-hyperlink-color: rgb(219, 45, 45);
   --mark-hyperlink-hover: rgb(45, 45, 219);
-  --ifm-link-color: rgb(219, 45, 45);
+  --ifm-link-color: #1e90ff;;
 
   /* 폰트 */
   --ifm-container-width-xl : 800px;
@@ -127,15 +127,21 @@
   padding: 0 5rem;
 }
 
+a{
+  transition:none;
+}
+
+
 /* main */
+main{
+  background-color: #fcfcfc;
+}
 /* font - 배민 한나체 */
 .hanna-text {
   font-family: 'A2z', sans-serif;
 }
 .heroBanner {
-  padding: 4rem 0;
-  position: relative;
-  overflow: hidden;
+  padding: 4rem 0 1rem 0;
 }
 
 .hero__subtitle {
@@ -148,6 +154,7 @@
   margin-top: 1.5rem;
 }
 .menuHref{
+  margin-top: 2rem;
   font-family: 'A2z', sans-serif;
 }
 .menuHref a{
@@ -159,6 +166,29 @@
   cursor: pointer;
 }
 
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin: 0.3rem 0;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link-icon {
+  display: inline-flex;
+  opacity: 0.7;
+}
 
 /* 제목 크기 */
 h1{

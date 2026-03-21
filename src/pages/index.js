@@ -11,17 +11,30 @@ import RecentDocs from '../components/RecentDocs';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className="heroBanner">
-      <div className="container">
-        <Heading as="h1" className="hanna-text">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <p className="hero__description">화면 너머의 구조를 설계합니다.</p>
-      </div>
-    </header>
+    <div className="container">
+      <header className="heroBanner">
+          <Heading as="h1" className="hanna-text">
+            {siteConfig.title}
+          </Heading>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <p className="hero__description">화면 너머의 구조를 설계합니다.</p>
+      </header>
+    </div>
   );
 }
+
+const LinkIcon = () => (
+  <svg viewBox="0 0 24 24" width="14" height="14">
+    <path
+      d="M21.44 11.05l-8.49 8.49a5 5 0 01-7.07-7.07l8.49-8.49a3 3 0 114.24 4.24l-8.49 8.49a1 1 0 01-1.41-1.41l7.78-7.78"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
@@ -41,11 +54,13 @@ export default function Home() {
           <HomepageHeader />
           <section className="container">
             <Heading as="h2" className="menuHref">
-              <Link href={blogHref}>Logs</Link> {blogCount}
+              <Link href={blogHref}>Logs</Link> 
+              {/* {blogCount} */}
             </Heading>
             <RecentLogs />
             <Heading as="h2" className="menuHref">
-              <Link href={docsHref}>Docs</Link> {docsCount} 
+              <Link href={docsHref}>Docs</Link> 
+              {/* {docsCount}  */}
             </Heading>
             <RecentDocs />
             <Heading as="h2" className="menuHref">
@@ -55,6 +70,23 @@ export default function Home() {
             <Heading as="h2" className="menuHref">
               contact
             </Heading>
+            <ul className="contact-list">
+              <li>
+                <Link to="https://github.com/eeheueklf" className="contact-link">
+                  <span className="link-icon"><LinkIcon /></span>
+                  GitHub
+                </Link>
+              </li>
+
+              <li>
+                <Link to="mailto:eeheueklf@email.com" className="contact-link">
+                  <span className="link-icon">
+                    <span className="link-icon"><LinkIcon /></span>
+                  </span>
+                  eeheueklf@email.com
+                </Link>
+              </li>
+            </ul>
           </section>
         </main>
       </div>

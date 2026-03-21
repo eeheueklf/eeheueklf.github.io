@@ -28,12 +28,10 @@ function getItems(dir, baseRoute) {
         const finalTitle = data.title || (dateMatch ? dateMatch[2] : fileName);
         const finalDate = data.date || (dateMatch ? dateMatch[1] : stat.mtime);
 
-        // 공통 relativePath
         let relativePath = path.relative(dir, filePath)
           .replace(/\.(md|mdx)$/, '')
           .replace(/\\/g, '/');
 
-        // ✅ blogs만 날짜 제거
         if (baseRoute === 'blogs' && dateMatch) {
           relativePath = relativePath.replace(
             /^(.+\/)?(\d{4}-\d{2}-\d{2})-(.+)$/,
@@ -59,12 +57,12 @@ function generate() {
 
   const docs = getItems(DOCS_DIR, 'docs')
     .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 10);
+    .slice(0, 5);
   fs.writeFileSync(path.join(DATA_DIR, 'recent-docs.json'), JSON.stringify(docs, null, 2));
 
   const blogs = getItems(BLOG_DIR, 'blogs') 
     .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 10);
+    .slice(0, 5);
   fs.writeFileSync(path.join(DATA_DIR, 'recent-blogs.json'), JSON.stringify(blogs, null, 2));
 
 }

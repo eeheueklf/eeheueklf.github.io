@@ -59,7 +59,8 @@ function useSyntheticTitle(): string | null {
 
 export default function DocItemContent({children}: Props): JSX.Element {
   const syntheticTitle = useSyntheticTitle();
-  const {metadata: { lastUpdatedAt , description} } = useDoc();
+
+  const {metadata: { lastUpdatedAt } } = useDoc();
 
   const lastUpdated = lastUpdatedAt
   ? (() => {
@@ -75,7 +76,6 @@ export default function DocItemContent({children}: Props): JSX.Element {
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
         <header className="heroBanner">
-          <p className="hero__subtitle">/Logs/{lastUpdated}</p>
           <Heading as="h1" className="hanna-text">{syntheticTitle}</Heading>
         </header>
       )}

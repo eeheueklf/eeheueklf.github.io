@@ -18,19 +18,19 @@ export default function DocRootLayout({children}: Props): JSX.Element {
   const sidebar = useDocsSidebar();
   const [hiddenSidebarContainer, setHiddenSidebarContainer] = useState(false);
   return (
-    <div className={styles.docsWrapper}>
+    <div>
       <BackToTopButton />
-      <div className={styles.docRoot}>
-        {/* {sidebar && (
+      <div>
+        <DocRootLayoutMain hiddenSidebarContainer={hiddenSidebarContainer}>
+          {children}
+        </DocRootLayoutMain>
+        {sidebar && (
           <DocRootLayoutSidebar
             sidebar={sidebar.items}
             hiddenSidebarContainer={hiddenSidebarContainer}
             setHiddenSidebarContainer={setHiddenSidebarContainer}
           />
-        )} */}
-        <DocRootLayoutMain hiddenSidebarContainer={hiddenSidebarContainer}>
-          {children}
-        </DocRootLayoutMain>
+        )}
       </div>
     </div>
   );

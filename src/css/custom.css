@@ -21,7 +21,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
 
 :root {
-  --ifm-color-primary: #72481d;
+  --ifm-color-primary: #000000;
   --ifm-color-primary-dark: #A2704C;
   --ifm-color-primary-darker: #67442E;
   --ifm-color-primary-darkest: #205d3b;
@@ -127,7 +127,7 @@ a{
 
 /* main */
 main{
-  background-color: #ffffff;
+  background-color: #fcfcfc;
 }
 /* font - 배민 한나체 */
 .hanna-text {
@@ -220,9 +220,8 @@ h1{
 }
 /* 제목 위치 */
 .breadcrumbs {
-  margin-bottom:20px;
+  position: absolute;
 }
-
 
 
 /* 박스 */
@@ -314,6 +313,7 @@ details{
 .menu__link {
   font-size: 1rem; 
   letter-spacing: -0.3px;
+  
 }
 
 .menu__caret{
@@ -324,7 +324,7 @@ details{
 }
 
 .menu__list-item:not(:first-child){
-  margin-top : 0.5rem;
+  margin-top : 0rem;
 }
 .sidebar-category-icon{
   border-radius :3px;
@@ -335,7 +335,7 @@ details{
 }
 
 .menu__list-item{
-  margin-top : 0.3rem !important;
+  margin-top : 0 !important;
 }
 
 .menu__link:hover{
@@ -433,4 +433,49 @@ table td {
   .docItemMain {
       margin-right: 0;
   }
+}
+
+/* 사이드바 */
+
+@media (min-width: 997px) {
+  .docSidebarContainer_src-theme-DocRoot-Layout-Sidebar-styles-module {
+    position: absolute;
+    left: 0;
+    top: var(--ifm-navbar-height);
+    z-index: 100;
+    height: calc(100vh - var(--ifm-navbar-height));
+    background-color: var(--ifm-background-color);
+    border-right: 1px solid var(--ifm-toc-border-color);
+    
+    width: var(--doc-sidebar-width);
+  }
+
+  .docMainContainer_src-theme-DocRoot-Layout-Main-styles-module {
+    margin-left: 0 !important; 
+    padding-left: 0 !important;
+  }
+}
+
+.menu__link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-700);
+  padding: 0.4rem 1rem;
+  border-radius: 0 !important;
+  transition: all 0.2s ease;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-color-emphasis-100) !important;
+  color: var(--ifm-color-primary);
+  border-left-color: var(--ifm-color-emphasis-300);
+}
+
+.menu__link--active {
+  background-color: transparent !important;
+  color: var(--ifm-color-primary) !important;
+  border-left-color: var(--ifm-color-primary) !important;
+  padding-left: 1rem;
 }

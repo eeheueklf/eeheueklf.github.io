@@ -155,14 +155,14 @@ export default function DocSidebarItemCategory({
           href={collapsible ? hrefWithSSRFallback ?? '#' : hrefWithSSRFallback}
           {...props}>
           {/* ✅ 아이콘 + 라벨 */}
-          {customProps?.icon && (
+          {/* {customProps?.icon && (
             <img
               src={customProps.icon}
               alt=""
               className="sidebar-category-icon"
               style={{width: '18px', height: '18px', marginRight: '6px'}}
             />
-          )}
+          )} */}
           {label}
         </Link>
         {href && collapsible && (

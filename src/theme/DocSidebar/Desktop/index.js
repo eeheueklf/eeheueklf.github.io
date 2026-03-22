@@ -12,14 +12,7 @@ import Logo from '@theme/Logo';
 import Content from '@theme/DocSidebar/Desktop/Content';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import IconHome from '@theme/Icon/Home';
-import IconDocs from '@theme/Icon/WordWrap';
-import IconBlog from '@theme/Icon/DarkMode';
-import IconSearch from '../../Icon/Search.tsx';
-import Link from '@docusaurus/Link';
 function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
-  const [openSearch, setOpenSearch] = useState(false);
-
 
   const {
     navbar: {hideOnScroll},
@@ -48,9 +41,6 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
     });
   };
 
-  const homeHref = useBaseUrl('/');
-  const docsHref = useBaseUrl('/docs/intro');
-  const blogHref = useBaseUrl('/blogs/intro');
 
   return (
     <div
@@ -59,20 +49,7 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
         hideOnScroll && styles.sidebarWithHideableNavbar,
         isHidden && styles.sidebarHidden,
       )}>
-      <div className={styles.searchContainer}>
-        <div className={styles.LogoContainer}>
-          <img src="/img/favicon.ico" alt="Logo" />
-          <span>히리로그</span>
-        </div>
-      </div>
-      {openSearch && 
-        <input
-          type="text"
-          className={styles.searchInput}
-          placeholder="문서 검색하기"
-          onInput={handleSearch}
-        />
-      }
+
       
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
       <Content path={path} sidebar={sidebar} />

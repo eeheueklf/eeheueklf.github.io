@@ -64,14 +64,13 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          showLastUpdateTime: true,
+          routeBasePath: 'docs',
           editUrl:
             'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
         },
         blog: {
           path: 'blogs',         
           routeBasePath: 'blogs',
-          showReadingTime: true,
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Posts',
           editUrl:
@@ -97,12 +96,6 @@ const config = {
         name:"google-site-verification",
         content:"fhdIMfm7eKRtHRKiRQ5quuM9xGeD5qNnWKm-hnjb-Qc"
       }],
-      docs:{
-        sidebar: {
-          autoCollapseCategories: true,
-          hideable: true,
-        }
-      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,

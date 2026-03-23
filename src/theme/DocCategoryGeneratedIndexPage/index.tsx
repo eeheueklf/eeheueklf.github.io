@@ -39,7 +39,6 @@ function DocCategoryGeneratedIndexPageContent({
 
   return (
     <div className={styles.generatedIndexPage}>
-      {/* 1. Hero Section */}
       <div>
         <header className="docsBanner">
           / <Link href={homeHref} className="docs__subtitle">홈</Link> 

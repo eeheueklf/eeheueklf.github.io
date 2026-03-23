@@ -12,6 +12,8 @@ import {useDoc} from '@docusaurus/theme-common/internal';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 import type {Props} from '@theme/DocItem/Content';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 import {useWindowSize} from '@docusaurus/theme-common';
@@ -70,12 +72,15 @@ export default function DocItemContent({children}: Props): JSX.Element {
   : null;
 
   const docTOC = useDocTOC();
+    const homeHref = useBaseUrl('/docs');
 
 
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
-        <header className="heroBanner">
+        <header className="docsBanner">
+          / <Link href={homeHref} className="docs__subtitle">Docs</Link> 
+          
           <Heading as="h1" className="hanna-text">{syntheticTitle}</Heading>
         </header>
       )}

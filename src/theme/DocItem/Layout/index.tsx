@@ -18,7 +18,6 @@ export default function DocItemLayout({children}: Props): JSX.Element {
   return (
     <div>
       <article>
-        <DocBreadcrumbs />
         <DocItemContent>{children}</DocItemContent>
         <DocItemFooter />
       </article>

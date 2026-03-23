@@ -37,10 +37,6 @@ function BlogPostPageContent({
     <Layout>
       {unlisted && <Unlisted />}
       <BlogPostItem>{children}</BlogPostItem>
-
-      {(nextItem || prevItem) && (
-        <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
-      )}
     </Layout>
   );
 }
@@ -54,7 +50,7 @@ export default function BlogPostPage(props: Props): JSX.Element {
           ThemeClassNames.wrapper.blogPages,
           ThemeClassNames.page.blogPostPage,
         )}>
-        <BlogPostPageMetadata />
+        {/* <BlogPostPageMetadata /> */}
         <BlogPostPageContent sidebar={props.sidebar}>
           <BlogPostContent />
         </BlogPostPageContent>

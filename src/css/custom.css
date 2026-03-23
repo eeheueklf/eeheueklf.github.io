@@ -453,3 +453,13 @@ table td {
   color: var(--ifm-color-primary);
   border-left-color: var(--ifm-color-primary);
 }
+
+/* blogs */
+
+.row{
+  margin: 0;
+}
+.margin-vert--lg {
+  margin-bottom: 0rem !important;
+  margin-top: 0rem !important;
+}

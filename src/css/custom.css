@@ -13,6 +13,12 @@
 }
 
 @font-face {
+    font-family: 'A2zR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
     font-family: 'A2z';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-7Bold.woff2') format('woff2');
     font-weight: 700;
@@ -49,7 +55,7 @@
   --doc-sidebar-hidden-width : 0 !important;
   
   /* 목차 */
-  --ifm-navbar-height: 10rem;
+  --ifm-navbar-height: 0rem;
   --ifm-sidebar-height: 20px;
   --ifm-menu-color-background-active : #e9dccd;
   --ifm-hover-overlay : #f3f3f3;
@@ -135,6 +141,7 @@ main{
 }
 .heroBanner {
   padding: 4rem 0 1rem 0;
+  margin-top: 2rem;
 }
 
 .hero__subtitle {
@@ -186,7 +193,7 @@ main{
 /* 제목 크기 */
 h1{
   font-size : 32px;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .markdown > h2{
@@ -309,39 +316,6 @@ details{
 }
 
 
-/* 사이드바 */
-.menu__link {
-  font-size: 1rem; 
-  letter-spacing: -0.3px;
-  
-}
-
-.menu__caret{
-  padding: 0.3rem;
-}
-.menu__caret:before{
-  background: var(--ifm-menu-link-sublist-icon) 100% / 1rem 1rem !important;
-}
-
-.menu__list-item:not(:first-child){
-  margin-top : 0rem;
-}
-.sidebar-category-icon{
-  border-radius :3px;
-}
-
-.menu{
-  padding : 0 0.7rem !important;
-}
-
-.menu__list-item{
-  margin-top : 0 !important;
-}
-
-.menu__link:hover{
-  color:var(--custom-menu-link-hover);
-}
-
 /* 마크 */
 mark {
   background-color: inherit;
@@ -437,45 +411,45 @@ table td {
 
 /* 사이드바 */
 
-@media (min-width: 997px) {
-  .docSidebarContainer_src-theme-DocRoot-Layout-Sidebar-styles-module {
-    position: absolute;
-    left: 0;
-    top: var(--ifm-navbar-height);
-    z-index: 100;
-    height: calc(100vh - var(--ifm-navbar-height));
-    background-color: var(--ifm-background-color);
-    border-right: 1px solid var(--ifm-toc-border-color);
-    
-    width: var(--doc-sidebar-width);
-  }
+.docsBanner {
+  padding: 4rem 0 1rem 0;
+  font-family: 'A2ZR';
+}
 
-  .docMainContainer_src-theme-DocRoot-Layout-Main-styles-module {
-    margin-left: 0 !important; 
-    padding-left: 0 !important;
-  }
+.docs__subtitle {
+  color:black;
+  text-decoration: underline;
+}
+
+.menu__list{
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+
+.menu__title {
+  font-family: 'A2ZR';
+  color:black;
+  font-size: 1.3rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.025em;
 }
 
 .menu__link {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--ifm-color-emphasis-700);
-  padding: 0.4rem 1rem;
-  border-radius: 0 !important;
-  transition: all 0.2s ease;
-  border-left-style: solid;
-  border-left-width: 1px;
+  font-size: 1.1rem;
+  color: rgb(49, 49, 49);
+  line-height: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  border-left: 1px solid var(--ifm-color-emphasis-300);
 }
 
 .menu__link:hover {
-  background-color: var(--ifm-color-emphasis-100) !important;
+  background-color: transparent;
   color: var(--ifm-color-primary);
-  border-left-color: var(--ifm-color-emphasis-300);
-}
-
-.menu__link--active {
-  background-color: transparent !important;
-  color: var(--ifm-color-primary) !important;
-  border-left-color: var(--ifm-color-primary) !important;
-  padding-left: 1rem;
+  border-left-color: var(--ifm-color-primary);
 }

@@ -24,13 +24,13 @@ export default function DocRootLayout({children}: Props): JSX.Element {
         <DocRootLayoutMain hiddenSidebarContainer={hiddenSidebarContainer}>
           {children}
         </DocRootLayoutMain>
-        {sidebar && (
+        {/* {sidebar && (
           <DocRootLayoutSidebar
             sidebar={sidebar.items}
             hiddenSidebarContainer={hiddenSidebarContainer}
             setHiddenSidebarContainer={setHiddenSidebarContainer}
           />
-        )}
+        )} */}
       </div>
     </div>
   );

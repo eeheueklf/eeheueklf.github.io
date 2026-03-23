@@ -11,15 +11,12 @@ import {
   useCurrentSidebarCategory,
 } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import DocCardList from '@theme/DocCardList';
-import DocPaginator from '@theme/DocPaginator';
-import DocVersionBanner from '@theme/DocVersionBanner';
-import DocVersionBadge from '@theme/DocVersionBadge';
-import DocBreadcrumbs from '@theme/DocBreadcrumbs';
+import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import type {Props} from '@theme/DocCategoryGeneratedIndexPage';
 
 import styles from './styles.module.css';
+
 
 function DocCategoryGeneratedIndexPageMetadata({
   categoryGeneratedIndex,
@@ -29,7 +26,6 @@ function DocCategoryGeneratedIndexPageMetadata({
       title={categoryGeneratedIndex.title}
       description={categoryGeneratedIndex.description}
       keywords={categoryGeneratedIndex.keywords}
-      // TODO `require` this?
       image={useBaseUrl(categoryGeneratedIndex.image)}
     />
   );
@@ -39,21 +35,42 @@ function DocCategoryGeneratedIndexPageContent({
   categoryGeneratedIndex,
 }: Props): JSX.Element {
   const category = useCurrentSidebarCategory();
+  const homeHref = useBaseUrl('/');
+
   return (
     <div className={styles.generatedIndexPage}>
-      <DocVersionBanner />
-      <DocBreadcrumbs />
-      <DocVersionBadge />
-      <header>
-        <Heading as="h1" className={styles.title}>
-          {categoryGeneratedIndex.title}
-        </Heading>
-        {categoryGeneratedIndex.description && (
-          <p>{categoryGeneratedIndex.description}</p>
-        )}
-      </header>
-      <article className="margin-top--lg">
-        <DocCardList items={category.items} className={styles.list} />
+      {/* 1. Hero Section */}
+      <div>
+        <header className="docsBanner">
+          / <Link href={homeHref} className="docs__subtitle">홈</Link> 
+          <Heading as="h1" className="hanna-text">
+            {categoryGeneratedIndex.title}
+          </Heading>
+        </header>
+      </div>
+
+      <article>
+        {category.items.map((item, index) => {
+          if (item.type === 'category') {
+            return (
+              <section key={index}>
+                <div className='menu__title'>
+                  {item.label}
+                </div>
+                <ul className='menu__list'>
+                  {item.items.map((child, childIdx) => (
+                    <li key={childIdx} style={{ margin: 0 }}>
+                      <Link to={child.href} className="menu__link">
+                        {child.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            );
+          }
+          return null;
+        })}
       </article>
     </div>
   );

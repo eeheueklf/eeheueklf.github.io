@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhamrang_log=self.webpackChunkhamrang_log||[]).push([[1086],{1136:l=>{l.exports=JSON.parse('[{"label":"hola","permalink":"/blogs/tags/hola","count":1},{"label":"docusaurus","permalink":"/blogs/tags/docusaurus","count":3},{"label":"hello","permalink":"/blogs/tags/hello","count":1}]')}}]);

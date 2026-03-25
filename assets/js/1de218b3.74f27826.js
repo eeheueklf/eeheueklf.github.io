@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhamrang_log=self.webpackChunkhamrang_log||[]).push([[8311],{3724:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"blogDocs"}')}}]);

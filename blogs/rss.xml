@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>히리로그 Blog</title>
+        <link>https://eeheueklf.github.io/blogs</link>
+        <description>히리로그 Blog</description>
+        <lastBuildDate>Sat, 21 Mar 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ko</language>
+        <item>
+            <title><![CDATA[Next.js가 함정이었던 타자 연습 프로젝트 회고]]></title>
+            <link>https://eeheueklf.github.io/blogs/next-sidepj</link>
+            <guid>https://eeheueklf.github.io/blogs/next-sidepj</guid>
+            <pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[최신 트렌드인 Next.js를 학습하고 적용했던 적용기입니다.]]></description>
+            <content:encoded><![CDATA[<p><em>최신 트렌드인 Next.js를 학습하고 적용했던 적용기입니다.</em></p>
+<p>블로그를 만들며 Next.js를 맛본 뒤, <strong>이거 물건이다</strong>라는 생각이 들었다.</p>
+<p>배포도 빠르고 리액트랑도 비슷해서, 바로 다음 프로젝트 프레임워크로 선택했다.</p>
+<p>그렇게 2명이서 야심차게 시작한 타자 연습 사이트 사이드 프로젝트
+<a href="https://tyletype.vercel.app/" target="_blank" rel="noopener noreferrer"><code>TYLE</code></a></p>
+<p><img decoding="async" loading="lazy" alt="TYLE" src="data:image/png;base64,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" width="78" height="28" class="img_ev3q"></p>
+<p>처음엔 모든 게 순조로웠다.</p>
+<p>Vercel에서의 배포는 순식간이었고, 리액트 했던대로 구현도 빠르게 했다.</p>
+<p>하지만 프로젝트가 진행될수록 뭔가 이상함을 느꼈다.</p>
+<p><img decoding="async" loading="lazy" alt="이상하다" src="https://eeheueklf.github.io/assets/images/%EC%9D%B4%EC%83%81%ED%95%98%EB%8B%A4-be85a42ed05603a31333eb63375550e9.png" width="400" height="400" class="img_ev3q"></p>
+<p><strong>1. 이거 ‘use Client’ 이렇게 많이 쓰면 안될 것 같은데</strong></p>
+<p>Next.js가 SSR(서버 사이드 렌더링)에 강점이 있다고 알았는데</p>
+<p>사이트 초기 메인화면 렌더링 속도가 너무 길었다. (거의 5초 이상?)</p>
+<p>타자 연습 특성상 실시간 키보드 이벤트와 상태 업데이트가 70% 이상이었다.</p>
+<p>결국 화면에 거의 모든 곳에 use client를 적고 있었다는 걸 알았다.</p>
+<p><strong>2. SEO 쓸데가 없네</strong></p>
+<p>검색 엔진 최적화가 장점이라지만, 타자 연습 사이트엔 텍스트 콘텐츠가 없기 때문에</p>
+<p>키보드와 글귀만 있는 서비스에서 장점을 발휘 할 수가 없다.</p>
+<hr>
+<p>한글 입력과 렌더링</p>
+<p>특히 한글 입력이 자+모음이 합쳐지는 형태라 상태 업데이트가 특수한데,</p>
+<p>( 조합 중인 글자가 상태와 동기화되면서 불필요한 렌더링을 유발한다는 점입니다.)</p>
+<p>불필요한 렌더링과 엔터 키 중복 이벤트 이슈 등 클라이언트 최적화에 집중해야 하기 때문에</p>
+<p>핵심인 타이핑 로직은 서버가 도와줄 수 없기 때문에 실제 성능의 핵심은 클라이언트 최적화에있었다.</p>
+<p>오히려 아키텍처만 복잡해지고 있었다.</p>
+<p>깨달음 : 기술은 도구일 뿐이다.</p>
+<p>고려 없는 기술 도입은 오히려 아키텍처를 복잡하게 만들고</p>
+<p>머리가 아파질 수 있다@.!</p>
+<p>다음 프로젝트에서는 SEO와 초기 로딩 속도가 중요했기에 Next.js를 선택했지만</p>
+<p>타자 연습 같은 프로젝트라면 가벼운 환경이 더 적합했을 것 같다.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[인트로]]></title>
+            <link>https://eeheueklf.github.io/blogs/intro</link>
+            <guid>https://eeheueklf.github.io/blogs/intro</guid>
+            <pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[마크다운 참고하기 🍪🍄‍🟫☕]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="마크다운-참고하기-">마크다운 참고하기 🍪🍄‍🟫☕<a href="https://eeheueklf.github.io/blogs/intro#%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EC%B0%B8%EA%B3%A0%ED%95%98%EA%B8%B0-" class="hash-link" aria-label="마크다운 참고하기 🍪🍄‍🟫☕에 대한 직접 링크" title="마크다운 참고하기 🍪🍄‍🟫☕에 대한 직접 링크">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-안녕하세요-">👋 안녕하세요 🤎🧸📜<a href="https://eeheueklf.github.io/blogs/intro#-%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94-" class="hash-link" aria-label="👋 안녕하세요 🤎🧸📜에 대한 직접 링크" title="👋 안녕하세요 🤎🧸📜에 대한 직접 링크">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="제목-4-">제목 4 🌕🍞🍂<a href="https://eeheueklf.github.io/blogs/intro#%EC%A0%9C%EB%AA%A9-4-" class="hash-link" aria-label="제목 4 🌕🍞🍂에 대한 직접 링크" title="제목 4 🌕🍞🍂에 대한 직접 링크">​</a></h4>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="제목-5-">제목 5 🪐🧺🥖<a href="https://eeheueklf.github.io/blogs/intro#%EC%A0%9C%EB%AA%A9-5-" class="hash-link" aria-label="제목 5 🪐🧺🥖에 대한 직접 링크" title="제목 5 🪐🧺🥖에 대한 직접 링크">​</a></h5>
+<h6 class="anchor anchorWithStickyNavbar_LWe7" id="제목-6-">제목 6 🐌🐻🪵<a href="https://eeheueklf.github.io/blogs/intro#%EC%A0%9C%EB%AA%A9-6-" class="hash-link" aria-label="제목 6 🐌🐻🪵에 대한 직접 링크" title="제목 6 🐌🐻🪵에 대한 직접 링크">​</a></h6>
+<p>🍩🐿️🍦</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="13-경고팁-박스-admonitions">13. 경고/팁 박스 (Admonitions)<a href="https://eeheueklf.github.io/blogs/intro#13-%EA%B2%BD%EA%B3%A0%ED%8C%81-%EB%B0%95%EC%8A%A4-admonitions" class="hash-link" aria-label="13. 경고/팁 박스 (Admonitions)에 대한 직접 링크" title="13. 경고/팁 박스 (Admonitions)에 대한 직접 링크">​</a></h2>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37">🐻</span></div><div class="admonitionContent_BuS1"><p>목차</p></div></div>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span></div><div class="admonitionContent_BuS1"><p>정보</p></div></div>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37">🌵</span></div><div class="admonitionContent_BuS1"><p>팁</p></div></div>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37">🌞</span></div><div class="admonitionContent_BuS1"><p>메모</p></div></div>
+<div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37">⛔</span></div><div class="admonitionContent_BuS1"><p>경고</p></div></div>
+<div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37">⛔</span>Take care</div><div class="admonitionContent_BuS1"><p>경고입니다~</p></div></div>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-텍스트-스타일">2. 텍스트 스타일<a href="https://eeheueklf.github.io/blogs/intro#2-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EC%8A%A4%ED%83%80%EC%9D%BC" class="hash-link" aria-label="2. 텍스트 스타일에 대한 직접 링크" title="2. 텍스트 스타일에 대한 직접 링크">​</a></h2>
+<p><strong>굵게</strong><br>
+<em>기울임</em><br>
+<del>취소선</del><br>
+<strong>굵고 <em>기울임</em></strong></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-목록">3. 목록<a href="https://eeheueklf.github.io/blogs/intro#3-%EB%AA%A9%EB%A1%9D" class="hash-link" aria-label="3. 목록에 대한 직접 링크" title="3. 목록에 대한 직접 링크">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="순서-없는-목록">순서 없는 목록<a href="https://eeheueklf.github.io/blogs/intro#%EC%88%9C%EC%84%9C-%EC%97%86%EB%8A%94-%EB%AA%A9%EB%A1%9D" class="hash-link" aria-label="순서 없는 목록에 대한 직접 링크" title="순서 없는 목록에 대한 직접 링크">​</a></h3>
+<ul>
+<li>아이템 1</li>
+<li>아이템 2<!-- -->
+<ul>
+<li>하위 아이템</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="순서-있는-목록">순서 있는 목록<a href="https://eeheueklf.github.io/blogs/intro#%EC%88%9C%EC%84%9C-%EC%9E%88%EB%8A%94-%EB%AA%A9%EB%A1%9D" class="hash-link" aria-label="순서 있는 목록에 대�한 직접 링크" title="순서 있는 목록에 대한 직접 링크">​</a></h3>
+<ol>
+<li>첫 번째</li>
+<li>두 번째<!-- -->
+<ol>
+<li>하위 첫 번째</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-링크--이미지">4. 링크 &amp; 이미지<a href="https://eeheueklf.github.io/blogs/intro#4-%EB%A7%81%ED%81%AC--%EC%9D%B4%EB%AF%B8%EC%A7%80" class="hash-link" aria-label="4. 링크 &amp; 이미지에 대한 직접 링크" title="4. 링크 &amp; 이미지에 대한 직접 링크">​</a></h2>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-코드">5. 코드<a href="https://eeheueklf.github.io/blogs/intro#5-%EC%BD%94%EB%93%9C" class="hash-link" aria-label="5. 코드에 대한 직접 링크" title="5. 코드에 대한 직접 링크">​</a></h2>
+<div class="codeBlockContainer_APcc"><div class="codeHeader_mrHn"><div class="circle_uTm0 red_SMRL"></div><div class="circle_uTm0 yellow_G5ZA"></div><div class="circle_uTm0 green_MLCj"></div></div><div class="language-js theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-js codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"JavaScript 코드 블록"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-인용문">6. 인용문<a href="https://eeheueklf.github.io/blogs/intro#6-%EC%9D%B8%EC%9A%A9%EB%AC%B8" class="hash-link" aria-label="6. 인용문에 대한 직접 링크" title="6. 인용문에 대한 직접 링크">​</a></h2>
+<blockquote>
+<p>인용문입니다.</p>
+<blockquote>
+<p>중첩 인용문입니다.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-구분선">7. 구분선<a href="https://eeheueklf.github.io/blogs/intro#7-%EA%B5%AC%EB%B6%84%EC%84%A0" class="hash-link" aria-label="7. 구분선에 대한 직접 링크" title="7. 구분선에 대한 직접 링크">​</a></h2>
+<hr>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-체크박스-gfm">8. 체크박스 (GFM)<a href="https://eeheueklf.github.io/blogs/intro#8-%EC%B2%B4%ED%81%AC%EB%B0%95%EC%8A%A4-gfm" class="hash-link" aria-label="8. 체크박스 (GFM)에 대한 직접 링크" title="8. 체크박스 (GFM)에 대한 직접 링크">​</a></h2>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->완료</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->미완료</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="9-표-gfm">9. 표 (GFM)<a href="https://eeheueklf.github.io/blogs/intro#9-%ED%91%9C-gfm" class="hash-link" aria-label="9. 표 (GFM)에 대한 직접 링크" title="9. 표 (GFM)에 대한 직접 링크">​</a></h2>
+<table><thead><tr><th>이름</th><th>나이</th><th>도시</th></tr></thead><tbody><tr><td>김철수</td><td>25</td><td>서울</td></tr><tr><td>이영희</td><td>30</td><td>부산</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="10-각주">10. 각주<a href="https://eeheueklf.github.io/blogs/intro#10-%EA%B0%81%EC%A3%BC" class="hash-link" aria-label="10. 각주에 대한 직접 링크" title="10. 각주에 대한 직접 링크">​</a></h2>
+<p>문장 안에서 각주를 달 수 있습니다<sup><a href="https://eeheueklf.github.io/blogs/intro#user-content-fn-1-e731eb" id="user-content-fnref-1-e731eb" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="11-html-직접-사용">11. HTML 직접 사용<a href="https://eeheueklf.github.io/blogs/intro#11-html-%EC%A7%81%EC%A0%91-%EC%82%AC%EC%9A%A9" class="hash-link" aria-label="11. HTML 직접 사용에 대한 직접 링크" title="11. HTML 직접 사용에 대한 직접 링크">​</a></h2>
+<p><span style="color:red">빨간 글자</span><br>
+<b>HTML 굵게</b></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="12-형광펜">12. 형광펜<a href="https://eeheueklf.github.io/blogs/intro#12-%ED%98%95%EA%B4%91%ED%8E%9C" class="hash-link" aria-label="12. 형광펜에 대한 직접 링크" title="12. 형광펜에 대한 직접 링크">​</a></h2>
+<p><mark>기본 형광펜</mark>이 잖아~</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="14-코드-블록">14. 코드 블록<a href="https://eeheueklf.github.io/blogs/intro#14-%EC%BD%94%EB%93%9C-%EB%B8%94%EB%A1%9D" class="hash-link" aria-label="14. 코드 블록에 대한 직접 링크" title="14. 코드 블록에 대한 직접 링크">​</a></h2>
+<div class="codeBlockContainer_APcc"><div class="codeHeader_mrHn"><div class="circle_uTm0 red_SMRL"></div><div class="circle_uTm0 yellow_G5ZA"></div><div class="circle_uTm0 green_MLCj"></div></div><div class="language-js theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-js codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line theme-code-block-highlighted-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">function</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">hello</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"2번 줄 하이라이트"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line theme-code-block-highlighted-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"4번 줄 하이라이트"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"4번 줄 하이라이트"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"4번 줄 하이라이트"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div>
+<div class="codeBlockContainer_APcc"><div class="codeHeader_mrHn"><div class="circle_uTm0 red_SMRL"></div><div class="circle_uTm0 yellow_G5ZA"></div><div class="circle_uTm0 green_MLCj"></div><div class="codeBlockTitle_ot1W">src/pages/my-react-page.js</div></div><div class="language-jsx theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-jsx codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token keyword module" style="color:#00009f">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color:#00009f">from</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'react'</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword module" style="color:#00009f">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">Layout</span><span class="token plain"> </span><span class="token keyword module" style="color:#00009f">from</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'@theme/Layout'</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword module" style="color:#00009f">export</span><span class="token plain"> </span><span class="token keyword module" style="color:#00009f">default</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token plain"> </span><span class="token function maybe-class-name" style="color:#d73a49">MyReactPage</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token keyword control-flow" style="color:#00009f">return</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag class-name" style="color:#00009f">Layout</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">      </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">h1</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">My React page</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">h1</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">      </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">p</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">This is a React page</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">p</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">    </span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag class-name" style="color:#00009f">Layout</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div>
+<hr>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Toggle me!</summary><div><div class="collapsibleContent_i85q"><p>This is the detailed content</p><div class="codeBlockContainer_APcc"><div class="codeHeader_mrHn"><div class="circle_uTm0 red_SMRL"></div><div class="circle_uTm0 yellow_G5ZA"></div><div class="circle_uTm0 green_MLCj"></div></div><div class="language-js theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-js codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"Markdown features including the code block are available"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div></div></div></details>
+<section data-footnotes="true" class="footnotes"><h2 class="anchor anchorWithStickyNavbar_LWe7 sr-only" id="footnote-label">Footnotes<a href="https://eeheueklf.github.io/blogs/intro#footnote-label" class="hash-link" aria-label="Footnotes에 대한 직접 링크" title="Footnotes에 대한 직접 링크">​</a></h2>
+<ol>
+<li id="user-content-fn-1-e731eb">
+<p>각주 내용 <a href="https://eeheueklf.github.io/blogs/intro#user-content-fnref-1-e731eb" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[히리로그]]></title>
+            <link>https://eeheueklf.github.io/blogs/first-blog-post</link>
+            <guid>https://eeheueklf.github.io/blogs/first-blog-post</guid>
+            <pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></description>
+            <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
+            <category>hola</category>
+            <category>docusaurus</category>
+        </item>
+        <item>
+            <title><![CDATA[Long Blog Post]]></title>
+            <link>https://eeheueklf.github.io/blogs/long-blog-post</link>
+            <guid>https://eeheueklf.github.io/blogs/long-blog-post</guid>
+            <pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is the summary of a very long blog post,]]></description>
+            <content:encoded><![CDATA[<p>This is the summary of a very long blog post,</p>
+<p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
+            <category>hello</category>
+            <category>docusaurus</category>
+        </item>
+        <item>
+            <title><![CDATA[MDX Blog Post]]></title>
+            <link>https://eeheueklf.github.io/blogs/mdx-blog-post</link>
+            <guid>https://eeheueklf.github.io/blogs/mdx-blog-post</guid>
+            <pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></description>
+            <content:encoded><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer">MDX</a>.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37">🌵</span></div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p><div class="codeBlockContainer_APcc"><div class="codeHeader_mrHn"><div class="circle_uTm0 red_SMRL"></div><div class="circle_uTm0 yellow_G5ZA"></div><div class="circle_uTm0 green_MLCj"></div></div><div class="language-js theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-js codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'button clicked!'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">}</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:#393A34">!</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token operator" style="color:#393A34">/</span><span class="token plain">button</span><span class="token operator" style="color:#393A34">&gt;</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div><button>Click me!</button></div></div>]]></content:encoded>
+            <category>docusaurus</category>
+        </item>
+    </channel>
+</rss>

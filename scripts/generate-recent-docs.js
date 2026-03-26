@@ -3,7 +3,7 @@ const path = require('path');
 const matter = require('gray-matter');
 
 const DOCS_DIR = path.join(__dirname, '../docs');
-const BLOG_DIR = path.join(__dirname, '../blogs');
+const BLOG_DIR = path.join(__dirname, '../blog');
 const DATA_DIR = path.join(__dirname, '../src/data');
 
 function getItems(dir, baseRoute) {
@@ -32,7 +32,7 @@ function getItems(dir, baseRoute) {
           .replace(/\.(md|mdx)$/, '')
           .replace(/\\/g, '/');
 
-        if (baseRoute === 'blogs' && dateMatch) {
+        if (baseRoute === 'blog' && dateMatch) {
           relativePath = relativePath.replace(
             /^(.+\/)?(\d{4}-\d{2}-\d{2})-(.+)$/,
             (_, folder = '', __, slug) => `${folder}${slug}`
@@ -60,7 +60,7 @@ function generate() {
     .slice(0, 5);
   fs.writeFileSync(path.join(DATA_DIR, 'recent-docs.json'), JSON.stringify(docs, null, 2));
 
-  const blogs = getItems(BLOG_DIR, 'blogs') 
+  const blogs = getItems(BLOG_DIR, 'blog') 
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 5);
   fs.writeFileSync(path.join(DATA_DIR, 'recent-blogs.json'), JSON.stringify(blogs, null, 2));

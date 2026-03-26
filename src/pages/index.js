@@ -41,7 +41,7 @@ export default function Home() {
   const { blogCount, docsCount } = siteConfig.customFields;
 
   const docsHref = useBaseUrl('/docs');
-  const blogHref = useBaseUrl('/blogs');
+  const blogHref = useBaseUrl('/blog');
 
   const startDay = new Date('2025-07-24')
   const today = new Date();

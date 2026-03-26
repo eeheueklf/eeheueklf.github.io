@@ -27,7 +27,7 @@ function countDocs(dir) {
 }
 
 const docsCount = countDocs(path.join(__dirname, 'docs'));
-const blogCount = countDocs(path.join(__dirname, 'blogs'));
+const blogCount = countDocs(path.join(__dirname, 'blog'));
 const totalCount = docsCount + blogCount;
 
 /** @type {import('@docusaurus/types').Config} */
@@ -69,8 +69,8 @@ const config = {
             'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
         },
         blog: {
-          path: 'blogs',         
-          routeBasePath: 'blogs',
+          path: 'blog',         
+          routeBasePath: 'blog',
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Posts',
           editUrl:

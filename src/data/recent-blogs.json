@@ -1,22 +1,27 @@
 [
   {
+    "title": "블로그 새 단장 with Docusaurus🦕",
+    "date": "2026-03-26T00:00:00.000Z",
+    "path": "/blog/blog"
+  },
+  {
     "title": "Next.js가 함정이었던 타자 연습 프로젝트 회고",
     "date": "2026-03-21T00:00:00.000Z",
-    "path": "/blogs/03-next-sidepj"
+    "path": "/blog/next-sidepj"
   },
   {
     "title": "타자 연습용 한 줄로 분리하는 법 Lookbehind",
     "date": "2025-09-25T00:00:00.000Z",
-    "path": "/blogs/01-lookbehind"
+    "path": "/blog/lookbehind"
   },
   {
     "title": "[회고] 기초 입문 달성 후기 🥳🎉",
     "date": "2025-09-25T00:00:00.000Z",
-    "path": "/blogs/02-programmers"
+    "path": "/blog/programmers"
   },
   {
     "title": "인트로",
     "date": "2025-08-27T00:00:00.000Z",
-    "path": "/blogs/intro"
+    "path": "/blog/intro"
   }
 ]

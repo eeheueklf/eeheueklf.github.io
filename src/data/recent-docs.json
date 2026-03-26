@@ -1,27 +1,27 @@
 [
   {
-    "title": "프론트엔드 필수 개념 정리",
-    "date": "2026-03-26T10:04:20.842Z",
-    "path": "/docs/fe-roadmap/frontend-roadmap"
+    "title": "Virtual DOM",
+    "date": "2026-03-26T10:12:35.402Z",
+    "path": "/docs/framework/virtual-dom"
   },
   {
-    "title": "이차원 리스트 (Day 25)",
-    "date": "2026-03-26T10:00:16.526Z",
-    "path": "/docs/programmers/day25"
+    "title": "프론트엔드 개발자를 위한 Git 사용법",
+    "date": "2026-03-26T10:12:30.962Z",
+    "path": "/docs/framework/vcs-git"
   },
   {
-    "title": "JS 기본 메서드 정리",
-    "date": "2026-03-26T09:50:32.625Z",
-    "path": "/docs/programmers/summary"
+    "title": "useEffect",
+    "date": "2026-03-26T10:12:19.280Z",
+    "path": "/docs/framework/useEffect-render"
   },
   {
-    "title": "조건문 활용 (Day 23 24)",
-    "date": "2026-03-26T09:48:33.768Z",
-    "path": "/docs/programmers/day23-24"
+    "title": "React vs Next.js",
+    "date": "2026-03-26T10:12:15.446Z",
+    "path": "/docs/framework/react-nextjs"
   },
   {
-    "title": "수학 응용 (2) (Day 21 22)",
-    "date": "2026-03-26T09:48:24.357Z",
-    "path": "/docs/programmers/day21-22"
+    "title": "패키지 매니저 npm yarn",
+    "date": "2026-03-26T10:12:11.132Z",
+    "path": "/docs/framework/package-manager"
   }
 ]

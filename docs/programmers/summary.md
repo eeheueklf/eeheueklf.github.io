@@ -1,9 +1,8 @@
 ---
-sidebar_position: 2
+slug: summary  
+title: "JS 기본 메서드 정리" 
+sidebar_position: 0
 ---
-
-# JS 기본 메서드 정리
-
 :::note
 [프로그래머스] <mark>일일 도전 과제 문제 풀이 정리</mark>입니다.  
 관련 개념도 첨부하였으니 필요한 분들은 참고하세요.  

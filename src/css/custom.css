@@ -27,6 +27,8 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
 
 :root {
+  --background-color: #fcfcfc;
+
   --ifm-color-primary: #000000;
   --ifm-color-primary-dark: #A2704C;
   --ifm-color-primary-darker: #67442E;
@@ -39,7 +41,6 @@
   --cus-tag-color-sec:#d4c9bd;
   --cus-tag-color-third:#f0e1d2;
 
-  --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'Pretendard', -apple-system;
 
@@ -68,6 +69,7 @@
   --ifm-menu-link-padding-horizontal : 0.4rem;
   --ifm-toc-padding-horizontal : 0;
   
+  
   /* 박스 */
   /* ::info ::note ::tip ::warning ::danger */
   --ifm-color-success-contrast-background : #eaf2e4;
@@ -89,7 +91,7 @@
   --ifm-color-info-contrast-background : #ffffff;
 
   /* 코드블럭 */
-  --ifm-font-family-monospace: 'Fira Code', Consolas, 'Courier New', monospace;
+  --ifm-font-family-monospace: "JetBrains Mono", 'Courier New', monospace;
   --ifm-pre-padding : 1.5rem;
   --ifm-global-shadow-lw :4px 4px 1px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
 
@@ -97,17 +99,19 @@
 
 
   /* 코드 */
-  --code-area-bg : #ececec;
+  /* --code-area-bg :var(--background-color); */
   --code-area-border : #d4d5d8;
-  --ifm-code-font-size : 100%;
+  --ifm-code-font-size : 14px;
   --ifm-global-shadow-lw : none;
   --ifm-code-border-radius : 10px;
 
   /* 제목 왼쪽 border 색 */
-  --h3-border-color : #727272;
+  --h3-border-color : #3a3a3a;
   
   /* 마크 */
   --mark-highlight-shadow : #fcf3d9;
+  --mark-highlight-shadow : #d63d2c2e;
+
 
   /* 하이퍼링크 */
   --mark-hyperlink-color: rgb(219, 45, 45);
@@ -118,7 +122,9 @@
   --ifm-container-width : 800px;
   --ifm-container-width-xl : 800px;
   --ifm-font-weight-base: 400;
-  --ifm-font-size-base: 14px;
+  --ifm-font-size-base: 16px;
+
+  --ifm-h1-font-size:32px;
 }
 
 
@@ -133,7 +139,7 @@ a{
 
 /* main */
 main{
-  background-color: #fcfcfc;
+  background-color: var(--background-color);
 }
 /* font - 배민 한나체 */
 .hanna-text {
@@ -190,31 +196,50 @@ main{
   opacity: 0.7;
 }
 
-/* 제목 크기 */
-h1{
-  font-size : 32px;
-  /* margin-top: 2rem; */
-}
-
 .markdown > h2{
-  font-size: 1.5em;
+  font-size: 1.5rem;;
   margin-top: 4rem;
   margin-bottom: 0.8em;
+  font-family: 'A2z';
 }
-.markdown > h3{
+.markdown > h3 {
   font-size: 1.25em;
-  border-left: 3px solid var(--h3-border-color);
-  padding-left : 20px;
-  margin-top: 3rem;
-  margin-bottom: 0.8em;
+  font-family: 'A2zR';
+  font-weight: 500;
+  
+  /* 포인트: 연한 배경색과 둥근 모서리 */
+  background-color: var(--h3-bg-color, #f8f9fa); /* 배경색 변수가 없다면 연한 회색 */
+  border-left: 5px solid var(--h3-border-color);
+  padding: 10px 15px;
+  border-radius: 0 4px 4px 0;
+  
+  display: block;
+  margin-top: 2.5em;
 }
-.markdown > h4{
-  margin-top: 2rem;
-  margin-bottom: 0.8em;
+.markdown > h3 {
+  font-size: 1.25em;
+  font-family: 'A2zR';
+  font-weight: 500;
+  
+  /* 포인트: 연한 배경색과 둥근 모서리 */
+  background-color: var(--h3-bg-color, #f8f9fa); /* 배경색 변수가 없다면 연한 회색 */
+  border-left: 5px solid var(--h3-border-color);
+  padding: 10px 15px;
+  border-radius: 0 4px 4px 0;
+  
+  display: block;
+  margin-top: 2.5em;
+}
+strong{
+  font-family: 'A2zR';
+  font-weight: 400;
+  font-size: 15px;
 }
 
-
-
+.markdown img {
+  display: block;
+  margin: 0 auto;
+}
 
 
 /* 이전-다음 글 */
@@ -240,7 +265,7 @@ h1{
 
 .alert{
   margin: 0 0 0.2rem;
-  font-size : 0.8rem;
+  /* font-size : 0.8rem; */
 }
 .alert svg {
   height: 1.2em !important;
@@ -273,15 +298,24 @@ h1{
 
 
 
+
 /* 목차 */
 .tableOfContents_node_modules-\@docusaurus-theme-classic-lib-theme-TOC-styles-module {
   position:inherit !important;
 }
 
 .table-of-contents {
-  font-size: 1rem;
-  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  padding-left: 0;
 }
+.table-of-contents li ul {
+  padding-left: 10px; 
+}
+
+.table-of-contents li ul ul {
+  padding-left: 10px;
+}
+
 
 .table-of-contents li a {
   display: inline;
@@ -289,6 +323,7 @@ h1{
   text-decoration: none;
   color: black;
 }
+
 .table-of-contents li a:hover, .table-of-contents__link--active{
   box-shadow: inset 0 -10px 0 var(--mark-highlight-shadow); 
 }
@@ -327,20 +362,42 @@ mark {
 
 /* 코드 */
 code {
-  padding: 0.1rem 0.3rem;
+  padding: 0rem 0rem;
   color : var(--code-text-color);
-  border: 1px solid #e1e4e8;  
-  letter-spacing: -0.3px;
-  border-radius:0.4rem;
+  /* border: 1px solid #e1e4e8;   */
+  border:none;
+  background-color: inherit;
 }
 
-p code:hover, li p code:hover{
-  background-color: rgb(255, 255, 255);
+
+pre code {
+  background-color: var(--background-color);
 }
+
+code:hover{
+  color: var(--ifm-link-color);
+}
+
+.token {
+  color: #3e3e3e !important; 
+}
+
+.token.comment {
+  color: #999 !important;
+  font-style: italic;
+}
+
 
 /* 링크 - 같은 code임 */
-.markdown a {
+.markdown p > a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: black;
   color: var(--mark-hyperlink-color);
+  color: var(--ifm-link-color);
+  font-family: 'A2zR';
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .markdown em{

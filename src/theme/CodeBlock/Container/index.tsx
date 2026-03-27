@@ -22,12 +22,12 @@ export default function CodeBlockContainer<T extends 'div' | 'pre'>({
     const title = parseCodeBlockTitle(metastring) || titleProp;
   return (
     <div className={styles.codeBlockContainer}>
-      <div className={styles.codeHeader}>
+      {/* <div className={styles.codeHeader}>
         <div className={clsx(styles.circle, styles.red)}></div>
         <div className={clsx(styles.circle, styles.yellow)}></div>
         <div className={clsx(styles.circle, styles.green)}></div>
         {title && <div className={styles.codeBlockTitle}>{title}</div>}
-      </div>
+      </div> */}
       <As
         // Polymorphic components are hard to type, without `oneOf` generics
         {...(props as any)}

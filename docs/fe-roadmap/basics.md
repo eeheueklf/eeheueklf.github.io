@@ -19,14 +19,16 @@ title: "HTML 문서 구조 & 태그"
 
 ### HTML 문서 구조 태그
 
-```
+```html
 <!DOCTYPE html>
 <html lang="ko-KR">
+    <!-- head -->
     <head>
         <meta name="viewport" content="width=device-width">
         <meta charset="UTF-8">
         <title>hamrang-log</title>
     </head>
+    <!-- body -->
     <body>
         <div>내용</div>
     </body>

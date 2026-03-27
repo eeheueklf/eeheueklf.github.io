@@ -26,10 +26,16 @@ export default function BlogPostItem({
 }: Props): JSX.Element {
   const containerClassName = useContainerClassName();
   return (
-    <BlogPostItemContainer className={clsx(containerClassName, className)}>
-      <BlogPostItemHeader />
-      <BlogPostItemContent>{children}</BlogPostItemContent>
-      <BlogPostItemFooter />
-    </BlogPostItemContainer>
+    <div style={{ display: 'flex', minHeight: '100vh' }}>
+      <main style={{ flex: 1, padding: '2rem' }}>
+        <article>
+          <BlogPostItemContainer className={clsx('container', containerClassName, className)}>
+            <BlogPostItemHeader />
+            <BlogPostItemContent>{children}</BlogPostItemContent>
+          </BlogPostItemContainer>
+        </article>
+      </main>
+    </div>
+    
   );
 }

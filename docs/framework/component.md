@@ -50,7 +50,7 @@ class Welcome extends React.Component {
 }
 ```
 
-# 컴포넌트 사용하기
+## 컴포넌트 사용하기
 
 내보낸 컴포넌트는 다른 컴포넌트 안에서 중첩해 사용할 수 있습니다.
 ```jsx

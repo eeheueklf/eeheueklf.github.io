@@ -13,6 +13,12 @@
 }
 
 @font-face {
+    font-family: 'A2zT';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
     font-family: 'A2zR';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-4Regular.woff2') format('woff2');
     font-weight: 400;
@@ -300,6 +306,7 @@ strong{
 
 
 /* 목차 */
+
 .table-of-contents {
   font-size: 0.9rem;
   padding-left: 0;

@@ -23,7 +23,9 @@ export default function BlogPostItemContent({
       id={isBlogPostPage ? blogPostContainerID : undefined}
       className={clsx('markdown', className)}
       itemProp="articleBody">
+        
       <MDXContent>{children}</MDXContent>
     </div>
+    
   );
 }

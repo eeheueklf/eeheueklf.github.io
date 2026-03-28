@@ -21,27 +21,28 @@ function getItems(dir, baseRoute) {
       } else if (file.endsWith('.md') || file.endsWith('.mdx')) {
         const content = fs.readFileSync(filePath, 'utf8');
         const { data } = matter(content);
-
+        
         const fileName = file.replace(/\.(md|mdx)$/, '');
-        const dateMatch = fileName.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/);
+        const dateMatch = fileName.match(/^(\d{4}-\d{2}-\d{2})$/);
 
-        const finalTitle = data.title || (dateMatch ? dateMatch[2] : fileName);
+        const finalTitle = data.title || fileName;
         const finalDate = data.date || (dateMatch ? dateMatch[1] : stat.mtime);
 
         let relativePath = path.relative(dir, filePath)
           .replace(/\.(md|mdx)$/, '')
           .replace(/\\/g, '/');
 
-        if (baseRoute === 'blog' && dateMatch) {
-          relativePath = relativePath.replace(
-            /^(.+\/)?(\d{4}-\d{2}-\d{2})-(.+)$/,
-            (_, folder = '', __, slug) => `${folder}${slug}`
-          );
+        if (baseRoute === 'blog' && data.slug) {
+          const parts = relativePath.split('/');
+          parts[parts.length - 1] = data.slug;
+          relativePath = parts.join('/');
         }
 
+        const formattedDate = new Date(finalDate).toISOString().split('T')[0];
+
         fileList.push({
-          title: finalTitle.replace(/[-_]/g, ' '),
-          date: finalDate,
+          title: finalTitle,
+          date: formattedDate,
           path: `/${baseRoute}/${relativePath}`,
         });
       }

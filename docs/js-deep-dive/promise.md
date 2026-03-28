@@ -1,5 +1,5 @@
 ---
-slug: asyncs
+slug: promise
 title: "Promise / Async & Await"
 sidebar_position: 4
 date: 2025-8-29

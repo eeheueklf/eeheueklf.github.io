@@ -1,7 +1,6 @@
 ---
 slug: tyle-performance  
-title: 타자연습에 애니메이션과 소리📣를 넣었더니 생긴 일⌨️
-sidebar_position: 2  
+title: "타자연습에 애니메이션과 소리📣를 넣었더니 생긴 일⌨️"
 date: 2026-04-05
 ---
 

@@ -306,11 +306,14 @@ strong{
 
 
 /* 목차 */
+.tableOfContents{
+  position:relative !important;
+}
 
 .table-of-contents {
   font-size: 0.9rem;
   padding-left: 0;
-  position:relative !important
+  position:relative !important;
 }
 .table-of-contents li ul {
   padding-left: 10px; 

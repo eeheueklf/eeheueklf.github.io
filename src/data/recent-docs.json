@@ -1,27 +1,27 @@
 [
   {
-    "title": "타자연습에 애니메이션과 소리📣를 넣었더니 생긴 일 ⌨️",
+    "title": "타자연습에 애니메이션과 소리📣를 넣었더니 생긴 일⌨️",
     "date": "2026-04-05",
     "path": "/docs/dev-log/tyle-performance"
   },
   {
+    "title": "컴포넌트",
+    "date": "2026-03-27",
+    "path": "/docs/framework/component"
+  },
+  {
     "title": "프론트엔드 필수 개념 정리",
-    "date": "2026-04-05",
+    "date": "2026-03-26",
     "path": "/docs/fe-roadmap/frontend-roadmap"
   },
   {
     "title": "JSX",
-    "date": "2026-04-05",
+    "date": "2026-03-26",
     "path": "/docs/framework/basics"
   },
   {
-    "title": "컴포넌트",
-    "date": "2026-04-05",
-    "path": "/docs/framework/component"
-  },
-  {
     "title": "React Context API",
-    "date": "2026-04-05",
+    "date": "2026-03-26",
     "path": "/docs/framework/context-api"
   }
 ]

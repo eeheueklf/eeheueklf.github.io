@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eeheueklf.github.io/blog"/>
     <subtitle>히리로그 Blog</subtitle>
-    <icon>https://eeheueklf.github.io/img/favicon.ico</icon>
+    <icon>https://eeheueklf.github.io/img/icon.svg</icon>
     <entry>
         <title type="html"><![CDATA[인트로]]></title>
         <id>https://eeheueklf.github.io/blog/intro</id>

@@ -415,6 +415,16 @@ code:hover{
   color: #818181
 }
 
+/* 이미지 */
+.markdown img {
+  height: auto; 
+  max-height: 300px;
+  
+  display: block;
+  margin: 0 auto;
+  
+  object-fit: contain; 
+}
 
 /* 테이블 */
 table {

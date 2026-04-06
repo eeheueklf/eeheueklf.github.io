@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1  
-date: 2025-8-11
+date: 2025-08-11
 title: "HTML 문서 구조 & 태그"
 ---
 

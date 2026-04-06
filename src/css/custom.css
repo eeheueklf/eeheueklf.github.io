@@ -50,6 +50,9 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'Pretendard', -apple-system;
 
+  /* resume */
+  --hiri-grey : rgb(209, 209, 209);
+
   /* 본문 글 간격 */
   --ifm-leading-desktop : 0.8;
 
@@ -123,6 +126,7 @@
   --mark-hyperlink-color: rgb(219, 45, 45);
   --mark-hyperlink-hover: rgb(45, 45, 219);
   --ifm-link-color: #1e90ff;;
+  --hiri-link-color: rgb(55, 55, 55);
 
   /* 폰트 */
   --ifm-container-width : 800px;
@@ -195,6 +199,16 @@ main{
   color: black;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.about-link {
+  color:black;
+  box-shadow: inset 0 -15px 0 var(--mark-highlight-shadow); 
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.about-link:hover {
+  color:var(--mark-highlight-shadow);
 }
 
 .link-icon {

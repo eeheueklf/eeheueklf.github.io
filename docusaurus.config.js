@@ -34,7 +34,7 @@ const totalCount = docsCount + blogCount;
 const config = {
   title: '히리로그',
   tagline: '/프론트엔드 개발로그',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/icon.svg',
 
   url: 'https://eeheueklf.github.io',
   baseUrl: '/',

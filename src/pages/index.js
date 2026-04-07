@@ -42,6 +42,7 @@ export default function Home() {
 
   const docsHref = useBaseUrl('/docs');
   const blogHref = useBaseUrl('/blog');
+  const resumeHref = useBaseUrl('/resume');
 
   const startDay = new Date('2025-07-24')
   const today = new Date();
@@ -55,18 +56,28 @@ export default function Home() {
           <section className="container">
             <Heading as="h2" className="menuHref">
               <Link href={blogHref}>Logs</Link> 
-              {/* {blogCount} */}
             </Heading>
             <RecentLogs />
             <Heading as="h2" className="menuHref">
               <Link href={docsHref}>Docs</Link> 
-              {/* {docsCount}  */}
             </Heading>
             <RecentDocs />
             <Heading as="h2" className="menuHref">
               activities
             </Heading>
-              시작한지 {diffDate}일
+              <ul className="contact-list">
+                <li>
+                  시작한지 {diffDate}일
+                </li>
+                <li>
+                  작성한 글 {blogCount+docsCount}+개
+                </li>
+                <li>🥳
+                  <Link href={resumeHref} className="about-link">
+                    about me
+                  </Link>
+                </li>
+              </ul>
             <Heading as="h2" className="menuHref">
               contact
             </Heading>

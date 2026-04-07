@@ -1,0 +1,161 @@
+/* Layout & Common */
+.mainWrapper {
+  width: 100%;
+}
+
+
+.sectionTitle {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Hero Section */
+.heroBanner {
+  padding: 4rem 0 1rem 0;
+  background: var(--ifm-background-color);
+  margin-top: 2rem;
+}
+
+.hanna {
+  font-family: 'A2z', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+}
+
+.hero__description {
+  margin-bottom: 0.5rem;
+}
+
+/* --- 프로젝트 구분선 (Divider) --- */
+.line {
+  /* margin: 3rem auto 2rem auto; */
+  margin : 70px 0;
+  width: 60px;
+  background-color: var(--hiri-grey);
+  height: 1px;
+}
+
+@media (min-width: 768px) {
+  .line {
+    max-width: 768px;
+  }
+}
+
+.text {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: var(--hiri-grey);
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-size: 0.875rem;
+  }
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.projectItem {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .projectItem {
+    grid-template-columns: 140px 1fr;
+    column-gap: 2.5rem;
+    align-items: start;
+    width: 100%;
+  }
+}
+
+.dateSection {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .dateSection {
+    justify-content: flex-end;
+    margin-bottom: 0;
+    padding-top: 0.25rem;
+  }
+}
+
+.dateText {
+  margin: 0 !important;
+  font-size: 0.875rem;
+  color: rgba(var(--hiri-foreground), 0.6);
+  white-space: nowrap;
+}
+
+.contentSection {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .contentSection {
+    padding-left: 0;
+  }
+}
+
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 0.8em;
+  font-family: 'A2z';
+}
+
+
+/* icon */
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+  flex-wrap: wrap;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 4px; 
+  color: rgba(var(--hiri-foreground), 0.6); 
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.iconButton:hover {
+  background-color: rgba(var(--hiri-foreground), 0.05); 
+  color: rgba(var(--hiri-foreground), 1); 
+  transform: translateY(-2px); 
+}
+
+.iconButton svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor; 
+}
+.svgIcon {
+  width: 20px;
+  height: 20px;
+}

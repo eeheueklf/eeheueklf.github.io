@@ -1,0 +1,19 @@
+---
+date: "2026-01 ~ 2026-03"
+title: "TYLE | 한글 타자 연습 사이트"
+description: "Next.js App Router를 기반으로 대량의 텍스트를 실시간으로 처리하며, 타격감 있는 사용자 경험을 제공하는 타자 연습 플랫폼입니다. 실시간 연산 성능 최적화와 오디오 지연 해소, 그리고 웹 성능 지표 개선을 목표로 개발했습니다."
+badges: ["Next.js", "TypeScript", "React", "TailwindCSS", "Jest", "Figma"]
+links:
+  - label: "GitHub"
+    href: "https://github.com/eeheueklf/typinggame"
+  - label: "Demo"
+    href: "https://tyletype.vercel.app/"
+  - label: "ReadMe"
+    href: "https://github.com/eeheueklf/typinggame/blob/main/README.md"
+---
+
+- `Hangul.js` 기반의 자소 분리 로직에 `useMemo`를 적용하여, 복잡한 한글 입력 상황에서도 <a href="/docs/dev-log/tyle-cls">평균 연산 시간을 0.1ms 수준으로 유지</a>하며 끊김 없는 반응형 인터페이스를 구현
+- `AudioBuffer` 사전 로드와 `Audio Sprite` 기법을 도입해 네트워크 요청 횟수를 줄이고, 브라우저 오디오 컨텍스트 최적화를 통해 연속 입력 시 발생하는 사운드 밀림 현상을 해결
+- `Suspense`와 `Skeleton UI`를 설계하여 <a href="/docs/dev-log/tyle-cls">`Layout Shift` 방지 및 CLS 지표 개선 **(0.137 → 0)**</a>
+- FileReader 비동기 API와 TextDecoder를 활용하여 대용량 파일 로드 시 발생하는 UI Blocking을 방지하고, 클라이언트 단 실시간 파싱 로직을 구현하여 서버 부하 최소화
+- <a href="/docs/dev-log/tyle-test">`Jest`를 활용한 유닛테스트</a>로 연산 로직 무결성 검증

@@ -4,10 +4,69 @@
         <title>히리로그 Blog</title>
         <link>https://eeheueklf.github.io/blog</link>
         <description>히리로그 Blog</description>
-        <lastBuildDate>Wed, 27 Aug 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 26 Mar 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
+        <item>
+            <title><![CDATA[블로그 새 단장 with Docusaurus🦕]]></title>
+            <link>https://eeheueklf.github.io/blog/blog-docusaurus</link>
+            <guid>https://eeheueklf.github.io/blog/blog-docusaurus</guid>
+            <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Next.js가 함정이었던 타자 연습 프로젝트 회고]]></title>
+            <link>https://eeheueklf.github.io/blog/next-sidepj</link>
+            <guid>https://eeheueklf.github.io/blog/next-sidepj</guid>
+            <pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[최신 트렌드인 Next.js를 학습하고 적용했던 적용기입니다.]]></description>
+            <content:encoded><![CDATA[<p><em>최신 트렌드인 Next.js를 학습하고 적용했던 적용기입니다.</em></p>
+<p>블로그를 만들며 <code>Next.js</code>를 맛본 뒤, <strong>이거 물건이다</strong>라는 생각이 들었다.</p>
+<p>배포도 빠르고 리액트랑도 비슷해서, 바로 다음 프로젝트 프레임워크로 선택했다.</p>
+<p>그렇게 2명이서 야심차게 시작한 타자 연습 사이트 사이드 프로젝트
+<a href="https://tyletype.vercel.app/" target="_blank" rel="noopener noreferrer">TYLE</a></p>
+<p><img decoding="async" loading="lazy" alt="TYLE" src="data:image/png;base64,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" width="78" height="28" class="img_ev3q"></p>
+<p>처음엔 모든 게 순조로웠다.</p>
+<p><code>Vercel</code>에서의 배포는 순식간이었고, 리액트 했던대로 구현도 빠르게 했다.</p>
+<p>하지만 프로젝트가 진행될수록 뭔가 이상함을 느꼈다.</p>
+<p><img decoding="async" loading="lazy" alt="이상하다" src="https://eeheueklf.github.io/assets/images/%EC%9D%B4%EC%83%81%ED%95%98%EB%8B%A4-be85a42ed05603a31333eb63375550e9.png" width="400" height="400" class="img_ev3q"></p>
+<p><strong>1. 이거 <code>use Client</code> 이렇게 많이 쓰면 안될 것 같은데</strong></p>
+<p><code>Next.js</code>가 SSR(서버 사이드 렌더링)에 강점이 있음에도 사이트 초기 메인화면 렌더링 속도가 너무 길었다.<br>
+<!-- -->(거의 5초 이상?)</p>
+<p>타자 연습 특성상 실시간 키보드 이벤트와 상태 업데이트가 70% 이상이었기 때문에<br>
+<!-- -->화면에 거의 모든 곳에 <code>use client</code>가 필요했고, .</p>
+<p><strong>2. SEO 쓸데가 없네</strong></p>
+<p>검색 엔진 최적화가 장점이라지만, 타자 연습 사이트엔 텍스트 콘텐츠가 없기 때문에</p>
+<p>키보드와 글귀만 있는 서비스에서 장점을 발휘 할 수가 없었다.</p>
+<p><strong>3. 한글 입력과 렌더링</strong></p>
+<p>특히 한글 입력이 자+모음이 합쳐지는 형태라 상태 업데이트가 특수한데,</p>
+<p>( 조합 중인 글자가 상태와 동기화되면서 불필요한 렌더링을 유발한다는 점입니다.)</p>
+<p>불필요한 렌더링과 엔터 키 중복 이벤트 이슈 등 클라이언트 최적화에 집중해야 하기 때문에</p>
+<p>핵심인 타이핑 로직은 서버가 도와줄 수 없기 때문에 실제 성능의 핵심은 클라이언트 최적화에있었다.</p>
+<p>오히려 아키텍처만 복잡해지고 있었다.</p>
+<p>깨달음 : 기술은 도구일 뿐이다.</p>
+<p>고려 없는 기술 도입은 오히려 아키텍처를 복잡하게 만들고</p>
+<p>머리가 아파질 수 있다@.!</p>
+<p>다음 프로젝트에서는 SEO와 초기 로딩 속도가 중요했기에 Next.js를 선택했지만</p>
+<p>타자 연습 같은 프로젝트라면 가벼운 환경이 더 적합했을 것 같다.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[[회고] 프로그래머스 기초 입문 달성 후기 🥳🎉]]></title>
+            <link>https://eeheueklf.github.io/blog/programmers</link>
+            <guid>https://eeheueklf.github.io/blog/programmers</guid>
+            <pubDate>Thu, 25 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[프론트엔드 코딩테스트 준비 겸 JS 기본기 익히기를 목표로 프로그래머스 기초 및 입문 트레이닝을 3주 동안 풀었다.]]></description>
+            <content:encoded><![CDATA[<p>프론트엔드 코딩테스트 준비 겸 JS 기본기 익히기를 목표로 프로그래머스 기초 및 입문 트레이닝을 3주 동안 풀었다.<br>
+<!-- -->기초와 입문 각 25일씩 <code>Lv.0</code> 문제를 풀어보는 과정이었는데, 전공자라 하루에 기초+입문 <code>2 Day</code>씩 달렸다.</p>
+<p>초반에는 1시간 정도 걸렸고, 후반에는 2시간, 어려울 때는 3시간까지 문제 풀이에 시간을 들였다.</p>
+<p>그동안 프론트엔드 구현에 <code>JavaScript</code>를 쓰긴 했지만 기초부터 체계적으로 배운 건 아니었다. 그래서 메서드 하나하나 알아가면서 풀었는데, 과정을 완료하는 시점에서 보니 각 메서드의 쓰임새를 익히고 문자열과 배열을 집중적으로 공략할 수 있어서 좋았다.</p>
+<p>드디어 JS의 기초를 제대로 뗀 느낌 😊😅</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="data:image/png;base64,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" width="100" height="100" class="img_ev3q"></p>
+<p><code>Lv.0</code>인데도 쉽지 않은 문제들이 섞여 있었지만, <code>JavaScript</code>에는 다른 언어에서 볼 수 없는 기특한 메서드가 참 많았다. 길게 풀어야 할 로직을 한 줄로 줄여주는 메서드들을 보며 확실히 <code>아는게 힘이다</code> 라는걸 느꼈다</p>
+<p><code>Lv.0</code>을 끝냈으니 이제 <code>Lv.1</code>을 차근차근 풀어볼 예정이다. 조금 풀어 보니까 <code>Lv.0</code>에서 기초를 탄탄히 다졌다면 <code>Lv.1</code>도 큰 어려움은 없을 것 같다!</p>
+<p>참고로 초반에는 기초와 입문 난이도가 비슷하지만, 입문 후반으로 갈수록 어려워진다. 기초와 입문을 따로 진행할 생각이라면 기초 → 입문 순서로 공부하는 것을 추천한다.</p>
+<p><img decoding="async" loading="lazy" alt="프로그래머스 완료 캘린더" src="https://eeheueklf.github.io/assets/images/programmers-cal-518f2a428430694c762fede7838b7a8a.png" width="913" height="645" class="img_ev3q"></p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[인트로]]></title>
             <link>https://eeheueklf.github.io/blog/intro</link>

@@ -9,9 +9,11 @@ function formatDate(date) {
 }
 
 export default function RecentDocs() {
+  const sortedDocs = [...recentDocs].sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return (
     <ul className={styles.postList}>
-      {recentDocs.map((doc, idx) => (
+      {sortedDocs.slice(0, 5).map((doc, idx) => (
         <li key={idx} className={styles.postItem}>
           <time className={styles.postDate}>
             {formatDate(doc.date)}

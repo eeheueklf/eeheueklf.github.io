@@ -33,7 +33,7 @@
 
 .modalBody {
   padding: 1.5rem;
-  overflow-y: auto; /* 내용이 길면 스크롤 */
+  overflow-y: auto;
   color: rgba(var(--hiri-foreground), 0.9);
   line-height: 1.6;
 }
@@ -48,4 +48,46 @@
 
 .closeButton:hover {
   color: #eab308;
+}
+
+
+.modalBody table {
+  font-size: 0.95rem;
+}
+
+
+.imageZoomOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; 
+  cursor: zoom-out;
+}
+
+.zoomedImage {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.2s ease-out;
+}
+
+.modalBody img {
+  cursor: zoom-in;
+  transition: transform 0.2s;
+}
+
+.modalBody img:hover {
+  opacity: 0.9;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

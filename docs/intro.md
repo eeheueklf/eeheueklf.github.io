@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
-last_update:
-  date: 7/8/2025
+date: 7/8/2025
 tags: ["markdown", "docusaurus"]
 keywords: ["markdown", "docusaurus"]
 ---

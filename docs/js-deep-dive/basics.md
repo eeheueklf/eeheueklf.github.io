@@ -1,5 +1,4 @@
 ---
-slug: basics
 title: "자바스크립트 기초"
 sidebar_position: 1
 date: 2025-8-26

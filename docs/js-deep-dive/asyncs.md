@@ -1,5 +1,4 @@
 ---
-slug: asyncs
 title: "자바스크립트의 비동기 이해하기"
 sidebar_position: 3
 date: 2025-8-26

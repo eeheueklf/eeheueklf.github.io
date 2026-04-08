@@ -1,5 +1,5 @@
 ---
-slug: day7-8  
+date: 2025-08-08
 title: "filter와 2차원 배열 순회 (Day 7-8)"
 sidebar_position: 2  
 ---

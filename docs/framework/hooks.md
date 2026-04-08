@@ -1,7 +1,6 @@
 ---
 sidebar_position: 3
-last_update:
-  date: 9/18/2025
+date: 9/18/2025
 title: "React Hook"
 ---
 

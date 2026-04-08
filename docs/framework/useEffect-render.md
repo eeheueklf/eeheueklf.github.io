@@ -1,7 +1,6 @@
 ---
 sidebar_position: 7
-last_update:
-  date: 10/3/2025
+date: 10/3/2025
 title: "useEffect"
 ---
 

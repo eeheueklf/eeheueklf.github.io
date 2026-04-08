@@ -1,7 +1,6 @@
 ---
 sidebar_position: 4
-last_update:
-  date: 9/18/2025
+date: 9/18/2025
 title: "React Context API"
 ---
 

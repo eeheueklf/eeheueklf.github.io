@@ -1,5 +1,5 @@
 ---
-slug: day1-2
+date: 2025-08-05
 title: "문자열 배열 & 대소문자 (Day 1-2)"
 sidebar_position: 2  
 ---

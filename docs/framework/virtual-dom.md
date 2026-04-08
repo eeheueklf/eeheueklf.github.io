@@ -1,7 +1,6 @@
 ---
 sidebar_position: 5
-last_update:
-  date: 9/25/2025
+date: 9/25/2025
 title: "Virtual DOM"
 ---
 

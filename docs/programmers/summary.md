@@ -1,5 +1,5 @@
 ---
-slug: summary  
+date: 2025-08-25 
 title: "JS 기본 메서드 정리" 
 sidebar_position: 0
 ---

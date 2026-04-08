@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
-last_update:
-  date: 9/15/2025
+date: 9/15/2025
 title: "JSX"
 ---
 

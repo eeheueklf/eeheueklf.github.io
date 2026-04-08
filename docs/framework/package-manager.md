@@ -1,8 +1,6 @@
 ---
 sidebar_position: 2
-toc_max_heading_level: 4
-last_update:
-  date: 9/10/2025
+date: 9/10/2025
 title: "패키지 매니저 npm yarn"
 ---
 

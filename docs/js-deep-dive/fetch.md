@@ -1,5 +1,4 @@
 ---
-slug: fetch
 title: "Data Fetching(데이터 가져오기)"
 sidebar_position: 5
 date: 2025-8-28

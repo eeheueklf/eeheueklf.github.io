@@ -1,7 +1,6 @@
 ---
 sidebar_position: 2
-last_update:
-  date: 9/16/2025
+date: 9/16/2025
 title: "컴포넌트"
 ---
 

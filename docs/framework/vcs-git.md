@@ -1,8 +1,6 @@
 ---
 sidebar_position: 1
-toc_max_heading_level: 4
-last_update:
-  date: 9/9/2025
+date: 9/9/2025
 title: "프론트엔드 개발자를 위한 Git 사용법"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: day5-6  
+date: 2025-08-07
 title: "reduce & 구조분해할당 (Day 5-6)"
 sidebar_position: 2  
 ---

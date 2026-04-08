@@ -1,4 +1,5 @@
 ---
+date: 2025-08-06
 slug: day3-4
 title: "forEach와 map 활용 (Day 3-4)"
 sidebar_position: 2  

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+date: 2025-7-21
 title: "프론트엔드 필수 개념 정리"
 ---
 

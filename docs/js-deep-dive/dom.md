@@ -1,5 +1,4 @@
 ---
-slug: dom
 title: "DOM 조작 : 바닐라 JS vs React"
 sidebar_position: 2
 date: 2025-8-25

@@ -1,5 +1,5 @@
 ---
-slug: day25  
+date: 2025-08-24 
 title: "이차원 리스트 (Day 25)" 
 sidebar_position: 4
 ---

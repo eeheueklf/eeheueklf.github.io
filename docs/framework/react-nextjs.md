@@ -1,8 +1,6 @@
 ---
 sidebar_position: 3
-toc_max_heading_level: 4
-last_update:
-  date: 9/11/2025
+date: 9/11/2025
 title: "React vs Next.js"
 ---
 

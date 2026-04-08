@@ -7,10 +7,38 @@
   flex-direction: column;
 }
 
-.title {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0.3rem 0;
 }
+
+.titleContainer strong {
+  font-size: 1rem;
+  
+}
+
+/* 수정 제안: detailButton */
+.detailButton {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.7rem;
+  transition: opacity 0.2s ease;
+}
+
+.detailButton:hover {
+  opacity: 0.7;
+  color:var(--code-text-color);
+}
+
+
 
 .dateSection {
   display: flex;
@@ -81,6 +109,7 @@
   text-decoration: underline;
 }
 
+/* markdown */
 .markdownContent a { 
   text-decoration: underline dashed rgb(139, 139, 139);
   text-underline-offset: 4px;
@@ -102,4 +131,40 @@
 
 .markdownContent ul {
   padding: 1.3rem;
+}
+
+
+
+.markdownContent h1 {
+  font-size: 32px !important;
+}
+
+.markdownContent h2 {
+  font-size: 1rem !important;
+  margin-top: 2.5rem; 
+  margin-bottom: 1.2rem;
+  word-break: keep-all;
+}
+
+.markdownContent p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(var(--hiri-foreground, 0,0,0), 0.85);
+  margin-bottom: 1.2rem;
+  word-break: keep-all; 
+}
+
+
+.markdownContent hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(var(--hiri-foreground, 0,0,0), 0.1);
+  margin: 3rem 0;
+}
+
+
+.markdownContent blockquote p {
+  margin-bottom: 0;
+  color: rgba(var(--hiri-foreground, 0,0,0), 0.7);
+  font-size: 0.9rem;
 }

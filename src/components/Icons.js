@@ -10,7 +10,19 @@ export const LinkIcon = () => (
 );
 
 export const BookIcon = () => (
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20v-12H6.5a2.5 2.5 0 0 0 0 5H20"></path>
-</svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20v-12H6.5a2.5 2.5 0 0 0 0 5H20"></path>
+  </svg>
 );
+
+export const ExternalLinkIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 33" width="10" height="10" class="sc-c867e766-10 uLOyp">
+    <path fill="currentColor" d="M.741 32.258a2.5 2.5 0 0 0 3.536 0l12.218-12.23a5 5 0 0 0-.001-7.07L4.268.732A2.5 2.5 0 0 0 .732 4.268l10.464 10.464a2.5 2.5 0 0 1 0 3.535L.741 28.723a2.5 2.5 0 0 0 0 3.535"> </path>
+  </svg>
+);
+
+export const DateIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+  </svg>
+)

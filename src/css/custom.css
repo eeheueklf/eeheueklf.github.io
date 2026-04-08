@@ -49,6 +49,10 @@
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'Pretendard', -apple-system;
+  --ifm-heading-font-family: 'A2z';
+
+  /* 스크롤바 */
+  --hiri-scroll-bar: #9e9e9e;
 
   /* resume */
   --hiri-grey : rgb(209, 209, 209);
@@ -465,12 +469,13 @@ table td {
 
 /* 스크롤바, 드래그 */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #e9dccd;
-  border-radius: 4px;
+  background-color: var(--hiri-scroll-bar);
+  border-radius: 8px;
 }
+
 ::selection {
   background-color: #b6d8ec;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './index.module.css';
-import { LinkIcon, BookIcon } from '../Icons';
+import { DateIcon, LinkIcon, BookIcon, ExternalLinkIcon } from '../Icons';
 import Modal from '../Modal';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -18,49 +18,49 @@ const TECH_ICONS = {
   'Vercel': 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vercel.svg',
 };
 
-export function ProjectItem({ date, title, description, badges = [], links = [], children }) {
+export function ProjectItem({ date, title, description, badges = [], links = [], children, DetailContent }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [readmeHtml, setReadmeHtml] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [currentRawBaseUrl, setCurrentRawBaseUrl] = useState('');
+  const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
 
+  const handleLinkClick = async (e, link) => {
+    if (link.label.toLowerCase() === 'readme') {
+      e.preventDefault();
+      setIsModalOpen(true);
+      setIsLoading(true);
 
-const handleLinkClick = async (e, link) => {
-  if (link.label.toLowerCase() === 'readme') {
-    e.preventDefault();
-    setIsModalOpen(true);
-    setIsLoading(true);
+      const rawUrl = link.href
+        .replace('github.com', 'raw.githubusercontent.com')
+        .replace('/blob/', '/');
+      
+      const baseUrl = rawUrl.substring(0, rawUrl.lastIndexOf('/') + 1);
+      setCurrentRawBaseUrl(baseUrl);
 
-    const rawUrl = link.href
-      .replace('github.com', 'raw.githubusercontent.com')
-      .replace('/blob/', '/');
-    
-    const baseUrl = rawUrl.substring(0, rawUrl.lastIndexOf('/') + 1);
-    setCurrentRawBaseUrl(baseUrl);
-
-    try {
-      const response = await fetch(rawUrl);
-      const text = await response.text();
-      setReadmeHtml(text);
-    } catch (err) {
-      setReadmeHtml('README를 불러오는 데 실패했습니다.');
-    } finally {
-      setIsLoading(false);
+      try {
+        const response = await fetch(rawUrl);
+        const text = await response.text();
+        setReadmeHtml(text);
+      } catch (err) {
+        setReadmeHtml('README를 불러오는 데 실패했습니다.');
+      } finally {
+        setIsLoading(false);
+      }
     }
-  }
-};
+  };
 
   return (
     <div className={styles.projectItem}>
       <div className={styles.dateSection}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24">
-          <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-        </svg>
+        <DateIcon/>
         <p className={styles.dateText}>{date}</p>
       </div>
 
       <div className={styles.contentSection}>
-        <p className={styles.title}><strong>{title}</strong></p>
+        <div className={styles.titleContainer}><strong>{title}</strong>
+          <button className={styles.detailButton} onClick={() => setIsDetailModalOpen(true)}>Read More<ExternalLinkIcon /></button>
+        </div>
         <p className={styles.description}>{description}</p>
 
         {links.length > 0 && (
@@ -105,38 +105,46 @@ const handleLinkClick = async (e, link) => {
         </div>
       </div>
 
-<Modal 
-  isOpen={isModalOpen} 
-  onClose={() => setIsModalOpen(false)} 
-  title={`${title} README`}
->
-  <div className={styles.readmeContent}>
-    {isLoading ? (
-      <p>README를 가져오는 중...</p>
-    ) : (
-      <ReactMarkdown 
-        remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeRaw]} 
-        components={{
-          img: ({node, ...props}) => (
-            <img {...props} style={{ maxWidth: '100%', height: 'auto', borderRadius: '4px' }} alt="readme-img" />
-          ),
-          table: ({node, ...props}) => (
-            <table style={{ width: '100%', borderCollapse: 'collapse', margin: '1rem 0' }} {...props} />
-          ),
-          th: ({node, ...props}) => (
-            <th style={{ border: '1px solid rgba(var(--hiri-foreground), 0.2)', padding: '8px', background: 'rgba(var(--hiri-foreground), 0.05)' }} {...props} />
-          ),
-          td: ({node, ...props}) => (
-            <td style={{ border: '1px solid rgba(var(--hiri-foreground), 0.2)', padding: '8px' }} {...props} />
-          )
-        }}
+      <Modal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
       >
-        {readmeHtml}
-      </ReactMarkdown>
-    )}
-  </div>
-</Modal>
+        <div className={styles.readmeContent}>
+          {isLoading ? (
+            <p>README를 가져오는 중...</p>
+          ) : (
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]} 
+              components={{
+                img: ({node, ...props}) => (
+                  <img {...props} style={{ maxWidth: '100%', height: 'auto', borderRadius: '4px' }} alt="readme-img" />
+                ),
+                table: ({node, ...props}) => (
+                  <table style={{ width: '100%', borderCollapse: 'collapse', margin: '1rem 0' }} {...props} />
+                ),
+                th: ({node, ...props}) => (
+                  <th style={{ border: '1px solid rgba(var(--hiri-foreground), 0.2)', padding: '8px', background: 'rgba(var(--hiri-foreground), 0.05)' }} {...props} />
+                ),
+                td: ({node, ...props}) => (
+                  <td style={{ border: '1px solid rgba(var(--hiri-foreground), 0.2)', padding: '8px' }} {...props} />
+                )
+              }}
+            >
+              {readmeHtml}
+            </ReactMarkdown>
+          )}
+        </div>
+      </Modal>
+
+      <Modal 
+        isOpen={isDetailModalOpen} 
+        onClose={() => setIsDetailModalOpen(false)} 
+      >
+        <div className={`${styles.markdownContent} markdown`}>
+           {DetailContent ? <DetailContent /> : <p>상세 내용을 불러올 수 없습니다.</p>}
+        </div>
+      </Modal>
     </div>
   );
 }

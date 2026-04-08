@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './index.module.css';
 
-export default function Modal({ isOpen, onClose, title, children }) {
+export default function Modal({ isOpen, onClose, children }) {
   const [zoomedImage, setZoomedImage] = useState(null);
 
   if (!isOpen) return null;
@@ -13,26 +13,30 @@ export default function Modal({ isOpen, onClose, title, children }) {
     }
   };
 
-  const closeZoom = (e) => {
-    e.stopPropagation();
-    setZoomedImage(null);
-  };
-
   return (
     <>
       <div className={styles.modalOverlay} onClick={onClose}>
         <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-          <div className={styles.modalHeader}>
-            <button className={styles.closeButton} onClick={onClose}>&times;</button>
-          </div>
+          <button 
+            className={styles.closeButton} 
+            onClick={onClose}
+            aria-label="Close modal"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+
           <div className={styles.modalBody} onClick={handleBodyClick}>
             {children}
           </div>
         </div>
       </div>
+      
       {zoomedImage && (
-        <div className={styles.imageZoomOverlay} onClick={closeZoom}>
-          <img src={zoomedImage} alt="Zoomed" className={styles.zoomedImage} />
+        <div className={styles.imageZoomOverlay} onClick={() => setZoomedImage(null)}>
+          <img src={zoomedImage} alt="Zoomed View" className={styles.zoomedImage} />
         </div>
       )}
     </>

@@ -8,6 +8,8 @@ import { ProjectItem } from '../../components/ProjectItem';
 import { projects } from '../../data/projects';
 import { GitHubIcon } from '../../components/Icons';
 
+
+
 const SocialLinks = () => {
   const socialData = [
     { label: 'GitHub', href: 'https://github.com/eeheueklf', icon: <GitHubIcon/> },
@@ -40,7 +42,7 @@ const SocialLinks = () => {
   );
 };
 
-function HomepageHeader() {
+function ResumeHeader() {
   return (
     <div className="container">
       <header className={styles.heroBanner}>
@@ -65,20 +67,11 @@ function HomepageHeader() {
 }
 
 
-const LinkIcon = () => (
-  <svg fill="currentColor" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg" class="size-3">
-    <path d="M11 17H7q-2.075 0-3.538-1.463T2 12q0-2.075 1.463-3.538T7 7h4v2H7q-1.25 0-2.125.875T4 12q0 1.25.875 2.125T7 15h4v2Zm-3-4v-2h8v2H8Zm5 4v-2h4q1.25 0 2.125-.875T20 12q0-1.25-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12q0 2.075-1.463 3.538T17 17h-4Z">
-    </path>
-  </svg>
-)
-
-
-
 export default function Resume() {
   return (
     <Layout title="Resume" description="프론트엔드 개발자">
       <main className={styles.mainWrapper}>
-        <HomepageHeader />
+        <ResumeHeader />
         <SocialLinks/>
 
         <section className="container">
@@ -86,8 +79,8 @@ export default function Resume() {
 
         <Heading as="h2">프로젝트</Heading>
         <div className={styles.projectList}>
-          {projects.map(({ Content, data }, idx) => (
-          <ProjectItem key={idx} {...data}>
+          {projects.map(({ Content, DetailContent, data }, idx) => (
+          <ProjectItem key={idx} {...data} DetailContent={DetailContent}>
             <Content />
           </ProjectItem>
         ))}

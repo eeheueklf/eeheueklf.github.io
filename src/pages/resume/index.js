@@ -70,7 +70,7 @@ function ResumeHeader() {
 export default function Resume() {
   return (
     <Layout title="Resume" description="프론트엔드 개발자">
-      <main className={styles.mainWrapper}>
+      <main style={{ flex: 1, padding: '2rem' }}>
         <ResumeHeader />
         <SocialLinks/>
 
@@ -79,7 +79,7 @@ export default function Resume() {
 
         <Heading as="h2">프로젝트</Heading>
         <div className={styles.projectList}>
-          {projects.map(({ Content, DetailContent, data }, idx) => (
+        {projects.map(({ Content, DetailContent, data }, idx) => (
           <ProjectItem key={idx} {...data} DetailContent={DetailContent}>
             <Content />
           </ProjectItem>

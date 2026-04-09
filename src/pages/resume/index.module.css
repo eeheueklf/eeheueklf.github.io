@@ -1,7 +1,4 @@
 /* Layout & Common */
-.mainWrapper {
-  width: 100%;
-}
 
 
 .sectionTitle {
@@ -12,7 +9,7 @@
 
 /* Hero Section */
 .heroBanner {
-  padding: 4rem 0 1rem 0;
+  padding: 2rem 0 1rem 0;
   background: var(--ifm-background-color);
   margin-top: 2rem;
 }

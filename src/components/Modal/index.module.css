@@ -124,18 +124,30 @@
 
 
 /* markdown */
+
+.modalBody strong{
+  font-size: 0.85rem;
+}
+
 .modalBody ul {
   padding: 0 1.3rem;
   list-style-type: '-  ';
 }
-.modalBody li::marker {
+.modalBody ul li::marker {
   color: var(--code-text-color);
-  font-weight: 600;
 }
 .modalBody li {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: rgba(var(--hiri-foreground, 0,0,0), 0.85);
+  color:black;
+}
+.modalBody li::marker{
+  font-weight: 600;
+  font-size: 1rem;
+}
+.modalBody ol li p strong{
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .modalBody pre code{
@@ -148,6 +160,21 @@
 
 .modalBody pre{
   border-radius: 0;
+  font-size:0.8rem;
   /* border: 1px solid black; */
   /* background-color: inherit; */
+}
+.modalBody p a { 
+  text-decoration: underline dashed rgb(139, 139, 139);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  color:inherit;
+  transition: all ease 100ms;
+  color:var(--code-text-color);
+}
+.modalBody p a:hover{
+  color:var(--code-text-color);
+  text-decoration: underline dashed rgb(139, 139, 139);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }

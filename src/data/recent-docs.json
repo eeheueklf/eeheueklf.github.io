@@ -15,13 +15,13 @@
     "path": "/docs/dev-log/tyle-cls"
   },
   {
-    "title": "컴포넌트",
-    "date": "2026-03-27",
-    "path": "/docs/framework/component"
+    "title": "useEffect",
+    "date": "2025-10-02",
+    "path": "/docs/framework/useEffect-render"
   },
   {
-    "title": "프론트엔드 필수 개념 정리",
-    "date": "2026-03-26",
-    "path": "/docs/fe-roadmap/frontend-roadmap"
+    "title": "컴포넌트 생명주기",
+    "date": "2025-09-29",
+    "path": "/docs/framework/life-cycle"
   }
 ]

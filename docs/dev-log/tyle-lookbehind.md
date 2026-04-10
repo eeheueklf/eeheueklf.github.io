@@ -1,5 +1,4 @@
 ---
-slug: tyle-lookbehind  
 title: "타자 연습용 한 줄로 분리하는 법 Lookbehind"  
 date: 2025-09-25
 ---

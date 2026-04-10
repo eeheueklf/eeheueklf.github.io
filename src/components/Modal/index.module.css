@@ -165,16 +165,14 @@
   /* background-color: inherit; */
 }
 .modalBody p a { 
-  text-decoration: underline dashed rgb(139, 139, 139);
+  text-decoration: 1px underline dashed rgb(139, 139, 139);
   text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
   color:inherit;
   transition: all ease 100ms;
   color:var(--code-text-color);
 }
 .modalBody p a:hover{
   color:var(--code-text-color);
-  text-decoration: underline dashed rgb(139, 139, 139);
   text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
+  text-decoration: 1px underline dashed rgb(139, 139, 139);
 }

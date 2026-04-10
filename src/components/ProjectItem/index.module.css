@@ -110,9 +110,8 @@
 
 /* markdown */
 .markdownContent a { 
-  text-decoration: underline dashed rgb(139, 139, 139);
+  text-decoration: 1px underline dashed rgb(139, 139, 139);
   text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
   color:inherit;
   transition: all ease 100ms;
 }
@@ -123,9 +122,6 @@
 
 .markdownContent a:hover{
   color:var(--code-text-color);
-  text-decoration: underline dashed rgb(139, 139, 139);
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
 }
 
 .markdownContent ul {

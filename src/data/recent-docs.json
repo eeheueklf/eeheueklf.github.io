@@ -1,6 +1,16 @@
 [
   {
-    "title": "구현은 순서 있어도 테스팅은 순서가 없다⚠️",
+    "title": "한번 깨지고 다시 다진 Next.js",
+    "date": "2026-04-13",
+    "path": "/docs/dev-log/noiton-render"
+  },
+  {
+    "title": "LCP가 9.8초면 이미 사용자는 떠났다.",
+    "date": "2026-04-10",
+    "path": "/docs/dev-log/noiton-lcp"
+  },
+  {
+    "title": "구현은 순서 있어도 테스팅엔 순서 없다⚠️",
     "date": "2026-04-06",
     "path": "/docs/dev-log/tyle-test"
   },
@@ -13,15 +23,5 @@
     "title": "[최적화] 웹 성능(CLS) 개선하기 (0 달성🥳)",
     "date": "2026-04-04",
     "path": "/docs/dev-log/tyle-cls"
-  },
-  {
-    "title": "useEffect",
-    "date": "2025-10-02",
-    "path": "/docs/framework/useEffect-render"
-  },
-  {
-    "title": "컴포넌트 생명주기",
-    "date": "2025-09-29",
-    "path": "/docs/framework/life-cycle"
   }
 ]

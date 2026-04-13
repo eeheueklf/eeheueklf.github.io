@@ -421,12 +421,14 @@ code:hover{
 .markdown p > a {
   text-decoration: underline;
   text-underline-offset: 3px;
-  color: black;
-  color: var(--mark-hyperlink-color);
-  color: var(--ifm-link-color);
+  /* color: black; */
+  /* color: var(--mark-hyperlink-color); */
+  /* color: var(--ifm-link-color); */
   font-family: 'A2zR';
   font-weight: 400;
   font-size: 15px;
+  text-decoration: 1px underline dashed rgb(139, 139, 139);
+
 }
 
 .markdown em{

@@ -1,13 +1,13 @@
 [
   {
+    "title": "Next.js가 함정이었던 타자 연습 프로젝트 회고",
+    "date": "2026-04-05",
+    "path": "/blog/next-sidepj"
+  },
+  {
     "title": "블로그 새 단장 with Docusaurus🦕",
     "date": "2026-03-26",
     "path": "/blog/blog-docusaurus"
-  },
-  {
-    "title": "Next.js가 함정이었던 타자 연습 프로젝트 회고",
-    "date": "2026-03-21",
-    "path": "/blog/next-sidepj"
   },
   {
     "title": "[회고] 프로그래머스 기초 입문 달성 후기 🥳🎉",

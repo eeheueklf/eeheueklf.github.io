@@ -35,6 +35,7 @@ const config = {
   title: '히리로그',
   tagline: '/프론트엔드 개발로그',
   favicon: 'img/icon.svg',
+  trailingSlash: false,
 
   url: 'https://eeheueklf.github.io',
   baseUrl: '/',
@@ -83,6 +84,12 @@ const config = {
         gtag:{
           trackingID: "G-NE35MDLPZW",
           anonymizeIP: true,
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
         },
       }),
     ],

@@ -13,21 +13,13 @@
 }
 
 @font-face {
-    font-family: 'A2zT';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-2ExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-display: swap;
-}
-@font-face {
     font-family: 'A2zR';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-4Regular.woff2') format('woff2');
-    font-weight: 400;
+    src: url('/fonts/A2Z-4Regular.woff2') format('woff2');
     font-display: swap;
 }
 @font-face {
     font-family: 'A2z';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-7Bold.woff2') format('woff2');
-    font-weight: 700;
+    src: url('/fonts/A2Z-7Bold.woff2') format('woff2');
     font-display: swap;
 }
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
@@ -154,7 +146,15 @@ a{
 /* main */
 main{
   background-color: var(--background-color);
+  flex: 1;
+  padding: 2rem;
 }
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+}
+
 /* font - 배민 한나체 */
 .hanna-text {
   font-family: 'A2z', sans-serif;
@@ -225,20 +225,6 @@ main{
   margin-top: 4rem;
   margin-bottom: 0.8em;
   font-family: 'A2z';
-}
-.markdown > h3 {
-  font-size: 1.25em;
-  font-family: 'A2zR';
-  font-weight: 500;
-  
-  /* 포인트: 연한 배경색과 둥근 모서리 */
-  background-color: var(--h3-bg-color, #f8f9fa); /* 배경색 변수가 없다면 연한 회색 */
-  border-left: 5px solid var(--h3-border-color);
-  padding: 10px 15px;
-  border-radius: 0 4px 4px 0;
-  
-  display: block;
-  margin-top: 2.5em;
 }
 .markdown > h3 {
   font-size: 1.25em;
@@ -512,7 +498,7 @@ table td {
 
 .docsBanner {
   padding: 4rem 0 1rem 0;
-  font-family: 'A2ZR';
+  font-family: 'A2zR';
 }
 
 .docs__subtitle {
@@ -527,7 +513,7 @@ table td {
 }
 
 .menu__title {
-  font-family: 'A2ZR';
+  font-family: 'A2zR';
   color:black;
   font-size: 1.3rem;
   line-height: 1.25rem;

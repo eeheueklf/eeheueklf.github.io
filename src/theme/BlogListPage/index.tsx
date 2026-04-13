@@ -31,7 +31,7 @@ function BlogListPageContent(props: Props): JSX.Element {
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh' }}>
-        <main style={{ flex: 1, padding: '2rem' }}>
+        <main>
           <div className="container">
           <div className={styles.generatedIndexPage}>
           <header className="docsBanner">

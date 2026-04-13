@@ -12,7 +12,6 @@ import {usePluralForm} from '@docusaurus/theme-common';
 import {useBlogPost} from '@docusaurus/theme-common/internal';
 import type {Props} from '@theme/BlogPostItem/Header/Info';
 
-import styles from './styles.module.css';
 
 // Very simple pluralization: probably good enough for now
 function useReadingTimePlural() {
@@ -58,7 +57,7 @@ export default function BlogPostItemHeaderInfo({
   const {date, formattedDate, readingTime} = metadata;
 
   return (
-    <div className={clsx(styles.container, 'margin-vert--md', className)}>
+    <div className={clsx('margin-vert--md', className)}>
       <Date date={date} formattedDate={formattedDate} />
       {typeof readingTime !== 'undefined' && (
         <>

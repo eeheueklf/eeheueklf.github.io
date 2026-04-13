@@ -19,7 +19,7 @@ export default function DocRootLayoutMain({
   const sidebar = useDocsSidebar();
   return (
     <div style={{ display: 'flex', minHeight: '100vh' }}>
-      <main style={{ flex: 1, padding: '2rem' }}>
+      <main>
         <div
           className={clsx(
             'container',

@@ -70,7 +70,7 @@ function ResumeHeader() {
 export default function Resume() {
   return (
     <Layout title="Resume" description="프론트엔드 개발자">
-      <main style={{ flex: 1, padding: '2rem' }}>
+      <main className='main-container'>
         <ResumeHeader />
         <SocialLinks/>
 

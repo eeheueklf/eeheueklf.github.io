@@ -27,7 +27,7 @@ export default function BlogPostItem({
   const containerClassName = useContainerClassName();
   return (
     <div style={{ display: 'flex', minHeight: '100vh' }}>
-      <main style={{ flex: 1, padding: '2rem' }}>
+      <main>
         <article>
           <BlogPostItemContainer className={clsx('container', containerClassName, className)}>
             <BlogPostItemHeader />

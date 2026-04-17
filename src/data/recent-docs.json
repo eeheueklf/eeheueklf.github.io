@@ -1,5 +1,10 @@
 [
   {
+    "title": "Redux-toolkit으로 사용자 상태 관리 구조 개선",
+    "date": "2026-04-17",
+    "path": "/docs/dev-log/notion-rtk"
+  },
+  {
     "title": "한번 깨지고 다시 다진 Next.js",
     "date": "2026-04-13",
     "path": "/docs/dev-log/noiton-render"
@@ -18,10 +23,5 @@
     "title": "타자연습에 애니메이션과 소리📣를 넣었더니 생긴 일⌨️",
     "date": "2026-04-05",
     "path": "/docs/dev-log/tyle-performance"
-  },
-  {
-    "title": "[최적화] 웹 성능(CLS) 개선하기 (0 달성🥳)",
-    "date": "2026-04-04",
-    "path": "/docs/dev-log/tyle-cls"
   }
 ]

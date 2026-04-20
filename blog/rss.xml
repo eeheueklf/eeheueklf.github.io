@@ -4,10 +4,52 @@
         <title>히리로그 Blog</title>
         <link>https://eeheueklf.github.io/blog</link>
         <description>히리로그 Blog</description>
-        <lastBuildDate>Sun, 05 Apr 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 20 Apr 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
+        <item>
+            <title><![CDATA[🤖Gemini와 알아본 현업에서 쓰는 폴더 관리]]></title>
+            <link>https://eeheueklf.github.io/blog/feature-sliced-design</link>
+            <guid>https://eeheueklf.github.io/blog/feature-sliced-design</guid>
+            <pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[학교에서, 그리고 개인적으로 여러 프로젝트를 진행하면서 폴더 구조의 정답을 쫓아왔다. 어떤 구조가 가장 효율적인지, 실제 현업에서는 어떤 방식을 사용하는지 항상 궁금했지만 참고할 만한 레퍼런스를 찾기가 쉽지 않았다.]]></description>
+            <content:encoded><![CDATA[<p>학교에서, 그리고 개인적으로 여러 프로젝트를 진행하면서 폴더 구조의 <strong>정답</strong>을 쫓아왔다. 어떤 구조가 가장 효율적인지, 실제 현업에서는 어떤 방식을 사용하는지 항상 궁금했지만 참고할 만한 레퍼런스를 찾기가 쉽지 않았다.</p>
+<p>과거, 규모가 작은 개인 프로젝트에 세분화된 구조를 적용하면서 <strong>과분리</strong>라는 느낌을 받았던 적도 있다. 하지만 코드 리팩토링을 하면서 <code>hook</code>과 <code>service</code>, <code>ui</code>를 분리했을때 얻는 유지보수성의 이점이 훨씬 크다는 것을 깨달았다.</p>
+<p>이제는 <code>Gemini</code>와 함께 현업에서 어떤 구조가 많이 쓰이는지, <strong>폴더 구조의 정답이 있는지</strong> 알 수 있게 되었다. <code>Gemini</code>는 어디서 폴더 구조를 참고하였는지 탐구해보자.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="폴더-구조의-교과서">폴더 구조의 교과서<a href="https://eeheueklf.github.io/blog/feature-sliced-design#%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%90%EA%B3%BC%EC%84%9C" class="hash-link" aria-label="폴더 구조의 교과서에 대한 직접 링크" title="폴더 구조의 교과서에 대한 직접 링크">​</a></h2>
+<p><a href="https://github.com/alan2207/bulletproof-react" target="_blank" rel="noopener noreferrer">Bulletproof-React</a><br>
+<code>Gemini</code>가 말하는 <strong>폴더 구조의 교과서</strong>로 통하는 레포지토리이다. 이 프로젝트의 핵심은 기능 기반 구조에 있다.</p>
+<p><code>A simple, scalable, and powerful architecture for building production ready React applications.</code></p>
+<p><code>components</code>, <code>hook</code> 폴더에 모든 파일을 넣는 것이 아니라, <code>src/features/comments</code>와 같이 특정 기능 단위로 폴더를 구성한다. 해당 기능에서만 사용하는 로직과 컴포넌트를 한 폴더에서 관리하는 방식이다.
+<img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/bulletproof-33d188b20839123e9c57ac05a5db8222.png" width="1009" height="303" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fsdfeature-sliced-design">FSD(Feature-Sliced Design)<a href="https://eeheueklf.github.io/blog/feature-sliced-design#fsdfeature-sliced-design" class="hash-link" aria-label="FSD(Feature-Sliced Design)에 대한 직접 링크" title="FSD(Feature-Sliced Design)에 대한 직접 링크">​</a></h2>
+<p>FSD는 여기서 더 나아가 <strong>계층화</strong>를 통해 엄격하게 의존성을 관리할 것을 제안한다. 가장 큰 특징은 <strong>단방향 의존성</strong>으로, 하위 계층이 상위 계층을 절대 참조할 수 없게 설계하여 코드 간 순서를 명확히 정의한다.</p>
+<ul>
+<li><strong>App</strong>: 앱의 진입점 (Provider, 전역 스타일)</li>
+<li><strong>Processes</strong>: 여러 단계가 필요한 비즈니스 로직</li>
+<li><strong>Pages</strong>: 실제 화면 단위</li>
+<li><strong>Widgets</strong>: 독립적인 큰 단위 (Header, Sidebar)</li>
+<li><strong>Features</strong>: 사용자 행동 (좋아요 버튼, 검색 창)</li>
+<li><strong>Entities</strong>: 비즈니스 (User, Product, Post)</li>
+<li><strong>Shared</strong>: 공통 UI 컴포넌트, 유틸 함수</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="적용해보기">적용해보기<a href="https://eeheueklf.github.io/blog/feature-sliced-design#%EC%A0%81%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0" class="hash-link" aria-label="적용해보기에 대한 직접 링크" title="적용해보기에 대한 직접 링크">​</a></h2>
+<p>리팩토링 과정 중 이러한 폴더 구조를 따라가보고 있다. 기존에는  <code>component</code> 폴더와 <code>features </code>폴더에 로직이 몰려있었고, 이를 각각 <code>features</code> 폴더 내부로 분산시켰다.</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/noiton-folder-d41b35800b829348159a956570f23b73.png" width="297" height="229" class="img_ev3q"></p>
+<ul>
+<li><code>src/features/template/hooks/useDownloadTemplate.ts</code></li>
+<li><code>src/features/template/service/tempolateService.ts</code></li>
+</ul>
+<p>기능을 새로 개발할때 <code>features</code> 폴더 안에 새로운 폴더를 만들기만 하면 된다는 포인트가 중요한 것 같다. 기능을 삭제하거나, 관련 함수를 테스트할때 폴더 하나만 확인하면 된다는 것이 작업에 매우 효율적이고 편리하다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hook-과-api를-분리하자">Hook 과 API를 분리하자<a href="https://eeheueklf.github.io/blog/feature-sliced-design#hook-%EF%BF%BD%EA%B3%BC-api%EB%A5%BC-%EB%B6%84%EB%A6%AC%ED%95%98%EC%9E%90" class="hash-link" aria-label="Hook 과 API를 분리하자에 대한 직접 링크" title="Hook 과 API를 분리하자에 대한 직접 링크">​</a></h2>
+<p>작은 프로젝트에 이런 엄격한 구조를 도입하는 것이 번거롭게 느껴질 수 있다. 하지만 직접 적용하며 느낀 점은 <strong>규모와 상관없이 관심사를 분리하는 습관이 필수적이다</strong>는 점이다.</p>
+<p>컴포넌트에서 직접 <code>API</code>를 호출하는 대신, <code>service</code>로 통신을 분리하고 이를 커스텀 <code>hook</code>으로 감싸는 구조를 추천한다. 이렇게 하면 나중에 <code>TanStack Query</code>를 도입하거나 낙관적 업데이트 로직을 추가할 때, <code>UI</code> 코드는 단 한 줄도 건드리지 않고 로직만 깔끔하게 교체할 수 있다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="마무리">마무리<a href="https://eeheueklf.github.io/blog/feature-sliced-design#%EB%A7%88%EB%AC%B4%EB%A6%AC" class="hash-link" aria-label="마무리에 대한 직접 링크" title="마무리에 대한 직접 링크">​</a></h2>
+<p>그럼에도 완벽한 폴더 구조란 건 없다.<br>
+<!-- -->기술은 변화하고, 그런 기술에 맞는 새로운 구조가 등장할 수 있다.<br>
+<!-- -->그럼으로 유지보수하기 좋은 구조에 대한 고민을 계속 해가며 학습해나가야겠다.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Next.js가 함정이었던 타자 연습 프로젝트 회고]]></title>
             <link>https://eeheueklf.github.io/blog/next-sidepj</link>

@@ -35,7 +35,7 @@ const config = {
   title: '히리로그',
   tagline: '/프론트엔드 개발로그',
   favicon: 'img/icon.svg',
-  trailingSlash: false,
+  trailingSlash: true,
 
   url: 'https://eeheueklf.github.io',
   baseUrl: '/',

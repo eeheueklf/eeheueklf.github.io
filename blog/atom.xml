@@ -80,7 +80,7 @@
 <p>결국 개발자의 진정한 실력은, 프로젝트의 성격에 맞는 적절한 기술을 선택하는 안목인 것이다. 이러한 깨달음을 새기고, 다음 프로젝트에서는 SEO와 초기 로딩 속도라는 목표를 설정하고, <code>Next.js</code>의 기능을 제대로 활용할 수 있는 <strong>서버 컴포넌트 우선 설계</strong>를 중심에 두기로 했다.</p>
 <hr>
 <blockquote>
-<p>다음 글 : <a href="https://eeheueklf.github.io/docs/dev-log/noiton-render">한번 깨지고 다시 다진 Next.js</a></p>
+<p>다음 글 : <a href="https://eeheueklf.github.io/docs/dev-log/noiton-render/">한번 깨지고 다시 다진 Next.js</a></p>
 </blockquote>]]></content>
     </entry>
     <entry>
@@ -115,7 +115,7 @@
         <content type="html"><![CDATA[<p>🧱🧱🧱🧱🧱🧱🧱🧱🧱🧱</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="마크다운-참고하기-">마크다운 참고하기 🍪🍄‍🟫☕<a href="https://eeheueklf.github.io/blog/intro#%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EC%B0%B8%EA%B3%A0%ED%95%98%EA%B8%B0-" class="hash-link" aria-label="마크다운 참고하기 🍪🍄‍🟫☕에 대한 직접 링크" title="마크다운 참고하기 🍪🍄‍🟫☕에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="-안녕하세요-">👋 안녕하세요 🤎🧸📜<a href="https://eeheueklf.github.io/blog/intro#-%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94-" class="hash-link" aria-label="👋 안녕하세요 🤎🧸📜에 대한 직접 링크" title="👋 안녕하세요 🤎🧸📜에 대한 직접 링크">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="제목-4-">제목 4 🌕🍞🍂<a href="https://eeheueklf.github.io/blog/intro#%EC%A0%9C%EB%AA%A9-4-" class="hash-link" aria-label="제목 4 🌕🍞🍂에 대한 직접 링크" title="제목 4 🌕🍞🍂에 대한 직접 링크">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="제��목-4-">제목 4 🌕🍞🍂<a href="https://eeheueklf.github.io/blog/intro#%EC%A0%9C%EB%AA%A9-4-" class="hash-link" aria-label="제목 4 🌕🍞🍂에 대한 직접 링크" title="제목 4 🌕🍞🍂에 대한 직접 링크">​</a></h4>
 <p>🍩🐿️🍦</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-alert">1. alert<a href="https://eeheueklf.github.io/blog/intro#1-alert" class="hash-link" aria-label="1. alert에 대한 직접 링크" title="1. alert에 대한 직접 링크">​</a></h2>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span></div><div class="admonitionContent_BuS1"><p>정보</p></div></div>

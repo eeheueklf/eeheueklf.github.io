@@ -42,7 +42,7 @@
 <li><code>src/features/template/service/tempolateService.ts</code></li>
 </ul>
 <p>기능을 새로 개발할때 <code>features</code> 폴더 안에 새로운 폴더를 만들기만 하면 된다는 포인트가 중요한 것 같다. 기능을 삭제하거나, 관련 함수를 테스트할때 폴더 하나만 확인하면 된다는 것이 작업에 매우 효율적이고 편리하다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hook-과-api를-분리하자">Hook 과 API를 분리하자<a href="https://eeheueklf.github.io/blog/feature-sliced-design#hook-%EF%BF%BD%EA%B3%BC-api%EB%A5%BC-%EB%B6%84%EB%A6%AC%ED%95%98%EC%9E%90" class="hash-link" aria-label="Hook 과 API를 분리하자에 대한 직접 링크" title="Hook 과 API를 분리하자에 대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hook-과-api를-분리하자">Hook 과 API를 분리하자<a href="https://eeheueklf.github.io/blog/feature-sliced-design#hook-%EA%B3%BC-api%EB%A5%BC-%EB%B6%84%EB%A6%AC%EF%BF%BD%ED%95%98%EC%9E%90" class="hash-link" aria-label="Hook 과 API를 분리하자에 대한 직접 링크" title="Hook 과 API를 분리하자에 대한 직접 링크">​</a></h2>
 <p>작은 프로젝트에 이런 엄격한 구조를 도입하는 것이 번거롭게 느껴질 수 있다. 하지만 직접 적용하며 느낀 점은 <strong>규모와 상관없이 관심사를 분리하는 습관이 필수적이다</strong>는 점이다.</p>
 <p>컴포넌트에서 직접 <code>API</code>를 호출하는 대신, <code>service</code>로 통신을 분리하고 이를 커스텀 <code>hook</code>으로 감싸는 구조를 추천한다. 이렇게 하면 나중에 <code>TanStack Query</code>를 도입하거나 낙관적 업데이트 로직을 추가할 때, <code>UI</code> 코드는 단 한 줄도 건드리지 않고 로직만 깔끔하게 교체할 수 있다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="마무리">마무리<a href="https://eeheueklf.github.io/blog/feature-sliced-design#%EB%A7%88%EB%AC%B4%EB%A6%AC" class="hash-link" aria-label="마무리에 대한 직접 링크" title="마무리에 대한 직접 링크">​</a></h2>
@@ -186,6 +186,12 @@
 </li>
 </ol>
 </section>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[memo]]></title>
+            <link>https://eeheueklf.github.io/blog/memo</link>
+            <guid>https://eeheueklf.github.io/blog/memo</guid>
+            <pubDate>Thu, 14 Aug 2025 05:08:25 GMT</pubDate>
         </item>
     </channel>
 </rss>

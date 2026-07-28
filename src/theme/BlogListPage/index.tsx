@@ -25,12 +25,17 @@ function BlogListPageMetadata(props: Props): JSX.Element {
   return <PageMetadata title={metadata.blogTitle} description={metadata.blogDescription} />;
 }
 
+function formatDate(dateStr: string): string {
+  const d = new Date(dateStr);
+  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+
 function BlogListPageContent(props: Props): JSX.Element {
   const {metadata, items} = props;
   const homeHref = useBaseUrl('/');
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
+    <div className="page-wrapper">
         <main>
           <div className="container">
           <div className={styles.generatedIndexPage}>
@@ -52,7 +57,7 @@ function BlogListPageContent(props: Props): JSX.Element {
                       <Link to={postMetadata.permalink} className="menu__link">
                         {postMetadata.title}
                         <span style={{ marginLeft: '10px', fontSize: '0.8em', opacity: 0.6 }}>
-                          {postMetadata.date.split('T')[0]}
+                          {formatDate(postMetadata.date)}
                         </span>
                       </Link>
                     </li>

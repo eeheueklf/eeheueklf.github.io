@@ -13,11 +13,15 @@
 
 .postTitle {
   margin-left:1rem;
-  /* text-decoration: underline; */
+  text-decoration: none;
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
   font-size: 1.1rem;
   color: inherit;
+}
+
+.postTitle:hover {
+  text-decoration: underline;
 }
 
 .postDate {

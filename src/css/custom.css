@@ -48,6 +48,7 @@
 
   /* resume */
   --hiri-grey : rgb(209, 209, 209);
+  --hiri-foreground: 0,0,0;
 
   /* 본문 글 간격 */
   --ifm-leading-desktop : 0.8;
@@ -159,14 +160,43 @@ main{
 .hanna-text {
   font-family: 'A2z', sans-serif;
 }
+.spaceCoverWrapper {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  min-height: 280px;
+  max-height: 480px;
+  overflow: hidden;
+}
+
+.spaceCoverContent {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .heroBanner {
   padding: 4rem 0 1rem 0;
   margin-top: 2rem;
 }
 
+.heroBannerDark {
+  margin-top: 0;
+  padding: 0;
+}
+
+.heroBannerDark h1,
+.heroBannerDark .hero__subtitle,
+.heroBannerDark .hero__description {
+  color: #f0f0f0;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+
 .hero__subtitle {
   font-size: 1.2rem;
-  line-height : 0.4;
+  line-height : 1.5;
 }
 
 .hero__description {
@@ -212,7 +242,7 @@ main{
   text-underline-offset: 3px;
 }
 .about-link:hover {
-  color:var(--mark-highlight-shadow);
+  color: var(--code-text-color);
 }
 
 .link-icon {
@@ -350,6 +380,12 @@ details{
   border-radius: 0 !important;
 }
 
+
+/* 페이지 래퍼 */
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
 
 /* 헤더 없앰 */
 .navbar {

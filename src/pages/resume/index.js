@@ -1,5 +1,6 @@
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import { useState, useEffect } from 'react';
 
 import Heading from '@theme/Heading';
 import RecentDocs from '../../components/RecentDocs';
@@ -7,6 +8,94 @@ import styles from './index.module.css';
 import { ProjectItem } from '../../components/ProjectItem';
 import { projects } from '../../data/projects';
 import { GitHubIcon } from '../../components/Icons';
+
+const COLORS = ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'];
+
+const TYPE_LABEL = { notice: '공지', update: '업데이트' };
+
+function ProjectUpdateCard() {
+  const [notices, setNotices] = useState([]);
+
+  useEffect(() => {
+    fetch('https://ddingtown.vercel.app/api/notices')
+      .then(r => r.json())
+      .then(data => setNotices(data.slice(0, 3)))
+      .catch(() => {});
+  }, []);
+
+  return (
+    <div style={{
+      display: 'inline-flex',
+      flexDirection: 'column',
+      gap: '0.6rem',
+      backgroundColor: '#faf8f5',
+      border: '1px solid #ede9e3',
+      borderRadius: 14,
+      padding: '1rem 1.25rem',
+      minWidth: 200,
+    }}>
+      <span style={{ fontSize: 13, fontFamily: 'Pretendard, sans-serif', letterSpacing: '0.04em', color: '#1a1a1a' }}>
+        Project update
+      </span>
+      {notices.length === 0 ? (
+        <span style={{ fontSize: 12, color: '#aaa', fontFamily: 'Pretendard, sans-serif' }}>불러오는 중...</span>
+      ) : (
+        notices.map(n => (
+          <div key={n.id} style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span style={{ fontSize: 10, color: '#888', fontFamily: 'Pretendard, sans-serif', backgroundColor: '#ede9e3', borderRadius: 4, padding: '1px 6px' }}>
+                {TYPE_LABEL[n.type] ?? n.type}
+              </span>
+              <span style={{ fontSize: 10, color: '#bbb', fontFamily: 'Pretendard, sans-serif' }}>{n.date}</span>
+            </div>
+            <span style={{ fontSize: 12, color: '#3a3a3a', fontFamily: 'Pretendard, sans-serif' }}>{n.title}</span>
+          </div>
+        ))
+      )}
+    </div>
+  );
+}
+
+function GitHubMiniCalendar() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://github-contributions-api.jogruber.de/v4/eeheueklf?y=last')
+      .then(r => r.json())
+      .then(json => setData(json.contributions.slice(-14)));
+  }, []);
+
+  if (!data.length) return null;
+
+  const total = data.reduce((sum, d) => sum + d.count, 0);
+
+  return (
+    <div style={{
+      display: 'inline-flex',
+      flexDirection: 'column',
+      gap: '0.75rem',
+      backgroundColor: '#2d2d2d',
+      borderRadius: 14,
+      padding: '1rem 1.25rem',
+    }}>
+      <span style={{ color: 'white', fontSize: 13, fontFamily: 'Pretendard, sans-serif', letterSpacing: '0.04em' }}>
+        Making Lately
+      </span>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 12px)', gap: '3px' }}>
+        {data.map((d, i) => (
+          <div
+            key={i}
+            title={`${d.date}: ${d.count}`}
+            style={{ width: 12, height: 12, backgroundColor: COLORS[d.level], borderRadius: 2 }}
+          />
+        ))}
+      </div>
+      <span style={{ color: 'rgba(255,255,255,0.45)', fontSize: 11, fontFamily: 'Pretendard, sans-serif' }}>
+        {total} contributions in the last 2 weeks
+      </span>
+    </div>
+  );
+}
 
 
 
@@ -73,6 +162,11 @@ export default function Resume() {
       <main className='main-container'>
         <ResumeHeader />
         <SocialLinks/>
+
+        <div className="container" style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <ProjectUpdateCard />
+          <GitHubMiniCalendar />
+        </div>
 
         <section className="container">
         <div className={styles.line}></div>

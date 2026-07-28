@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 const fs = require("fs");
 const path = require("path");
 
@@ -34,14 +34,14 @@ const totalCount = docsCount + blogCount;
 const config = {
   title: '히리로그',
   tagline: '/프론트엔드 개발로그',
-  favicon: 'img/icon.svg',
+  favicon: 'img/icon.png',
   trailingSlash: false,
 
   url: 'https://eeheueklf.github.io',
   baseUrl: '/',
 
-  organizationName: 'eeheueklf', 
-  projectName: 'eeheueklf.github.io', 
+  organizationName: 'eeheueklf',
+  projectName: 'eeheueklf.github.io',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -70,7 +70,7 @@ const config = {
             'https://github.com/eeheueklf/eeheueklf.github.io/tree/main/',
         },
         blog: {
-          path: 'blog',         
+          path: 'blog',
           routeBasePath: 'blog',
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Posts',
@@ -81,7 +81,7 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-        gtag:{
+        gtag: {
           trackingID: "G-NE35MDLPZW",
           anonymizeIP: true,
         },
@@ -99,20 +99,20 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/docusaurus-social-card.jpg',
-      metadata:[{
-        name:"google-site-verification",
-        content:"fhdIMfm7eKRtHRKiRQ5quuM9xGeD5qNnWKm-hnjb-Qc"
+      metadata: [{
+        name: "google-site-verification",
+        content: "fhdIMfm7eKRtHRKiRQ5quuM9xGeD5qNnWKm-hnjb-Qc"
       }],
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
-    customFields: {
-      blogCount,
-      docsCount,
-      totalCount,
-    },
+  customFields: {
+    blogCount,
+    docsCount,
+    totalCount,
+  },
 };
 
 export default config;

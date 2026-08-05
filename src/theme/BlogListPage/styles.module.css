@@ -14,3 +14,24 @@
     margin-bottom: 0 !important;
   }
 }
+
+/* ── 분류 코드 배지 ──────────────────────────────────── */
+
+.classCode {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  padding: 1px 4px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  margin-right: 8px;
+  opacity: 0.5;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.classLog    { color: #a06820; }
+.classData   { color: #1a4a99; }
+.classFile   { color: #1a5e1a; }
+.classReport { color: #991a1a; }
+.classMemo   { color: #5c1a99; }

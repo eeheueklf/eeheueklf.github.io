@@ -534,6 +534,18 @@ table td {
 .docsBanner {
   padding: 4rem 0 1rem 0;
   font-family: 'A2zR';
+  border-left: 2px solid rgba(0, 0, 0, 0.12);
+  padding-left: 1.2rem;
+}
+
+.docsBanner::before {
+  content: 'SYS://';
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  opacity: 0.35;
+  margin-bottom: 0.5rem;
 }
 
 .docs__subtitle {
@@ -548,18 +560,33 @@ table td {
 }
 
 .menu__title {
-  font-family: 'A2zR';
-  color:black;
-  font-size: 1.3rem;
-  line-height: 1.25rem;
-  font-weight: 400;
-  margin-top: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: black;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
-  /* text-transform: uppercase; */
-  letter-spacing: 0.025em;
+  opacity: 0.55;
+}
+
+.menu__title::before {
+  content: '■ ';
+  opacity: 0.7;
+}
+
+.menu__list {
+  counter-reset: item-counter;
+}
+
+.menu__list li {
+  counter-increment: item-counter;
 }
 
 .menu__link {
+  position: relative;
+  overflow: hidden;
   font-size: 1.1rem;
   color: rgb(49, 49, 49);
   line-height: 1.5rem;
@@ -568,10 +595,112 @@ table td {
   border-left: 1px solid var(--ifm-color-emphasis-300);
 }
 
+.menu__link::before {
+  content: counter(item-counter, decimal-leading-zero) '  ';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7em;
+  opacity: 0.28;
+  letter-spacing: 0;
+}
+
+.menu__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.055) 50%, transparent 100%);
+  transform: translateX(-110%);
+  pointer-events: none;
+}
+
 .menu__link:hover {
   background-color: transparent;
   color: var(--ifm-color-primary);
   border-left-color: var(--ifm-color-primary);
+}
+
+.menu__link:hover::after {
+  animation: scanLight 0.38s ease-out forwards;
+}
+
+@keyframes scanLight {
+  from { transform: translateX(-110%); }
+  to   { transform: translateX(110%);  }
+}
+
+
+/* ── 커서 깜빡임 (페이지 제목) ──────────────────────── */
+
+.docsBanner h1::after {
+  content: '_';
+  animation: cursorBlink 1.1s step-end infinite;
+  opacity: 0.45;
+  margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 0.45; }
+  50%       { opacity: 0; }
+}
+
+/* ── 텍스트 글리치 (제목 호버) ──────────────────────── */
+
+.hanna-text {
+  display: inline-block;
+}
+
+.hanna-text:hover {
+  animation: glitch 0.28s steps(3) 1;
+}
+
+@keyframes glitch {
+  0%   { transform: translateX(0);   text-shadow: none; }
+  20%  { transform: translateX(-3px); text-shadow: 2px 0 rgba(200,0,0,0.25); }
+  40%  { transform: translateX(3px);  text-shadow: -2px 0 rgba(0,0,200,0.2); }
+  60%  { transform: translateX(-1px); text-shadow: none; }
+  80%  { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+/* ── 섹션 구분선 (hr) ────────────────────────────────── */
+
+.markdown hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 3rem 0;
+  overflow: visible;
+}
+
+.markdown hr::before {
+  content: '◈';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background-color, #fcfcfc);
+  padding: 0 0.8rem;
+  font-size: 0.68rem;
+  color: rgba(0, 0, 0, 0.25);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── h2 섹션 번호 ────────────────────────────────────── */
+
+.markdown {
+  counter-reset: section-h2;
+}
+
+.markdown > h2 {
+  counter-increment: section-h2;
+}
+
+.markdown > h2::before {
+  content: '§' counter(section-h2, decimal-leading-zero) '  ';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68em;
+  opacity: 0.28;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 /* blogs */

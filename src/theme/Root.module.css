@@ -1,0 +1,164 @@
+/* ── HUD 코너 (mix-blend-mode: difference) ──────────── */
+
+.hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.tl { top: 20px; left: 20px; border-top: 1.5px solid white; border-left: 1.5px solid white; }
+.tr { top: 20px; right: 20px; border-top: 1.5px solid white; border-right: 1.5px solid white; }
+.bl { bottom: 20px; left: 20px; border-bottom: 1.5px solid white; border-left: 1.5px solid white; }
+.br { bottom: 20px; right: 20px; border-bottom: 1.5px solid white; border-right: 1.5px solid white; }
+
+/* ── 텍스트 요소 (각각 독립 fixed) ──────────────────── */
+
+.stardate {
+  position: fixed;
+  bottom: 44px;
+  left: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  user-select: none;
+  z-index: 9998;
+}
+
+.coords {
+  position: fixed;
+  bottom: 44px;
+  right: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  user-select: none;
+  z-index: 9998;
+}
+
+.status {
+  position: fixed;
+  top: 44px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  user-select: none;
+  z-index: 9998;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  flex-shrink: 0;
+  animation: dotBlink 2.4s ease-in-out infinite;
+}
+
+@keyframes dotBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.15; }
+}
+
+/* ── 스크롤 진행바 ───────────────────────────────────── */
+
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 9997;
+  pointer-events: none;
+}
+
+.progressFill {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  transition: width 0.08s linear;
+}
+
+/* ── 로딩바 ─────────────────────────────────────────── */
+
+.loadingBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+  pointer-events: none;
+  animation: loadAnim 0.55s ease-out forwards;
+}
+
+@keyframes loadAnim {
+  0%   { width: 0%;   opacity: 1; }
+  65%  { width: 90%;  opacity: 1; }
+  82%  { width: 100%; opacity: 1; }
+  100% { width: 100%; opacity: 0; }
+}
+
+/* ── 클릭 Ripple ─────────────────────────────────────── */
+
+.ripple {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 9999;
+  animation: rippleOut 0.7s ease-out forwards;
+}
+
+@keyframes rippleOut {
+  0%   { width: 0;    height: 0;    opacity: 0.7; }
+  100% { width: 56px; height: 56px; opacity: 0;   }
+}
+
+/* ── 링크 미리보기 ───────────────────────────────────── */
+
+.linkPreview {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.10em;
+  color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  user-select: none;
+  z-index: 9996;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: opacity 0.18s, transform 0.18s;
+  max-width: 340px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.linkPreviewVisible {
+  opacity: 1;
+  transform: translateY(0);
+}

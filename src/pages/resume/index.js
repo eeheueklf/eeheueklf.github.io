@@ -108,7 +108,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="container">
+    <div>
       <div className={styles.socialContainer}>
         {socialData.map((item) => (
           <a
@@ -131,26 +131,56 @@ const SocialLinks = () => {
   );
 };
 
-function ResumeHeader() {
+const SKILLS = [
+  'React', 'Next.js', 'TypeScript', 'TailwindCSS',
+  'Supabase', 'Redux', 'Jest', 'Figma',
+];
+
+function LeftColumn() {
   return (
-    <div className="container">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', flex: 1, minWidth: 240 }}>
       <header className={styles.heroBanner}>
-          <p className={styles.hero__subtitle}>안녕하세요,</p>
-          <Heading as="h1" className={styles.hanna}>
-            프론트엔드 개발자 하유경입니다.
-          </Heading>
-          <p className={styles.hero__description}>
-            데이터 흐름을 파악하여 상태와 UI가 분리된 구조를 설계합니다.
-          </p>
-          <p className={styles.hero__description}>
-            공용 컴포넌트화로 복잡도를 낮추고, 렌더링 최적화로 사용자 경험을 개선합니다.
-          </p>
-          <p className={styles.hero__description}>
-            풀스택 경험을 바탕으로 효율적인 API 인터페이스를 고민하는 협업을 지향합니다.
-          </p>
-          
+        <p className={styles.hero__subtitle}>안녕하세요,</p>
+        <Heading as="h1" className={styles.hanna}>
+          프론트엔드 개발자 하유경입니다.
+        </Heading>
+        <p className={styles.hero__description}>
+          데이터 흐름을 파악하여 상태와 UI가 분리된 구조를 설계합니다.
+        </p>
+        <p className={styles.hero__description}>
+          공용 컴포넌트화로 복잡도를 낮추고, 렌더링 최적화로 사용자 경험을 개선합니다.
+        </p>
+        <p className={styles.hero__description}>
+          풀스택 경험을 바탕으로 효율적인 API 인터페이스를 고민하는 협업을 지향합니다.
+        </p>
       </header>
-      
+
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+        {SKILLS.map(skill => (
+          <span key={skill} style={{
+            fontSize: 12,
+            fontFamily: 'Pretendard, sans-serif',
+            backgroundColor: '#f3f3f3',
+            border: '1px solid #e0e0e0',
+            borderRadius: 6,
+            padding: '3px 10px',
+            color: '#444',
+          }}>
+            {skill}
+          </span>
+        ))}
+      </div>
+
+      <SocialLinks />
+    </div>
+  );
+}
+
+function RightColumn() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'flex-start' }}>
+      <ProjectUpdateCard />
+      <GitHubMiniCalendar />
     </div>
   );
 }
@@ -160,12 +190,9 @@ export default function Resume() {
   return (
     <Layout title="Resume" description="프론트엔드 개발자">
       <main className='main-container'>
-        <ResumeHeader />
-        <SocialLinks/>
-
-        <div className="container" style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <ProjectUpdateCard />
-          <GitHubMiniCalendar />
+        <div className="container" style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap', alignItems: 'flex-start', marginTop: '2rem' }}>
+          <LeftColumn />
+          <RightColumn />
         </div>
 
         <section className="container">

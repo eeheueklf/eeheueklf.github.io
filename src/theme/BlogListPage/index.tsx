@@ -30,6 +30,14 @@ function formatDate(dateStr: string): string {
   return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}`;
 }
 
+const CLASS_CODES = [
+  { label: 'LOG',    cls: styles.classLog },
+  { label: 'DATA',   cls: styles.classData },
+  { label: 'FILE',   cls: styles.classFile },
+  { label: 'REPORT', cls: styles.classReport },
+  { label: 'MEMO',   cls: styles.classMemo },
+];
+
 function BlogListPageContent(props: Props): JSX.Element {
   const {metadata, items} = props;
   const homeHref = useBaseUrl('/');
@@ -50,11 +58,13 @@ function BlogListPageContent(props: Props): JSX.Element {
             <section>
               <div className="menu__title">전체 포스트 ({items.length})</div>
               <ul className="menu__list">
-                {items.map(({content: BlogPostContent}) => {
+                {items.map(({content: BlogPostContent}, idx) => {
                   const {metadata: postMetadata} = BlogPostContent;
+                  const code = CLASS_CODES[idx % CLASS_CODES.length];
                   return (
                     <li key={postMetadata.permalink} style={{ margin: 0 }}>
                       <Link to={postMetadata.permalink} className="menu__link">
+                        <span className={`${styles.classCode} ${code.cls}`}>{code.label}</span>
                         {postMetadata.title}
                         <span style={{ marginLeft: '10px', fontSize: '0.8em', opacity: 0.6 }}>
                           {formatDate(postMetadata.date)}

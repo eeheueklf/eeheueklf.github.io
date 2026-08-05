@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
@@ -8,18 +8,18 @@ import styles from './index.module.css';
 // ── Icons ─────────────────────────────────────────────────────────────────────
 
 const IMAGE_SRCS = [
-  '/img/home/그림1.png',
-  '/img/home/그림2.png',
-  '/img/home/그림3.png',
-  '/img/home/그림4.png',
-  '/img/home/그림5.png',
-  '/img/home/그림6.png',
-  '/img/home/그림7.png',
-  '/img/home/그림8.png',
-  '/img/home/그림9.png',
-  '/img/home/그림10.png',
-  '/img/home/그림11.png',
-  '/img/home/그림12.png',
+  '/img/home/그림1.webp',
+  '/img/home/그림2.webp',
+  '/img/home/그림3.webp',
+  '/img/home/그림4.webp',
+  '/img/home/그림5.webp',
+  '/img/home/그림6.webp',
+  '/img/home/그림7.webp',
+  '/img/home/그림8.webp',
+  '/img/home/그림9.webp',
+  '/img/home/그림10.webp',
+  '/img/home/그림11.webp',
+  '/img/home/그림12.webp',
 ];
 
 // 그림7(index 6), 그림10(index 9)은 1개, 나머지는 3개
@@ -63,6 +63,46 @@ function drawDebris(ctx, shape, s, color) {
       ctx.arc(0, 0, s, 0, Math.PI * 2);
       ctx.fill();
   }
+}
+
+// ── Discord Status ────────────────────────────────────────────────────────────
+
+const STATUS_COLOR = { online: '#43b581', idle: '#faa61a', dnd: '#f04747', offline: '#747f8d' };
+const STATUS_LABEL = { online: 'online', idle: 'idle', dnd: 'do not disturb', offline: 'offline' };
+
+function DiscordStatus() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const USER_ID = '797413208339906571';
+    const fetch_ = () =>
+      fetch(`https://api.lanyard.rest/v1/users/${USER_ID}`)
+        .then(r => r.json())
+        .then(j => j.success && setData(j.data))
+        .catch(() => {});
+    fetch_();
+    const id = setInterval(fetch_, 30000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (!data) return null;
+
+  const status = data.discord_status ?? 'offline';
+  const spotify = data.spotify;
+
+  return (
+    <div className={styles.discordStatus}>
+      <span className={styles.discordDot} style={{ background: STATUS_COLOR[status] }} />
+      {spotify ? (
+        <span className={styles.discordText}>
+          <span className={styles.discordSpotify}>♫</span>
+          {spotify.song} — {spotify.artist}
+        </span>
+      ) : (
+        <span className={styles.discordText}>{STATUS_LABEL[status]}</span>
+      )}
+    </div>
+  );
 }
 
 // ── Routes ────────────────────────────────────────────────────────────────────
@@ -270,35 +310,98 @@ export default function Home() {
         meteorsRef.current.push(spawnMeteor(W, H));
         nextMeteorRef.current = 180 + Math.floor(Math.random() * 180);
       }
-      meteorsRef.current = meteorsRef.current.filter(m => m.age < m.maxAge);
-      meteorsRef.current.forEach(m => {
-        m.x += m.dx; m.y += m.dy; m.age++;
-        const p = m.age / m.maxAge;
-        const a = p < 0.15 ? p / 0.15 : 1 - (p - 0.15) / 0.85;
-        const angle = Math.atan2(m.dy, m.dx);
-        const tx = m.x - Math.cos(angle) * m.len;
-        const ty = m.y - Math.sin(angle) * m.len;
-        const g = ctx.createLinearGradient(tx, ty, m.x, m.y);
-        g.addColorStop(0, 'rgba(255,255,240,0)');
-        g.addColorStop(1, `rgba(255,255,240,${(a * 0.85).toFixed(2)})`);
-        ctx.beginPath();
-        ctx.moveTo(tx, ty);
-        ctx.lineTo(m.x, m.y);
-        ctx.strokeStyle = g;
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-      });
+      // Charging & Holding Black Hole Visual (while holding press)
+      if (pressStartRef.current) {
+        const elapsed = Date.now() - pressStartRef.current.time;
+        const px = pressStartRef.current.x;
+        const py = pressStartRef.current.y;
+        const progress = Math.min(1, elapsed / 1000);
+
+        if (elapsed > 100) {
+          const coreR = 16 + progress * 42;
+
+          // 1. 차징 나선형 소용돌이 먼지 입자 (Swirling Dust while holding)
+          if (pressStartRef.current.dust) {
+            pressStartRef.current.dust.forEach(d => {
+              d.angle += d.rotSpeed;
+              d.dist -= d.inwardSpeed;
+              if (d.dist <= 4) d.dist = (200 + progress * 180) * (0.8 + Math.random() * 0.2);
+
+              const dx = px + Math.cos(d.angle) * d.dist;
+              const dy = py + Math.sin(d.angle) * d.dist;
+              const da = Math.min(1, d.dist / 160) * (0.4 + progress * 0.6);
+
+              const tailAngle = d.angle - d.rotSpeed * 2.5;
+              const tailDist = d.dist + d.inwardSpeed * 2.5;
+              const tx = px + Math.cos(tailAngle) * tailDist;
+              const ty = py + Math.sin(tailAngle) * tailDist;
+
+              ctx.beginPath();
+              ctx.moveTo(dx, dy);
+              ctx.lineTo(tx, ty);
+              ctx.strokeStyle = `${d.color}${(da * 0.65).toFixed(2)})`;
+              ctx.lineWidth = d.size;
+              ctx.stroke();
+
+              ctx.beginPath();
+              ctx.arc(dx, dy, d.size * 0.9, 0, Math.PI * 2);
+              ctx.fillStyle = `${d.color}${da.toFixed(2)})`;
+              ctx.fill();
+            });
+          }
+
+          // 2. 칠흑같이 검은 블랙홀 본체 - 윤곽선 뚜렷하게 보존 (Solid Sharp Black Core)
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(px, py, coreR, 0, Math.PI * 2);
+          ctx.fillStyle = '#000000';
+          ctx.fill();
+          ctx.restore();
+        }
+      }
 
       // Black holes — attract phase → burst phase
       gravityWellsRef.current = gravityWellsRef.current.filter(g => g.age < g.maxAge);
       gravityWellsRef.current.forEach(g => {
         g.age++;
+
         const pulling = g.age < g.pullAge;
         const p = pulling
           ? g.age / g.pullAge
           : (g.age - g.pullAge) / (g.maxAge - g.pullAge);
 
         if (pulling) {
+          // 1. 나선형 소용돌이 먼지 입자 (Swirling Gravitational Dust) 렌더링
+          if (g.dust) {
+            g.dust.forEach(d => {
+              d.angle += d.rotSpeed;
+              d.dist -= d.inwardSpeed;
+              if (d.dist <= 4) d.dist = g.maxR * (0.8 + Math.random() * 0.2);
+
+              const dx = g.x + Math.cos(d.angle) * d.dist;
+              const dy = g.y + Math.sin(d.angle) * d.dist;
+              const da = Math.min(1, d.dist / (g.maxR * 0.5)) * p;
+
+              const tailAngle = d.angle - d.rotSpeed * 2.5;
+              const tailDist = d.dist + d.inwardSpeed * 2.5;
+              const tx = g.x + Math.cos(tailAngle) * tailDist;
+              const ty = g.y + Math.sin(tailAngle) * tailDist;
+
+              ctx.beginPath();
+              ctx.moveTo(dx, dy);
+              ctx.lineTo(tx, ty);
+              ctx.strokeStyle = `${d.color}${(da * 0.65).toFixed(2)})`;
+              ctx.lineWidth = d.size;
+              ctx.stroke();
+
+              ctx.beginPath();
+              ctx.arc(dx, dy, d.size * 0.9, 0, Math.PI * 2);
+              ctx.fillStyle = `${d.color}${da.toFixed(2)})`;
+              ctx.fill();
+            });
+          }
+
+          // 2. 기존 흡입 파동 고리 렌더링
           for (let i = 0; i < 3; i++) {
             const offset = (i / 3) * g.maxR;
             const r = g.maxR * (1 - p) - offset * p;
@@ -309,23 +412,71 @@ export default function Home() {
             ctx.lineWidth = 1.5 - i * 0.4;
             ctx.stroke();
           }
-          const coreR = 18 * p;
-          const grad = ctx.createRadialGradient(g.x, g.y, 0, g.x, g.y, coreR);
-          grad.addColorStop(0, `rgba(0,0,0,${p * 0.9})`);
-          grad.addColorStop(1, 'rgba(0,0,0,0)');
-          ctx.beginPath();
-          ctx.arc(g.x, g.y, coreR, 0, Math.PI * 2);
-          ctx.fillStyle = grad;
-          ctx.fill();
-        } else {
-          for (let i = 0; i < 3; i++) {
-            const r = g.maxR * p * (1 + i * 0.4);
+
+          // 3. 블랙홀 코어 렌더링 (차징 시에만 검은 코어 원 표시)
+          if (g.showCore !== false) {
+            const coreR = 18 * p;
+            const grad = ctx.createRadialGradient(g.x, g.y, 0, g.x, g.y, coreR);
+            grad.addColorStop(0, `rgba(0,0,0,${p * 0.9})`);
+            grad.addColorStop(1, 'rgba(0,0,0,0)');
             ctx.beginPath();
-            ctx.arc(g.x, g.y, r, 0, Math.PI * 2);
-            ctx.strokeStyle = `rgba(${180 + i * 25},${120 + i * 30},255,${(1 - p) * (0.5 - i * 0.12)})`;
-            ctx.lineWidth = 2 - i * 0.5;
-            ctx.stroke();
+            ctx.arc(g.x, g.y, coreR, 0, Math.PI * 2);
+            ctx.fillStyle = grad;
+            ctx.fill();
           }
+        } else {
+          // 폭발 전환 시점: 호킹 방사(Hawking Radiation) 파티클 생성
+          if (!g.burstSparks) {
+            const sparkCount = 36;
+            g.burstSparks = Array.from({ length: sparkCount }, () => {
+              const angle = Math.random() * Math.PI * 2;
+              const speed = 3.5 + Math.random() * 7.5;
+              return {
+                x: g.x,
+                y: g.y,
+                vx: Math.cos(angle) * speed,
+                vy: Math.sin(angle) * speed,
+                len: 10 + Math.random() * 16,
+                size: 1 + Math.random() * 1.5,
+                age: 0,
+                maxAge: 20 + Math.floor(Math.random() * 20),
+                color: Math.random() < 0.5 ? 'rgba(60, 60, 60,' : 'rgba(100, 100, 100,',
+              };
+            });
+          }
+
+          // 호킹 방사 방사선 스파크 렌더링
+          g.burstSparks.forEach(s => {
+            s.x += s.vx;
+            s.y += s.vy;
+            s.vx *= 0.95;
+            s.vy *= 0.95;
+            s.age++;
+            const sa = 1 - (s.age / s.maxAge);
+            if (sa <= 0) return;
+
+            const angle = Math.atan2(s.vy, s.vx);
+            const tailX = s.x - Math.cos(angle) * s.len * sa;
+            const tailY = s.y - Math.sin(angle) * s.len * sa;
+
+            ctx.beginPath();
+            ctx.moveTo(tailX, tailY);
+            ctx.lineTo(s.x, s.y);
+            ctx.strokeStyle = `${s.color}${sa.toFixed(2)})`;
+            ctx.lineWidth = s.size;
+            ctx.stroke();
+          });
+
+          // 검은색이 바깥으로 갈수록 연해지는 확산 효과
+          const discR = g.maxR * p * 1.4;
+          const discGrad = ctx.createRadialGradient(g.x, g.y, 0, g.x, g.y, discR);
+          discGrad.addColorStop(0, `rgba(0,0,0,${((1 - p) * 0.55).toFixed(2)})`);
+          discGrad.addColorStop(0.45, `rgba(40,40,40,${((1 - p) * 0.25).toFixed(2)})`);
+          discGrad.addColorStop(1, 'rgba(0,0,0,0)');
+          ctx.beginPath();
+          ctx.arc(g.x, g.y, discR, 0, Math.PI * 2);
+          ctx.fillStyle = discGrad;
+          ctx.fill();
         }
       });
 
@@ -365,6 +516,22 @@ export default function Home() {
           e.vy *= 0.72;
           e.rotSpeed *= 0.92;
         } else {
+          // 누르고 있는 동안(Holding): 실시간으로 지속적 인력(Suction) 작용!
+          if (pressStartRef.current) {
+            const elapsed = Date.now() - pressStartRef.current.time;
+            const px = pressStartRef.current.x;
+            const py = pressStartRef.current.y;
+            const progress = Math.min(1, elapsed / 1000);
+            const gdx = px - e.x, gdy = py - e.y;
+            const gd = Math.sqrt(gdx * gdx + gdy * gdy);
+            const pullR = 240 + progress * 200;
+            if (gd > 0.1 && gd < pullR) {
+              const f = Math.pow(1 - gd / pullR, 0.7) * (3.5 + progress * 4.5);
+              e.vx += (gdx / gd) * f;
+              e.vy += (gdy / gd) * f;
+            }
+          }
+
           gravityWellsRef.current.forEach(g => {
             const gdx = g.x - e.x, gdy = g.y - e.y;
             const gd = Math.sqrt(gdx * gdx + gdy * gdy);
@@ -451,20 +618,100 @@ export default function Home() {
     };
   }, []);
 
-  const handleMouseMove = e => { mouseRef.current = { x: e.clientX, y: e.clientY }; };
-  const handleMouseLeave = () => { mouseRef.current = { x: -9999, y: -9999 }; };
-  const handleClick = e => {
-    const hit = entitiesRef.current.find(ent => ent.kind === 'char' && ent.hovered);
-    if (hit) {
-      window.location.href = ROUTES[hit.type % ROUTES.length].path;
-      return;
+  const pressStartRef = useRef(null);
+
+  const handleMouseMove = e => {
+    mouseRef.current = { x: e.clientX, y: e.clientY };
+    if (pressStartRef.current) {
+      pressStartRef.current.x = e.clientX;
+      pressStartRef.current.y = e.clientY;
     }
-    gravityWellsRef.current.push({ x: e.clientX, y: e.clientY, age: 0, pullAge: 60, maxAge: 110, maxR: 220 });
   };
-  const handleDblClick = e => {
-    gravityWellsRef.current.push({ x: e.clientX, y: e.clientY, age: 0, pullAge: 90, maxAge: 160, maxR: 360 });
+  const handleMouseLeave = () => {
+    mouseRef.current = { x: -9999, y: -9999 };
+    pressStartRef.current = null;
   };
 
+  const handlePointerDown = e => {
+    const dust = Array.from({ length: 32 }, () => {
+      const initialDist = (0.25 + Math.random() * 0.75) * 360;
+      const angle = Math.random() * Math.PI * 2;
+      return {
+        dist: initialDist,
+        angle,
+        rotSpeed: (0.04 + Math.random() * 0.07) * (Math.random() < 0.5 ? 1 : -1),
+        inwardSpeed: 1.5 + Math.random() * 2.5,
+        size: Math.random() * 1.8 + 1.2,
+        color: Math.random() < 0.6 ? 'rgba(60, 60, 60,' : 'rgba(100, 100, 100,',
+      };
+    });
+
+    pressStartRef.current = {
+      x: e.clientX,
+      y: e.clientY,
+      time: Date.now(),
+      dust,
+    };
+  };
+
+  const handlePointerUp = e => {
+    if (!pressStartRef.current) return;
+    const elapsed = Date.now() - pressStartRef.current.time;
+    const { x, y } = pressStartRef.current;
+    pressStartRef.current = null;
+
+    if (elapsed < 250) {
+      // 짧은 클릭 시: 미니 인력 파동 후 순간 폭발
+      const dust = Array.from({ length: 24 }, () => {
+        const initialDist = (0.2 + Math.random() * 0.8) * 180;
+        const angle = Math.random() * Math.PI * 2;
+        return {
+          dist: initialDist,
+          angle,
+          rotSpeed: (0.04 + Math.random() * 0.07) * (Math.random() < 0.5 ? 1 : -1),
+          inwardSpeed: 1.5 + Math.random() * 2.5,
+          size: Math.random() * 1.8 + 1.2,
+          color: Math.random() < 0.6 ? 'rgba(60, 60, 60,' : 'rgba(100, 100, 100,',
+        };
+      });
+      gravityWellsRef.current.push({ x, y, age: 0, pullAge: 60, maxAge: 110, maxR: 220, dust, burstSparks: null });
+      return;
+    }
+
+    // 2단계: 꾹 누르고 있다가 손을 뗀 순간 -> 누르는 동안 빨려들어왔으므로 떼는 순간 즉시 사방 척력 폭발(Burst) 시작!
+    const progress = Math.min(1, (elapsed - 250) / 750);
+    const maxR = 300 + progress * 140;
+
+    // 손을 떼는 첫 프레임: 커서 근처에 조여들었던 모든 캐릭터와 파편에 방사형 폭발 충격파(Radial Blast) 부여!
+    entitiesRef.current.forEach(ent => {
+      const edx = ent.x - x;
+      const edy = ent.y - y;
+      const dist = Math.sqrt(edx * edx + edy * edy);
+      if (dist < maxR * 0.95) {
+        const blastFactor = Math.pow(Math.max(0, 1 - dist / maxR), 0.5);
+        const blastSpeed = (7.0 + progress * 13.0) * blastFactor;
+        const angle = dist < 2 ? Math.random() * Math.PI * 2 : Math.atan2(edy, edx);
+
+        // 당겨지던 인력 속도를 튕겨 나가는 척력 속도로 강제 전환!
+        ent.vx = Math.cos(angle) * blastSpeed;
+        ent.vy = Math.sin(angle) * blastSpeed;
+      }
+    });
+
+    gravityWellsRef.current.push({
+      x, y,
+      age: 60,       // pullAge(60)와 동일하게 설정하여 떼는 순간 즉시 폭발(Burst) 모드로 전환!
+      pullAge: 60,
+      maxAge: 110,
+      maxR,
+      dust: null,
+      burstSparks: null,
+      showCore: true,
+    });
+  };
+
+  const homeHref = useBaseUrl('/');
+  const iconSrc = useBaseUrl('/img/logo.png');
   const blogHref = useBaseUrl('/blog');
   const docsHref = useBaseUrl('/docs');
   const resumeHref = useBaseUrl('/resume');
@@ -472,13 +719,23 @@ export default function Home() {
   return (
     <Layout description="프론트엔드 개발블로그">
       <div className={styles.root}>
+        <nav className={styles.topNav}>
+          <Link href={homeHref} className={styles.topNavLogo}>
+            <img src={iconSrc} alt="히리로그" className={styles.topNavLogoImg} />
+          </Link>
+          <span className={styles.topNavDivider} />
+          <Link href={blogHref} className={styles.topNavLink}>logs</Link>
+          <Link href={docsHref} className={styles.topNavLink}>docs</Link>
+          <Link href={resumeHref} className={styles.topNavLink}>about</Link>
+        </nav>
         <canvas
           ref={canvasRef}
           className={styles.canvas}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          onClick={handleClick}
-          onDoubleClick={handleDblClick}
+          onPointerDown={handlePointerDown}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handleMouseLeave}
         />
         <div className={styles.overlay}>
           <p className={styles.eyebrow}>Frontend Dev Blog</p>
@@ -488,6 +745,7 @@ export default function Home() {
             <Link href={docsHref} className={styles.navLink}>docs →</Link>
             <Link href={resumeHref} className={styles.navLink}>about →</Link>
           </nav>
+          <DiscordStatus />
         </div>
       </div>
     </Layout>

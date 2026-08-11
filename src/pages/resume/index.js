@@ -1,9 +1,7 @@
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 import { useState, useEffect } from 'react';
 
 import Heading from '@theme/Heading';
-import RecentDocs from '../../components/RecentDocs';
 import styles from './index.module.css';
 import { ProjectItem } from '../../components/ProjectItem';
 import { projects } from '../../data/projects';
@@ -207,16 +205,6 @@ export default function Resume() {
         ))}
         </div>
 
-        <div className={styles.line}></div>
-        
-        <Heading as="h2">포스팅</Heading>
-          <p>학습한 내용을 기록하고 공유하며 성장합니다.</p>
-          <RecentDocs />
-        <div className="text--center margin-top--lg">
-          <Link className="button button--outline button--primary" to="/">
-            전체 블로그 글 보기
-          </Link>
-        </div>
         </section>
 
       </main>

@@ -157,6 +157,10 @@ function makeDebris(w, h) {
   };
 }
 
+// ── Module-level snapshot — survives SPA navigation (unmount → remount) ───────
+
+let _snapshot = null;
+
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default function Home() {
@@ -209,20 +213,25 @@ export default function Home() {
     const cw = () => canvas.width;
     const ch = () => canvas.height;
 
-    nebulaRef.current = Array.from({ length: 4 }, () => ({
-      x: Math.random() * cw(),
-      y: Math.random() * ch(),
-      r: 160 + Math.random() * 180,
-      hue: Math.random() < 0.5 ? 260 : 220,
-      vx: (Math.random() - 0.5) * 0.07,
-      vy: (Math.random() - 0.5) * 0.07,
-      phase: Math.random() * Math.PI * 2,
-    }));
+    if (_snapshot) {
+      nebulaRef.current = _snapshot.nebula;
+      entitiesRef.current = _snapshot.entities;
+    } else {
+      nebulaRef.current = Array.from({ length: 4 }, () => ({
+        x: Math.random() * cw(),
+        y: Math.random() * ch(),
+        r: 160 + Math.random() * 180,
+        hue: Math.random() < 0.5 ? 260 : 220,
+        vx: (Math.random() - 0.5) * 0.07,
+        vy: (Math.random() - 0.5) * 0.07,
+        phase: Math.random() * Math.PI * 2,
+      }));
 
-    entitiesRef.current = [
-      ...IMAGE_SRCS.flatMap((_, i) => Array.from({ length: IMAGE_COUNTS[i] }, () => makeChar(i, cw(), ch()))),
-      ...Array.from({ length: 90 }, () => makeDebris(cw(), ch())),
-    ];
+      entitiesRef.current = [
+        ...IMAGE_SRCS.flatMap((_, i) => Array.from({ length: IMAGE_COUNTS[i] }, () => makeChar(i, cw(), ch()))),
+        ...Array.from({ length: 90 }, () => makeDebris(cw(), ch())),
+      ];
+    }
 
     const tick = () => {
       const W = cw(), H = ch();
@@ -614,6 +623,7 @@ export default function Home() {
     tick();
 
     return () => {
+      _snapshot = { entities: entitiesRef.current, nebula: nebulaRef.current };
       cancelAnimationFrame(rafRef.current);
       window.removeEventListener('resize', resize);
     };

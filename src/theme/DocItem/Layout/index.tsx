@@ -16,7 +16,7 @@ import type {Props} from '@theme/DocItem/Layout';
 
 export default function DocItemLayout({children}: Props): JSX.Element {
   return (
-    <div>
+    <div style={{ background: 'var(--background-color)', padding: '2rem' }}>
       <article>
         <DocItemContent>{children}</DocItemContent>
         <DocItemFooter />

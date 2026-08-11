@@ -9,35 +9,12 @@ function getStarDate(): string {
   return `STARDATE ${now.getFullYear()}.${String(doy).padStart(3, '0')}`;
 }
 
-function HudCorners() {
-  return (
-    <div className={styles.hud}>
-      <div className={`${styles.corner} ${styles.tl}`} />
-      <div className={`${styles.corner} ${styles.tr}`} />
-      <div className={`${styles.corner} ${styles.bl}`} />
-      <div className={`${styles.corner} ${styles.br}`} />
-    </div>
-  );
-}
 
 function StarDate() {
   const [label, setLabel] = useState('');
   useEffect(() => { setLabel(getStarDate()); }, []);
   if (!label) return null;
   return <div className={styles.stardate}>{label}</div>;
-}
-
-function Coords() {
-  return <div className={styles.coords}>37.5°N · 127.0°E</div>;
-}
-
-function StatusBar() {
-  return (
-    <div className={styles.status}>
-      <span className={styles.dot} />
-      ONLINE
-    </div>
-  );
 }
 
 function ScrollProgress() {
@@ -125,10 +102,8 @@ export default function Root({ children }: { children: React.ReactNode }) {
       {children}
       <LoadingBar />
       <ScrollProgress />
-      <HudCorners />
+
       <StarDate />
-      <Coords />
-      <StatusBar />
       <ClickRipple />
       <LinkPreview />
     </>

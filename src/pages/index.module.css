@@ -25,22 +25,51 @@
   z-index: 1;
 }
 
-.eyebrow {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.35);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin: 0 0 0.7rem;
-}
-
 .title {
   font-family: 'A2z', sans-serif;
   font-size: clamp(3rem, 7vw, 6.5rem);
   color: #f0f0f0;
   line-height: 1.05;
-  margin: 0 0 1.8rem;
+  margin: 0;
   text-shadow: 0 0 60px rgba(120, 90, 220, 0.25);
+}
+
+.discordStatus {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 1.2rem;
+  pointer-events: auto;
+  width: fit-content;
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.discordDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.discordText {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.discordSpotify {
+  margin-right: 4px;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .nav {
@@ -122,40 +151,3 @@
   text-decoration: none;
 }
 
-.discordStatus {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 2rem;
-  pointer-events: auto;
-  width: fit-content;
-  padding: 6px 14px;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.discordDot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.discordText {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 260px;
-}
-
-.discordSpotify {
-  margin-right: 4px;
-  color: rgba(255, 255, 255, 0.3);
-}

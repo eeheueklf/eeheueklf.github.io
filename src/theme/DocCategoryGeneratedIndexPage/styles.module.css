@@ -1,16 +1,383 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+/* ── 문서 루트 / 메뉴바 / 다크 배경 ────────────────── */
 
-@media (min-width: 997px) {
-  .generatedIndexPage {
-    max-width: 75% !important;
+.docsRoot {
+  flex-direction: column;
+  background: transparent;
+  --space-line:         #ff7c6e;
+  --space-glow:         rgba(255, 124, 110, 0.28);
+  --space-border:       rgba(255, 124, 110, 0.22);
+  --space-border-hover: rgba(255, 124, 110, 0.55);
+}
+
+.docsMain {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.85);
+  padding-top: 88px !important;
+}
+
+.topNav {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 10px 32px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.topNavLogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.topNavLogoImg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.topNavLogo:hover .topNavLogoImg {
+  opacity: 1;
+}
+
+.topNavDivider {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+.topNavLink {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  transition: color 0.2s;
+}
+
+.topNavLink:hover {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+}
+
+/* ── CSS 변수 (라이트 / 다크) ─────────────────────────── */
+
+:root {
+  --space-line:         #6b5ce7;
+  --space-glow:         rgba(107, 92, 231, 0.32);
+  --space-border:       rgba(107, 92, 231, 0.28);
+  --space-border-hover: rgba(107, 92, 231, 0.6);
+}
+
+[data-theme='dark'] {
+  --space-line:         #00d4ff;
+  --space-glow:         rgba(0, 212, 255, 0.28);
+  --space-border:       rgba(0, 212, 255, 0.22);
+  --space-border-hover: rgba(0, 212, 255, 0.55);
+}
+
+/* ── 애니메이션 ────────────────────────────────────────── */
+
+@keyframes dash-flow {
+  to { stroke-dashoffset: -48; }
+}
+
+@keyframes wp-pulse {
+  0%, 100% { opacity: 0.1; }
+  50%       { opacity: 0.28; }
+}
+
+@keyframes glow-in {
+  from { opacity: 0; }
+  to   { opacity: 0.16; }
+}
+
+@keyframes particle-in {
+  from { opacity: 0; transform: scale(0); }
+  to   { opacity: 0.5; transform: scale(1); }
+}
+
+@keyframes item-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── 타임라인 컨테이너 ────────────────────────────────── */
+
+.timeline {
+  position: relative;
+  padding: 3rem 0 5rem;
+  margin-top: 1.5rem;
+}
+
+.timelineSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* ── 항로 경로 ────────────────────────────────────────── */
+
+.routePath {
+  animation: dash-flow 2s linear infinite;
+}
+
+/* ── 구간 하이라이트 ──────────────────────────────────── */
+
+.segmentHighlight {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.segmentHighlightActive {
+  opacity: 0.65;
+}
+
+/* ── 웨이포인트 ────────────────────────────────────────── */
+
+.waypointDot {
+  fill: var(--space-line);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.waypointRing {
+  fill: var(--space-line);
+  animation: wp-pulse 2.8s ease-in-out infinite;
+}
+
+.waypointGlowArea {
+  fill: var(--space-line);
+  filter: url(#wp-glow-docs);
+  animation: glow-in 0.25s ease forwards;
+}
+
+.waypointParticle {
+  fill: var(--space-line);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: particle-in 0.35s ease both;
+}
+
+.waypointActive .waypointDot {
+  filter: url(#wp-glow-docs);
+  transform: scale(1.6);
+}
+
+.waypointActive .waypointRing {
+  animation: none;
+  opacity: 0.38;
+}
+
+.waypointScrollActive .waypointDot {
+  transform: scale(1.3);
+}
+
+.waypointScrollActive .waypointRing {
+  animation: none;
+  opacity: 0.22;
+}
+
+/* ── 각 항목 ──────────────────────────────────────────── */
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  margin: 2.5rem 0;
+  align-items: center;
+  min-height: 100px;
+  opacity: 0;
+}
+
+.itemVisible {
+  animation: item-in 0.4s ease both;
+  animation-delay: calc(var(--idx, 0) * 80ms);
+}
+
+.timelineItem::after { content: none; }
+
+/* ── 스크롤 활성 DOC — 텍스트 강조 ───────────────────── */
+
+.scrollActive .docCode {
+  text-shadow: 0 0 10px var(--space-glow);
+}
+
+.scrollActive .routeFrom {
+  color: rgba(255, 255, 255, 0.77);
+}
+
+.scrollActive .ticketDate {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+/* ── 티켓 ─────────────────────────────────────────────── */
+
+.ticket {
+  display: block;
+  text-decoration: none !important;
+  color: inherit !important;
+  max-width: 260px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.ticket:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.ticket:hover .docCode {
+  text-shadow: 0 0 10px var(--space-glow);
+}
+
+.left .ticket {
+  grid-column: 1;
+  margin-left: auto;
+  margin-right: 40px;
+  text-align: right;
+}
+
+.right .ticket {
+  grid-column: 2;
+  margin-left: 40px;
+}
+
+/* ── 메타 ─────────────────────────────────────────────── */
+
+.ticketMeta {
+  margin-bottom: 2px;
+}
+
+.docCode {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--space-line);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.left .docCode {
+  justify-content: flex-end;
+}
+
+.statusTag {
+  font-size: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.status비행중 { color: rgba(251, 191,  36, 0.75); }
+.status순항중 { color: rgba(74,  222, 128, 0.75); }
+.status착륙   { color: rgba(148, 163, 184, 0.75); }
+
+.routeMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.left .routeMeta {
+  justify-content: flex-end;
+}
+
+.routeFrom {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.ticketDate {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.34);
+}
+
+/* ── 태그 ─────────────────────────────────────────────── */
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.left .tagList {
+  justify-content: flex-end;
+}
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.48rem;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+/* ── 기록 본문 ────────────────────────────────────────── */
+
+.ticketBody {
+  position: relative;
+}
+
+/* ── 모바일 ───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .timelineItem {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    margin: 1.5rem 0;
   }
 
-  .list article:nth-last-child(-n + 2) {
-    margin-bottom: 0 !important;
+  .left .ticket,
+  .right .ticket {
+    grid-column: 1;
+    margin-left: 48px;
+    margin-right: 0;
+    max-width: calc(100% - 48px);
+    text-align: left;
+  }
+
+  .left .routeMeta {
+    justify-content: flex-start;
+  }
+
+  .left .docCode {
+    justify-content: flex-start;
   }
 }

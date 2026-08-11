@@ -1,10 +1,5 @@
 [
   {
-    "title": "memo",
-    "date": "2026-07-29",
-    "path": "/blog/memo"
-  },
-  {
     "title": "🤖Gemini와 알아본 현업에서 쓰는 폴더 관리",
     "date": "2026-04-20",
     "path": "/blog/feature-sliced-design"
@@ -23,5 +18,10 @@
     "title": "[회고] 프로그래머스 기초 입문 달성 후기 🥳🎉",
     "date": "2025-09-25",
     "path": "/blog/programmers"
+  },
+  {
+    "title": "인트로",
+    "date": "2025-08-27",
+    "path": "/blog/intro"
   }
 ]

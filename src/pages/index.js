@@ -174,6 +174,7 @@ export default function Home() {
   const nextMeteorRef = useRef(120);
   const nebulaRef = useRef([]);
   const trailRef = useRef([]);
+  const pressStartRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -618,8 +619,6 @@ export default function Home() {
     };
   }, []);
 
-  const pressStartRef = useRef(null);
-
   const handleMouseMove = e => {
     mouseRef.current = { x: e.clientX, y: e.clientY };
     if (pressStartRef.current) {
@@ -738,13 +737,7 @@ export default function Home() {
           onPointerCancel={handleMouseLeave}
         />
         <div className={styles.overlay}>
-          <p className={styles.eyebrow}>Frontend Dev Blog</p>
           <h1 className={styles.title}>{siteConfig.title}</h1>
-          <nav className={styles.nav}>
-            <Link href={blogHref} className={styles.navLink}>logs →</Link>
-            <Link href={docsHref} className={styles.navLink}>docs →</Link>
-            <Link href={resumeHref} className={styles.navLink}>about →</Link>
-          </nav>
           <DiscordStatus />
         </div>
       </div>

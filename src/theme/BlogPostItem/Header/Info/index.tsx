@@ -7,63 +7,51 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import {translate} from '@docusaurus/Translate';
-import {usePluralForm} from '@docusaurus/theme-common';
+import Link from '@docusaurus/Link';
 import {useBlogPost} from '@docusaurus/theme-common/internal';
 import type {Props} from '@theme/BlogPostItem/Header/Info';
+import styles from './styles.module.css';
 
-
-// Very simple pluralization: probably good enough for now
-function useReadingTimePlural() {
-  const {selectMessage} = usePluralForm();
-  return (readingTimeFloat: number) => {
-    const readingTime = Math.ceil(readingTimeFloat);
-    return selectMessage(
-      readingTime,
-      translate(
-        {
-          id: 'theme.blog.post.readingTime.plurals',
-          description:
-            'Pluralized label for "{readingTime} min read". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
-          message: 'One min read|{readingTime} min read',
-        },
-        {readingTime},
-      ),
-    );
-  };
-}
-
-function ReadingTime({readingTime}: {readingTime: number}) {
-  const readingTimePlural = useReadingTimePlural();
-  return <>{readingTimePlural(readingTime)}</>;
-}
-
-function Date({date, formattedDate}: {date: string; formattedDate: string}) {
-  return (
-    <time dateTime={date} itemProp="datePublished">
-      {formattedDate}
-    </time>
-  );
-}
-
-function Spacer() {
-  return <>{' · '}</>;
+function formatDate(dateStr: string): string {
+  const d = new Date(dateStr);
+  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
 }
 
 export default function BlogPostItemHeaderInfo({
   className,
 }: Props): JSX.Element {
   const {metadata} = useBlogPost();
-  const {date, formattedDate, readingTime} = metadata;
+  const {date, readingTime, tags} = metadata;
 
   return (
-    <div className={clsx('margin-vert--md', className)}>
-      <Date date={date} formattedDate={formattedDate} />
+    <div className={clsx(styles.meta, className)}>
+      <div className={styles.metaItem}>
+        <span className={styles.metaLabel}>DATE</span>
+        <time className={styles.metaValue} dateTime={date} itemProp="datePublished">
+          {formatDate(date)}
+        </time>
+      </div>
+
       {typeof readingTime !== 'undefined' && (
-        <>
-          <Spacer />
-          <ReadingTime readingTime={readingTime} />
-        </>
+        <div className={styles.metaItem}>
+          <span className={styles.metaLabel}>READ</span>
+          <span className={styles.metaValue}>{Math.ceil(readingTime)} min</span>
+        </div>
+      )}
+
+      {tags.length > 0 && (
+        <div className={styles.metaItem}>
+          <span className={styles.metaLabel}>TAGS</span>
+          <ul className={styles.tagList}>
+            {tags.map((tag) => (
+              <li key={tag.permalink}>
+                <Link to={tag.permalink} className={styles.tag}>
+                  {tag.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );

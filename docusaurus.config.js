@@ -81,10 +81,10 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-        gtag: {
+        gtag: process.env.NODE_ENV === 'production' ? {
           trackingID: "G-NE35MDLPZW",
           anonymizeIP: true,
-        },
+        } : undefined,
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,

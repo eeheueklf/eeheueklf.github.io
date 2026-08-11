@@ -14,8 +14,6 @@ import MDXContent from '@theme/MDXContent';
 import type {Props} from '@theme/DocItem/Content';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 import {useWindowSize} from '@docusaurus/theme-common';
 import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 

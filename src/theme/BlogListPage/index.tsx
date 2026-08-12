@@ -272,6 +272,11 @@ function BlogListPageContent(props: Props): JSX.Element {
                 const isLeft      = idx % 2 === 0;
                 const frontMatter = (postMeta as any).frontMatter as Record<string, string> | undefined;
                 const status      = frontMatter?.status as string | undefined;
+                const statusClassMap: Record<string, string> = {
+                  '비행 중': styles.statusFlying,
+                  '순항 중': styles.statusCruising,
+                  '착륙 완료': styles.statusLanded,
+                };
                 return (
                   <div
                     key={postMeta.permalink}
@@ -292,7 +297,7 @@ function BlogListPageContent(props: Props): JSX.Element {
                         <div className={styles.logCode}>
                           LOG {String(idx + 1).padStart(2, '0')}
                           {status && (
-                            <span className={clsx(styles.statusTag, styles[`status${status.replace(/\s/g, '')}`])}>
+                            <span className={clsx(styles.statusTag, statusClassMap[status])}>
                               ● {status}
                             </span>
                           )}

@@ -5,22 +5,41 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import React from 'react';
 import DocItemFooter from '@theme/DocItem/Footer';
 import DocItemContent from '@theme/DocItem/Content';
-import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import type {Props} from '@theme/DocItem/Layout';
-
-/**
- * Decide if the toc should be rendered, on mobile or desktop viewports
- */
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import styles from './styles.module.css';
 
 export default function DocItemLayout({children}: Props): JSX.Element {
+  const homeHref = useBaseUrl('/');
+  const iconSrc = useBaseUrl('/img/logo.png');
+  const blogHref = useBaseUrl('/blog');
+  const docsHref = useBaseUrl('/docs');
+  const resumeHref = useBaseUrl('/resume');
+
   return (
-    <div style={{ background: 'var(--background-color)', padding: '2rem' }}>
-      <article>
-        <DocItemContent>{children}</DocItemContent>
-        <DocItemFooter />
-      </article>
+    <div className="page-wrapper">
+      <nav className={styles.topNav}>
+        <Link href={homeHref} className={styles.topNavLogo}>
+          <img src={iconSrc} alt="히리로그" className={styles.topNavLogoImg} />
+        </Link>
+        <span className={styles.topNavDivider} />
+        <Link href={blogHref} className={styles.topNavLink}>logs</Link>
+        <Link href={docsHref} className={styles.topNavLink}>docs</Link>
+        <Link href={resumeHref} className={styles.topNavLink}>about</Link>
+      </nav>
+      <main>
+        <article className="container">
+          <DocItemContent>{children}</DocItemContent>
+          <DocItemFooter />
+        </article>
+      </main>
+      <footer className={styles.footer}>
+        <span className={styles.footerText}>© 2026 히리로그</span>
+      </footer>
     </div>
   );
 }

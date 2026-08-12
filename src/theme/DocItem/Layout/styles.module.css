@@ -1,0 +1,72 @@
+.topNav {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 10px 32px;
+  border-radius: 50px;
+  background: rgba(252, 252, 252, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.topNavLogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.topNavLogoImg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.topNavLogo:hover .topNavLogoImg {
+  opacity: 1;
+}
+
+.topNavDivider {
+  width: 1px;
+  height: 14px;
+  background: rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.topNavLink {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  transition: color 0.2s;
+}
+
+.topNavLink:hover {
+  color: rgba(0, 0, 0, 0.85);
+  text-decoration: none;
+}
+
+.footer {
+  padding: 48px 0 40px;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.footerText {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.06em;
+}

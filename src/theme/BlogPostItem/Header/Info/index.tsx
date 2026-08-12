@@ -25,20 +25,6 @@ export default function BlogPostItemHeaderInfo({
 
   return (
     <div className={clsx(styles.meta, className)}>
-      <div className={styles.metaItem}>
-        <span className={styles.metaLabel}>DATE</span>
-        <time className={styles.metaValue} dateTime={date} itemProp="datePublished">
-          {formatDate(date)}
-        </time>
-      </div>
-
-      {typeof readingTime !== 'undefined' && (
-        <div className={styles.metaItem}>
-          <span className={styles.metaLabel}>READ</span>
-          <span className={styles.metaValue}>{Math.ceil(readingTime)} min</span>
-        </div>
-      )}
-
       {tags.length > 0 && (
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>TAGS</span>

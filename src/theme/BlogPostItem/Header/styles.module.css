@@ -1,0 +1,48 @@
+.header {
+  padding: 5rem 0 0 0;
+}
+
+.ticket {
+  padding: 1.4rem 1.8rem 1.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.018);
+  margin-bottom: 2rem;
+}
+
+.ticketTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.statusTag {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.statusFlying   { color: rgba(217, 119, 6, 0.9); }   /* 비행 중 — amber */
+.statusCruising { color: rgba(2, 132, 199, 0.85); }  /* 순항 중 — sky blue */
+.statusLanded   { color: rgba(100, 116, 139, 0.75); } /* 착륙 완료 — slate */
+
+.ticketDate {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.header :global(h1)::after {
+  content: '_';
+  animation: cursorBlink 1.1s step-end infinite;
+  opacity: 0.45;
+  margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 0.45; }
+  50%       { opacity: 0; }
+}

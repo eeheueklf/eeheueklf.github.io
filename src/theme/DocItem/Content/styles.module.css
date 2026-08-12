@@ -1,3 +1,29 @@
+.header {
+  padding: 5rem 0 0 0;
+}
+
+.ticket {
+  padding: 1.4rem 1.8rem 1.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.018);
+  margin-bottom: 2rem;
+}
+
+.ticketTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.ticketDate {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .meta {
   display: flex;
   flex-wrap: wrap;
@@ -24,11 +50,6 @@
   white-space: nowrap;
 }
 
-.metaValue {
-  font-family: 'Pretendard', sans-serif;
-  color: #3a3a3a;
-}
-
 .tagList {
   display: flex;
   flex-wrap: wrap;
@@ -51,4 +72,16 @@
 .tag:hover {
   border-color: #000;
   color: #000;
+}
+
+.header :global(h1)::after {
+  content: '_';
+  animation: cursorBlink 1.1s step-end infinite;
+  opacity: 0.45;
+  margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 0.45; }
+  50%       { opacity: 0; }
 }

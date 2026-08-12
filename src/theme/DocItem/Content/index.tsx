@@ -12,22 +12,10 @@ import {useDoc} from '@docusaurus/theme-common/internal';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 import type {Props} from '@theme/DocItem/Content';
-import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import {useWindowSize} from '@docusaurus/theme-common';
 import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
-
-/**
- Title can be declared inside md content or declared through
- front matter and added manually. To make both cases consistent,
- the added title is added under the same div.markdown block
- See https://github.com/facebook/docusaurus/pull/4882#issuecomment-853021120
-
- We render a "synthetic title" if:
- - user doesn't ask to hide it with front matter
- - the markdown content does not already contain a top-level h1 heading
-*/
-
+import Link from '@docusaurus/Link';
+import styles from './styles.module.css';
 
 function useDocTOC() {
   const {frontMatter, toc} = useDoc();
@@ -41,10 +29,7 @@ function useDocTOC() {
       <DocItemTOCDesktop />
     ) : undefined;
 
-  return {
-    hidden,
-    desktop,
-  };
+  return { hidden, desktop };
 }
 
 function useSyntheticTitle(): string | null {
@@ -59,30 +44,47 @@ function useSyntheticTitle(): string | null {
 
 export default function DocItemContent({children}: Props): JSX.Element {
   const syntheticTitle = useSyntheticTitle();
-
-  const {metadata: { lastUpdatedAt } } = useDoc();
+  const {metadata: {lastUpdatedAt, tags}} = useDoc();
+  const docTOC = useDocTOC();
 
   const lastUpdated = lastUpdatedAt
-  ? (() => {
-      const d = new Date(lastUpdatedAt * 1000);
-      return `${d.getFullYear()}.${d.getMonth() + 1}.${d.getDate()}`;
-    })()
-  : null;
-
-  const docTOC = useDocTOC();
-    const homeHref = useBaseUrl('/docs');
-
+    ? (() => {
+        const d = new Date(lastUpdatedAt * 1000);
+        return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
+      })()
+    : null;
 
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
-        <header className="docsBanner">
-          / <Link href={homeHref} className="docs__subtitle">Docs</Link> 
-          
-          <Heading as="h1" className="hanna-text">{syntheticTitle}</Heading>
+        <header className={styles.header}>
+          <div className={styles.ticket}>
+            <div className={styles.ticketTop}>
+              <span />
+              {lastUpdated && (
+                <time className={styles.ticketDate}>{lastUpdated}</time>
+              )}
+            </div>
+            <Heading as="h1" className="hanna-text">{syntheticTitle}</Heading>
+            {tags && tags.length > 0 && (
+              <div className={styles.meta}>
+                <div className={styles.metaItem}>
+                  <span className={styles.metaLabel}>TAGS</span>
+                  <ul className={styles.tagList}>
+                    {tags.map((tag) => (
+                      <li key={tag.permalink}>
+                        <Link to={tag.permalink} className={styles.tag}>
+                          {tag.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
         </header>
       )}
-      
       {docTOC.desktop}
       <MDXContent>{children}</MDXContent>
     </div>

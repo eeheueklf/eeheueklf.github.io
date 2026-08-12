@@ -297,9 +297,9 @@
   letter-spacing: 0.12em;
 }
 
-.statusTRANSMITTED { color: rgba(74,  222, 128, 0.75); }
-.statusARCHIVED    { color: rgba(148, 163, 184, 0.75); }
-.statusINFLIGHT    { color: rgba(251, 191,  36, 0.75); }
+.statusFlying   { color: rgba(251, 191,  36, 0.9); }   /* 비행 중 — amber */
+.statusCruising { color: rgba( 96, 165, 250, 0.85); }  /* 순항 중 — sky blue */
+.statusLanded   { color: rgba(148, 163, 184, 0.75); }  /* 착륙 완료 — slate */
 
 .routeMeta {
   display: flex;

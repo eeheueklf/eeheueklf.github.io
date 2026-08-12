@@ -258,7 +258,6 @@ main{
 }
 .markdown > h3 {
   font-size: 1.25em;
-  font-family: 'A2zR';
   font-weight: 500;
   
   /* 포인트: 연한 배경색과 둥근 모서리 */
@@ -271,9 +270,8 @@ main{
   margin-top: 2.5em;
 }
 strong{
-  font-family: 'A2zR';
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 600;
+  box-shadow: inset 0 -6px 0 var(--mark-highlight-shadow);
 }
 
 .markdown img {
@@ -384,6 +382,7 @@ details{
 /* 페이지 래퍼 */
 .page-wrapper {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -439,17 +438,22 @@ code:hover{
 }
 
 
-/* 링크 - 같은 code임 */
+/* 링크 */
 .markdown p > a {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   text-decoration: underline;
+  text-decoration-color: rgba(214, 61, 44, 0.35);
   text-underline-offset: 3px;
-  /* color: black; */
-  /* color: var(--mark-hyperlink-color); */
-  /* color: var(--ifm-link-color); */
-  font-family: 'A2zR';
-  font-weight: 400;
-  font-size: 15px;
+  text-decoration-thickness: 1.5px;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
 
+.markdown p > a:hover {
+  color: var(--code-text-color);
+  text-decoration-color: var(--code-text-color);
 }
 
 .markdown em{
@@ -684,24 +688,6 @@ table td {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* ── h2 섹션 번호 ────────────────────────────────────── */
-
-.markdown {
-  counter-reset: section-h2;
-}
-
-.markdown > h2 {
-  counter-increment: section-h2;
-}
-
-.markdown > h2::before {
-  content: '§' counter(section-h2, decimal-leading-zero) '  ';
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68em;
-  opacity: 0.28;
-  font-weight: 400;
-  letter-spacing: 0;
-}
 
 /* blogs */
 

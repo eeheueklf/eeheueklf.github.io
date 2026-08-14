@@ -181,6 +181,11 @@ export default function Home() {
   const pressStartRef = useRef(null);
 
   useEffect(() => {
+    document.documentElement.dataset.bg = 'space';
+    return () => { delete document.documentElement.dataset.bg; };
+  }, []);
+
+  useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 

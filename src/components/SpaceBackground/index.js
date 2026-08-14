@@ -110,6 +110,11 @@ export default function SpaceBackground() {
   const trailRef = useRef([]);
 
   useEffect(() => {
+    document.documentElement.dataset.bg = 'space';
+    return () => { delete document.documentElement.dataset.bg; };
+  }, []);
+
+  useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 

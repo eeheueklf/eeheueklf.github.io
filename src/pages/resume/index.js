@@ -1,4 +1,6 @@
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useState, useEffect } from 'react';
 
 import Heading from '@theme/Heading';
@@ -7,9 +9,20 @@ import { ProjectItem } from '../../components/ProjectItem';
 import { projects } from '../../data/projects';
 import { GitHubIcon } from '../../components/Icons';
 
-const COLORS = ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'];
+const COLORS = ['#2a2a2a', '#0e4429', '#006d32', '#26a641', '#39d353'];
 
 const TYPE_LABEL = { notice: '공지', update: '업데이트' };
+
+const SKILL_ICONS = {
+  'React': 'https://lh8zlkkhlslw0zyz.public.blob.vercel-storage.com/skills/react-VS4Vwy6It1uAZy63ihXuYvHqqYkY1X.png',
+  'TypeScript': 'https://lh8zlkkhlslw0zyz.public.blob.vercel-storage.com/skills/typescript-50YJFG5dzDLgPyvDvGxy6XZ6oMqjKi.png',
+  'Redux': 'https://lh8zlkkhlslw0zyz.public.blob.vercel-storage.com/skills/Redux-OPRBQPUl3kg0BnNpys48ZbhxE3zWJO.png',
+  'Figma': 'https://lh8zlkkhlslw0zyz.public.blob.vercel-storage.com/skills/figma-IiFO7yrdgnjBSjpxsCokIusUg6AoGO.png',
+  'TailwindCSS': '/img/tailwind.png',
+  'Next.js': 'https://cdn.worldvectorlogo.com/logos/next-js.svg',
+  'Jest': '/img/jest.png',
+  'Supabase': 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/supabase.svg',
+};
 
 function ProjectUpdateCard() {
   const [notices, setNotices] = useState([]);
@@ -22,31 +35,18 @@ function ProjectUpdateCard() {
   }, []);
 
   return (
-    <div style={{
-      display: 'inline-flex',
-      flexDirection: 'column',
-      gap: '0.6rem',
-      backgroundColor: '#faf8f5',
-      border: '1px solid #ede9e3',
-      borderRadius: 14,
-      padding: '1rem 1.25rem',
-      minWidth: 200,
-    }}>
-      <span style={{ fontSize: 13, fontFamily: 'Pretendard, sans-serif', letterSpacing: '0.04em', color: '#1a1a1a' }}>
-        Project update
-      </span>
+    <div className={styles.infoCard}>
+      <span className={styles.infoCardTitle}>Project update</span>
       {notices.length === 0 ? (
-        <span style={{ fontSize: 12, color: '#aaa', fontFamily: 'Pretendard, sans-serif' }}>불러오는 중...</span>
+        <span className={styles.updateLoading}>불러오는 중...</span>
       ) : (
         notices.map(n => (
-          <div key={n.id} style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-              <span style={{ fontSize: 10, color: '#888', fontFamily: 'Pretendard, sans-serif', backgroundColor: '#ede9e3', borderRadius: 4, padding: '1px 6px' }}>
-                {TYPE_LABEL[n.type] ?? n.type}
-              </span>
-              <span style={{ fontSize: 10, color: '#bbb', fontFamily: 'Pretendard, sans-serif' }}>{n.date}</span>
+          <div key={n.id} className={styles.updateItem}>
+            <div className={styles.updateMeta}>
+              <span className={styles.updateType}>{TYPE_LABEL[n.type] ?? n.type}</span>
+              <span className={styles.updateDate}>{n.date}</span>
             </div>
-            <span style={{ fontSize: 12, color: '#3a3a3a', fontFamily: 'Pretendard, sans-serif' }}>{n.title}</span>
+            <span className={styles.updateTitle}>{n.title}</span>
           </div>
         ))
       )}
@@ -68,34 +68,24 @@ function GitHubMiniCalendar() {
   const total = data.reduce((sum, d) => sum + d.count, 0);
 
   return (
-    <div style={{
-      display: 'inline-flex',
-      flexDirection: 'column',
-      gap: '0.75rem',
-      backgroundColor: '#2d2d2d',
-      borderRadius: 14,
-      padding: '1rem 1.25rem',
-    }}>
-      <span style={{ color: 'white', fontSize: 13, fontFamily: 'Pretendard, sans-serif', letterSpacing: '0.04em' }}>
-        Making Lately
-      </span>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 12px)', gap: '3px' }}>
+    <div className={`${styles.infoCard} ${styles.infoCardDark}`}>
+      <span className={styles.infoCardTitle}>Making Lately</span>
+      <div className={styles.gridCal}>
         {data.map((d, i) => (
           <div
             key={i}
             title={`${d.date}: ${d.count}`}
-            style={{ width: 12, height: 12, backgroundColor: COLORS[d.level], borderRadius: 2 }}
+            className={styles.gridCell}
+            style={{ backgroundColor: COLORS[d.level] }}
           />
         ))}
       </div>
-      <span style={{ color: 'rgba(255,255,255,0.45)', fontSize: 11, fontFamily: 'Pretendard, sans-serif' }}>
+      <span className={styles.calFoot}>
         {total} contributions in the last 2 weeks
       </span>
     </div>
   );
 }
-
-
 
 const SocialLinks = () => {
   const socialData = [
@@ -106,25 +96,24 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div>
-      <div className={styles.socialContainer}>
-        {socialData.map((item) => (
-          <a
-            key={item.label}
-            href={item.href}
-            className={styles.iconButton}
-            aria-label={item.label}
-            target={item.label === 'Email' ? '_self' : '_blank'}
-            rel="noopener noreferrer"
-          >
-            {typeof item.icon === 'string' ? (
-              <img src={item.icon} alt={item.label} className={styles.svgIcon} />
-            ) : (
-              item.icon
-            )}
-          </a>
-        ))}
-      </div>
+    <div className={styles.socialContainer}>
+      {socialData.map((item) => (
+        <a
+          key={item.label}
+          href={item.href}
+          className={styles.iconButton}
+          aria-label={item.label}
+          target={item.label === 'Email' ? '_self' : '_blank'}
+          rel="noopener noreferrer"
+        >
+          {typeof item.icon === 'string' ? (
+            <img src={item.icon} alt={item.label} className={styles.svgIcon} />
+          ) : (
+            item.icon
+          )}
+          <span className={styles.iconTooltip}>{item.label}</span>
+        </a>
+      ))}
     </div>
   );
 };
@@ -136,8 +125,9 @@ const SKILLS = [
 
 function LeftColumn() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', flex: 1, minWidth: 240 }}>
+    <div className={styles.leftColumn}>
       <header className={styles.heroBanner}>
+        <p className={styles.eyebrow}>Portfolio / 2026</p>
         <p className={styles.hero__subtitle}>안녕하세요,</p>
         <Heading as="h1" className={styles.hanna}>
           프론트엔드 개발자 하유경입니다.
@@ -153,20 +143,19 @@ function LeftColumn() {
         </p>
       </header>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-        {SKILLS.map(skill => (
-          <span key={skill} style={{
-            fontSize: 12,
-            fontFamily: 'Pretendard, sans-serif',
-            backgroundColor: '#f3f3f3',
-            border: '1px solid #e0e0e0',
-            borderRadius: 6,
-            padding: '3px 10px',
-            color: '#444',
-          }}>
-            {skill}
-          </span>
-        ))}
+      <div className={styles.skillChips}>
+        {SKILLS.map(skill => {
+          const icon = SKILL_ICONS[skill];
+          return (
+            <span
+              key={skill}
+              className={`${styles.skillChip} ${!icon ? styles.skillChipTextOnly : ''}`}
+            >
+              {icon && <img src={icon} alt="" className={styles.skillChipIcon} />}
+              {skill}
+            </span>
+          );
+        })}
       </div>
 
       <SocialLinks />
@@ -174,9 +163,9 @@ function LeftColumn() {
   );
 }
 
-function RightColumn() {
+function StatusRow() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'flex-start' }}>
+    <div className={styles.statusRow}>
       <ProjectUpdateCard />
       <GitHubMiniCalendar />
     </div>
@@ -185,29 +174,51 @@ function RightColumn() {
 
 
 export default function Resume() {
+  const homeHref = useBaseUrl('/');
+  const iconSrc = useBaseUrl('/img/logo.png');
+  const blogHref = useBaseUrl('/blog');
+  const docsHref = useBaseUrl('/docs');
+  const resumeHref = useBaseUrl('/resume');
+
   return (
     <Layout title="Resume" description="프론트엔드 개발자">
-      <main className='main-container'>
-        <div className="container" style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap', alignItems: 'flex-start', marginTop: '2rem' }}>
-          <LeftColumn />
-          <RightColumn />
-        </div>
+      <div className={styles.resumeRoot}>
+        <nav className={styles.topNav}>
+          <Link href={homeHref} className={styles.topNavLogo}>
+            <img src={iconSrc} alt="히리로그" className={styles.topNavLogoImg} />
+          </Link>
+          <span className={styles.topNavDivider} />
+          <Link href={blogHref} className={styles.topNavLink}>logs</Link>
+          <Link href={docsHref} className={styles.topNavLink}>docs</Link>
+          <Link href={resumeHref} className={styles.topNavLink}>about</Link>
+        </nav>
+        <main className="main-container">
+          <div className={`container ${styles.topSection}`}>
+            <LeftColumn />
+          </div>
 
-        <section className="container">
-        <div className={styles.line}></div>
+          <div className={`container ${styles.statusSection}`}>
+            <StatusRow />
+          </div>
 
-        <Heading as="h2">프로젝트</Heading>
-        <div className={styles.projectList}>
-        {projects.map(({ Content, DetailContent, data }, idx) => (
-          <ProjectItem key={idx} {...data} DetailContent={DetailContent}>
-            <Content />
-          </ProjectItem>
-        ))}
-        </div>
+          <section className={`container ${styles.projectSection}`}>
+            <div className={styles.sectionDivider}>
+              <span className={styles.sectionDividerLine} />
+              <span className={styles.sectionDividerLabel}>Projects</span>
+              <span className={styles.sectionDividerLine} />
+            </div>
 
-        </section>
-
-      </main>
+            <Heading as="h2">프로젝트</Heading>
+            <div className={styles.projectList}>
+              {projects.map(({ Content, DetailContent, data }, idx) => (
+                <ProjectItem key={idx} {...data} DetailContent={DetailContent}>
+                  <Content />
+                </ProjectItem>
+              ))}
+            </div>
+          </section>
+        </main>
+      </div>
     </Layout>
   );
 }

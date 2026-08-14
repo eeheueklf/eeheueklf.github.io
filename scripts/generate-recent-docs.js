@@ -23,10 +23,16 @@ function getItems(dir, baseRoute) {
         const { data } = matter(content);
         
         const fileName = file.replace(/\.(md|mdx)$/, '');
-        const dateMatch = fileName.match(/^(\d{4}-\d{2}-\d{2})$/);
+        const dateMatchLong = fileName.match(/^(\d{4}-\d{2}-\d{2})$/);
+        const dateMatchShort = fileName.match(/^(\d{2})(\d{2})(\d{2})$/);
+        const parsedDate = dateMatchLong
+          ? dateMatchLong[1]
+          : dateMatchShort
+          ? `20${dateMatchShort[1]}-${dateMatchShort[2]}-${dateMatchShort[3]}`
+          : null;
 
         const finalTitle = data.title || fileName;
-        const finalDate = data.date || (dateMatch ? dateMatch[1] : stat.mtime);
+        const finalDate = data.date || parsedDate || stat.mtime;
 
         let relativePath = path.relative(dir, filePath)
           .replace(/\.(md|mdx)$/, '')

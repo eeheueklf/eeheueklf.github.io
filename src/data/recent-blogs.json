@@ -1,5 +1,10 @@
 [
   {
+    "title": "🪐나만의 플래너 앱을 만들었다",
+    "date": "2026-08-13",
+    "path": "/blog/my-space-app"
+  },
+  {
     "title": "블로그 새단장!",
     "date": "2026-08-12",
     "path": "/blog/blog-new-day"
@@ -18,10 +23,5 @@
     "title": "블로그 새 단장 with Docusaurus🦕",
     "date": "2026-03-26",
     "path": "/blog/blog-docusaurus"
-  },
-  {
-    "title": "[회고] 프로그래머스 기초 입문 달성 후기 🥳🎉",
-    "date": "2025-09-25",
-    "path": "/blog/programmers"
   }
 ]

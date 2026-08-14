@@ -7,10 +7,14 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
   letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(0, 0, 0, 0.4);
   pointer-events: none;
   user-select: none;
   z-index: 9998;
+}
+
+:global(html[data-bg='space']) .stardate {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* ── 스크롤 진행바 ───────────────────────────────────── */
@@ -92,6 +96,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+:global(html[data-bg='space']) .linkPreview {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .linkPreviewVisible {

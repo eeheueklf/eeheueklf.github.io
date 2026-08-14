@@ -4,18 +4,63 @@
         <title>히리로그 Blog</title>
         <link>https://eeheueklf.github.io/blog</link>
         <description>히리로그 Blog</description>
-        <lastBuildDate>Mon, 20 Apr 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 12 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
+        <item>
+            <title><![CDATA[블로그 새단장!]]></title>
+            <link>https://eeheueklf.github.io/blog/blog-new-day</link>
+            <guid>https://eeheueklf.github.io/blog/blog-new-day</guid>
+            <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[디자인의 세계는 어렵다. 그중 나한테 가장 어려운 부분은 요소를 넣는 것이다.]]></description>
+            <content:encoded><![CDATA[<p>디자인의 세계는 어렵다. 그중 나한테 가장 어려운 부분은 <strong>요소를 넣는 것</strong>이다.<br>
+<em>물론 깔끔하게 만드는 것도 엄청나게 어렵다</em></p>
+<p>심플, 모던 디자인은 참고할 만한 레퍼런스도 많았고, 다른 사람들도 편하게 볼 수 있어야 한다는 생각이 있어서 내 취향을 담는 게 꺼려졌다.</p>
+<p>그런데 내가 가꾼 서비스 <a href="https://ddingtown.vercel.app/" target="_blank" rel="noopener noreferrer">띵타운</a>을 운영하면서 자신감이 좀 생겼다</p>
+<mark>블로그를 온전히 내 취향으로 꾸며보고 싶다!</mark>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="테마를-찾아서">테마를 찾아서<a href="https://eeheueklf.github.io/blog/blog-new-day#%ED%85%8C%EB%A7%88%EB%A5%BC-%EC%B0%BE%EC%95%84%EC%84%9C" class="hash-link" aria-label="테마를 찾아서에 대한 직접 링크" title="테마를 찾아서에 대한 직접 링크">​</a></h2>
+<p>AI가 등장한 이후, 원하는 화면을 만들기가 훨씬 쉬워졌다. 문제는 내가 원하는 게 뭔지 몰랐다는 것이다.</p>
+<p><strong>우주</strong>라는 대략적인 테마를 잡고, 세부 컨셉을 찾기 시작했다.</p>
+<ul>
+<li>계기판 — SF 느낌은 좋았는데 너무 복잡했다</li>
+<li>우주선 내부 — 재밌긴 한데 가독성이 걱정됐다</li>
+<li>티켓 / 탑승권 — 귀엽지만 블로그랑 어울리지 않았다</li>
+<li>터미널 — 개발자스럽긴 한데 이미 흔한 컨셉이었다</li>
+</ul>
+<p>그러다 두 가지 아이디어로 좁혀졌다.</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/new-65089dc6f0e223c721ef5b31f958576d.png" width="1200" height="504" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="배경이-반이다">배경이 반이다<a href="https://eeheueklf.github.io/blog/blog-new-day#%EB%B0%B0%EA%B2%BD%EC%9D%B4-%EB%B0%98%EC%9D%B4%EB%8B%A4" class="hash-link" aria-label="배경이 반이다에 대한 직접 링크" title="배경이 반이다에 대한 직접 링크">​</a></h2>
+<p>마음에 드는 배경을 찾다가 <a href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%ED%95%98%EB%8A%98%EC%97%90-%EB%96%A0-%EC%9E%88%EB%8A%94-%EB%A7%A4%EC%9A%B0-%ED%81%B0-%EB%B3%84%EC%9D%98-%EC%9D%B4%EB%AF%B8%EC%A7%80-GVFWR7TBv7U" target="_blank" rel="noopener noreferrer">NASA 이미지</a>를 발견했다.</p>
+<p>배경이 결정되니 어떻게 구상해야할지 느낌이 왔다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="구현한-것들">구현한 것들<a href="https://eeheueklf.github.io/blog/blog-new-day#%EA%B5%AC%ED%98%84%ED%95%9C-%EA%B2%83%EB%93%A4" class="hash-link" aria-label="구현한 것들에 대한 직접 링크" title="구현한 것들에 대한 직접 링크">​</a></h2>
+<p>배경 위에 생동감을 더하기 위한 요소들을 추가했다</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/new1-5599aa672717830dc976a52b82ea9bfb.png" width="1202" height="372" class="img_ev3q"></p>
+<ul>
+<li><strong>픽셀 이미지</strong>: 우주를 천천히 떠다니는 별들을 추가했다</li>
+<li><strong>별자리</strong>: 가까운 별들을 선으로 잇는 별자리 효과를 추가했다</li>
+<li><strong>블랙홀</strong>: 클릭~꾹 누르면 블랙홀이 생겨나는 효과를 넣었다. 마우스를 떼면 모였던 이미지들이 퍼진다.</li>
+</ul>
+<p>여기에 요즘 유행하는 글래스모피즘을 카드 UI에 적용해서 우주 배경과 잘 어우러지게 만들었다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="포스트-목록-화면">포스트 목록 화면<a href="https://eeheueklf.github.io/blog/blog-new-day#%ED%8F%AC%EC%8A%A4%ED%8A%B8-%EB%AA%A9%EB%A1%9D-%ED%99%94%EB%A9%B4" class="hash-link" aria-label="포스트 목록 화면에 대한 직접 링크" title="포스트 목록 화면에 대한 직접 링크">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/new3-da80486e09eed8f609c26f0ad1f20ccc.png" width="1200" height="504" class="img_ev3q">
+블로그 포스트 목록 페이지도 우주 테마에 맞게 바꿨다. 각 포스트가 <strong>우주선 항로</strong>처럼 이어지는 형태로 배치했다.</p>
+<p>평범한 리스트 형태가 아니라, 우주선이 지나간 항로로 포스트들이 이어진 느낌이 마음에 든다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="마무리">마무리<a href="https://eeheueklf.github.io/blog/blog-new-day#%EB%A7%88%EB%AC%B4%EB%A6%AC" class="hash-link" aria-label="마무리에 대한 직접 링크" title="마무리에 대한 직접 링크">​</a></h2>
+<p>원하는 걸 AI와 함께 빠르게 구현할 수 있게 되면서, 내가 원하는게 뭔지도 바로 알 수 있게 되었다.</p>
+<p>계획했던 것보다 훨씬 더 만족스러운 결과가 나왔고,</p>
+<p>앞으로도 이 블로그를 이런 식으로 계속 다듬어 나갈 것 같다!</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[🤖Gemini와 알아본 현업에서 쓰는 폴더 관리]]></title>
             <link>https://eeheueklf.github.io/blog/feature-sliced-design</link>
             <guid>https://eeheueklf.github.io/blog/feature-sliced-design</guid>
             <pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[학교에서, 그리고 개인적으로 여러 프로젝트를 진행하면서 폴더 구조의 정답을 쫓아왔다. 어떤 구조가 가장 효율적인지, 실제 현업에서는 어떤 방식을 사용하는지 항상 궁금했지만 참고할 만한 레퍼런스를 찾기가 쉽지 않았다.]]></description>
-            <content:encoded><![CDATA[<p>학교에서, 그리고 개인적으로 여러 프로젝트를 진행하면서 폴더 구조의 <strong>정답</strong>을 쫓아왔다. 어떤 구조가 가장 효율적인지, 실제 현업에서는 어떤 방식을 사용하는지 항상 궁금했지만 참고할 만한 레퍼런스를 찾기가 쉽지 않았다.</p>
-<p>과거, 규모가 작은 개인 프로젝트에 세분화된 구조를 적용하면서 <strong>과분리</strong>라는 느낌을 받았던 적도 있다. 하지만 코드 리팩토링을 하면서 <code>hook</code>과 <code>service</code>, <code>ui</code>를 분리했을때 얻는 유지보수성의 이점이 훨씬 크다는 것을 깨달았다.</p>
+            <description><![CDATA[여러 프로젝트를 지나오면서 폴더 구조에 정답이 있는지 궁금했다.]]></description>
+            <content:encoded><![CDATA[<p>여러 프로젝트를 지나오면서 폴더 구조에 정답이 있는지 궁금했다.<br>
+<!-- -->어떤 방식이 가장 효율적인지, 현업에서는 어떻게 쓰는지 알고 싶었지만 참고할 레퍼런스를 찾기가 쉽지 않았다.<br>
+<!-- -->예전에 했던 개인 프로젝트에서는 역할 분리라는 목적으로 세분화된 폴더 구조를 적용해본 적이 있는데, 작은 프로젝트에서는 어울리지 않는다는 느낌을 받았다.<br>
+<!-- -->그런데 이번에 코드 리팩토링을 하면서 <code>hook</code>과 <code>service</code>, <code>ui</code>를 분리했을때 얻는 유지보수성의 이점이 훨씬 크다는 것을 깨달았다.</p>
 <p>이제는 <code>Gemini</code>와 함께 현업에서 어떤 구조가 많이 쓰이는지, <strong>폴더 구조의 정답이 있는지</strong> 알 수 있게 되었다. <code>Gemini</code>는 어디서 폴더 구조를 참고하였는지 탐구해보자.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="폴더-구조의-교과서">폴더 구조의 교과서<a href="https://eeheueklf.github.io/blog/feature-sliced-design#%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%90%EA%B3%BC%EC%84%9C" class="hash-link" aria-label="폴더 구조의 교과서에 대한 직접 링크" title="폴더 구조의 교과서에 대한 직접 링크">​</a></h2>
 <p><a href="https://github.com/alan2207/bulletproof-react" target="_blank" rel="noopener noreferrer">Bulletproof-React</a><br>
@@ -35,7 +80,7 @@
 <li><strong>Shared</strong>: 공통 UI 컴포넌트, 유틸 함수</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="적용해보기">적용해보기<a href="https://eeheueklf.github.io/blog/feature-sliced-design#%EC%A0%81%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0" class="hash-link" aria-label="적용해보기에 대한 직접 링크" title="적용해보기에 대한 직접 링크">​</a></h2>
-<p>리팩토링 과정 중 이러한 폴더 구조를 따라가보고 있다. 기존에는  <code>component</code> 폴더와 <code>features </code>폴더에 로직이 몰려있었고, 이를 각각 <code>features</code> 폴더 내부로 분산시켰다.</p>
+<p>리팩토링을 하면서 이러한 폴더 구조를 따라가보고 있다. 기존에는  <code>component</code> 폴더와 <code>features </code>폴더에 로직이 몰려있었고, 이를 각각 <code>features</code> 폴더 내부로 분산시켰다.</p>
 <p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/noiton-folder-d41b35800b829348159a956570f23b73.png" width="297" height="229" class="img_ev3q"></p>
 <ul>
 <li><code>src/features/template/hooks/useDownloadTemplate.ts</code></li>
@@ -61,12 +106,11 @@
 <p>배포도 빠르고 리액트랑도 비슷해서, 바로 다음 프로젝트 프레임워크로 선택했다.</p>
 <p>그렇게 2명이서 야심차게 시작한 타자 연습 사이트 사이드 프로젝트
 <a href="https://tyletype.vercel.app/" target="_blank" rel="noopener noreferrer">TYLE</a></p>
-<p><img decoding="async" loading="lazy" alt="TYLE" src="data:image/png;base64,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" width="78" height="28" class="img_ev3q"></p>
 <p>처음엔 모든 게 순조로웠다.</p>
 <p><code>Vercel</code>에서의 배포는 순식간이었고, 리액트 했던대로 구현도 빠르게 했다.</p>
 <p>하지만 프로젝트가 진행될수록 뭔가 이상함을 느꼈다.</p>
-<p><img decoding="async" loading="lazy" alt="이상하다" src="https://eeheueklf.github.io/assets/images/%EC%9D%B4%EC%83%81%ED%95%98%EB%8B%A4-be85a42ed05603a31333eb63375550e9.png" width="400" height="400" class="img_ev3q"></p>
-<p><strong>1. 이거 <code>use Client</code> 이렇게 많이 쓰면 안될 것 같은데</strong></p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/TYLE1-c5d1dba53331fc0848d46fd62f1159aa.png" width="1200" height="504" class="img_ev3q">
+<strong>1. 이거 <code>use Client</code> 이렇게 많이 쓰면 안될 것 같은데</strong></p>
 <p><code>Next.js</code>가 서버 사이드 렌더링<code>SSR</code>에 강점이 있음에도 사이트 초기 메인화면 렌더링 속도가 너무 길었다.</p>
 <p>타자 연습 특성상 실시간 키보드 이벤트와 상태 업데이트가 70% 이상이었기 때문에 화면에 거의 모든 곳에 <code>use client</code>가 필요했다!</p>
 <p><strong>2. SEO 쓸데가 없네</strong></p>
@@ -78,7 +122,7 @@
 <p>결국 서비스의 핵심인 타이핑 로직은 순수 클라이언트 영역이었고 성능 최적화의 핵심 또한 클라이언트 측에 있었다. <code>Next.js</code>의 장점을 살리지 못하고 오히려 아키텍처만 복잡해지는 결과였다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="기술은-도구일-뿐이다">기술은 도구일 뿐이다!<a href="https://eeheueklf.github.io/blog/next-sidepj#%EA%B8%B0%EC%88%A0%EC%9D%80-%EB%8F%84%EA%B5%AC%EC%9D%BC-%EB%BF%90%EC%9D%B4%EB%8B%A4" class="hash-link" aria-label="기술은 도구일 뿐이다!에 대한 직접 링크" title="기술은 도구일 뿐이다!에 대한 직접 링크">​</a></h2>
 <p>고민 없는 기술 도입은 오히려 설계의 복잡도를 높이고 개발 생산성을 저해한다. 트렌드에 따라 <code>Next.js</code>를 선택했지만, 타자 연습과 같이 실시간 인터랙션 비중이 높은 프로젝트에서는 더 가벼운 클라이언트 중심의 환경이 적합했다.</p>
-<p>결국 개발자의 진정한 실력은, 프로젝트의 성격에 맞는 적절한 기술을 선택하는 안목인 것이다. 이러한 깨달음을 새기고, 다음 프로젝트에서는 SEO와 초기 로딩 속도라는 목표를 설정하고, <code>Next.js</code>의 기능을 제대로 활용할 수 있는 <strong>서버 컴포넌트 우선 설계</strong>를 중심에 두기로 했다.</p>
+<p>기술 선택의 이유를 명확히 아는것에서 개발자의 실력이 나뉘는 것 같다. 다음 프로젝트에서는 SEO와 초기 로딩 속도라는 목표를 설정하고, <code>Next.js</code>의 기능을 제대로 활용할 수 있는 <strong>서버 컴포넌트 우선 설계</strong>를 중심에 두기로 했다.</p>
 <hr>
 <blockquote>
 <p>다음 글 : <a href="https://eeheueklf.github.io/docs/dev-log/noiton-render">한번 깨지고 다시 다진 Next.js</a></p>
@@ -89,9 +133,36 @@
             <link>https://eeheueklf.github.io/blog/blog-docusaurus</link>
             <guid>https://eeheueklf.github.io/blog/blog-docusaurus</guid>
             <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[블로그 N차 리모델링 기록]]></description>
+            <content:encoded><![CDATA[<p><em>블로그 N차 리모델링 기록</em></p>
+<p>티스토리, 네이버 블로그, 깃허브 커스텀 블로그, 노션 블로그를 떠도는 유목민 생활을 하다가 드디어 정착했다😊</p>
+<p>티스토리 블로그 할때도 티스토리 특유의 HTML, CSS를 박으면서 공부했는데 노션 기반 블로그도 깃허브 블로그 여러 커스텀 테마들도 내가 100% 만족할만한 결과물이 나오지 않았다.</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/doc1-6a27d139df872c0edf22c02cb502f8ed.png" width="1200" height="639" class="img_ev3q"></p>
+<p>사진 중간에 있는 블로그는 바로 이전 블로그인 노션 기반 블로그인데, 오픈소스 <a href="https://github.com/morethanmin/morethan-log" target="_blank" rel="noopener noreferrer">morethanlog</a>를 커스텀한 테마이다.</p>
+<p>블로그 테마는 정말 마음에 들었지만, 노션 연동 특성상 업데이트가 너무 느려서 다시 깃허브 블로그로 회귀했다..</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="docusaurus를-고른-이유">Docusaurus를 고른 이유<a href="https://eeheueklf.github.io/blog/blog-docusaurus#docusaurus%EB%A5%BC-%EA%B3%A0%EB%A5%B8-%EC%9D%B4%EC%9C%A0" class="hash-link" aria-label="Docusaurus를 고른 이유에 대한 직접 링크" title="Docusaurus를 고른 이유에 대한 직접 링크">​</a></h2>
+<p>어떤 테마를 기본으로 블로그를 만들어나갈까 하다, 기준을 정해서 선택하기로 하였다.</p>
+<ul>
+<li>마크다운으로 글 쓰기</li>
+<li>GitHub Pages 배포</li>
+<li>커스텀이 자유로울 것</li>
+</ul>
+<p><code>Docusaurus</code>는 이 세 가지를 딱 만족했고, 여러 참고할만한 자료들도 많이 있었다!
+<img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/doc2-7cbb0cc75acb8b6679cb5f59da12647c.png" width="1200" height="504" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="뜯어고치기-시작">뜯어고치기 시작<a href="https://eeheueklf.github.io/blog/blog-docusaurus#%EB%9C%AF%EC%96%B4%EA%B3%A0%EC%B9%98%EA%B8%B0-%EC%8B%9C%EC%9E%91" class="hash-link" aria-label="뜯어고치기 시작에 대한 직접 링크" title="뜯어고치기 시작에 대한 직접 링크">​</a></h2>
+<p>내 취향에 맞게 단장했다. 사이드바 구조를 바꾸고, 메인 페이지도 새로 그리고, 포스팅 레이아웃도 좀 손봤다.</p>
+<p><em>Docusaurus는 <a href="https://docusaurus.io/ko/docs/swizzling" target="_blank" rel="noopener noreferrer">스위즐링</a> 방법으로 컴포넌트를 추출하여 내부 컴포넌트를 수정할 수 있다.</em></p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/doc4-a4917dcc9c1b2323c6b75e0c1aa7c4d7.png" width="1200" height="467" class="img_ev3q"></p>
+<div class="codeBlockContainer_APcc"><div class="language-bash theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-bash codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token plain">npx docusaurus swizzle @docusaurus/theme-classic BlogListPage</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div>
+<p>이렇게 꺼내서 내가 원하는 대로 바꾸면 된다.</p>
+<p>굿~</p>
+<hr>
+<blockquote>
+<p>다음 글 : <a href="https://eeheueklf.github.io/blog/blog-new-day">블로그 새단장!</a></p>
+</blockquote>]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[[회고] 프로그래머스 기초 입문 달성 후기 🥳🎉]]></title>
+            <title><![CDATA[프로그래머스 기초 입문 달성 후기 🥳🎉]]></title>
             <link>https://eeheueklf.github.io/blog/programmers</link>
             <guid>https://eeheueklf.github.io/blog/programmers</guid>
             <pubDate>Thu, 25 Sep 2025 00:00:00 GMT</pubDate>
@@ -108,16 +179,15 @@
 <p><img decoding="async" loading="lazy" alt="프로그래머스 완료 캘린더" src="https://eeheueklf.github.io/assets/images/programmers-cal-518f2a428430694c762fede7838b7a8a.png" width="913" height="645" class="img_ev3q"></p>]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[인트로]]></title>
+            <title><![CDATA[마크다운 참고하기]]></title>
             <link>https://eeheueklf.github.io/blog/intro</link>
             <guid>https://eeheueklf.github.io/blog/intro</guid>
             <pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🧱🧱🧱🧱🧱🧱🧱🧱🧱🧱]]></description>
             <content:encoded><![CDATA[<p>🧱🧱🧱🧱🧱🧱🧱🧱🧱🧱</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="마크다운-참고하기-">마크다운 참고하기 🍪🍄‍🟫☕<a href="https://eeheueklf.github.io/blog/intro#%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EC%B0%B8%EA%B3%A0%ED%95%98%EA%B8%B0-" class="hash-link" aria-label="마크다운 참고하기 🍪🍄‍🟫☕에 대한 직접 링크" title="마크다운 참고하기 🍪🍄‍🟫☕에 대한 직접 링크">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-안녕하세요-">👋 안녕하세요 🤎🧸📜<a href="https://eeheueklf.github.io/blog/intro#-%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94-" class="hash-link" aria-label="👋 안녕하세요 🤎🧸📜에 대한 직접 링크" title="👋 안녕하세요 🤎🧸📜에 대한 직접 링크">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="제목-4-">제목 4 🌕🍞🍂<a href="https://eeheueklf.github.io/blog/intro#%EC%A0%9C%EB%AA%A9-4-" class="hash-link" aria-label="제목 4 🌕🍞🍂에 대한 직접 링크" title="제목 4 🌕🍞🍂에 대한 직접 링크">​</a></h4>
-<p>🍩🐿️🍦</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="h2-마크다운-참고하기-">h2 마크다운 참고하기 🍪🍄‍🟫☕<a href="https://eeheueklf.github.io/blog/intro#h2-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EC%B0%B8%EA%B3%A0%ED%95%98%EA%B8%B0-" class="hash-link" aria-label="h2 마크다운 참고하기 🍪🍄‍🟫☕에 대한 직접 링크" title="h2 마크다운 참고하기 🍪🍄��‍🟫☕에 대한 직접 링크">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="h3--안녕하세요">h3 👋 안녕하세요<a href="https://eeheueklf.github.io/blog/intro#h3--%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94" class="hash-link" aria-label="h3 👋 안녕하세요에 대한 직접 링크" title="h3 👋 안녕하세요에 대한 직접 링크">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="h4-제목">h4 제목<a href="https://eeheueklf.github.io/blog/intro#h4-%EC%A0%9C%EB%AA%A9" class="hash-link" aria-label="h4 제목에 대한 직접 링크" title="h4 제목에 대한 직접 링크">​</a></h4>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-alert">1. alert<a href="https://eeheueklf.github.io/blog/intro#1-alert" class="hash-link" aria-label="1. alert에 대한 직접 링크" title="1. alert에 대한 직접 링크">​</a></h2>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span></div><div class="admonitionContent_BuS1"><p>정보</p></div></div>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37">🌵</span></div><div class="admonitionContent_BuS1"><p>팁</p></div></div>
@@ -151,7 +221,7 @@
 </li>
 </ol>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-코드">5. 코드<a href="https://eeheueklf.github.io/blog/intro#5-%EC%BD%94%EB%93%9C" class="hash-link" aria-label="5. 코드에 대한 직접 링크" title="5. 코드에 ��대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-코드">5. 코드<a href="https://eeheueklf.github.io/blog/intro#5-%EC%BD%94%EB%93%9C" class="hash-link" aria-label="5. 코드에 대한 직접 링크" title="5. 코드에 대한 직접 링크">​</a></h2>
 <div class="codeBlockContainer_APcc"><div class="language-js theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-js codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"JavaScript 코드 블록"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-인용문">6. 인용문<a href="https://eeheueklf.github.io/blog/intro#6-%EC%9D%B8%EC%9A%A9%EB%AC%B8" class="hash-link" aria-label="6. 인용문에 대한 직접 링크" title="6. 인용문에 대한 직접 링크">​</a></h2>
@@ -162,36 +232,31 @@
 </blockquote>
 </blockquote>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-체크박스-gfm">8. 체크박스 (GFM)<a href="https://eeheueklf.github.io/blog/intro#8-%EC%B2%B4%ED%81%AC%EB%B0%95%EC%8A%A4-gfm" class="hash-link" aria-label="8. 체크박스 (GFM)�에 대한 직접 링크" title="8. 체크박스 (GFM)에 대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-체크박스-gfm">8. 체크박스 (GFM)<a href="https://eeheueklf.github.io/blog/intro#8-%EC%B2%B4%ED%81%AC%EB%B0%95%EC%8A%A4-gfm" class="hash-link" aria-label="8. 체크박스 (GFM)에 대한 직접 링크" title="8. 체크박스 (GFM)에 대한 직접 링크">​</a></h2>
 <ul class="contains-task-list containsTaskList_mC6p">
 <li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->완료</li>
 <li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->미완료</li>
 </ul>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="10-각주">10. 각주<a href="https://eeheueklf.github.io/blog/intro#10-%EA%B0%81%EC%A3%BC" class="hash-link" aria-label="10. 각주에 대한 직접 링크" title="10. 각주에 대한 직접 링크">​</a></h2>
-<p>문장 안에서 각주를 달 수 있습니다<sup><a href="https://eeheueklf.github.io/blog/intro#user-content-fn-1-bf2b8a" id="user-content-fnref-1-bf2b8a" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup>.</p>
+<p>문장 안에서 각주를 달 수 있습니다<sup><a href="https://eeheueklf.github.io/blog/intro#user-content-fn-1-d3ca31" id="user-content-fnref-1-d3ca31" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup>.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="12-형광펜">12. 형광펜<a href="https://eeheueklf.github.io/blog/intro#12-%ED%98%95%EA%B4%91%ED%8E%9C" class="hash-link" aria-label="12. 형광펜에 대한 직접 링크" title="12. 형광펜에 대한 직접 링크">​</a></h2>
-<p><mark>기본 형광펜</mark>이잖아~</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="11-형광펜">11. 형광펜<a href="https://eeheueklf.github.io/blog/intro#11-%ED%98%95%EA%B4%91%ED%8E%9C" class="hash-link" aria-label="11. 형광펜에 대한 직접 링크" title="11. 형광펜에 대한 직접 링크">​</a></h2>
+<mark>기본 형광펜</mark>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="14-코드-블록">14. 코드 블록<a href="https://eeheueklf.github.io/blog/intro#14-%EC%BD%94%EB%93%9C-%EB%B8%94%EB%A1%9D" class="hash-link" aria-label="14. 코드 블록에 대한 직접 링크" title="14. 코드 블록에 대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="12-코드-블록">12. 코드 블록<a href="https://eeheueklf.github.io/blog/intro#12-%EC%BD%94%EB%93%9C-%EB%B8%94%EB%A1%9D" class="hash-link" aria-label="12. 코드 블록에 대한 직접 링크" title="12. 코드 블록에 대한 직접 링크">​</a></h2>
 <div class="codeBlockContainer_APcc"><div class="language-js theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-js codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line theme-code-block-highlighted-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">function</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">hello</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"2번 줄 하이라이트"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line theme-code-block-highlighted-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"4번 줄 하이라이트"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"4번 줄 하이라이트"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"4번 줄 하이라이트"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div>
-<div class="codeBlockContainer_APcc"><div class="language-jsx theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-jsx codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token keyword module" style="color:#00009f">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color:#00009f">from</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'react'</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword module" style="color:#00009f">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">Layout</span><span class="token plain"> </span><span class="token keyword module" style="color:#00009f">from</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'@theme/Layout'</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword module" style="color:#00009f">export</span><span class="token plain"> </span><span class="token keyword module" style="color:#00009f">default</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token plain"> </span><span class="token function maybe-class-name" style="color:#d73a49">MyReactPage</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token keyword control-flow" style="color:#00009f">return</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag class-name" style="color:#00009f">Layout</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">      </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">h1</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">My React page</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">h1</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">      </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">p</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">This is a React page</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">p</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">    </span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag class-name" style="color:#00009f">Layout</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div>
+<div class="codeBlockContainer_APcc"><div class="language-jsx theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-jsx codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token keyword module" style="color:#00009f">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color:#00009f">from</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'react'</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword module" style="color:#00009f">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">Layout</span><span class="token plain"> </span><span class="token keyword module" style="color:#00009f">from</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'@theme/Layout'</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword module" style="color:#00009f">export</span><span class="token plain"> </span><span class="token keyword module" style="color:#00009f">default</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token plain"> </span><span class="token function maybe-class-name" style="color:#d73a49">MyReactPage</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token keyword control-flow" style="color:#00009f">return</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag class-name" style="color:#00009f">Layout</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">      </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">h1</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">My React page</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">h1</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">      </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">p</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">This is a React page</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">p</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">    </span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag class-name" style="color:#00009f">Layout</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코�드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div>
 <hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="13-토글">13. 토글<a href="https://eeheueklf.github.io/blog/intro#13-%ED%86%A0%EA%B8%80" class="hash-link" aria-label="13. 토글에 대한 직접 링크" title="13. 토글에 대한 직접 링크">​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Toggle me!</summary><div><div class="collapsibleContent_i85q"><p>This is the detailed content</p><div class="codeBlockContainer_APcc"><div class="language-js theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-js codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"Markdown features including the code block are available"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div></div></div></details>
 <section data-footnotes="true" class="footnotes"><h2 class="anchor anchorWithStickyNavbar_LWe7 sr-only" id="footnote-label">Footnotes<a href="https://eeheueklf.github.io/blog/intro#footnote-label" class="hash-link" aria-label="Footnotes에 대한 직접 링크" title="Footnotes에 대한 직접 링크">​</a></h2>
 <ol>
-<li id="user-content-fn-1-bf2b8a">
-<p>각주 내용 <a href="https://eeheueklf.github.io/blog/intro#user-content-fnref-1-bf2b8a" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+<li id="user-content-fn-1-d3ca31">
+<p>각주 내용 <a href="https://eeheueklf.github.io/blog/intro#user-content-fnref-1-d3ca31" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
 </li>
 </ol>
 </section>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[memo]]></title>
-            <link>https://eeheueklf.github.io/blog/memo</link>
-            <guid>https://eeheueklf.github.io/blog/memo</guid>
-            <pubDate>Thu, 14 Aug 2025 05:08:25 GMT</pubDate>
         </item>
     </channel>
 </rss>

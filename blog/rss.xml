@@ -4,10 +4,38 @@
         <title>히리로그 Blog</title>
         <link>https://eeheueklf.github.io/blog</link>
         <description>히리로그 Blog</description>
-        <lastBuildDate>Wed, 12 Aug 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 13 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
+        <item>
+            <title><![CDATA[🪐나만의 플래너 앱을 만들었다]]></title>
+            <link>https://eeheueklf.github.io/blog/my-space-app</link>
+            <guid>https://eeheueklf.github.io/blog/my-space-app</guid>
+            <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[시간 관리를 위해 오래전부터 실물 플래너를 써왔다. 실물 플래너와 똑같은 기능의 데스크탑 앱이 없어서 노션을 써왔는데, 항상 옆에 띄우고 보는 용도로는 아쉬운 점이 있었다.]]></description>
+            <content:encoded><![CDATA[<p>시간 관리를 위해 오래전부터 실물 플래너를 써왔다. 실물 플래너와 똑같은 기능의 데스크탑 앱이 없어서 노션을 써왔는데, 항상 옆에 띄우고 보는 용도로는 아쉬운 점이 있었다.</p>
+<p>토스 블로그에서 한 디자이너분의 <a href="https://toss.tech/article/todolist" target="_blank" rel="noopener noreferrer">투두 위젯 개발기</a>를 봤다. 이걸 보고 나서 나도 <strong>내가 원하는 형태로 직접 만들어보자</strong>는 생각이 들었다.</p>
+<p>~ 자급자족 투두 위젯 겸 일기장 겸 플래너 겸 메모장 만들기 ~</p>
+<p><code>thanks to Claude ❤️ </code></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="어떤-앱인가">어떤 앱인가<a href="https://eeheueklf.github.io/blog/my-space-app#%EC%96%B4%EB%96%A4-%EC%95%B1%EC%9D%B8%EA%B0%80" class="hash-link" aria-label="어떤 앱인가에 대한 직접 링크" title="어떤 앱인가에 대한 직접 링크">​</a></h2>
+<p>앱 이름은 <strong>Mars</strong>. 데스크탑 위젯 형태의 <code>Electron</code> 앱이다.
+<img decoding="async" loading="lazy" alt="Mars 앱 전체 화면" src="https://eeheueklf.github.io/assets/images/mars-d15f98254402fab44329b05407a74f48.png" width="1200" height="392" class="img_ev3q"></p>
+<p>탭은 총 여섯 가지다. 홈 / 메모 / 할 일 / 플래너 / 음악 / 일기.<br>
+<!-- -->실물 플래너에서 항상 쓰던 요소들을 그대로 옮겨왔다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10분-타임-블록-플래너">10분 타임 블록 플래너<a href="https://eeheueklf.github.io/blog/my-space-app#10%EB%B6%84-%ED%83%80%EC%9E%84-%EB%B8%94%EB%A1%9D-%ED%94%8C%EB%9E%98%EB%84%88" class="hash-link" aria-label="10분 타임 블록 플래너에 대한 직접 링크" title="10분 타임 블록 플래너에 대한 직접 링크">​</a></h3>
+<p>하루를 10분 단위로 나눠서 활동을 드래그로 색칠하는 타임 블록 플래너.<br>
+<!-- -->내 루틴에 맞게 기본값으로 미리 채워놨고, 실제 한 활동은 팔레트에서 골라 채우면 된다.<br>
+<!-- -->각 활동에 몇 시간을 썼는지 통계로도 볼 수 있다.<br>
+<!-- -->플래너 옆에는 할 일을 메모 할 수 있다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="일기와-기분-기록">일기와 기분 기록<a href="https://eeheueklf.github.io/blog/my-space-app#%EC%9D%BC%EA%B8%B0%EC%99%80-%EA%B8%B0%EF%BF%BD%EB%B6%84-%EA%B8%B0%EB%A1%9D" class="hash-link" aria-label="일기와 기분 기록에 대한 직접 링크" title="일기와 기분 기록에 대한 직접 링크">​</a></h3>
+<p>일기 탭에서는 날짜별로 짧게 글을 남기고, 그날의 <strong>기분</strong>도 네 단계 이모지 중 하나로 기록한다.<br>
+<!-- -->그날 완료한 할 일 목록, 활동시간, 메모가 일기 위에 있어서 보면서 하루를 돌아보기 좋다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="후기">후기<a href="https://eeheueklf.github.io/blog/my-space-app#%ED%9B%84%EA%B8%B0" class="hash-link" aria-label="후기에 대한 직접 링크" title="후기에 대한 직접 링크">​</a></h2>
+<p>솔직히 <code>Electron</code>이란 것도 처음 들어봤다. 기술 선택부터 코드 짜는 것까지 <code>Claude</code>의 도움을 받았는데, 기능 자체가 단순한 덕분에 하루 만에 완성할 수 있었다.</p>
+<p>만들고 나서 실제로 매일 잘 쓰고 있다. 직접 만든 도구라 불편한 게 보이면 바로 고칠 수 있다는 게 너~무 좋다 ^^</p>
+<p>언니가 써보고 싶다고 해서 설치파일도 줬고, 피드백도 받아볼 예정이다. 일단은 할 일 목록 옮기기, 월별 활동 통계 기능도 넣어볼 계획중이다.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[블로그 새단장!]]></title>
             <link>https://eeheueklf.github.io/blog/blog-new-day</link>

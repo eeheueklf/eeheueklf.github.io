@@ -72,6 +72,7 @@ const config = {
         blog: {
           path: 'blog',
           routeBasePath: 'blog',
+          postsPerPage: 'ALL',
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Posts',
           editUrl:

@@ -1,7 +1,7 @@
 [
   {
     "title": "🪐나만의 플래너 앱을 만들었다",
-    "date": "2026-08-13",
+    "date": "2026-08-18",
     "path": "/blog/my-space-app"
   },
   {
@@ -15,13 +15,13 @@
     "path": "/blog/feature-sliced-design"
   },
   {
-    "title": "Next.js가 함정이었던 타자 연습 프로젝트 회고",
-    "date": "2026-04-05",
-    "path": "/blog/next-sidepj"
+    "title": "Redux-toolkit으로 사용자 상태 관리 구조 개선",
+    "date": "2026-04-17",
+    "path": "/blog/notion-rtk"
   },
   {
-    "title": "블로그 새 단장 with Docusaurus🦕",
-    "date": "2026-03-26",
-    "path": "/blog/blog-docusaurus"
+    "title": "한번 깨지고 다시 다진 Next.js",
+    "date": "2026-04-13",
+    "path": "/blog/noiton-render"
   }
 ]

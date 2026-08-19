@@ -108,7 +108,7 @@ function DiscordStatus() {
 // ── Routes ────────────────────────────────────────────────────────────────────
 
 const ROUTES = [
-  { path: '/blog', label: 'logs' },
+  { path: '/blog', label: 'log' },
   { path: '/docs', label: 'docs' },
   { path: '/resume', label: 'about' },
 ];
@@ -738,7 +738,7 @@ export default function Home() {
             <img src={iconSrc} alt="히리로그" className={styles.topNavLogoImg} />
           </Link>
           <span className={styles.topNavDivider} />
-          <Link href={blogHref} className={styles.topNavLink}>logs</Link>
+          <Link href={blogHref} className={styles.topNavLink}>log</Link>
           <Link href={docsHref} className={styles.topNavLink}>docs</Link>
           <Link href={resumeHref} className={styles.topNavLink}>about</Link>
         </nav>

@@ -247,7 +247,7 @@ function DocCategoryGeneratedIndexPageContent({
           <img src={iconSrc} alt="히리로그" className={styles.topNavLogoImg} />
         </Link>
         <span className={styles.topNavDivider} />
-        <Link href={blogHref} className={styles.topNavLink}>logs</Link>
+        <Link href={blogHref} className={styles.topNavLink}>log</Link>
         <Link href={docsHref} className={styles.topNavLink}>docs</Link>
         <Link href={resumeHref} className={styles.topNavLink}>about</Link>
       </nav>

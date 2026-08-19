@@ -1,38 +1,4 @@
 {
-  "dev-log/noiton-lcp": {
-    "tags": [
-      "lcp"
-    ],
-    "date": "2026-04-10"
-  },
-  "dev-log/noiton-render": {
-    "tags": [],
-    "date": "2026-04-13"
-  },
-  "dev-log/noiton-state": {
-    "tags": [],
-    "date": "2026-04-10"
-  },
-  "dev-log/notion-rtk": {
-    "tags": [],
-    "date": "2026-04-17"
-  },
-  "dev-log/tyle-cls": {
-    "tags": [],
-    "date": "2026-04-04"
-  },
-  "dev-log/tyle-lookbehind": {
-    "tags": [],
-    "date": "2025-09-25"
-  },
-  "dev-log/tyle-performance": {
-    "tags": [],
-    "date": "2026-04-05"
-  },
-  "dev-log/tyle-test": {
-    "tags": [],
-    "date": "2026-04-06"
-  },
   "fe-roadmap/basics": {
     "tags": [],
     "date": "2025-08-11"
@@ -175,6 +141,10 @@
   "js-deep-dive/promise": {
     "tags": [],
     "date": "2025-08-28"
+  },
+  "js-deep-dive/rendering": {
+    "tags": [],
+    "date": "2026-08-18"
   },
   "programmers/day1-2": {
     "tags": [],

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 13
 date: 9/11/2025
 title: "React vs Next.js"
 ---

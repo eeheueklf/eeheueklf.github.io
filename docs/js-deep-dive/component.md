@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 7
 date: 9/16/2025
 title: "컴포넌트"
 ---

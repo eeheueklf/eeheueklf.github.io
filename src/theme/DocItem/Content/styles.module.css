@@ -17,6 +17,14 @@
   margin-bottom: 0.8rem;
 }
 
+.categoryTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: rgba(0, 0, 0, 0.38);
+}
+
 .ticketDate {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.68rem;

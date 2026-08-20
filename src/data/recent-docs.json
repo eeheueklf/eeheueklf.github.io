@@ -10,18 +10,18 @@
     "path": "/docs/programmers/method"
   },
   {
-    "title": "useEffect",
-    "date": "2025-10-02",
-    "path": "/docs/framework/useEffect-render"
+    "title": "🤖Gemini와 알아본 현업에서 쓰는 폴더 관리",
+    "date": "2026-04-20",
+    "path": "/docs/feature-sliced-design"
   },
   {
-    "title": "컴포넌트 생명주기",
-    "date": "2025-09-29",
-    "path": "/docs/framework/life-cycle"
+    "title": "Redux-toolkit으로 사용자 상태 관리 구조 개선",
+    "date": "2026-04-17",
+    "path": "/docs/notion-rtk"
   },
   {
-    "title": "Virtual DOM",
-    "date": "2025-09-24",
-    "path": "/docs/framework/virtual-dom"
+    "title": "한번 깨지고 다시 다진 Next.js",
+    "date": "2026-04-13",
+    "path": "/docs/noiton-render"
   }
 ]

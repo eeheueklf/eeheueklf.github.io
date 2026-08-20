@@ -7,10 +7,26 @@ import {
 import docTagsMap from '@site/src/data/doc-tags.json';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
-import type {Props} from '@theme/DocCategoryGeneratedIndexPage';
+import type { Props } from '@theme/DocCategoryGeneratedIndexPage';
 import SpaceBackground from '@site/src/components/SpaceBackground';
 
 import styles from './styles.module.css';
+
+const PALETTE = [
+  { color: '#87BAC3', glow: 'rgba(96, 165, 250, 0.35)' },   // blue
+  { color: '#5674edff', glow: 'rgba(67, 56, 202, 0.35)' },    // dark navy
+  { color: '#dc5252ff', glow: 'rgba(107, 114, 128, 0.35)' },  // black
+  { color: '#f59e0b', glow: 'rgba(245, 158, 11, 0.35)' },   // gold
+  { color: '#D6F4ED', glow: 'rgba(74, 222, 128, 0.35)' },   // green
+];
+
+const CATEGORY_PALETTE: Record<string, typeof PALETTE[number]> = {
+  'dev': PALETTE[0],
+  'fe-roadmap': PALETTE[1],
+  'framework': PALETTE[2],
+  'js-deep-dive': PALETTE[3],
+  'programmers': PALETTE[4],
+};
 
 function formatDate(dateStr: string): string {
   const d = new Date(dateStr);
@@ -24,23 +40,40 @@ type SvgState = {
   height: number;
 };
 
+function computeItemLabels(items: any[], defaultTitle = 'DOC'): string[] {
+  let docCount = 0;
+  let currentTitle = defaultTitle;
+
+  return items.map(item => {
+    if (item.type === 'category') {
+      docCount = 0;
+      currentTitle = (item.customProps?.title as string | undefined) ?? (item.label as string);
+      return currentTitle;
+    } else {
+      docCount++;
+      return `${currentTitle} ${String(docCount).padStart(2, '0')}`;
+    }
+  });
+}
+
 function DocTimelineItem({
-  item, idx, isLeft, isVisible, isScrollActive, onMouseEnter, onMouseLeave,
+  item, idx, label, isLeft, isVisible, isScrollActive, onMouseEnter, onMouseLeave, overrideColor,
 }: {
-  item: any; idx: number; isLeft: boolean; isVisible: boolean;
+  item: any; idx: number; label: string; isLeft: boolean; isVisible: boolean;
   isScrollActive: boolean; onMouseEnter: () => void; onMouseLeave: () => void;
+  overrideColor?: typeof PALETTE[number];
 }) {
-  const href       = item.href ?? item.items?.[0]?.href;
+  const palette = overrideColor ?? PALETTE[idx % PALETTE.length];
+  const href = item.href ?? item.items?.[0]?.href;
 
   type DocMeta = { tags: string[]; date: string | null };
   const isCategory = item.type === 'category';
-  const isDoc      = item.type === 'link' && !!item.docId;
-  const docId      = isDoc ? (item.docId ?? (item.href ?? '').replace(/^\/docs\//, '')) : '';
+  const isDoc = item.type === 'link' && !!item.docId;
+  const docId = isDoc ? (item.docId ?? (item.href ?? '').replace(/^\/docs\//, '')) : '';
   const meta: DocMeta | undefined = docId ? (docTagsMap as Record<string, DocMeta>)[docId] : undefined;
-  const tags   = meta?.tags ?? [];
-  const date   = meta?.date ?? null;
-  const count  = isCategory ? (item.items?.length ?? 0) : null;
-  const status = (item.customProps?.status as string | undefined) ?? null;
+  const tags = meta?.tags ?? [];
+  const date = meta?.date ?? null;
+  const count = isCategory ? (item.items?.length ?? 0) : null;
 
   if (!href) return null;
   return (
@@ -51,7 +84,7 @@ function DocTimelineItem({
         isVisible && styles.itemVisible,
         isScrollActive && styles.scrollActive,
       )}
-      style={{ '--idx': idx } as React.CSSProperties}
+      style={{ '--idx': idx, '--item-color': palette.color, '--item-glow': palette.glow } as React.CSSProperties}
       data-timeline-item=""
       data-item-idx={String(idx)}
       onMouseEnter={onMouseEnter}
@@ -60,12 +93,7 @@ function DocTimelineItem({
       <Link to={href} className={styles.ticket}>
         <div className={styles.ticketMeta}>
           <div className={styles.docCode}>
-            DOC {String(idx + 1).padStart(2, '0')}
-            {status && (
-              <span className={clsx(styles.statusTag, styles[`status${status.replace(/\s/g, '')}`])}>
-                ● {status}
-              </span>
-            )}
+            {label}
           </div>
           <div className={styles.routeMeta}>
             <span className={styles.routeFrom}>{item.label}</span>
@@ -106,23 +134,28 @@ function DocCategoryGeneratedIndexPageMetadata({
 function DocCategoryGeneratedIndexPageContent({
   categoryGeneratedIndex,
 }: Props): JSX.Element {
-  const category   = useCurrentSidebarCategory();
-  const homeHref   = useBaseUrl('/');
-  const iconSrc    = useBaseUrl('/img/logo.png');
-  const blogHref   = useBaseUrl('/blog');
-  const docsHref   = useBaseUrl('/docs');
+  const category = useCurrentSidebarCategory();
+  const homeHref = useBaseUrl('/');
+  const iconSrc = useBaseUrl('/img/logo.png');
+  const blogHref = useBaseUrl('/blog');
+  const docsHref = useBaseUrl('/docs');
   const resumeHref = useBaseUrl('/resume');
 
-  const timelineRef    = useRef<HTMLDivElement>(null);
-  const routePathRef   = useRef<SVGPathElement>(null);
+  const slug = (category?.href ?? '').split('/').filter(Boolean).pop() ?? '';
+  const categoryPalette = CATEGORY_PALETTE[slug];
+
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const routePathRef = useRef<SVGPathElement>(null);
   const hasAnimatedRef = useRef(false);
 
-  const [svgState,        setSvgState]        = useState<SvgState>({ pathD: '', segments: [], waypoints: [], height: 0 });
-  const [hoveredIdx,      setHoveredIdx]      = useState<number | null>(null);
-  const [itemsVisible,    setItemsVisible]    = useState(false);
+  const [svgState, setSvgState] = useState<SvgState>({ pathD: '', segments: [], waypoints: [], height: 0 });
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const [itemsVisible, setItemsVisible] = useState(false);
   const [scrollActiveIdx, setScrollActiveIdx] = useState<number | null>(null);
 
   const categoryItems = category?.items ?? [];
+  const categoryTitle = (category?.customProps?.title as string | undefined) ?? 'DOC';
+  const itemLabels = computeItemLabels(categoryItems, categoryTitle);
 
   // ── 경로 + 웨이포인트 계산 (ResizeObserver) ────────────
   useEffect(() => {
@@ -133,8 +166,8 @@ function DocCategoryGeneratedIndexPageContent({
       const itemEls = Array.from(
         container.querySelectorAll<HTMLElement>('[data-timeline-item]')
       );
-      const W  = container.offsetWidth;
-      const H  = container.offsetHeight;
+      const W = container.offsetWidth;
+      const H = container.offsetHeight;
       const cx = W / 2;
 
       const wps = itemEls.map(el => {
@@ -163,8 +196,8 @@ function DocCategoryGeneratedIndexPageContent({
           const cp1y = (curr.y + dist * 0.38).toFixed(1);
           const cp2x = (next.x + drift).toFixed(1);
           const cp2y = (next.y - dist * 0.38).toFixed(1);
-          const ex   = next.x.toFixed(1);
-          const ey   = next.y.toFixed(1);
+          const ex = next.x.toFixed(1);
+          const ey = next.y.toFixed(1);
 
           segments.push(
             `M ${curr.x.toFixed(1)} ${curr.y.toFixed(1)} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${ex} ${ey}`
@@ -192,19 +225,19 @@ function DocCategoryGeneratedIndexPageContent({
     hasAnimatedRef.current = true;
 
     const path = routePathRef.current;
-    const len  = path.getTotalLength();
+    const len = path.getTotalLength();
 
-    path.style.strokeDasharray  = `${len}`;
+    path.style.strokeDasharray = `${len}`;
     path.style.strokeDashoffset = `${len}`;
 
     requestAnimationFrame(() => {
-      path.style.transition       = 'stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1)';
+      path.style.transition = 'stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1)';
       path.style.strokeDashoffset = '0';
     });
 
     const timer = setTimeout(() => {
-      path.style.transition       = '';
-      path.style.strokeDasharray  = '';
+      path.style.transition = '';
+      path.style.strokeDasharray = '';
       path.style.strokeDashoffset = '';
       setItemsVisible(true);
     }, 300);
@@ -239,8 +272,12 @@ function DocCategoryGeneratedIndexPageContent({
     return () => io.disconnect();
   }, [categoryItems]);
 
+  const rootStyle = categoryPalette
+    ? { '--space-line': categoryPalette.color, '--space-glow': categoryPalette.glow } as React.CSSProperties
+    : undefined;
+
   return (
-    <div className={clsx('page-wrapper', styles.docsRoot)}>
+    <div className={clsx('page-wrapper', styles.docsRoot)} style={rootStyle}>
       <SpaceBackground />
       <nav className={styles.topNav}>
         <Link href={homeHref} className={styles.topNavLogo}>
@@ -265,8 +302,8 @@ function DocCategoryGeneratedIndexPageContent({
                     x2="0"
                     y2={svgState.height || 1000}
                   >
-                    <stop offset="0%"   stopColor="var(--space-line)" stopOpacity="0.85" />
-                    <stop offset="65%"  stopColor="var(--space-line)" stopOpacity="0.35" />
+                    <stop offset="0%" stopColor="var(--space-line)" stopOpacity="0.85" />
+                    <stop offset="65%" stopColor="var(--space-line)" stopOpacity="0.35" />
                     <stop offset="100%" stopColor="var(--space-line)" stopOpacity="0.08" />
                   </linearGradient>
                   <filter id="wp-glow-docs" x="-100%" y="-100%" width="300%" height="300%">
@@ -292,7 +329,7 @@ function DocCategoryGeneratedIndexPageContent({
 
                 {svgState.segments.map((seg, si) => {
                   const activeIdx = hoveredIdx ?? scrollActiveIdx;
-                  const isActive  = activeIdx !== null && si < activeIdx;
+                  const isActive = activeIdx !== null && si < activeIdx;
                   return (
                     <path
                       key={`seg-${si}`}
@@ -307,20 +344,21 @@ function DocCategoryGeneratedIndexPageContent({
                 })}
 
                 {svgState.waypoints.map((wp, i) => {
-                  const active       = i === hoveredIdx;
+                  const active = i === hoveredIdx;
                   const scrollActive = i === scrollActiveIdx && !active;
+                  const wpColor = categoryPalette ? categoryPalette.color : PALETTE[i % PALETTE.length].color;
                   return (
                     <g
                       key={i}
                       className={clsx(
                         styles.waypointGroup,
-                        active       && styles.waypointActive,
+                        active && styles.waypointActive,
                         scrollActive && styles.waypointScrollActive,
                       )}
                     >
                       {active && (
                         <>
-                          <circle cx={wp.x} cy={wp.y} r={26} className={styles.waypointGlowArea} />
+                          <circle cx={wp.x} cy={wp.y} r={26} className={styles.waypointGlowArea} fill={wpColor} />
                           {[30, 150, 270].map((deg, pi) => {
                             const rad = (deg * Math.PI) / 180;
                             return (
@@ -330,14 +368,15 @@ function DocCategoryGeneratedIndexPageContent({
                                 cy={wp.y + Math.sin(rad) * 20}
                                 r={1.5}
                                 className={styles.waypointParticle}
+                                fill={wpColor}
                                 style={{ animationDelay: `${pi * 0.1}s` }}
                               />
                             );
                           })}
                         </>
                       )}
-                      <circle cx={wp.x} cy={wp.y} r={14} className={styles.waypointRing} />
-                      <circle cx={wp.x} cy={wp.y} r={4}  className={styles.waypointDot}  />
+                      <circle cx={wp.x} cy={wp.y} r={14} className={styles.waypointRing} fill={wpColor} />
+                      <circle cx={wp.x} cy={wp.y} r={4} className={styles.waypointDot} fill={wpColor} />
                     </g>
                   );
                 })}
@@ -348,11 +387,13 @@ function DocCategoryGeneratedIndexPageContent({
                   key={idx}
                   item={item}
                   idx={idx}
+                  label={itemLabels[idx]}
                   isLeft={idx % 2 === 0}
                   isVisible={itemsVisible}
                   isScrollActive={idx === scrollActiveIdx}
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
+                  overrideColor={categoryPalette}
                 />
               ))}
             </div>

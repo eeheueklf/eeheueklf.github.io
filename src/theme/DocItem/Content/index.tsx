@@ -7,14 +7,13 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import {ThemeClassNames} from '@docusaurus/theme-common';
+import {ThemeClassNames, useCurrentSidebarCategory} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/theme-common/internal';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 import type {Props} from '@theme/DocItem/Content';
 import {useWindowSize} from '@docusaurus/theme-common';
 import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
-import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 function useDocTOC() {
@@ -44,12 +43,15 @@ function useSyntheticTitle(): string | null {
 
 export default function DocItemContent({children}: Props): JSX.Element {
   const syntheticTitle = useSyntheticTitle();
-  const {metadata: {lastUpdatedAt, tags}} = useDoc();
+  const {metadata: {tags}, frontMatter} = useDoc();
   const docTOC = useDocTOC();
+  const category = useCurrentSidebarCategory();
+  const categoryTitle = (category?.customProps?.title as string | undefined) ?? null;
 
-  const lastUpdated = lastUpdatedAt
+  const rawDate = (frontMatter as Record<string, unknown>).date as string | undefined;
+  const lastUpdated = rawDate
     ? (() => {
-        const d = new Date(lastUpdatedAt * 1000);
+        const d = new Date(rawDate);
         return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
       })()
     : null;
@@ -60,7 +62,10 @@ export default function DocItemContent({children}: Props): JSX.Element {
         <header className={styles.header}>
           <div className={styles.ticket}>
             <div className={styles.ticketTop}>
-              <span />
+              {categoryTitle
+                ? <span className={styles.categoryTitle}>{categoryTitle}</span>
+                : <span />
+              }
               {lastUpdated && (
                 <time className={styles.ticketDate}>{lastUpdated}</time>
               )}
@@ -73,9 +78,7 @@ export default function DocItemContent({children}: Props): JSX.Element {
                   <ul className={styles.tagList}>
                     {tags.map((tag) => (
                       <li key={tag.permalink}>
-                        <Link to={tag.permalink} className={styles.tag}>
-                          {tag.label}
-                        </Link>
+                        <span className={styles.tag}>{tag.label}</span>
                       </li>
                     ))}
                   </ul>

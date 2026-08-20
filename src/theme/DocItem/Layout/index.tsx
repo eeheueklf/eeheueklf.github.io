@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-import DocItemFooter from '@theme/DocItem/Footer';
 import DocItemContent from '@theme/DocItem/Content';
 import type {Props} from '@theme/DocItem/Layout';
 import Link from '@docusaurus/Link';
@@ -34,7 +33,6 @@ export default function DocItemLayout({children}: Props): JSX.Element {
       <main>
         <article className="container">
           <DocItemContent>{children}</DocItemContent>
-          <DocItemFooter />
         </article>
       </main>
       <footer className={styles.footer}>

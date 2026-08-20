@@ -38,10 +38,9 @@ function getItems(dir, baseRoute) {
           .replace(/\.(md|mdx)$/, '')
           .replace(/\\/g, '/');
 
-        if (baseRoute === 'blog' && data.slug) {
-          const parts = relativePath.split('/');
-          parts[parts.length - 1] = data.slug;
-          relativePath = parts.join('/');
+        if (data.slug) {
+          const slug = data.slug.startsWith('/') ? data.slug.slice(1) : data.slug;
+          relativePath = slug;
         }
 
         const formattedDate = new Date(finalDate).toISOString().split('T')[0];

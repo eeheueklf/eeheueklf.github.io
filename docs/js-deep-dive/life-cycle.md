@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 11
 date: 9/30/2025
 title: "컴포넌트 생명주기"
 ---

@@ -3,9 +3,9 @@
 .blogRoot {
   flex-direction: column;
   background: transparent;
-  --space-line:         #ff7c6e;
-  --space-glow:         rgba(255, 124, 110, 0.28);
-  --space-border:       rgba(255, 124, 110, 0.22);
+  --space-line: #ff7c6e;
+  --space-glow: rgba(255, 124, 110, 0.28);
+  --space-border: rgba(255, 124, 110, 0.22);
   --space-border-hover: rgba(255, 124, 110, 0.55);
 }
 
@@ -78,43 +78,71 @@
 /* ── CSS 변수 (라이트 / 다크) ─────────────────────────── */
 
 :root {
-  --space-line:         #6b5ce7;
-  --space-glow:         rgba(107, 92, 231, 0.32);
-  --space-border:       rgba(107, 92, 231, 0.28);
+  --space-line: #6b5ce7;
+  --space-glow: rgba(107, 92, 231, 0.32);
+  --space-border: rgba(107, 92, 231, 0.28);
   --space-border-hover: rgba(107, 92, 231, 0.6);
 }
 
 [data-theme='dark'] {
-  --space-line:         #00d4ff;
-  --space-glow:         rgba(0, 212, 255, 0.28);
-  --space-border:       rgba(0, 212, 255, 0.22);
+  --space-line: #00d4ff;
+  --space-glow: rgba(0, 212, 255, 0.28);
+  --space-border: rgba(0, 212, 255, 0.22);
   --space-border-hover: rgba(0, 212, 255, 0.55);
 }
 
 /* ── 애니메이션 ────────────────────────────────────────── */
 
 @keyframes dash-flow {
-  to { stroke-dashoffset: -48; }
+  to {
+    stroke-dashoffset: -48;
+  }
 }
 
 @keyframes wp-pulse {
-  0%, 100% { opacity: 0.1; }
-  50%       { opacity: 0.28; }
+
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.28;
+  }
 }
 
 @keyframes glow-in {
-  from { opacity: 0; }
-  to   { opacity: 0.16; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.16;
+  }
 }
 
 @keyframes particle-in {
-  from { opacity: 0; transform: scale(0); }
-  to   { opacity: 0.5; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0.5;
+    transform: scale(1);
+  }
 }
 
 @keyframes item-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ── 타임라인 컨테이너 ────────────────────────────────── */
@@ -215,7 +243,9 @@
   animation-delay: calc(var(--idx, 0) * 80ms);
 }
 
-.timelineItem::after { content: none; }
+.timelineItem::after {
+  content: none;
+}
 
 /* ── 스크롤 활성 LOG — 텍스트 강조 ───────────────────── */
 
@@ -240,15 +270,13 @@
   max-width: 260px;
   padding: 14px 18px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.09);
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: background 0.2s, border-color 0.2s;
 }
 
 .ticket:hover {
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.16);
   border-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -297,9 +325,21 @@
   letter-spacing: 0.12em;
 }
 
-.statusFlying   { color: rgba(251, 191,  36, 0.9); }   /* 비행 중 — amber */
-.statusCruising { color: rgba( 96, 165, 250, 0.85); }  /* 순항 중 — sky blue */
-.statusLanded   { color: rgba(148, 163, 184, 0.75); }  /* 착륙 완료 — slate */
+.statusFlying {
+  color: rgba(251, 191, 36, 0.9);
+}
+
+/* 비행 중 — amber */
+.statusCruising {
+  color: rgba(96, 165, 250, 0.85);
+}
+
+/* 순항 중 — sky blue */
+.statusLanded {
+  color: rgba(148, 163, 184, 0.75);
+}
+
+/* 착륙 완료 — slate */
 
 .routeMeta {
   display: flex;

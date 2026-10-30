@@ -33,6 +33,18 @@
     "tags": [],
     "date": "2026-04-20"
   },
+  "dev/260818": {
+    "tags": [],
+    "date": "2026-08-18"
+  },
+  "dev/260928": {
+    "tags": [],
+    "date": "2026-09-28"
+  },
+  "dev/261001": {
+    "tags": [],
+    "date": "2026-10-01"
+  },
   "fe-roadmap/basics": {
     "tags": [],
     "date": "2025-08-11"
@@ -109,45 +121,13 @@
     "tags": [],
     "date": "2025-08-04"
   },
-  "framework/basics": {
-    "tags": [],
-    "date": "2025-09-14"
-  },
-  "framework/component": {
-    "tags": [],
-    "date": "2025-09-15"
-  },
-  "framework/context-api": {
-    "tags": [],
-    "date": "2025-09-17"
-  },
-  "framework/hooks": {
-    "tags": [],
-    "date": "2025-09-17"
-  },
-  "framework/life-cycle": {
-    "tags": [],
-    "date": "2025-09-29"
-  },
   "framework/package-manager": {
     "tags": [],
     "date": "2025-09-09"
   },
-  "framework/react-nextjs": {
-    "tags": [],
-    "date": "2025-09-10"
-  },
-  "framework/useEffect-render": {
-    "tags": [],
-    "date": "2025-10-02"
-  },
   "framework/vcs-git": {
     "tags": [],
     "date": "2025-09-08"
-  },
-  "framework/virtual-dom": {
-    "tags": [],
-    "date": "2025-09-24"
   },
   "js-deep-dive/asyncs": {
     "tags": [],
@@ -157,6 +137,14 @@
     "tags": [],
     "date": "2025-08-25"
   },
+  "js-deep-dive/component": {
+    "tags": [],
+    "date": "2025-09-15"
+  },
+  "js-deep-dive/context-api": {
+    "tags": [],
+    "date": "2025-09-17"
+  },
   "js-deep-dive/dom": {
     "tags": [],
     "date": "2025-08-24"
@@ -165,13 +153,37 @@
     "tags": [],
     "date": "2025-08-27"
   },
+  "js-deep-dive/hooks": {
+    "tags": [],
+    "date": "2025-09-17"
+  },
+  "js-deep-dive/jsx": {
+    "tags": [],
+    "date": "2025-09-14"
+  },
+  "js-deep-dive/life-cycle": {
+    "tags": [],
+    "date": "2025-09-29"
+  },
   "js-deep-dive/promise": {
     "tags": [],
     "date": "2025-08-28"
   },
+  "js-deep-dive/react-nextjs": {
+    "tags": [],
+    "date": "2025-09-10"
+  },
   "js-deep-dive/rendering": {
     "tags": [],
     "date": "2026-08-18"
+  },
+  "js-deep-dive/useEffect-render": {
+    "tags": [],
+    "date": "2025-10-02"
+  },
+  "js-deep-dive/virtual-dom": {
+    "tags": [],
+    "date": "2025-09-24"
   },
   "programmers/day1-2": {
     "tags": [],

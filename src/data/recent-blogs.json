@@ -1,11 +1,16 @@
 [
   {
-    "title": "내가 직접 만든 플래너 앱, MARS를 소개합니다🪐",
+    "title": "띵타운, 사람들이 쓰고 있다",
+    "date": "2026-09-28",
+    "path": "/blog/ddingtown-growth"
+  },
+  {
+    "title": "직접 만든 플래너 앱, MARS를 소개합니다",
     "date": "2026-08-18",
     "path": "/blog/my-space-app"
   },
   {
-    "title": "블로그 새단장!",
+    "title": "블로그 새단장!🌃🌠✨",
     "date": "2026-08-12",
     "path": "/blog/blog-new-day"
   },
@@ -18,10 +23,5 @@
     "title": "블로그 새 단장 with Docusaurus🦕",
     "date": "2026-03-26",
     "path": "/blog/blog-docusaurus"
-  },
-  {
-    "title": "프로그래머스 기초 입문 달성 후기 🥳🎉",
-    "date": "2025-09-25",
-    "path": "/blog/programmers"
   }
 ]

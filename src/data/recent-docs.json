@@ -1,5 +1,20 @@
 [
   {
+    "title": "1분 걸리던 계산기를 1초 미만으로",
+    "date": "2026-10-01",
+    "path": "/docs/ddingtaun-pension-calculator"
+  },
+  {
+    "title": "사이드 프로젝트 서버가 멈춘 날",
+    "date": "2026-09-28",
+    "path": "/docs/vercel-next-image"
+  },
+  {
+    "title": "직접 만든 플래너 앱, MARS를 소개합니다",
+    "date": "2026-08-18",
+    "path": "/docs/my-space-app"
+  },
+  {
     "title": "Rendering",
     "date": "2026-08-18",
     "path": "/docs/js-deep-dive/rendering"
@@ -8,20 +23,5 @@
     "title": "JS 메서드 정리",
     "date": "2026-04-21",
     "path": "/docs/programmers/method"
-  },
-  {
-    "title": "🤖Gemini와 알아본 현업에서 쓰는 폴더 관리",
-    "date": "2026-04-20",
-    "path": "/docs/feature-sliced-design"
-  },
-  {
-    "title": "Redux-toolkit으로 사용자 상태 관리 구조 개선",
-    "date": "2026-04-17",
-    "path": "/docs/notion-rtk"
-  },
-  {
-    "title": "한번 깨지고 다시 다진 Next.js",
-    "date": "2026-04-13",
-    "path": "/docs/noiton-render"
   }
 ]

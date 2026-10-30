@@ -194,3 +194,43 @@
   color: rgba(var(--hiri-foreground, 0,0,0), 0.7);
   font-size: 0.9rem;
 }
+
+@media print {
+  .detailButton {
+    display: none !important;
+  }
+
+  .badgeList {
+    display: none !important;
+  }
+
+  .projectItem {
+    border: none !important;
+    background: none !important;
+    padding: 0.5rem 0 !important;
+    margin-bottom: 0 !important;
+    break-inside: avoid;
+  }
+
+  .titleContainer strong {
+    font-size: 0.92rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .markdownContent ul {
+    padding: 0.5rem 1.2rem;
+  }
+
+  .markdownContent li {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin-bottom: 0.2rem;
+  }
+
+  .markdownContent code {
+    font-size: 0.78rem;
+  }
+}

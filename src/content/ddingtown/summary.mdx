@@ -1,0 +1,16 @@
+---
+date: "2026.05 - Pres."
+title: "띵타운 | 띵타이쿤 게임 유틸리티·커뮤니티 사이트"
+description: "일 평균 방문자 400명 규모의 게임 유틸리티·커뮤니티 사이트를 기획·개발·운영 중인 개인 프로젝트. 계산 알고리즘 재설계, Edge Request 99% 절감처럼 운영 데이터 기반으로 수치를 확인하고 구조를 바꿔 해결해왔습니다."
+badges: ["Next.js", "TypeScript", "Supabase", "TailwindCSS", "Vercel"]
+links:
+  - label: "Demo"
+    href: "https://ddingtown.vercel.app/"
+---
+
+- 타 서비스 계산기의 휴리스틱 방식이 야기한 일관성 문제를, 선형계획법의 꼭짓점 성질을 근거로 `Cramer's Rule` 기반 알고리즘으로 재설계하여 **0.1ms 이내**에 일관된 최적해 산출
+- `Vercel Observability`로 월 300만 건 이상의 Edge Request 원인(`next/image`)을 추적하고, `Cloudflare CDN` 전환으로 **Edge Request 99% 절감** — 유료 플랜 전환 없이 운영 유지
+- OAuth 토큰 교환을 `Next.js Route Handler`로 이관하고 `httpOnly 쿠키`에 세션을 저장하여 클라이언트 JS에서 토큰 접근 불가한 구조로 보안 개선
+- 로그인 여부에 따라 `localStorage` ↔ `DB`로 분기 저장하는 스킬트리 동기화, 연속 선택 시 다중 API 호출을 1500ms `Debounce`로 묶어 최적화
+- 즐겨찾기→최근 방문→직업별 기본값 순으로 슬롯을 채우는 `Quick Access` 패널 구현 — **도입률 약 40%**
+- `Discord Webhook` 실시간 알림 기반 관리자 승인 플로우로 누적 **357건** 신청을 상시 모니터링 없이 처리하는 1인 운영 체계 구축

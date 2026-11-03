@@ -15,13 +15,13 @@
         <summary type="html"><![CDATA[띵타운 성장 기록!!]]></summary>
         <content type="html"><![CDATA[<p><em><a href="https://ddingtown.vercel.app/" target="_blank" rel="noopener noreferrer">띵타운</a> 성장 기록!!</em><br>
 <a href="https://cafe.naver.com/ddingtycoon/13582" target="_blank" rel="noopener noreferrer">카페 소개글</a></p>
-<p><strong>v0.1부터 v2.28까지의 기록</strong></p>
+<p><strong>v0.1부터 v2.28까지</strong></p>
 <p>띵타운은 마인크래프트 사설 서버 '띵타이쿤'의 팬사이트다.</p>
 <p>띵타이쿤을 한창 열심히 하던 두 달째쯤 개발을 시작했었다.</p>
-<p>그때 나는 광부에 푹 빠져 있었다. 열심히 모은 돈으로 돌 1틱 곡괭이를 사려고 했는데, 얼마에 사야 하는지 알아보는 것부터 일이었다.
-디스코드 판매 게시판을 계속 들락날락하면서 시세를 확인하는 것도 힘들었다..</p>
+<p>그때 나는 광부에 푹 빠져 있어서, 열심히 모은 돈으로 돌 1틱 곡괭이를 사려고 했는데 얼마에 사야 하는지 알아보는 것부터 일이었다.<br>
+<!-- -->디스코드 판매 게시판을 계속 들락날락하면서 시세를 확인하는 것도 쉽지 않았다..</p>
 <p>~ 시세를 한눈에 볼 수 없을까? 라는 생각으로 띵타운 개발 시작 ~</p>
-<p>처음엔 거래소가 목적이었는데, 지금은 채광·재배·해양·사냥 직업별 계산기·정보 모음 사이트가 됐다. v0.1에서 시작해서 지금은 v2.28까지 왔다.</p>
+<p>처음엔 거래소가 목적이었는데 지금은 채광·재배·해양·사냥 직업별 계산기·정보 모음 사이트가 됐고, v0.1에서 시작해서 어느새 v2.28까지 왔다.</p>
 <p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/260928-3-c87f650c0799a3d00a51932e68923285.png" width="1200" height="362" class="img_ev3q"></p>
 <p>&nbsp;</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="수치">수치<a href="https://eeheueklf.github.io/blog/ddingtown-growth#%EC%88%98%EC%B9%98" class="hash-link" aria-label="수치에 대한 직접 링크" title="수치에 대한 직접 링크">​</a></h2>
@@ -31,16 +31,67 @@
 <img decoding="async" loading="lazy" alt="profiles" src="https://eeheueklf.github.io/assets/images/260928-1-b773459655ff0d612a2afeed799531ee.png" width="1200" height="635" class="img_ev3q"></p>
 <p><img decoding="async" loading="lazy" alt="total requests" src="https://eeheueklf.github.io/assets/images/260928-0-24b6b75ec731ff0a3b9dfe0ff08d60a5.png" width="1240" height="319" class="img_ev3q"> 요청수는 5월엔 <strong>2,217</strong>건이었는데 6월엔 <strong>4,607</strong>건으로 한 달 만에 두 배가 넘었다.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="여담">여담<a href="https://eeheueklf.github.io/blog/ddingtown-growth#%EC%97%AC%EB%8B%B4" class="hash-link" aria-label="여담에 대한 직접 링크" title="여담에 대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="여담">여담<a href="https://eeheueklf.github.io/blog/ddingtown-growth#%EC%97%AC%EB%8B%B4" class="hash-link" aria-label="여�담에 대한 직접 링크" title="여담에 대한 직접 링크">​</a></h2>
 <p>내가 쓰려고 정말 편하게 만들어보자는 생각으로 만든 건데, 솔직히 이렇게 많은 분들이 써주실 줄은 몰랐다 ㅠ</p>
-<p>처음에 인증 한 건 올라올 때마다 진짜 너무 소중했는데, 벌써 1000명이 다 되어간다.</p>
-<p>사이트 특성상 게임 접속자 수만큼이 한계일 거라 생각했는데, 생각보다 많이 들어와서 아직도 신기하다.</p>
+<p>처음에 인증 한 건 올라올 때마다 확인했던게 엊그제인데 벌써 1000명 가까이 등록해주신게 놀랍다..</p>
+<p>사이트 특성상 게임 접속자 수만큼이 한계일 거라 생각했는데, 생각보다 많이 들어와서 신기한 점도 있다.</p>
 <p>쓰는 사람이 생기니까 업데이트도 계속 하게 된다~!</p>
 <p><img decoding="async" loading="lazy" alt="alt text" src="https://eeheueklf.github.io/assets/images/260928-4-313a809545830f04db7cc398d9f12569.png" width="1200" height="362" class="img_ev3q"></p>
-<p>테스터가 없어서 디스코드에 올렸던 적도 있다. 해양인이 너무 없어서..</p>
-<p>당시 해양은 진입장벽이 있고, 연금도 복잡했고, 나도 막 해양에 입문한 참이었다.</p>
-<p>보상도 걸어봤는데.. Github contributors 페이지에서 모티브를 얻은 '도움 주신 분들' 칸이다.</p>
-<p>다섯 분이 의견과 피드백을 내주셨고, 덕분에 정확하고 더 편리하게 기능을 완성할 수 있었던 것 같다. (이 글을 빌려 다시 감사하다는 말씀을 전합니다!!🫶)</p>]]></content>
+<p>내 주변 해양인 단 한명의 연금 데이터로는 테스트가 잘 안되서 디스코드에 테스터 모집글을 올렸던 적이 있었는데, 세 분이 연락을 주셨다.</p>
+<p>총 다섯 분이 의견과 피드백을 내주셨고,&nbsp;덕분에 정확하고 더 편리하게 기능을 완성할 수 있었던 것 같다.&nbsp;</p>
+<p>깃허브 Contributors 칸처럼 사이트에도 '도움주신분들'칸을 마련해 두었다. 띵타운이 여기까지 오기까지 의견을 주셨던 많은 분들이 떠오르는데,, 이 글을 빌려 다시 감사하다는 말씀을 전합니다!!🫶</p>
+<p>&nbsp;</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[사이드 프로젝트 서버가 멈춘 날]]></title>
+        <id>https://eeheueklf.github.io/blog/vercel-next-image</id>
+        <link href="https://eeheueklf.github.io/blog/vercel-next-image"/>
+        <updated>2026-09-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[띵타운 성장 기록!!]]></summary>
+        <content type="html"><![CDATA[<p><em><a href="https://ddingtown.vercel.app/" target="_blank" rel="noopener noreferrer">띵타운</a> 성장 기록!!</em><br>
+<a href="https://cafe.naver.com/ddingtycoon/13582" target="_blank" rel="noopener noreferrer">카페 소개글</a></p>
+<p><strong>역대급으로  당황했었던 날,,</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="사이트가-퍼즈됐다는-제보">사이트가 퍼즈됐다는 제보<a href="https://eeheueklf.github.io/blog/vercel-next-image#%EC%82%AC%EC%9D%B4%ED%8A%B8%EA%B0%80-%ED%8D%BC%EC%A6%88%EB%90%90%EB%8B%A4%EB%8A%94-%EC%A0%9C%EB%B3%B4" class="hash-link" aria-label="사이트가 퍼즈됐다는 제보에 대한 직접 링크" title="사이트가 퍼즈됐다는 제보에 대한 직접 링크">​</a></h2>
+<p>&nbsp;</p>
+<p>나의 사이드 프로젝트인 띵타운은 Vercel로 배포 및 운영되고 있다.</p>
+<p>Vercel은 무료 요금인 Hobby, 유료 요금제인 Pro가 있다. 무료와 유료 요금제는 각종 사용량을 기준으로&nbsp; 정해지는데, 띵타운은 네트워크(CDN) 사용량을 가장 많이 쓰고 있다.</p>
+<p><img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-2-c12bb61041ebe0d02dbcdaf936d44097.png" width="1200" height="142" class="img_ev3q">
+띵타운에 찍히는 Request가 심상치 않았지만, 무료 요금제 안에서 잘 유지되고 있었기 때문에 지켜보고 있었다.</p>
+<p>그런데 7월 25일때즈음 서버가 퍼즈가 난 적이 있다. 그때 처음 Edge Request 초과라는 걸 봤고 여러 대응 방법들을 알아봤다.</p>
+<p>사용량은 월간 기준으로 집계되기에 25일쯤 초과가 되었으면 거의 막바지에 난거라고 예상을 했고, 일단 Pro 요금제로 결제를 했다 🥹</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="예상-원인-link">예상 원인: &lt;Link&gt;<a href="https://eeheueklf.github.io/blog/vercel-next-image#%EC%98%88%EC%83%81-%EC%9B%90%EC%9D%B8-link" class="hash-link" aria-label="예상 원인: <Link>에 대한 직접 링크" title="예상 원인: <Link>에 대한 직접 링크">​</a></h3>
+<p><a href="https://www.reddit.com/r/nextjs/comments/1hh1myw/vercel_13k_visitors_300k_function_invocations_5/" target="_blank" rel="noopener noreferrer">레딧</a>에서 next/link가 사용자가 해당 페이지로 이동하지 않더라도 다른 페이지를 미리 로드하기 때문에 Request가 많이 일어난다고 해서 다음과 같이 prefetch=<!-- -->를 적용해 link에서의 로드를 막았다.</p>
+<p>띵타운 상단 메뉴에서의 직업 메뉴들이 미리 불러와지고 있었기 때문에 도움이 됐을 것이다.</p>
+<p><img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-6-0f61627a9ef8371e7d1279c7d2273e00.png" width="1200" height="367" class="img_ev3q"></p>
+<p>또한 request 그래프를 살펴보았는데, 오전 3시에 눈에띄게 request가 들어오는 모습을 확인할 수 있었다. 띵타이쿤 게임에서 오전 3시에 시세가 초기화되기 때문에 시세 변경과 조회를 하기 위한 요청이 많이 들어오는구나 싶었지만 따로 고쳐야할 부분은 확인하지 못했다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="다음-달-8월">다음 달 (8월)<a href="https://eeheueklf.github.io/blog/vercel-next-image#%EB%8B%A4%EC%9D%8C-%EB%8B%AC-8%EC%9B%94" class="hash-link" aria-label="다음 달 (8월)에 대한 직접 링크" title="다음 달 (8월)에 대한 직접 링크">​</a></h3>
+<p>이번엔 18일즈음에 디스코드 제보가 들어왔다.</p>
+<p><img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-1-d270878ff19ceffa289d858c33f7281e.png" width="1200" height="522" class="img_ev3q"></p>
+<p>사이트를 들어갔을때 뜨는 pasue를 본 순간 진짜 식은땀이 다 났다 😭</p>
+<p>pro를 또 결제해야 되나, 사용자가 계속 늘어나면 계속 이 상태일텐데 지속하기가 어렵겠다 싶었다.</p>
+<p><img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-3-87c2ea978004940b8e9a5cd35fc976ab.png" width="1200" height="522" class="img_ev3q"></p>
+<p>일단 서버를 2~3일 동안 닫아두기로 했다..</p>
+<p>걱정이 많았는데 사람들이 오히려 기다리겠다고 응원해주셔서 정말 감사했다 ㅠㅠ</p>
+<p>(제가 생각하기에는 후원받을만한 일이 아닌데,, 후원해주시겠다는 분도 계셔서 너무너무 감사했다.) ((<em>후원은 받지않음))</em></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="해결기">해결기<a href="https://eeheueklf.github.io/blog/vercel-next-image#%ED%95%B4%EA%B2%B0%EA%B8%B0" class="hash-link" aria-label="해결기에 대한 직접 링크" title="해결기에 대한 직접 링크">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-0-1adb922ae8439646b5ea416c1fec3c91.png" width="1200" height="552" class="img_ev3q">
+Edge request를 보는데 무료 요금제인 1M을 훌쩍 넘긴 3M가 찍히고 있었다.</p>
+<p>근데 뭔가 이상한게 내 사이트가 다른 사이트랑 비교해서&nbsp;용량이 큰 것도 아니고, 사용자가 300~400명 단위인데 이렇게 찍히는 것은 비정상적인 수치라고 생각이 들었다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="원인-1--봇">원인 1 : 봇<a href="https://eeheueklf.github.io/blog/vercel-next-image#%EC%9B%90%EC%9D%B8-1--%EB%B4%87" class="hash-link" aria-label="원인 1 : 봇에 대한 직접 링크" title="원인 1 : 봇에 대한 직접 링크">​</a></h3>
+<p>그래서 가장 의심이 갔던 건 크롤러였다.</p>
+<p><code>robots.ts</code>에는 <code>/auth/</code>만 막혀있어서 AI/상용 크롤러 봇 15종을 추가로 차단했다.</p>
+<div class="codeBlockContainer_APcc"><div class="language-ts theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_m3Ux"><pre tabindex="0" class="prism-code language-ts codeBlock_qGQc thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p187"><span class="token-line" style="color:#393A34"><span class="token plain">rules</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    userAgent</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token string" style="color:#e3116c">'GPTBot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'ClaudeBot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'Claude-Web'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'anthropic-ai'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token string" style="color:#e3116c">'CCBot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'Google-Extended'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'PerplexityBot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token string" style="color:#e3116c">'Applebot-Extended'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'Meta-ExternalAgent'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token string" style="color:#e3116c">'Bytespider'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'Amazonbot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'FacebookBot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token string" style="color:#e3116c">'AhrefsBot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'SemrushBot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'MJ12bot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'DotBot'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    disallow</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token string" style="color:#e3116c">'/'</span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    userAgent</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'*'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    allow</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'/'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    disallow</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token string" style="color:#e3116c">'/api/'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'/auth/'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'/profile/settings'</span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">,</span><br></span></code></pre><div class="buttonGroup_6DOT"><button type="button" aria-label="클립보드에 코드 복사" title="복사" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="원인-2-이미지">원인 2: 이미지<a href="https://eeheueklf.github.io/blog/vercel-next-image#%EC%9B%90%EC%9D%B8-2-%EC%9D%B4%EB%AF%B8%EC%A7%80" class="hash-link" aria-label="원인 2: 이미지에 대한 직접 링크" title="원인 2: 이미지에 대한 직접 링크">​</a></h3>
+<p>인터넷에서 또 원인을 열심히 찾았고&nbsp;<a href="https://www.reddit.com/r/nextjs/comments/1l74plq/why_does_every_request_count_as_an_edge_request/" target="_blank" rel="noopener noreferrer">레딧</a>에서 이미지 요청이 request를 늘린다는 것을 확인했다!</p>
+<p>Vercel에서&nbsp;<code>next/image</code>를 쓰면 이미지가 Vercel의 이미지 최적화를 거치고, 이 요청들이 Edge Request로 집계되어 뻥튀기 된다는 내용이다.</p>
+<p>띵타운은 이미지가 많이 쓰이기 때문에 페이지 하나를 열 때마다 이미지 각각이 요청을 만들었기 때문에 발생한 일이었다!</p>
+<p><img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-4-ca11bc497cbc21a82e757906caa65755.png" width="1200" height="537" class="img_ev3q"></p>
+<p>그래서 이미지를&nbsp;Cloudflare R2로 옮기고 CDN을 도입했다.</p>
+<h1>해결!</h1>
+<p>지금은 CDN Request가 매일 5,000~6,000건 정도 나온다. 한 달로 계산하면 20만 건 정도로, 기존 300만건에서 90% 이상을 감소시킨 셈이다.
+<img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-5-1f95bb0a5fbd72625f0adc30d0a80a26.png" width="1200" height="367" class="img_ev3q"></p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-7-b9151ea823a8f19a3c6f3df649bc06ee.png" width="1200" height="618" class="img_ev3q"></p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[직접 만든 플래너 앱, MARS를 소개합니다]]></title>

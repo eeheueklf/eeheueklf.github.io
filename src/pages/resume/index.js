@@ -24,6 +24,52 @@ const SKILL_ICONS = {
   'Supabase': 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/supabase.svg',
 };
 
+const SKILLS = [
+  'React', 'Next.js', 'TypeScript', 'TailwindCSS',
+  'Supabase', 'Redux', 'Jest', 'Figma',
+];
+
+const TECH_STACK = [
+  { label: 'Frontend', value: 'Next.js, React, TypeScript, Tailwind CSS, Styled-components, TanStack Query' },
+  { label: 'Backend', value: 'Supabase (PostgreSQL, Auth, Storage)' },
+  { label: 'Auth', value: 'Discord OAuth 2.0, JWT' },
+  { label: 'Infra', value: 'Vercel, Cloudflare CDN' },
+  { label: 'Tools', value: 'Jest, Vercel Analytics, Amplitude, Figma, Git, Notion' },
+];
+
+const EDUCATION = [
+  {
+    school: '동국대학교',
+    dept: '컴퓨터정보통신공학부 컴퓨터공학전공 · 학사',
+    period: '2021.03 - 2026.03',
+  },
+];
+
+const AWARDS = [
+  {
+    title: '동국대학교 여름 종합설계 결과 발표회 최우수상',
+    desc: 'SigLIP 모델 파인튜닝 및 웹 서비스 개발',
+    date: '2025.06',
+  },
+  {
+    title: '동국대학교 어드벤처디자인경진대회 장려상',
+    desc: '아두이노 기반 스마트 창문 제어 시스템 구현',
+    date: '2021.12',
+  },
+];
+
+const ACTIVITIES = [
+  {
+    title: '아두이노 활용 코딩 교육 활동 (총 57시간)',
+    org: '시립서울청소년센터',
+    period: '2022.06 - 2022.08',
+  },
+  {
+    title: 'CAPS (동국대학교 중앙 프로그래밍 동아리) 임원진 → 회장',
+    period: '2021.03 - 2022.06',
+  },
+];
+
 function ProjectUpdateCard() {
   const [notices, setNotices] = useState([]);
 
@@ -118,11 +164,6 @@ const SocialLinks = () => {
   );
 };
 
-const SKILLS = [
-  'React', 'Next.js', 'TypeScript', 'TailwindCSS',
-  'Supabase', 'Redux', 'Jest', 'Figma',
-];
-
 function LeftColumn() {
   return (
     <div className={styles.leftColumn}>
@@ -132,16 +173,36 @@ function LeftColumn() {
         <Heading as="h1" className={styles.hanna}>
           프론트엔드 개발자 하유경입니다.
         </Heading>
+
+        <div className={styles.printContact}>
+          <span>(+82) 10-4257-7240</span>
+          <span className={styles.printContactSep}>·</span>
+          <a href="mailto:eeheueklf@gmail.com">eeheueklf@gmail.com</a>
+          <span className={styles.printContactSep}>·</span>
+          <a href="https://github.com/eeheueklf">github.com/eeheueklf</a>
+          <span className={styles.printContactSep}>·</span>
+          <a href="https://eeheueklf.github.io">eeheueklf.github.io</a>
+        </div>
+
         <p className={styles.hero__description}>
-          데이터 흐름을 파악하여 상태와 UI가 분리된 구조를 설계합니다.
+          Next.js App Router 서버 컴포넌트 기반 아키텍처와 성능 최적화를 중심으로, 일 평균 방문자 400명 규모의 서비스를 1인으로 설계·운영 중인 프론트엔드 개발자입니다.
         </p>
         <p className={styles.hero__description}>
-          공용 컴포넌트화로 복잡도를 낮추고, 렌더링 최적화로 사용자 경험을 개선합니다.
+          계산 알고리즘 재설계, Edge Request 99% 절감처럼 문제의 원인을 수치로 확인하고 구조를 바꿔 해결해 왔으며, 유저 피드백 30건 이상을 직접 수집해 서비스에 반영했습니다.
         </p>
         <p className={styles.hero__description}>
-          풀스택 경험을 바탕으로 효율적인 API 인터페이스를 고민하는 협업을 지향합니다.
+          프론트엔드를 중심으로 인증·백엔드·운영까지 직접 구현하며 서비스 전체를 책임진 경험이 있습니다.
         </p>
       </header>
+
+      <div className={styles.printTechStack}>
+        {TECH_STACK.map(({ label, value }) => (
+          <div key={label} className={styles.printTechRow}>
+            <span className={styles.printTechLabel}>{label}</span>
+            <span className={styles.printTechValue}>{value}</span>
+          </div>
+        ))}
+      </div>
 
       <div className={styles.skillChips}>
         {SKILLS.map(skill => {
@@ -158,7 +219,16 @@ function LeftColumn() {
         })}
       </div>
 
-      <SocialLinks />
+      <div className={styles.socialAndPrint}>
+        <SocialLinks />
+        <button
+          className={styles.printButton}
+          onClick={() => window.print()}
+          aria-label="PDF로 저장"
+        >
+          PDF 저장
+        </button>
+      </div>
     </div>
   );
 }
@@ -172,6 +242,68 @@ function StatusRow() {
   );
 }
 
+function EducationSection() {
+  return (
+    <section className={`container ${styles.resumeSection}`}>
+      <div className={styles.sectionDivider}>
+        <span className={styles.sectionDividerLine} />
+        <span className={styles.sectionDividerLabel}>Education</span>
+        <span className={styles.sectionDividerLine} />
+      </div>
+      {EDUCATION.map(({ school, dept, period }) => (
+        <div key={school} className={styles.listRow}>
+          <div className={styles.listMain}>
+            <span className={styles.listTitle}>{school}</span>
+            <span className={styles.listSub}>{dept}</span>
+          </div>
+          <span className={styles.listPeriod}>{period}</span>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+function AwardsSection() {
+  return (
+    <section className={`container ${styles.resumeSection}`}>
+      <div className={styles.sectionDivider}>
+        <span className={styles.sectionDividerLine} />
+        <span className={styles.sectionDividerLabel}>Awards</span>
+        <span className={styles.sectionDividerLine} />
+      </div>
+      {AWARDS.map(({ title, desc, date }) => (
+        <div key={title} className={styles.listRow}>
+          <div className={styles.listMain}>
+            <span className={styles.listTitle}>{title}</span>
+            <span className={styles.listSub}>{desc}</span>
+          </div>
+          <span className={styles.listPeriod}>{date}</span>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+function ActivitiesSection() {
+  return (
+    <section className={`container ${styles.resumeSection}`}>
+      <div className={styles.sectionDivider}>
+        <span className={styles.sectionDividerLine} />
+        <span className={styles.sectionDividerLabel}>Activities</span>
+        <span className={styles.sectionDividerLine} />
+      </div>
+      {ACTIVITIES.map(({ title, org, period }) => (
+        <div key={title} className={styles.listRow}>
+          <div className={styles.listMain}>
+            <span className={styles.listTitle}>{title}</span>
+            {org && <span className={styles.listSub}>{org}</span>}
+          </div>
+          <span className={styles.listPeriod}>{period}</span>
+        </div>
+      ))}
+    </section>
+  );
+}
 
 export default function Resume() {
   const homeHref = useBaseUrl('/');
@@ -208,7 +340,7 @@ export default function Resume() {
               <span className={styles.sectionDividerLine} />
             </div>
 
-            <Heading as="h2">프로젝트</Heading>
+            <Heading as="h2" className={styles.sectionHeading}>프로젝트</Heading>
             <div className={styles.projectList}>
               {projects.map(({ Content, DetailContent, data }, idx) => (
                 <ProjectItem key={idx} {...data} DetailContent={DetailContent}>
@@ -217,6 +349,11 @@ export default function Resume() {
               ))}
             </div>
           </section>
+
+          <EducationSection />
+          <AwardsSection />
+          <ActivitiesSection />
+          <div className={styles.pageEnd} />
         </main>
       </div>
     </Layout>

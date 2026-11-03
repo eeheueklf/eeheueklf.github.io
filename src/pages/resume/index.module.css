@@ -149,7 +149,54 @@
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.7;
-  max-width: 44ch;
+  max-width: 54ch;
+}
+
+/* ── Print-only contact info ──────────────────────────── */
+.printContact {
+  display: none;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--muted);
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0.25rem 0;
+}
+
+.printContact a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.printContactSep {
+  color: var(--muted-soft);
+  user-select: none;
+}
+
+/* ── Print-only tech stack ────────────────────────────── */
+.printTechStack {
+  display: none;
+}
+
+.printTechRow {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.printTechLabel {
+  font-weight: 600;
+  min-width: 72px;
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  color: var(--fg);
+}
+
+.printTechValue {
+  color: var(--muted);
+  font-family: var(--font-sans);
 }
 
 /* ── Skill chips (hero) ───────────────────────────────── */
@@ -191,13 +238,18 @@
   padding-left: 10px;
 }
 
-/* ── Social icons ─────────────────────────────────────── */
+/* ── Social icons + print button ─────────────────────── */
+.socialAndPrint {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .socialContainer {
   display: flex;
   align-items: center;
   gap: 0.35rem;
   flex-wrap: wrap;
-  margin-top: 0.25rem;
 }
 
 .iconButton {
@@ -257,6 +309,25 @@
 .iconButton:focus-visible .iconTooltip {
   visibility: visible;
   opacity: 1;
+}
+
+.printButton {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--muted-soft);
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.printButton:hover {
+  color: var(--fg);
+  border-color: var(--card-border-strong);
 }
 
 /* ── Info card (shared shell) ─────────────────────────── */
@@ -353,7 +424,7 @@
   font-family: var(--font-sans);
 }
 
-/* ── Section divider + heading ────────────────────────── */
+/* ── Section divider ──────────────────────────────────── */
 .sectionDivider {
   display: flex;
   align-items: center;
@@ -375,7 +446,8 @@
   color: var(--muted-soft);
 }
 
-.projectSection h2 {
+/* ── Projects ─────────────────────────────────────────── */
+.projectSection .sectionHeading {
   font-family: 'A2z', sans-serif;
   font-size: 1.5rem;
   margin: 0 0 1.8rem;
@@ -386,11 +458,60 @@
   flex-direction: column;
 }
 
-/* ── Legacy (kept for backwards refs) ─────────────────── */
+/* ── Resume sections (Education / Awards / Activities) ── */
+.resumeSection {
+  margin-bottom: 0.5rem;
+}
+
+.listRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.listRow:last-child {
+  border-bottom: none;
+}
+
+.listMain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.listTitle {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.listSub {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.listPeriod {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted-soft);
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+/* ── Legacy ───────────────────────────────────────────── */
 .text {
   flex-shrink: 0;
   font-size: 0.75rem;
   color: var(--muted-soft);
+}
+
+.pageEnd {
+  height: 4rem;
 }
 
 /* ── Animations ───────────────────────────────────────── */
@@ -426,6 +547,10 @@
   .sectionDivider {
     margin: 3.5rem 0 1.5rem;
   }
+  .listRow {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -437,5 +562,128 @@
   }
   .hero__description {
     font-size: 0.9rem;
+  }
+}
+
+/* ── Print ────────────────────────────────────────────── */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm 2cm;
+  }
+
+  :global(.navbar),
+  :global(.footer) {
+    display: none !important;
+  }
+
+  .topNav,
+  .statusSection,
+  .skillChips,
+  .socialAndPrint,
+  .pageEnd {
+    display: none !important;
+  }
+
+  .resumeRoot {
+    background: white;
+    color: black;
+  }
+
+  .topSection {
+    margin-top: 0 !important;
+    animation: none !important;
+    padding-bottom: 0;
+  }
+
+  .heroBanner {
+    gap: 0.4rem;
+  }
+
+  .eyebrow {
+    display: none;
+  }
+
+  .hero__subtitle {
+    display: none;
+  }
+
+  .hanna {
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero__description {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.7);
+    max-width: none;
+  }
+
+  .printContact {
+    display: flex !important;
+    font-size: 0.8rem;
+    margin: 0.25rem 0 0.5rem;
+  }
+
+  .printContact a {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .printTechStack {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-top: 0.75rem;
+    padding: 0.6rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .printTechRow {
+    font-size: 0.8rem;
+    gap: 0.75rem;
+  }
+
+  .printTechLabel {
+    min-width: 64px;
+  }
+
+  .sectionDivider {
+    margin: 1.25rem 0 0.5rem !important;
+  }
+
+  .sectionDividerLabel {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+
+  .sectionHeading {
+    display: none !important;
+  }
+
+  .projectSection {
+    break-before: auto;
+  }
+
+  .resumeSection {
+    break-inside: avoid;
+  }
+
+  .listRow {
+    flex-direction: row;
+    padding: 0.4rem 0;
+    border-bottom: none;
+  }
+
+  .listTitle {
+    font-size: 0.85rem;
+  }
+
+  .listSub {
+    font-size: 0.78rem;
+  }
+
+  .listPeriod {
+    font-size: 0.75rem;
   }
 }

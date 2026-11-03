@@ -1,0 +1,696 @@
+/* ── Tokens & Root ────────────────────────────────────────────── */
+.portfolioRoot {
+  --paper: #f7f7f5;
+  --ink: #16181d;
+  --body: #2b2f36;
+  --sub: #4a4f59;
+  --muted: #5b606b;
+  --line: #e2e3e0;
+  --line-strong: #cdd0d4;
+  --bg-ph: #ecedea;
+  --chip: #f1f2f0;
+  --accent: #2449d8;
+  --accent-deep: #1a36a6;
+  --accent-soft: #e8edff;
+  --accent-border: #b4c3f5;
+  --good: #17663b;
+  --good-soft: #e3f4ea;
+  --good-border: #a8d9bc;
+  --bad: #8a2c0b;
+  --bad-soft: #fdece6;
+  --bad-border: #f2b8a4;
+  --fs: 'IBM Plex Sans KR', system-ui, sans-serif;
+  --fm: 'IBM Plex Mono', ui-monospace, monospace;
+
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--fs);
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Reset within scope ───────────────────────────────────────── */
+.portfolioRoot a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolioRoot a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolioRoot h1,
+.portfolioRoot h2,
+.portfolioRoot h3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-weight: 700;
+}
+
+.portfolioRoot p {
+  margin: 0;
+}
+
+.portfolioRoot ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Container ────────────────────────────────────────────────── */
+.c {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Scroll offset for sticky header ─────────────────────────── */
+.scrollTarget {
+  scroll-margin-top: 4rem;
+}
+
+/* ── Utility ──────────────────────────────────────────────────── */
+.textSm {
+  font-size: 0.875rem;
+}
+
+/* ── Header ───────────────────────────────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--line);
+  background: rgba(247, 247, 245, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.headerName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  color: var(--ink);
+}
+
+.headerNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.headerNavLink {
+  padding: 0.75rem 0.875rem;
+  font-size: 15px;
+  color: var(--sub);
+  transition: color 0.15s;
+}
+
+.headerNavLink:hover {
+  color: var(--ink);
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.hero {
+  padding: 6rem 0 4.5rem;
+}
+
+.heroEyebrow {
+  font-family: var(--fm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.heroH1 {
+  max-width: 920px;
+  font-size: clamp(36px, 5.2vw, 64px);
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.heroIntro {
+  margin-top: 1.75rem;
+  max-width: 720px;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--sub);
+}
+
+.heroBtns {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Metrics */
+.metricsGrid {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  border-top: 1px solid var(--ink);
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.5rem 0.5rem 0;
+}
+
+.metricValue {
+  order: 1;
+  font-family: var(--fm);
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.metricUnit {
+  margin-left: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.metricLabel {
+  order: 2;
+  margin-top: 0.625rem;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.metricNote {
+  order: 3;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* ── Section heading ──────────────────────────────────────────── */
+.sectionHead {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.sectionIdx {
+  font-family: var(--fm);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.sectionTitle {
+  font-size: 32px;
+  letter-spacing: -0.025em;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  border-radius: 10px;
+  padding: 0 1.25rem;
+  font-size: 15px;
+  font-family: var(--fs);
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+.btnPrimary:hover {
+  background: var(--accent-deep);
+  color: white;
+}
+
+.btnDark {
+  background: var(--ink);
+  color: white;
+  font-weight: 600;
+}
+
+.btnDark:hover {
+  background: #000;
+  color: white;
+}
+
+.btnOutline {
+  border-color: var(--line-strong);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.btnOutline:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.btnGhost {
+  color: var(--sub);
+}
+
+.btnGhost:hover {
+  color: var(--ink);
+}
+
+.btnLight {
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.btnLight:hover {
+  background: white;
+  color: var(--ink);
+}
+
+.btnLg {
+  min-height: 3rem;
+  padding: 0 1.5rem;
+}
+
+/* ── Tags ─────────────────────────────────────────────────────── */
+.tag {
+  border-radius: 0.375rem;
+  background: var(--chip);
+  padding: 0.25rem 0.625rem;
+  font-family: var(--fm);
+  font-size: 0.75rem;
+  color: #3f444d;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+/* ── Highlight rows ───────────────────────────────────────────── */
+.highlightList {
+  border-top: 1px solid var(--bg-ph);
+}
+
+.highlightRow {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--bg-ph);
+}
+
+.hlMetricWide {
+  flex-shrink: 0;
+  width: 5.5rem;
+  font-family: var(--fm);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.hlMetric {
+  flex-shrink: 0;
+  width: 7.5rem;
+  font-family: var(--fm);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.hlText {
+  font-size: 15px;
+  line-height: 1.625;
+  color: var(--body);
+}
+
+/* ── Projects section ─────────────────────────────────────────── */
+.projectsSection {
+  padding: 4.5rem 0;
+}
+
+/* Badges */
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 0.375rem 0.75rem;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.badgeAccent {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+.badgeGood {
+  background: var(--good-soft);
+  color: var(--good);
+}
+
+/* Project shared */
+.projectName {
+  font-size: 2.25rem;
+  letter-spacing: -0.025em;
+}
+
+.projectSummary {
+  margin-top: 0.5rem;
+  font-size: 17px;
+  color: var(--sub);
+}
+
+.projectMeta {
+  margin-top: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.projectBtns {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  padding-top: 0.5rem;
+}
+
+/* Featured project */
+.featuredProject {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+.featuredImgWrap {
+  flex: 1 1 520px;
+  min-height: 420px;
+  background: var(--bg-ph);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgLabel {
+  font-family: var(--fm);
+  font-size: 0.875rem;
+  color: var(--muted);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.featuredContent {
+  flex: 1 1 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2.75rem 2.5rem;
+}
+
+/* Project cards */
+.projectGrid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+  gap: 1.5rem;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+.cardImgWrap {
+  height: 15rem;
+  background: var(--bg-ph);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.cardName {
+  font-size: 26px;
+  letter-spacing: -0.025em;
+}
+
+.cardHighlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+/* ── Skills section ───────────────────────────────────────────── */
+.skillsSection {
+  padding: 4.5rem 0;
+}
+
+.skillsTable {
+  border-top: 1px solid var(--ink);
+}
+
+.skillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  border-bottom: 1px solid var(--line);
+  padding: 1.5rem 0;
+  align-items: flex-start;
+}
+
+.skillCategory {
+  flex-basis: 140px;
+  flex-shrink: 0;
+  font-family: var(--fm);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.skillBody {
+  min-width: 0;
+  flex: 1 1 520px;
+}
+
+.skillItems {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.skillUsage {
+  margin-top: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* ── About section ────────────────────────────────────────────── */
+.aboutSection {
+  padding: 4.5rem 0 6rem;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 2.5rem;
+}
+
+.aboutGroupHead {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.aboutList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.aboutItemTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.aboutItemDetail {
+  margin-top: 0.25rem;
+  font-size: 15px;
+  line-height: 1.625;
+  color: var(--sub);
+}
+
+.aboutItemPeriod {
+  margin-top: 0.25rem;
+  font-family: var(--fm);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ── Contact ──────────────────────────────────────────────────── */
+.contact {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.contactInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 3.5rem;
+}
+
+.contactEyebrow {
+  margin-bottom: 1rem;
+  font-family: var(--fm);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  color: #a9b8f5;
+}
+
+.contactH2 {
+  max-width: 760px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  color: var(--paper);
+}
+
+.contactBtns {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ctaEmail {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3.25rem;
+  border-radius: 10px;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--fs);
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.ctaEmail:hover {
+  background: white;
+  color: var(--ink);
+}
+
+.ctaGithub {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3.25rem;
+  border-radius: 10px;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-family: var(--fs);
+  border: 1px solid #4a4f59;
+  color: var(--paper);
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+.ctaGithub:hover {
+  border-color: var(--paper);
+  color: var(--paper);
+}
+
+.contactCopy {
+  margin-top: 5rem;
+  font-size: 13px;
+  color: #9a9fa8;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sectionHead {
+    margin-bottom: 1.5rem;
+  }
+
+  .featuredImgWrap {
+    min-height: 280px;
+  }
+
+  .featuredContent {
+    padding: 2rem 1.5rem;
+  }
+
+  .projectName {
+    font-size: 1.75rem;
+  }
+
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metricValue {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .metricsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skillRow {
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .skillCategory {
+    flex-basis: auto;
+  }
+}

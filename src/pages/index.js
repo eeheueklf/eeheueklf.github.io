@@ -110,7 +110,7 @@ function DiscordStatus() {
 const ROUTES = [
   { path: '/blog', label: 'log' },
   { path: '/docs', label: 'docs' },
-  { path: '/resume', label: 'about' },
+  { path: '/about', label: 'about' },
 ];
 
 // ── Entity factories ──────────────────────────────────────────────────────────
@@ -728,7 +728,7 @@ export default function Home() {
   const iconSrc = useBaseUrl('/img/logo.png');
   const blogHref = useBaseUrl('/blog');
   const docsHref = useBaseUrl('/docs');
-  const resumeHref = useBaseUrl('/resume');
+  const resumeHref = useBaseUrl('/about');
 
   return (
     <Layout description="프론트엔드 개발블로그">

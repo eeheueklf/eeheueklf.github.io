@@ -139,7 +139,7 @@ function DocCategoryGeneratedIndexPageContent({
   const iconSrc = useBaseUrl('/img/logo.png');
   const blogHref = useBaseUrl('/blog');
   const docsHref = useBaseUrl('/docs');
-  const resumeHref = useBaseUrl('/resume');
+  const resumeHref = useBaseUrl('/about');
 
   const slug = (category?.href ?? '').split('/').filter(Boolean).pop() ?? '';
   const categoryPalette = CATEGORY_PALETTE[slug];

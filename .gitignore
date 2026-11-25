@@ -11,6 +11,7 @@
 # Claude Code
 .claude/
 CLAUDE.md
+.codegraph/
 
 # Misc
 .DS_Store

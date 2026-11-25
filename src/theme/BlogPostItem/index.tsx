@@ -31,7 +31,7 @@ export default function BlogPostItem({
   const iconSrc = useBaseUrl('/img/logo.png');
   const blogHref = useBaseUrl('/blog');
   const docsHref = useBaseUrl('/docs');
-  const resumeHref = useBaseUrl('/resume');
+  const resumeHref = useBaseUrl('/about');
 
   return (
     <div className="page-wrapper">

@@ -36,7 +36,7 @@ function BlogListPageContent(props: Props): JSX.Element {
   const iconSrc = useBaseUrl('/img/logo.png');
   const blogHref = useBaseUrl('/blog');
   const docsHref = useBaseUrl('/docs');
-  const resumeHref = useBaseUrl('/resume');
+  const resumeHref = useBaseUrl('/about');
 
   const timelineRef    = useRef<HTMLDivElement>(null);
   const routePathRef   = useRef<SVGPathElement>(null);

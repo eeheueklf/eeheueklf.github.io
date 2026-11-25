@@ -1,0 +1,294 @@
+/* ── Resume v2 (포트폴리오.html 이식) ─────────────────────── */
+
+.root {
+  --accent: #2a5d8f;
+  --accent-soft: #e8eef5;
+  --text: #111;
+  --muted: #6b6b6b;
+  --line: #e5e7eb;
+  --bg: #fafafa;
+  --card: #ffffff;
+  --ifm-font-family-base: 'Pretendard', 'Inter', 'Malgun Gothic', sans-serif;
+  --ifm-heading-font-family: 'Pretendard', 'Inter', 'Malgun Gothic', sans-serif;
+  --font-sans: 'Pretendard', sans-serif;
+  --card-bg: #ffffff;
+  --card-bg-accent: #ffffff;
+  --card-border: #e5e7eb;
+  --card-border-strong: #d4d7dc;
+  --radius-lg: 12px;
+  --font-mono: 'Pretendard', 'Inter', 'Malgun Gothic', sans-serif;
+  --muted-soft: rgba(0, 0, 0, 0.38);
+  --fg: rgba(0, 0, 0, 0.88);
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Pretendard', 'Inter', 'Malgun Gothic', sans-serif;
+  line-height: 1.7;
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* resume2 톤에 맞춘 status 카드 오버라이드 */
+.root :global([class*='infoCardDark']) {
+  background: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+}
+.root :global([class*='infoCardDark']) :global([class*='infoCardTitle']) {
+  color: var(--muted-soft);
+}
+.root :global([class*='calFoot']) {
+  color: var(--muted-soft);
+}
+
+.root *,
+.root h1,
+.root h2,
+.root h3,
+.root h4,
+.root h5,
+.root h6 {
+  font-family: 'Pretendard', 'Inter', 'Malgun Gothic', sans-serif;
+}
+
+.container a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.container a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 72px 28px 96px;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 72px;
+}
+.heroTitle {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  margin: 0 0 12px;
+}
+.tagline {
+  font-size: 17px;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+.meta {
+  font-size: 14px;
+  color: var(--muted);
+}
+.meta span + span::before {
+  content: '·';
+  margin: 0 10px;
+  color: #c4c8cd;
+}
+
+/* Section */
+.section {
+  margin-top: 64px;
+}
+.sectionLabel {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.sectionTitle {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 0 0 32px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--text);
+}
+
+/* Values */
+.values {
+  display: grid;
+  gap: 28px;
+}
+.value {
+  padding: 28px 28px 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.valueHeading {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.3px;
+}
+.valueRow {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.valueRow:first-child {
+  padding-top: 0;
+}
+.valueRow:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.valueList {
+  margin: 0;
+  padding-left: 20px;
+}
+.valueList li {
+  font-size: 15px;
+  color: #333;
+  margin: 4px 0;
+}
+
+/* Project */
+.project {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 36px 36px 32px;
+  margin-bottom: 28px;
+}
+.projectHeader {
+  margin-bottom: 20px;
+}
+.projectTitle {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  letter-spacing: -0.4px;
+}
+.projectSub {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 18px;
+}
+.stackChip {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.projectDesc {
+  font-size: 15px;
+  color: #333;
+  margin: 0 0 24px;
+}
+
+.block {
+  margin-top: 24px;
+}
+.blockHeading {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--text);
+  letter-spacing: -0.2px;
+}
+.block ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.block li {
+  font-size: 14.5px;
+  color: #333;
+  margin: 4px 0;
+}
+.block li b {
+  font-weight: 700;
+  color: var(--text);
+}
+.block li code {
+  background: #f1f3f5;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 13px;
+}
+
+.links {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+.links a {
+  margin-right: 16px;
+  font-weight: 600;
+}
+
+/* List sections */
+.item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.item:last-child {
+  border-bottom: none;
+}
+.itemTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.itemMeta {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.itemDesc {
+  font-size: 14.5px;
+  color: #333;
+  margin: 4px 0 0;
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+.footer a {
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 48px 20px 64px;
+  }
+  .heroTitle {
+    font-size: 28px;
+  }
+  .tagline {
+    font-size: 15px;
+  }
+  .sectionTitle {
+    font-size: 22px;
+  }
+  .project {
+    padding: 24px 22px;
+  }
+  .projectTitle {
+    font-size: 20px;
+  }
+  .value {
+    padding: 22px;
+  }
+}

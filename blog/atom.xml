@@ -31,7 +31,7 @@
 <img decoding="async" loading="lazy" alt="profiles" src="https://eeheueklf.github.io/assets/images/260928-1-b773459655ff0d612a2afeed799531ee.png" width="1200" height="635" class="img_ev3q"></p>
 <p><img decoding="async" loading="lazy" alt="total requests" src="https://eeheueklf.github.io/assets/images/260928-0-24b6b75ec731ff0a3b9dfe0ff08d60a5.png" width="1240" height="319" class="img_ev3q"> 요청수는 5월엔 <strong>2,217</strong>건이었는데 6월엔 <strong>4,607</strong>건으로 한 달 만에 두 배가 넘었다.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="여담">여담<a href="https://eeheueklf.github.io/blog/ddingtown-growth#%EC%97%AC%EB%8B%B4" class="hash-link" aria-label="여�담에 대한 직접 링크" title="여담에 대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="여담">여담<a href="https://eeheueklf.github.io/blog/ddingtown-growth#%EC%97%AC%EB%8B%B4" class="hash-link" aria-label="여담�에 대한 직접 링크" title="여담에 대한 직접 링크">​</a></h2>
 <p>내가 쓰려고 정말 편하게 만들어보자는 생각으로 만든 건데, 솔직히 이렇게 많은 분들이 써주실 줄은 몰랐다 ㅠ</p>
 <p>처음에 인증 한 건 올라올 때마다 확인했던게 엊그제인데 벌써 1000명 가까이 등록해주신게 놀랍다..</p>
 <p>사이트 특성상 게임 접속자 수만큼이 한계일 거라 생각했는데, 생각보다 많이 들어와서 신기한 점도 있다.</p>
@@ -89,7 +89,7 @@ Edge request를 보는데 무료 요금제인 1M을 훌쩍 넘긴 3M가 찍히�
 <p>그래서 이미지를&nbsp;Cloudflare R2로 옮기고 CDN을 도입했다.</p>
 <h1>해결!</h1>
 <p>지금은 CDN Request가 매일 5,000~6,000건 정도 나온다. 한 달로 계산하면 20만 건 정도로, 기존 300만건에서 90% 이상을 감소시킨 셈이다.
-<img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-5-1f95bb0a5fbd72625f0adc30d0a80a26.png" width="1200" height="367" class="img_ev3q"></p>
+<img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-5-f6a69ec2df52a48d3001f41db7ade087.png" width="1200" height="499" class="img_ev3q"></p>
 <hr>
 <p><img decoding="async" loading="lazy" src="https://eeheueklf.github.io/assets/images/260929-7-b9151ea823a8f19a3c6f3df649bc06ee.png" width="1200" height="618" class="img_ev3q"></p>]]></content>
     </entry>

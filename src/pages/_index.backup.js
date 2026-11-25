@@ -46,7 +46,7 @@ export default function Home() {
 
   const docsHref = useBaseUrl('/docs');
   const blogHref = useBaseUrl('/blog');
-  const resumeHref = useBaseUrl('/resume');
+  const resumeHref = useBaseUrl('/about');
 
   const startDay = new Date('2025-07-24')
   const today = new Date();

@@ -743,3 +743,243 @@ table td {
   margin-bottom: 0rem !important;
   margin-top: 0rem !important;
 }
+
+
+/* ============================================================
+   DocBlocks — 문서 본문 스타일 세트
+   (seafood-ilp-model-no-sub.html 이식)
+   ============================================================ */
+
+:root {
+  --doc-card-bg: #ffffff;
+  --doc-border: #d8dee4;
+  --doc-code-bg: #eff2f5;
+  --doc-muted: #656d76;
+  --doc-accent: #2f6feb;
+  --doc-ok: #1a7f37;
+  --doc-ok-bg: #dafbe1;
+  --doc-warn: #9a6700;
+  --doc-warn-bg: #fff8c5;
+  --doc-info-bg: #ddf4ff;
+}
+
+[data-theme='dark'] {
+  --doc-card-bg: #161b22;
+  --doc-border: #30363d;
+  --doc-code-bg: #1f2630;
+  --doc-muted: #8d96a0;
+  --doc-accent: #4493f8;
+  --doc-ok: #3fb950;
+  --doc-ok-bg: #12261e;
+  --doc-warn: #d29922;
+  --doc-warn-bg: #272115;
+  --doc-info-bg: #121d2f;
+}
+
+/* 제목 — docs 본문 한정 */
+.markdown h1 {
+  font-size: 1.75rem;
+  margin: 0 0 8px;
+}
+
+.markdown > h2 {
+  font-size: 1.3rem;
+  margin: 48px 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--doc-border);
+  scroll-margin-top: 60px;
+  font-family: 'A2z';
+}
+
+.markdown > h3 {
+  font-size: 1.05rem;
+  margin: 26px 0 8px;
+  font-weight: 600;
+}
+
+.markdown > h3::before {
+  content: none;
+}
+
+/* 수식 박스 */
+.doc-math {
+  font-family: 'Cambria Math', 'Times New Roman', serif;
+  font-size: 1.12rem;
+  background: var(--doc-card-bg);
+  border: 1px solid var(--doc-border);
+  border-left: 3px solid var(--doc-accent);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 12px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.doc-math__sub {
+  display: block;
+  color: var(--doc-muted);
+  font-size: 0.98rem;
+  margin-top: 4px;
+}
+
+/* 기호 설명 블록 */
+.doc-explain {
+  background: var(--doc-card-bg);
+  border: 1px solid var(--doc-border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 10px 0 16px;
+}
+
+.doc-explain h4 {
+  margin: 0 0 6px;
+  font-size: 0.92rem;
+  color: var(--doc-muted);
+  font-weight: 600;
+}
+
+.doc-explain h4 + p,
+.doc-explain h4 + div {
+  margin-top: 0;
+}
+
+.doc-explain dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 16px;
+  margin: 0 0 12px;
+}
+
+.doc-explain dt {
+  font-family: 'Cambria Math', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.doc-explain dd {
+  margin: 0;
+}
+
+.doc-explain__ex {
+  border-top: 1px dashed var(--doc-border);
+  margin-top: 12px;
+  padding-top: 10px;
+  color: var(--doc-muted);
+}
+
+/* 노트 (info / warn) */
+.doc-note {
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 14px 0;
+  border: 1px solid var(--doc-border);
+}
+
+.doc-note--info {
+  background: var(--doc-info-bg);
+}
+
+.doc-note--warn {
+  background: var(--doc-warn-bg);
+}
+
+.doc-note__title {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* 카드 / 플로우 */
+.doc-card {
+  background: var(--doc-card-bg);
+  border: 1px solid var(--doc-border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 14px 0;
+}
+
+.doc-flow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.doc-flow__box {
+  border: 1px solid var(--doc-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: var(--doc-code-bg);
+}
+
+.doc-flow__box small {
+  display: block;
+  color: var(--doc-muted);
+}
+
+.doc-flow__arrow {
+  color: var(--doc-muted);
+  font-size: 1.2rem;
+}
+
+/* pill */
+.doc-pill {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 1px 9px;
+  border-radius: 999px;
+}
+
+.doc-pill--ok {
+  color: var(--doc-ok);
+  background: var(--doc-ok-bg);
+}
+
+.doc-pill--warn {
+  color: var(--doc-warn);
+  background: var(--doc-warn-bg);
+}
+
+/* 표 — docs 본문 한정 */
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--doc-card-bg);
+  border: 1px solid var(--doc-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 12px 0;
+  display: table;
+  font-size: 0.92rem;
+}
+
+.markdown th,
+.markdown td {
+  padding: 11px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--doc-border);
+}
+
+.markdown th {
+  background: var(--doc-code-bg);
+  font-size: 0.88rem;
+  color: var(--doc-muted);
+  font-weight: 600;
+}
+
+.markdown tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown td.sym {
+  font-family: 'Cambria Math', 'Times New Roman', serif;
+  font-size: 1.08rem;
+  white-space: nowrap;
+  font-style: italic;
+}
+
+.markdown td.src {
+  white-space: nowrap;
+}

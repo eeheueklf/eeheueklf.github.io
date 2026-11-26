@@ -184,6 +184,13 @@
   padding: 3px 10px;
   border-radius: 999px;
 }
+.projectImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 744;
+  margin: 0 0 24px;
+}
 .projectDesc {
   font-size: 15px;
   color: #333;

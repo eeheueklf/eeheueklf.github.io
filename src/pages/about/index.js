@@ -2,6 +2,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Heading from '@theme/Heading';
 import { useEffect, useState } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import resumeStyles from './resume.module.css';
 import styles from './index.module.css';
@@ -81,6 +82,7 @@ const VALUES = [
 const PROJECTS = [
   {
     name: '띵타운',
+    image: { src: '/img/resume/ddingtown-calculator.webp', alt: '띵타운 연금 계산기 화면' },
     sub: '개인 프로젝트 (기획/개발/운영) · 2026. 05 - 재직중',
     stack: ['Next.js', 'TypeScript', 'Supabase', 'TailwindCSS', 'Vercel', 'Cloudflare CDN', 'Discord OAuth 2.0'],
     desc: '띵타이쿤 게임 플레이어를 위한 유틸리티·커뮤니티 플랫폼입니다. 일 평균 방문자 400명 규모로 혼자 운영하며, 유저 피드백 30건 이상을 직접 수집해 서비스에 반영하고 있습니다.',
@@ -90,7 +92,7 @@ const PROJECTS = [
         items: [
           <>타 서비스 계산기가 입력값이 늘수록 10분 이상 걸리는 문제를 Ruin &amp; Recreate 휴리스틱으로 개선했으나, 무작위로 해를 부수고 다시 만드는 방식이라 실행마다 결과가 달라지는 일관성 문제 발생</>,
           "선형계획법의 꼭짓점을 Cramer's Rule로 직접 계산하는 방식으로 전환해 결과를 고정했지만, 1,000개 테스트 케이스로 검증한 결과 정수 조건을 반영하지 못해 최적해는 11%에 그쳤고 9%는 재료가 부족해 실제로 실행할 수 없는 결과였음",
-          <>생산 계획 문제와 같은 형태라는 점에 착안해 <b>정수 선형계획법(ILP)으로 재설계, 최적해 비율 11% → 100%</b>, 계산 시간 평균 1ms 이내, 동일 입력에 항상 같은 최적해 보장</>,
+          <>생산 계획 문제와 같은 형태라는 점에 착안해 <b>정수 선형계획법(ILP)으로 재설계, 최적해 비율 11% → 100%</b>, 계산 시간 평균 약 1ms, 동일 입력에 항상 같은 최적해 보장</>,
         ],
       },
       {
@@ -130,6 +132,7 @@ const PROJECTS = [
   },
   {
     name: 'Noiton',
+    image: { src: '/img/resume/noiton-home.webp', alt: '노션 템플릿 공유 서비스 Noiton 메인 화면' },
     sub: '개인 프로젝트 · 2026. 01 - 2026. 03',
     stack: ['Next.js', 'TypeScript', 'TailwindCSS', 'Supabase'],
     desc: '복잡한 노션 템플릿을 자유롭게 공유하고 체계적으로 탐색하는 플랫폼입니다. 단순한 파일 공유가 아니라, 생산성 노하우를 영감으로 주고받는 커뮤니티 공간을 지향했습니다.',
@@ -173,6 +176,7 @@ const PROJECTS = [
   },
   {
     name: 'TYLE',
+    image: { src: '/img/resume/tyle-typing.webp', alt: 'TYLE 타자 연습 화면' },
     sub: '2인 프로젝트 · Frontend Developer · 2025. 08 - 2025. 10',
     stack: ['Next.js', 'TypeScript', 'TailwindCSS', 'Hangul.js', 'Web Audio API', 'Jest'],
     desc: '사용자의 타수와 정확도를 실시간으로 측정해 시각화하는 한국어 타자 연습 어플리케이션입니다. 잦은 상태 변화와 오디오 재생 등 브라우저 부하가 높은 환경에서도 끊김 없는 사용자 경험을 제공하는 데 집중했습니다.',
@@ -249,6 +253,7 @@ function Block({ heading, items }) {
 }
 
 function Project({ project }) {
+  const imageSrc = useBaseUrl(project.image.src);
   return (
     <article className={styles.project}>
       <div className={styles.projectHeader}>
@@ -258,6 +263,15 @@ function Project({ project }) {
           {project.stack.map(s => <span key={s} className={styles.stackChip}>{s}</span>)}
         </div>
       </div>
+      <img
+        className={styles.projectImage}
+        src={imageSrc}
+        alt={project.image.alt}
+        width={1200}
+        height={744}
+        loading="lazy"
+        decoding="async"
+      />
       <p className={styles.projectDesc}>{project.desc}</p>
       {project.blocks.map((b, i) => <Block key={i} heading={b.heading} items={b.items} />)}
       {project.links?.length > 0 && (
